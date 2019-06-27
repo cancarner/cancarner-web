@@ -1,0 +1,209 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+div.pnlm-hotspot-base.fas:before,
+div.pnlm-hotspot-base.fab:before,
+div.pnlm-hotspot-base.far:before{
+    font-size: 14px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+ .pnlm-container iframe {
+    max-width: inherit;
+    margin-bottom: 0;
+}
+
+.pnlm-hotspot-base.custom-icon {
+    width: 30px;
+    height: 30px;
+    display: block;
+    cursor: pointer;
+    border-radius: 100%;
+}
+.pnlm-hotspot-base.custom-icon:hover{
+    z-index: 9;
+}
+.pnlm-panorama-info {
+    left: 0;
+    bottom: 0;
+}
+
+div.custom-tooltip span {
+    visibility: hidden;
+    position: absolute;
+    border-radius: 3px;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    padding: 5px 10px;
+    cursor: default;
+    margin: 0!important;
+    bottom: 40px!important;
+    transform: translateX(-50%);
+    min-width: 300px;
+}
+div.custom-tooltip span img{
+    max-width: inherit;
+    height: 225px;
+    width: 400px;
+}
+div.pnlm-tooltip span {
+    display: none;
+}
+div.custom-tooltip:hover span{
+    visibility: visible;
+}
+div.custom-tooltip:hover span:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+    bottom: -20px;
+    left: -10px;
+    margin: 0 50%;
+}
+
+div.custom-ifram {
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+    width: 80%;
+}
+
+.pano-wrap:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.4);
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s linear;
+}
+.pano-wrap.show-modal:before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.pano-wrap .cross {
+    background: #fff;
+    width: 30px;
+    height: 30px;
+    color: red;
+    line-height: 30px;
+    position: absolute;
+    top: 6px;
+    z-index: 99;
+    right: 6px;
+    border-radius: 100%;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s linear;
+}
+.pano-wrap.show-modal .cross {
+    opacity: 1;
+    visibility: visible;
+}
+
+.custom-ifram p,
+.custom-tooltip p {
+    background-color: #fff;
+    padding: 10px 0;
+    margin: auto;
+    border-radius: 5px;
+    font-size: 15px;
+    line-height: 24px;
+    /*font-family: Helvetica, "Nimbus Sans L", "Liberation Sans", Arial, sans-serif;*/
+}
+.custom-ifram p{
+    padding: 10px;
+}
+
+.custom-ifram img {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+.custom-ifram iframe {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+@media (max-width: 1199px){
+    .pnlm-container {
+        width: 100%!important;
+        height: 400px!important;
+    }
+    .custom-ifram iframe {
+        height: 300px;
+    }
+    div.custom-ifram {
+        width: 90%;
+    }
+    .custom-tooltip p {
+        width: 430px;
+    }
+    
+    
+}
+
+@media (max-width: 768px){
+    div.custom-tooltip span img {
+        height: 195px;
+        width: 340px;
+    }
+    
+    .custom-ifram iframe {
+        height: 194px;
+        width: 350px;
+    }
+    .custom-tooltip p {
+        width: 330px;
+    }
+    
+}
+
+@media (max-width: 767px){
+    div.custom-tooltip span img {
+        height: 240px;
+        width: 420px;
+    }
+    .custom-ifram iframe {
+        height: 320px;
+        width: 100%;
+    }
+    .custom-tooltip p {
+        width: 430px;
+    }
+    
+}
+
+@media (max-width: 575px){
+    div.custom-tooltip span img {
+        height: 150px;
+        width: 220px;
+    }
+    .custom-ifram iframe {
+        height: 250px;
+        width: 100%;
+    }
+    .custom-tooltip p {
+        width: 200px;
+    }
+    
+}

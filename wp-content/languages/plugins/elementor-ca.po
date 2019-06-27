@@ -1,0 +1,4522 @@
+# Translation of Plugins - Elementor Page Builder - Stable (latest release) in Catalan
+# This file is distributed under the same license as the Plugins - Elementor Page Builder - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2019-05-15 22:56:16+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: ca\n"
+"Project-Id-Version: Plugins - Elementor Page Builder - Stable (latest release)\n"
+
+#: includes/editor.php:553
+msgid "Elementor 2.5 introduces key changes to the layout using CSS Flexbox. Your existing pages might have been affected, please review your page before publishing."
+msgstr "Elementor 2.5 incorpora canvis clau al format tot fent servir CSS Flexbox. Les pàgines existents poden haver quedat afectades, reviseu la vostra abans de publicar."
+
+#: includes/editor.php:552
+msgid "Note: Flexbox Changes"
+msgstr "Canvis de Flexbox"
+
+#: includes/widgets/common.php:599
+msgid "Vertical Orientation"
+msgstr "Orientació Vertical"
+
+#: includes/widgets/common.php:521 includes/widgets/common.php:560
+#: includes/widgets/common.php:624 includes/widgets/common.php:662
+msgid "Offset"
+msgstr "Desplaçament"
+
+#: includes/widgets/common.php:495
+msgid "Horizontal Orientation"
+msgstr "Orientació vertical"
+
+#: includes/widgets/common.php:482
+msgid "Fixed"
+msgstr "Fixe"
+
+#: includes/widgets/common.php:481
+msgid "Absolute"
+msgstr "Absolut"
+
+#: includes/widgets/common.php:463
+msgid "Custom positioning is not considered best practice for responsive web design and should not be used too frequently."
+msgstr "El posicionament personalitzat no es considera una bona pràctica per al disseny de llocs web responsius, i no hauria de fer-se servir amb molta freqüència."
+
+#: includes/widgets/common.php:463
+msgid "Please note!"
+msgstr "Tingueu en compte"
+
+#: includes/widgets/common.php:396
+msgid "Custom Width"
+msgstr "Amplada personalitzada"
+
+#: includes/widgets/common.php:366
+msgid "Custom Positioning"
+msgstr "Posició personalitzada"
+
+#: includes/settings/controls.php:227
+msgid "Super Admin"
+msgstr "Super administrador"
+
+#: includes/settings/settings.php:257
+msgid "Get the Full Guide"
+msgstr "Obté la guia completa"
+
+#: includes/settings/settings.php:177
+msgid "Get Help"
+msgstr "Obtingueu ajuda"
+
+#: includes/elements/section.php:503
+msgid "Hidden"
+msgstr "Amagat"
+
+#: includes/elements/section.php:498
+msgid "Overflow"
+msgstr "Desbordament"
+
+#: includes/elements/column.php:842 includes/elements/section.php:1247
+#: includes/widgets/common.php:143
+msgid "Motion Effects"
+msgstr "Efectes de moviment"
+
+#: includes/elements/column.php:238
+msgid "Horizontal Align"
+msgstr "Alineació horitzontal"
+
+#: includes/elements/column.php:222 includes/elements/column.php:248
+msgid "Space Evenly"
+msgstr "Espai uniforme"
+
+#: includes/elements/column.php:221 includes/elements/column.php:247
+msgid "Space Around"
+msgstr "Espai al voltant"
+
+#: includes/elements/column.php:212 includes/widgets/common.php:433
+msgid "Vertical Align"
+msgstr "Alineació vertical"
+
+#: core/common/modules/connect/apps/connect.php:25
+msgid "Connected to Elementor as %s"
+msgstr "Conectat a Elementor com %s"
+
+#: modules/safe-mode/module.php:339
+msgid "Having problems loading Elementor? Please enable Safe Mode to troubleshoot."
+msgstr "Teniu problemes per carregar Elementor? Activeu el mode segur per resoldre problemes."
+
+#: modules/safe-mode/module.php:266
+msgid "The issue was probably caused by one of your plugins or theme."
+msgstr "El problema probablement està causat per una de les vostres extensions o temes."
+
+#: includes/widgets/menu-anchor.php:105
+msgid "Note: The ID link ONLY accepts these chars: %s"
+msgstr "Observació: l’enllaç de l'identificador només accepta aquests caràcters: %s"
+
+#: includes/widgets/video.php:199
+msgid "Choose File"
+msgstr "Escolliu el fitxer"
+
+#: includes/widgets/video.php:188
+msgid "External URL"
+msgstr "URL extern"
+
+#: includes/widgets/image-gallery.php:173
+msgid "Order By"
+msgstr "Ordenar per"
+
+#: includes/widgets/read-more.php:101
+msgid "Read More Text"
+msgstr "Llegeix més text"
+
+#: includes/widgets/read-more.php:93
+msgid "Note: This widget only affects themes that use `%s` in archive pages."
+msgstr "Observació: Aquest giny només afecta temes que utilitzen '%s' a pàgines d'arxiu."
+
+#: includes/widgets/read-more.php:87
+msgid "Continue reading"
+msgstr "Continua llegint"
+
+#: includes/widgets/read-more.php:41 includes/widgets/read-more.php:83
+msgid "Read More"
+msgstr "Més informació"
+
+#: includes/widgets/google-maps.php:111
+msgid "Location"
+msgstr "Ubicació"
+
+#. translators: %s: Name of current post
+#: includes/frontend.php:1133
+msgid "Continue reading %s"
+msgstr "Continua llegint %s"
+
+#: includes/frontend.php:1126
+msgid "(more&hellip;)"
+msgstr "(més&hellip;)"
+
+#: includes/template-library/sources/local.php:1265
+msgctxt "Template Library"
+msgid "Filter by category"
+msgstr "Filtra per categoria"
+
+#: includes/template-library/sources/local.php:299
+msgctxt "Template Library"
+msgid "All Categories"
+msgstr "Totes les categories"
+
+#: includes/template-library/sources/local.php:298
+msgctxt "Template Library"
+msgid "Category"
+msgstr "Categoria"
+
+#: includes/template-library/sources/local.php:297
+msgctxt "Template Library"
+msgid "Categories"
+msgstr "Categories"
+
+#: includes/template-library/sources/local.php:231
+msgctxt "Template Library"
+msgid "Templates"
+msgstr "Plantilles"
+
+#: includes/controls/groups/background.php:355
+msgctxt "Background Control"
+msgid "Y Position"
+msgstr "Posició Y"
+
+#: includes/controls/groups/background.php:289
+msgctxt "Background Control"
+msgid "X Position"
+msgstr "Posició X"
+
+#: includes/controls/groups/background.php:276
+#: includes/controls/groups/background.php:481
+msgctxt "Background Control"
+msgid "Custom"
+msgstr "Personalitzat"
+
+#: includes/settings/settings.php:321
+msgid "Get Theme Builder"
+msgstr "Obté el constructor de temes"
+
+#: includes/settings/settings.php:301
+msgid "Popup Builder lets you take advantage of all the amazing features in Elementor, so you can build beautiful & highly converting popups. Go pro and start designing your popups today."
+msgstr "Popup Builder us permet aprofitar totes les funcions sorprenents d’Elementor, de manera que podeu crear boniques finestres emergents que converteixin. Aneu a pro i comenceu a dissenyar les vostres finestres emergents avui."
+
+#: includes/settings/settings.php:300
+msgid "Get Popup Builder"
+msgstr "Obté el constructor de finestres emergents"
+
+#: includes/template-library/sources/local.php:1563
+#: includes/settings/settings.php:151
+msgid "Popups"
+msgstr "Finestra"
+
+#: includes/template-library/sources/local.php:1562
+#: includes/settings/settings.php:150
+msgid "Theme Builder"
+msgstr "Constructor de temes"
+
+#: includes/settings/settings.php:150
+msgid "Theme Templates"
+msgstr "Plantilles del tema"
+
+#: modules/safe-mode/module.php:335
+msgid "Enable Safe Mode"
+msgstr "Habilita el mode segur"
+
+#: modules/safe-mode/module.php:333
+msgid "Can't Edit?"
+msgstr "No podeu editar?"
+
+#: modules/safe-mode/module.php:277
+msgid "Please note! We couldn't deactivate all of your plugins on Safe Mode. Please <a href=\"%s\" target=\"_blank\">read more</a> about this issue."
+msgstr "Atenció, no s'han pogut desactivar totes les extensions al mode segur. <a href=\"%s\" target=\"_blank\">Obtingues més informació</a> sobre aquest problema."
+
+#: modules/safe-mode/module.php:266 modules/safe-mode/module.php:270
+msgid "<a href=\"%s\" target=\"_blank\">Click here</a> to troubleshoot"
+msgstr "<a href=\"%s\" target=\"_blank\">Feu clic aquí</a> per solucionar el problema"
+
+#: modules/safe-mode/module.php:269
+msgid "Still experiencing issues?"
+msgstr "Encara teniu problemes?"
+
+#: modules/safe-mode/module.php:265
+msgid "Editor successfully loaded?"
+msgstr "Se us ha carregat l'editor correctament?"
+
+#: modules/safe-mode/module.php:258 modules/safe-mode/module.php:439
+msgid "Disable Safe Mode"
+msgstr "Deshabilita el mode segur"
+
+#: modules/safe-mode/module.php:256
+msgid "Safe Mode ON"
+msgstr "Mode segur activat"
+
+#: modules/safe-mode/module.php:89
+msgid "Cannot enable Safe Mode"
+msgstr "No s'ha pogut habilitar el mode segur"
+
+#: modules/safe-mode/module.php:49
+msgid "Safe Mode allows you to troubleshoot issues by only loading the editor, without loading the theme or any other plugin."
+msgstr "El mode segur us permet solucionar problemes carregant només l'editor, sense carregar el tema ni cap altre extensió."
+
+#: modules/safe-mode/module.php:40
+msgid "Safe Mode"
+msgstr "Mode segur"
+
+#: core/admin/admin.php:742
+msgid "Please note that you are switching to WordPress default editor. Your current layout, design and content might break."
+msgstr "Tingueu en compte que esteu canviant al editor per defecte de WordPress. La disposició actual del vostre disseny i els continguts es poden fer malbé."
+
+#: core/admin/admin.php:739
+msgid "Continue"
+msgstr "Continua"
+
+#: core/upgrade/manager.php:38
+msgid "Elementor Data Updater"
+msgstr "Actualitzador de les dades d'Elementor"
+
+#: core/common/modules/finder/categories/general.php:44
+msgctxt "Template Library"
+msgid "Saved Templates"
+msgstr "Plantilles desades"
+
+#. translators: %d: interval
+#: core/base/background-task.php:314
+msgid "Every %d minutes"
+msgstr "Cada %d minuts"
+
+#: core/base/db-upgrades-manager.php:92
+msgid "%s The database update process is now complete. Thank you for updating to the latest version!"
+msgstr "L'actualització de la base dades %s s'ha completat. Gràcies per actualitzar a la darrera versió."
+
+#: core/base/db-upgrades-manager.php:83
+msgid "%s Database update process is running in the background."
+msgstr "La base de dades %s s'està actualitzant en segon pla"
+
+#: core/base/db-upgrades-manager.php:75
+msgid "%s Your site database needs to be updated to the latest version."
+msgstr "%s Cal actualitzar la base de dades del teu lloc web a la darrera versió."
+
+#: includes/libraries/wp-background-process/wp-background-process.php:432
+msgid "Every %d Minutes"
+msgstr "Cada %d minuts"
+
+#: modules/library/documents/not-supported.php:68
+msgid "Not Supported"
+msgstr "No compatible"
+
+#: core/common/modules/finder/categories/site.php:80
+msgid "Users"
+msgstr "Usuaris"
+
+#: core/common/modules/finder/categories/site.php:74
+msgid "Plugins"
+msgstr "Extensions"
+
+#: includes/widgets/video.php:387
+msgid "Any Video"
+msgstr "Cap vídeo"
+
+#: includes/widgets/video.php:386
+msgid "Current Video Channel"
+msgstr "Canal de vídeo actual"
+
+#: includes/widgets/star-rating.php:303
+msgid "Unmarked Color"
+msgstr "Color sense marcar"
+
+#: includes/widgets/star-rating.php:248
+msgid "Stars"
+msgstr "Estrelles"
+
+#: includes/widgets/star-rating.php:141
+msgid "Outline"
+msgstr "Contorn"
+
+#: includes/widgets/star-rating.php:132
+msgid "Unmarked Style"
+msgstr "Estil desmarcat"
+
+#: includes/widgets/star-rating.php:91
+msgid "Rating Scale"
+msgstr "Escala de valoracions"
+
+#: includes/widgets/star-rating.php:84 includes/widgets/star-rating.php:104
+msgid "Rating"
+msgstr "Valoració"
+
+#: includes/widgets/star-rating.php:41
+msgid "Star Rating"
+msgstr "Valoració amb estrelles"
+
+#: includes/widgets/image.php:161 includes/widgets/image.php:170
+msgid "Custom Caption"
+msgstr "Captura personalitzada"
+
+#: includes/widgets/image.php:160
+msgid "Attachment Caption"
+msgstr "Títol de l'adjunt"
+
+#: includes/editor-templates/hotkeys.php:152
+msgid "Quit"
+msgstr "Surt"
+
+#: includes/editor-templates/hotkeys.php:144 includes/editor.php:683
+msgid "Keyboard Shortcuts"
+msgstr "Original"
+
+#: includes/editor-templates/hotkeys.php:100
+msgid "Show / Hide Panel"
+msgstr "Mostra / Amaga taulell"
+
+#: includes/editor-templates/hotkeys.php:88 includes/editor.php:563
+msgid "Go To"
+msgstr "Anar a"
+
+#: includes/editor-templates/hotkeys.php:26
+msgid "Redo"
+msgstr "Refés"
+
+#: includes/editor-templates/hotkeys.php:18
+msgid "Undo"
+msgstr "Desfés"
+
+#: core/common/modules/finder/template.php:13
+msgid "Type to find anything in Elementor"
+msgstr "Tecleja per trovar alguna cosa a Elementor"
+
+#: core/common/modules/finder/module.php:115
+#: includes/editor-templates/hotkeys.php:92
+msgid "Finder"
+msgstr "Cercador"
+
+#: core/common/modules/finder/categories/site.php:68
+msgid "Customizer"
+msgstr "Personalitzar"
+
+#: core/common/modules/finder/categories/site.php:56
+msgid "Menus"
+msgstr "Menús"
+
+#: core/common/modules/finder/categories/site.php:50
+msgid "Dashboard"
+msgstr "Escriptori"
+
+#: core/common/modules/finder/categories/site.php:44
+msgid "Homepage"
+msgstr "Pàgina d'inici"
+
+#: core/common/modules/finder/categories/create.php:28
+msgid "Create"
+msgstr "Crea"
+
+#: core/common/modules/connect/apps/connect.php:30
+msgid "Connect to Elementor"
+msgstr "Connecta amb Elementor"
+
+#: core/common/modules/connect/apps/connect.php:26
+msgid "Disconnect"
+msgstr "Desconnecta"
+
+#: core/common/modules/connect/apps/base-app.php:143
+msgid "Disconnected Successfully."
+msgstr "Desconnectat correctament."
+
+#: core/common/modules/connect/apps/base-app.php:131
+msgid "Connected Successfully."
+msgstr "Connectat correctament."
+
+#: core/common/modules/connect/apps/connect.php:31
+#: core/common/modules/connect/apps/connect.php:36
+#: core/common/modules/connect/admin.php:24
+#: core/common/modules/connect/admin.php:25
+msgid "Connect"
+msgstr "Connecta"
+
+#: core/base/document.php:471
+msgid "Future"
+msgstr "Futur"
+
+#: includes/widgets/video.php:454
+msgid "Poster"
+msgstr "Pòster"
+
+#: includes/widgets/video.php:510
+msgid "Lazy Load"
+msgstr "Càrrega lenta"
+
+#: includes/widgets/video.php:134 includes/widgets/video.php:155
+#: includes/widgets/video.php:176 includes/widgets/video.php:232
+msgid "Enter your URL"
+msgstr "Introduïu el vostre URL"
+
+#: includes/settings/settings.php:245
+msgid "We recommend you watch this 2 minute getting started video, and then try the editor yourself by dragging and dropping elements to create your first page."
+msgstr "Us recomanem que mireu aquest vídeo d'introducció de 2 minuts i que proveu l'editor arrossegant i deixant anar elements per crear la vostra primera pàgina. "
+
+#: includes/settings/settings.php:244
+msgid "Welcome to Elementor"
+msgstr "Us donem la benvinguda a Elementor"
+
+#: includes/settings/settings.php:223
+msgid "Create Your First Post"
+msgstr "Creeu la vostra primera entrada"
+
+#: includes/settings/settings.php:220
+msgid "Create Your First Page"
+msgstr "Creeu la vostra primera pàgina"
+
+#: includes/settings/settings.php:168 includes/settings/settings.php:235
+msgid "Getting Started"
+msgstr "Com començar"
+
+#: includes/editor-templates/navigator.php:53
+msgid "Once you fill your page with content, this window will give you an overview display of all the page elements. This way, you can easily move around any section, column, or widget."
+msgstr "Un cop ompliu la pàgina amb contingut, aquesta finestra us mostrarà els elements de la pàgina. D'aquesta manera podreu moure-us per qualsevol secció, columna o giny."
+
+#: includes/editor-templates/navigator.php:47
+msgid "Empty"
+msgstr "Buit"
+
+#: includes/editor-templates/hotkeys.php:126
+#: includes/editor-templates/panel.php:61
+#: includes/editor-templates/panel.php:63
+#: includes/editor-templates/navigator.php:12 includes/editor.php:676
+msgid "Navigator"
+msgstr "Navegador"
+
+#: includes/editor-templates/library-layout.php:13
+#: includes/settings/settings.php:238 includes/settings/settings.php:239
+msgid "Skip"
+msgstr "Salta"
+
+#: includes/controls/url.php:68
+msgid "Paste URL or type"
+msgstr "Enganxeu l'URL o teclejeu"
+
+#: includes/controls/groups/css-filter.php:132
+msgctxt "Filter Control"
+msgid "Hue"
+msgstr "Tonalitat"
+
+#: core/debug/inspector.php:49
+msgid "Debug Bar"
+msgstr "Barra de depuració"
+
+#: core/admin/feedback.php:233
+msgid "Hide Notification"
+msgstr "Amagueu la notificació"
+
+#: core/admin/feedback.php:230
+msgid "Congrats!"
+msgstr "Enhorabona"
+
+#: includes/widgets/google-maps.php:128
+msgid "Zoom"
+msgstr "Escalada"
+
+#: core/debug/inspector.php:57
+msgid "Debug Bar adds an admin bar menu that lists all the templates that are used on a page that is being displayed."
+msgstr "La barra de depuració afegeix un menú de barra d'administració que llista totes les plantilles que s’utilitzen en una pàgina que s'està mostrant."
+
+#: core/document-types/post.php:43
+msgid "Single"
+msgstr "Individual"
+
+#: modules/history/module.php:61
+msgid "All Content"
+msgstr "Tot el contingut"
+
+#: modules/history/module.php:60
+msgid "Style Reset"
+msgstr "Restablir l'estil"
+
+#: modules/history/module.php:59
+msgid "Style Pasted"
+msgstr "Estil enganxat"
+
+#: includes/widgets/video.php:344
+msgid "Logo"
+msgstr "Logotip"
+
+#: includes/widgets/video.php:318
+msgid "Video Info"
+msgstr "Informació del vídeo"
+
+#: includes/widgets/video.php:218
+msgid "URL"
+msgstr "URL"
+
+#: includes/widgets/video.php:117
+msgid "Self Hosted"
+msgstr "Allotjament propi"
+
+#: includes/widgets/video.php:116
+msgid "Dailymotion"
+msgstr "Dailymotion"
+
+#: includes/widgets/video.php:110
+msgid "Source"
+msgstr "Font"
+
+#: includes/widgets/button.php:263
+msgid "Please make sure the ID is unique and not used elsewhere on the page this form is displayed. This field allows <code>A-z 0-9</code> & underscore chars without spaces."
+msgstr "Si us plau, assegureu-vos que aquesta ID és única i no està sent utilitzada enlloc més de la pàgina on es mostra aquest formulari. Aquest camp permet caràcters <code>A-z 0-9</code> i guió baix sense espais."
+
+#: includes/widgets/button.php:255
+msgid "Button ID"
+msgstr "ID del botó"
+
+#: includes/settings/settings.php:532
+msgid "Mobile Breakpoint"
+msgstr "Punt de ruptura del mòbil"
+
+#: includes/settings/settings.php:517
+msgid "Tablet Breakpoint"
+msgstr "Punt de ruptura de la tauleta"
+
+#: includes/managers/elements.php:346
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: core/common/modules/finder/categories/site.php:28
+#: includes/managers/elements.php:342
+msgid "Site"
+msgstr "Lloc web"
+
+#: includes/managers/elements.php:335
+msgid "Pro"
+msgstr "Pro"
+
+#: includes/elements/column.php:425 includes/elements/section.php:693
+#: includes/widgets/heading.php:255
+msgid "Blend Mode"
+msgstr "Mode degradat"
+
+#: includes/editor.php:548
+msgid "Got It"
+msgstr "Ho heu aconsseguit"
+
+#: includes/editor.php:680
+msgid "Now you can access all editing actions using right click."
+msgstr "Podeu accedir a les accions d'edició fent servir el clic amb el botó dret."
+
+#: includes/editor.php:674
+msgid "Copy All Content"
+msgstr "Copia tot el contingut"
+
+#: includes/editor.php:671
+msgid "Save as a Global"
+msgstr "Desa com a global"
+
+#: includes/editor.php:670
+msgid "Reset Style"
+msgstr "Restaura l'estil"
+
+#: includes/editor.php:668
+msgid "Copy Style"
+msgstr "Copia l'estil"
+
+#: includes/editor-templates/hotkeys.php:35 includes/editor.php:666
+msgid "Copy"
+msgstr "Copia"
+
+#: includes/editor-templates/panel.php:85
+#: includes/editor-templates/panel.php:90
+msgid "Preview for %s"
+msgstr "Vista prèvia de %s"
+
+#: includes/editor-templates/global.php:31
+msgid "Drag widget here"
+msgstr "Arrossegueu el giny aquí"
+
+#: includes/controls/groups/css-filter.php:166
+msgctxt "Filter Control"
+msgid "CSS Filters"
+msgstr "Filtres CSS"
+
+#: includes/controls/groups/css-filter.php:115
+msgctxt "Filter Control"
+msgid "Saturation"
+msgstr "Saturació"
+
+#: includes/controls/groups/css-filter.php:98
+msgctxt "Filter Control"
+msgid "Contrast"
+msgstr "Contrast"
+
+#: includes/controls/groups/css-filter.php:81
+msgctxt "Filter Control"
+msgid "Brightness"
+msgstr "Brillantor"
+
+#: includes/controls/groups/css-filter.php:62
+msgctxt "Filter Control"
+msgid "Blur"
+msgstr "Difuminat"
+
+#: includes/controls/groups/background.php:574 includes/widgets/video.php:257
+msgid "Specify an end time (in seconds)"
+msgstr "Especifiqueu una hora de finalització (en segons)"
+
+#: includes/controls/groups/background.php:572 includes/widgets/video.php:255
+msgid "End Time"
+msgstr "Hora d'acabament"
+
+#: includes/controls/groups/background.php:563 includes/widgets/video.php:245
+msgid "Specify a start time (in seconds)"
+msgstr "Especifiqueu una hora d'inici (en segons)"
+
+#: includes/controls/groups/background.php:561 includes/widgets/video.php:243
+msgid "Start Time"
+msgstr "Hora d'inici"
+
+#: core/admin/feedback.php:119
+msgid "Wait! Don't deactivate Elementor. You have to activate both Elementor and Elementor Pro in order for the plugin to work."
+msgstr "Precaució! No desactiveu Elementor. Perque l'extensió funcioni correctament heu d'activar tant Elementor com Elementor Pro."
+
+#: core/admin/feedback.php:117
+msgid "I have Elementor Pro"
+msgstr "Tinc Elementor Pro"
+
+#: core/debug/inspector.php:115
+msgid "Elementor Debugger"
+msgstr "Depurador Elementor"
+
+#: core/admin/admin.php:148 core/admin/admin.php:743
+msgid "Back to WordPress Editor"
+msgstr "Tornar a l'editor de WordPress"
+
+#. translators: %s: Document title
+#: core/documents-manager.php:355
+msgid "Elementor %s"
+msgstr "%s Elementor"
+
+#. translators: %s the title of the post type
+#. translators: %s: Template type label.
+#: core/common/modules/finder/categories/create.php:62
+#: includes/template-library/sources/local.php:1237
+msgid "Add New %s"
+msgstr "Afegeix %s"
+
+#. translators: %d: Number of rows
+#: includes/utils.php:243
+msgid "%d row affected."
+msgid_plural "%d rows affected."
+msgstr[0] "%d fila afectada."
+msgstr[1] "%d files afectades."
+
+#: modules/page-templates/module.php:145
+msgctxt "Page Template"
+msgid "Elementor Full Width"
+msgstr "Amplària completa Elementor"
+
+#: modules/page-templates/module.php:144
+msgctxt "Page Template"
+msgid "Elementor Canvas"
+msgstr "Llenç Elementor"
+
+#: includes/elements/column.php:394 includes/elements/column.php:465
+#: includes/elements/section.php:662 includes/elements/section.php:733
+#: includes/widgets/image-box.php:297 includes/widgets/image-box.php:351
+#: includes/widgets/image.php:330 includes/widgets/image.php:364
+msgid "Opacity"
+msgstr "Opacitat"
+
+#: core/base/module.php:124 core/base/module.php:137 includes/plugin.php:409
+#: includes/plugin.php:422
+msgid "Something went wrong."
+msgstr "Alguna cosa no ha funcionat correctament."
+
+#: includes/widgets/image.php:287
+msgid "Max Width"
+msgstr "Amplada màxima"
+
+#: includes/widgets/image-carousel.php:383
+#: includes/widgets/image-carousel.php:445 includes/widgets/common.php:476
+msgid "Position"
+msgstr "Posició"
+
+#: includes/admin-templates/new-template.php:41
+msgid "Templates Help You <span>Work Efficiently</span>"
+msgstr "Les plantilles us ajuden a <span>treballar de manera eficient</span>"
+
+#: core/admin/admin.php:741
+msgid "New Template"
+msgstr "Plantilla nova"
+
+#. translators: %s: Element type.
+#. translators: %s: Section label
+#: includes/editor.php:640 includes/elements/section.php:244
+msgid "Delete %s"
+msgstr "Esborra %s"
+
+#. translators: 1: Elementor, 2: Link to plugin review
+#: core/admin/admin.php:421
+msgid "Enjoyed %1$s? Please leave us a %2$s rating. We really appreciate your support!"
+msgstr "Heu gaudit %1$s? Deixeu-nos una valoració de %2$s. De debò que agraïm el vostre suport!"
+
+#: core/common/modules/finder/categories/general.php:62
+msgid "Knowledge Base"
+msgstr "Base de coneixement"
+
+#: modules/page-templates/module.php:311
+msgid "This template includes the header, full-width content and footer"
+msgstr "Aquesta plantilla inclou la capçalera, el contingut a amplada completa i el peu de pàgina"
+
+#: modules/page-templates/module.php:298
+msgid "No header, no footer, just Elementor"
+msgstr "Sense capçalera ni peu de pàgina, només Elementor"
+
+#: modules/page-templates/module.php:285
+msgid "Default Page Template from your theme"
+msgstr "La plantilla de pàgina per defecte del tema"
+
+#: modules/page-templates/module.php:274
+msgid "Page Layout"
+msgstr "Estructura de pàgina"
+
+#: modules/history/views/revisions-panel-template.php:53
+msgid "Current"
+msgstr "Actual"
+
+#: includes/widgets/video.php:864
+msgid "Play Video"
+msgstr "Reprodueix vídeo"
+
+#: includes/widgets/icon-list.php:101 includes/widgets/common.php:380
+msgid "Inline"
+msgstr "En línia"
+
+#: includes/widgets/counter.php:166
+msgid "Separator"
+msgstr "Separador"
+
+#: includes/template-library/sources/local.php:1233
+msgid "Add templates and reuse them across your website. Easily export and import them to any other project, for an optimized workflow."
+msgstr "Afegiu plantilles i reutilitzeu-les en tota la web. Exporteu-les i importeu-les fàcilment a qualsevol altre projecte, per a un flux de treball òptim."
+
+#. translators: %s: Template type label.
+#: includes/template-library/sources/local.php:1230
+msgid "Create Your First %s"
+msgstr "Crea la primera %s"
+
+#: includes/template-library/sources/local.php:1147
+msgid "All"
+msgstr "Tot"
+
+#: includes/template-library/sources/local.php:219
+msgctxt "Template Library"
+msgid "My Templates"
+msgstr "Les meves plantilles"
+
+#: includes/admin-templates/new-template.php:89
+msgid "Create Template"
+msgstr "Crea una plantilla"
+
+#: includes/admin-templates/new-template.php:86
+msgid "Enter template name (optional)"
+msgstr "Introdueix el nom la plantilla (opcional)"
+
+#: includes/admin-templates/new-template.php:83
+msgid "Name your template"
+msgstr "Nom de la plantilla"
+
+#: includes/admin-templates/new-template.php:58
+msgid "Select the type of template you want to work on"
+msgstr "Trieu el tipus de plantilla en el qual voleu treballar"
+
+#: includes/admin-templates/new-template.php:56
+msgid "Choose Template Type"
+msgstr "Tria el tipus de plantilla"
+
+#: includes/admin-templates/new-template.php:42
+msgid "Use templates to create the different pieces of your site, and reuse them with one click whenever needed."
+msgstr "Utilitzeu plantilles per crear diferents parts de la web, i reutilitzeu-les amb un clic quan sigui necessari."
+
+#: includes/settings/settings.php:280
+msgid "Custom Fonts allows you to add your self-hosted fonts and use them on your Elementor projects to create a unique brand language."
+msgstr "Les fonts personalitzades et permeten afegir les fonts allotjades i usar-les en els projectes Elementor per crear un llenguatge de marca única."
+
+#: includes/settings/settings.php:279
+msgid "Add Your Custom Fonts"
+msgstr "Afegeix les fonts personalitzades"
+
+#: includes/settings/settings.php:134 includes/settings/settings.php:135
+msgid "Custom Fonts"
+msgstr "Fonts personalitzades"
+
+#: includes/editor.php:587
+msgid "Category"
+msgstr "Categoria"
+
+#: includes/editor-templates/templates.php:176
+msgid "More actions"
+msgstr "Més accions"
+
+#: includes/editor-templates/templates.php:100
+msgid "Search Templates:"
+msgstr "Cerca plantilles:"
+
+#: includes/editor.php:609
+msgid "Pages"
+msgstr "Pàgines"
+
+#: includes/editor.php:608
+msgid "Blocks"
+msgstr "Blocs"
+
+#: includes/editor-templates/panel.php:247
+msgid "Dynamic"
+msgstr "Dinàmic"
+
+#: includes/editor-templates/global.php:52
+msgid "This tag has no settings."
+msgstr "Aquesta etiqueta no té paràmetres."
+
+#: includes/controls/groups/border.php:68
+msgctxt "Border Control"
+msgid "Groove"
+msgstr "Solc"
+
+#. translators: %s: Document title
+#: core/settings/page/model.php:126 core/base/document.php:830
+#: includes/editor-templates/panel.php:59
+msgid "%s Settings"
+msgstr "Paràmetres de %s"
+
+#: core/role-manager/role-manager.php:167
+msgid "Want to give access only to content?"
+msgstr "Voleu donar accés només al contingut?"
+
+#: core/role-manager/role-manager.php:132
+msgid "No access to editor"
+msgstr "Sense accés a l'editor"
+
+#: core/role-manager/role-manager.php:125
+msgid "Role Excluded"
+msgstr "Rol exclòs"
+
+#: core/role-manager/role-manager.php:89
+msgid "Manage What Your Users Can Edit In Elementor"
+msgstr "Gestioneu el que els usuaris poden editar en Elementor"
+
+#: core/common/modules/finder/categories/general.php:56
+#: core/role-manager/role-manager.php:31
+msgid "Role Manager"
+msgstr "Gestor de rols"
+
+#: core/dynamic-tags/tag.php:107
+msgid "Fallback"
+msgstr "De reserva"
+
+#: core/document-types/post.php:207
+msgid "Featured Image"
+msgstr "Imatge destacada"
+
+#: core/document-types/post.php:140
+msgid "Body Style"
+msgstr "Estil del cos"
+
+#: core/base/document.php:106
+msgid "Document"
+msgstr "Document"
+
+#: core/common/modules/ajax/module.php:161
+msgid "Action not found."
+msgstr "No s'ha trobat l'acció."
+
+#: includes/template-library/manager.php:543
+msgid "Post not found."
+msgstr "No s'ha trobat l'entrada."
+
+#: core/common/modules/ajax/module.php:130
+msgid "Token Expired."
+msgstr "Testimoni d'autenticació caducat."
+
+#: includes/widgets/image-carousel.php:145
+msgid "Set how many slides are scrolled per swipe."
+msgstr "Estableix quantes diapositives es mostren per passada."
+
+#: includes/controls/groups/background.php:441
+msgid "Note: Attachment Fixed works only on desktop."
+msgstr "Nota: L'adjunt fix només funciona a escriptori."
+
+#: core/admin/admin.php:482
+msgid "Create New Post"
+msgstr "Crea una entrada nova"
+
+#: includes/fonts.php:69
+msgid "Google Early Access"
+msgstr "Google Early Access"
+
+#: includes/editor.php:662
+msgid "Unknown Error"
+msgstr "Error desconegut"
+
+#: includes/editor.php:657
+msgid "Saving has been disabled until you’re reconnected."
+msgstr "S'ha desactivat fins que torneu a connectar."
+
+#: includes/editor.php:660
+msgid "Server Error"
+msgstr "Error del servidor"
+
+#: includes/editor.php:661
+msgid "Connection Lost"
+msgstr "S'ha perdut la connexió"
+
+#: modules/history/revisions-manager.php:376
+msgid "There is an autosave of this post that is more recent than the version below. You can restore the saved data fron the Revisions panel"
+msgstr "Hi ha un desat automàtic d'aquesta entrada que és més recent que el de la versió següent. Podeu restaurar les dades desades des del panell de revisions"
+
+#: modules/history/revisions-manager.php:375
+msgid "Restore Auto Saved Data"
+msgstr "Restaura les dades desades automàticament"
+
+#: modules/history/revisions-manager.php:374
+msgid "Restore"
+msgstr "Restaura"
+
+#: modules/history/revisions-manager.php:373
+msgid "Current Version"
+msgstr "Versió actual"
+
+#: modules/history/revisions-manager.php:370
+msgid "Edit Published"
+msgstr "Edita el publicat"
+
+#: modules/history/revisions-manager.php:369
+msgid "Edit Draft"
+msgstr "Edita l'esborrany"
+
+#: includes/widgets/video.php:373
+msgid "When you turn on privacy mode, YouTube won't store information about visitors on your website unless they play the video."
+msgstr "Quan activeu el mode privat, YouTube no emmagatzemarà informació sobre visitants a la web llevat que reprodueixin el vídeo."
+
+#: includes/widgets/video.php:371
+msgid "Privacy Mode"
+msgstr "Mode privat"
+
+#: includes/widgets/shortcode.php:106
+msgid "Enter your shortcode"
+msgstr "Introdueix el codi curt"
+
+#: includes/widgets/image.php:173
+msgid "Enter your image caption"
+msgstr "Introdueix el títol de la imatge"
+
+#: includes/widgets/html.php:95
+msgid "Enter your code"
+msgstr "Introdueix el codi"
+
+#: includes/widgets/heading.php:114
+msgid "Add Your Heading Text Here"
+msgstr "Afegeix aquí el text de capçalera"
+
+#: includes/widgets/alert.php:302 includes/widgets/alert.php:334
+msgid "Dismiss alert"
+msgstr "Descarta l'alerta"
+
+#: includes/widgets/image-box.php:135 includes/widgets/icon-box.php:157
+#: includes/widgets/alert.php:122
+msgid "Enter your description"
+msgstr "Introdueix la descripció"
+
+#: includes/widgets/alert.php:112
+msgid "This is an Alert"
+msgstr "Açò és una alerta"
+
+#: includes/widgets/accordion.php:157 includes/widgets/toggle.php:154
+msgid "Active Icon"
+msgstr "Icona activa"
+
+#. translators: 1: Editing date, 2: Author display name
+#: core/base/document.php:1084
+msgid "Last edited on %1$s by %2$s"
+msgstr "Darrera modificació el %1$s per %2$s"
+
+#. translators: 1: Saving date, 2: Author display name
+#: core/base/document.php:1081
+msgid "Draft saved on %1$s by %2$s"
+msgstr "S'ha creat l'esborrany el %1$s per %2$s"
+
+#: core/base/document.php:1076
+msgctxt "revision date format"
+msgid "M j, H:i"
+msgstr "M j, H:i"
+
+#: core/common/modules/connect/apps/base-app.php:75 includes/editor.php:656
+msgid "Dismiss"
+msgstr "Descarta"
+
+#: includes/editor.php:655
+msgid "View All Revisions"
+msgstr "Mostra totes les revisions"
+
+#: includes/editor.php:654
+msgid "Have a look"
+msgstr "Pega una ullada"
+
+#: includes/editor.php:653
+msgid "Keep Editing"
+msgstr "Manté l'edició"
+
+#: includes/editor.php:652
+msgid "This is just a draft. Play around and when you're done - click update."
+msgstr "Açò és un esborrany. Jugueu i quan ho tingueu - feu clic a actualitza."
+
+#. translators: %s: the document title.
+#: core/base/document.php:89
+msgid "Hurray! Your %s is live."
+msgstr "Bé! El %s està en línia."
+
+#: includes/editor.php:651
+msgid "Submit"
+msgstr "Envia"
+
+#: includes/editor.php:650
+msgid "Update"
+msgstr "Actualitza"
+
+#: includes/editor.php:646
+msgid "Published"
+msgstr "Publicades"
+
+#: includes/editor.php:615
+msgid "Proceed Anyway"
+msgstr "Procedeix igualment"
+
+#: includes/editor.php:614
+msgid "Your browser isn't compatible with all of Elementor's editing features. We recommend you switch to another browser like Chrome or Firefox."
+msgstr "El navegador no és compatible amb totes les funcionalitats d'edició de l'Elementor. Recomanem canviar a un altre navegador com ara el Chrome o el Firefox."
+
+#: includes/editor.php:613
+msgid "Your browser isn't compatible"
+msgstr "El navegador no és compatible"
+
+#: core/common/modules/finder/template.php:19 includes/editor.php:605
+msgid "No Results Found"
+msgstr "No s'han trobat resultats"
+
+#: includes/editor.php:604
+msgid "Please make sure your search is spelled correctly or try a different words."
+msgstr "Assegureu-vos que està correctament escrita la cerca o proveu amb paraules diferents."
+
+#: includes/editor.php:603
+msgid "No Favorite Templates"
+msgstr "No hi fa plantilles favorites"
+
+#: includes/editor.php:602
+msgid "You can mark any pre-designed template as a favorite."
+msgstr "Podeu marcar qualsevol plantilla predissenyada com a una favorita."
+
+#: includes/editor.php:590
+msgid "Import Document Settings"
+msgstr "Importa els paràmetres del document"
+
+#: includes/editor.php:579
+msgid "Show Panel"
+msgstr "Mostra el panell"
+
+#: includes/editor.php:558
+msgid "Dashboard Settings"
+msgstr "Tauler de paràmetres"
+
+#: includes/editor-templates/templates.php:238
+msgid "Select File"
+msgstr "Selecciona el fitxer"
+
+#: includes/editor-templates/templates.php:237
+msgid "or"
+msgstr "o"
+
+#: includes/editor-templates/templates.php:236
+msgid "Drag & drop your .JSON or .zip template file"
+msgstr "Arrossegueu i deixeu anar el fitxer de plantilla amb extensió .JSON o .zip"
+
+#: includes/editor-templates/templates.php:235
+msgid "Import Template to Your Library"
+msgstr "Importa la plantilla a la lliberia"
+
+#: includes/editor-templates/templates.php:226
+#: includes/editor-templates/templates.php:242
+#: includes/editor-templates/templates.php:255 includes/widgets/button.php:138
+#: includes/widgets/button.php:139
+msgid "Click here"
+msgstr "Feu clic aquí"
+
+#: includes/editor-templates/templates.php:225
+#: includes/editor-templates/templates.php:241
+#: includes/editor-templates/templates.php:254
+msgid "Want to learn more about the Elementor library?"
+msgstr "Voleu aprendre més sobre la llibreria de l'Elementor?"
+
+#: includes/editor-templates/templates.php:154
+msgid "Favorite"
+msgstr "Preferit"
+
+#: includes/editor-templates/templates.php:120
+msgid "Creation Date"
+msgstr "Data de creació"
+
+#: includes/editor-templates/templates.php:116
+msgid "Created By"
+msgstr "Creat per"
+
+#: includes/editor-templates/templates.php:101
+msgid "Search"
+msgstr "Cerca"
+
+#: includes/editor-templates/templates.php:92
+msgid "My Favorites"
+msgstr "Els meus favorits"
+
+#: includes/editor-templates/templates.php:70
+msgid "Popular"
+msgstr "Populars"
+
+#: includes/editor-templates/templates.php:68
+msgid "Trend"
+msgstr "Tendència"
+
+#: includes/editor-templates/templates.php:66
+msgid "New"
+msgstr "Nou"
+
+#: includes/editor-templates/templates.php:10
+#: includes/editor-templates/templates.php:11
+msgid "Import Template"
+msgstr "Importa la plantilla"
+
+#: includes/editor-templates/repeater.php:27
+msgid "Remove"
+msgstr "Suprimeix"
+
+#: includes/editor-templates/hotkeys.php:67
+#: includes/editor-templates/repeater.php:21 includes/editor.php:665
+msgid "Duplicate"
+msgstr "Duplica"
+
+#: includes/editor-templates/repeater.php:14
+msgid "Drag & Drop"
+msgstr "Arrossega i deixa anar"
+
+#: includes/editor-templates/panel.php:142
+#: includes/editor-templates/panel.php:143 includes/editor.php:580
+msgid "Hide Panel"
+msgstr "Amaga el panell"
+
+#: includes/editor-templates/panel.php:132 includes/editor.php:672
+msgid "Save as Template"
+msgstr "Desa com a plantilla"
+
+#: includes/editor-templates/panel.php:128
+msgid "Save Draft"
+msgstr "Desa l'esborrany"
+
+#: includes/editor-templates/panel.php:112
+#: includes/editor-templates/panel.php:114
+msgid "Save Options"
+msgstr "Desa les opcions"
+
+#: includes/editor-templates/panel.php:107 includes/editor.php:647
+msgid "Publish"
+msgstr "Publica"
+
+#: includes/editor-templates/panel.php:95
+#: includes/editor-templates/panel.php:98
+msgid "Preview Changes"
+msgstr "Previsualitza els canvis"
+
+#: includes/editor.php:565
+msgid "Exit To Dashboard"
+msgstr "Surt al tauler"
+
+#: includes/editor-templates/panel-elements.php:36
+msgid "Search Widget:"
+msgstr "Cerca un giny:"
+
+#: includes/controls/popover-toggle.php:72
+#: includes/controls/popover-toggle.php:74
+msgid "Back to default"
+msgstr "Torna al predeterminat"
+
+#: includes/controls/groups/typography.php:171
+msgctxt "Typography Control"
+msgid "Line Through"
+msgstr "Línia barrada"
+
+#: includes/controls/groups/typography.php:170
+msgctxt "Typography Control"
+msgid "Overline"
+msgstr "Sobreratllat"
+
+#: includes/controls/groups/typography.php:169
+msgctxt "Typography Control"
+msgid "Underline"
+msgstr "Subratllat"
+
+#: includes/controls/groups/typography.php:164
+msgctxt "Typography Control"
+msgid "Decoration"
+msgstr "Decoració"
+
+#: includes/controls/dimensions.php:128
+msgid "Unlinked values"
+msgstr "Valors sense relacionar"
+
+#: core/admin/admin.php:565
+msgid "Blog"
+msgstr "Blog"
+
+#: core/admin/admin.php:546
+msgid "(opens in a new window)"
+msgstr "(s'obre en una finestra nova)"
+
+#: core/admin/admin.php:527
+msgid "News & Updates"
+msgstr "Novetats i actualitzacions"
+
+#: core/admin/admin.php:516
+msgctxt "Dashboard Overview Widget Recently Date"
+msgid "M jS"
+msgstr "M jS"
+
+#: core/admin/admin.php:510
+msgid "Recently Edited"
+msgstr "Editat recentment"
+
+#: core/admin/admin.php:479
+msgid "Create New Page"
+msgstr "Crea una pàgina nova"
+
+#: core/admin/admin.php:441
+msgid "Elementor Overview"
+msgstr "Vista general de l'Elementor"
+
+#: core/admin/admin.php:384
+msgid "Update Elementor Now"
+msgstr "Actualitza l'Elementor ara"
+
+#: core/document-types/post.php:195
+msgid "Excerpt"
+msgstr "Extracte"
+
+#: modules/history/revisions-manager.php:248
+#: modules/history/revisions-manager.php:280
+#: includes/template-library/sources/local.php:455
+#: includes/template-library/sources/local.php:519
+#: includes/template-library/sources/local.php:648
+msgid "Access denied."
+msgstr "S'ha denegat l'accés."
+
+#: includes/settings/settings.php:429
+msgid "Disable Default Fonts"
+msgstr "Desactiva les fonts predeterminades"
+
+#: includes/elements/column.php:245 includes/widgets/accordion.php:323
+#: includes/widgets/toggle.php:343 includes/widgets/common.php:446
+msgid "End"
+msgstr "Final"
+
+#: includes/elements/column.php:243 includes/widgets/accordion.php:319
+#: includes/widgets/toggle.php:339 includes/widgets/common.php:438
+msgid "Start"
+msgstr "Inici"
+
+#: includes/editor.php:583
+msgid "Type Here"
+msgstr "Escriviu aquí"
+
+#: includes/editor.php:688
+msgid "Reload Page"
+msgstr "Recarrega la pàgina"
+
+#: includes/editor.php:690
+msgid "Your session has expired. Please reload the page to continue editing."
+msgstr "La sessió ha caducat. Recarregueu la pàgina per continuar l'edició."
+
+#: includes/editor.php:689
+msgid "Timeout"
+msgstr "Temps excedit"
+
+#: includes/editor.php:622
+msgid "We're sorry, but something went wrong. Click on 'Learn more' and follow each of the steps to quickly solve it."
+msgstr "Ho sentim, però alguna cosa ha anat malament. Feu clic a 'Aprèn més' i seguiu cadascun dels passos per solucionar-ho ràpidament."
+
+#: includes/editor.php:621
+msgid "The preview could not be loaded"
+msgstr "No s'ha pogut carregar la previsualització"
+
+#: includes/editor.php:559
+msgid "Default Colors"
+msgstr "Colors per defecte"
+
+#: core/admin/admin.php:370
+msgid "Update Notification"
+msgstr "Notificació actualitzada"
+
+#: includes/editor.php:692
+msgid "Unknown Value"
+msgstr "Valor desconegut"
+
+#. Author URI of the plugin
+msgid "https://elementor.com/?utm_source=wp-plugins&utm_campaign=author-uri&utm_medium=wp-dash"
+msgstr "https://elementor.com/?utm_source=wp-plugins&utm_campaign=author-uri&utm_medium=wp-dash"
+
+#. Plugin URI of the plugin
+msgid "https://elementor.com/?utm_source=wp-plugins&utm_campaign=plugin-uri&utm_medium=wp-dash"
+msgstr "https://elementor.com/?utm_source=wp-plugins&utm_campaign=plugin-uri&utm_medium=wp-dash"
+
+#: modules/history/views/history-panel-template.php:23
+msgid "Once you start working, you'll be able to redo / undo any action you make in the editor."
+msgstr "Una vegada comenceu a treballar, podreu fer o desfer qualsevol acció que feu amb l'editor."
+
+#: modules/history/views/history-panel-template.php:22
+msgid "No History Yet"
+msgstr "Sense historial encara"
+
+#: modules/history/views/history-panel-template.php:17
+msgid "Switch to Revisions tab for older versions"
+msgstr "Canvieu a la pestanya de revisions per a versions més antigues"
+
+#: modules/history/views/history-panel-template.php:10
+#: modules/history/views/revisions-panel-template.php:26
+msgid "Revisions"
+msgstr "Revisions"
+
+#: modules/history/views/history-panel-template.php:9
+#: includes/editor-templates/hotkeys.php:14
+#: includes/editor-templates/templates.php:123
+msgid "Actions"
+msgstr "Accions"
+
+#: modules/history/module.php:57
+msgid "Moved"
+msgstr "S'han mogut"
+
+#: modules/history/module.php:54
+msgid "Added"
+msgstr "Afegit"
+
+#: includes/editor.php:687
+msgid "Documentation"
+msgstr "Documentació"
+
+#: modules/history/module.php:52 includes/editor-templates/hotkeys.php:117
+#: includes/editor-templates/panel.php:65
+#: includes/editor-templates/panel.php:67
+msgid "History"
+msgstr "Historial"
+
+#: core/settings/general/model.php:168 includes/widgets/video.php:702
+msgid "UI Hover Color"
+msgstr "Color UI amb el ratolí a sobre"
+
+#: core/settings/general/model.php:161 includes/widgets/video.php:691
+msgid "UI Color"
+msgstr "Color UI"
+
+#: modules/history/module.php:56
+msgid "Edited"
+msgstr "Editat"
+
+#: modules/history/module.php:58
+msgid "Editing Started"
+msgstr "S'ha iniciat l'edició"
+
+#: includes/widgets/video.php:652
+msgctxt "Text Shadow Control"
+msgid "Shadow"
+msgstr "Ombra"
+
+#: includes/widgets/video.php:285
+msgid "Mute"
+msgstr "Desactiva el so"
+
+#: includes/template-library/sources/local.php:881
+msgid "Choose an Elementor template JSON file or a .zip archive of Elementor templates, and add them to the list of templates available in your library."
+msgstr "Trieu un fitxer de plantilla JSON o .zip de les plantilles de l'Elementor, i afegiu-les a la llista de plantilles disponibles a la llibreria."
+
+#: includes/settings/settings.php:553
+msgid "You can customize the lightbox design by going to: Top-left hamburger icon > Global Settings > Lightbox."
+msgstr "Podeu personalitzar el disseny de les transparències anant a: la icona d'hamburguesa de la part superior esquerra > Paràmetres globals > Transparències."
+
+#: includes/controls/groups/text-shadow.php:61
+#: includes/controls/groups/text-shadow.php:85
+msgctxt "Text Shadow Control"
+msgid "Text Shadow"
+msgstr "Ombra del text"
+
+#: core/settings/general/model.php:148
+msgid "Enable In Editor"
+msgstr "Activa a l'editor"
+
+#: core/settings/general/model.php:144 includes/settings/settings.php:552
+msgid "Open all image links in a lightbox popup window. The lightbox will automatically work on any link that leads to an image file."
+msgstr "Obreu tots els enllaços d'imatges en una finestra emergent amb transparències. Les transparències funcionaran automàticament en qualsevol enllaç que apunti a un fitxer d'imatge."
+
+#: core/settings/general/model.php:141 includes/settings/settings.php:547
+msgid "Image Lightbox"
+msgstr "Imatge ligtbox"
+
+#: core/settings/general/model.php:67
+msgid "Global Settings"
+msgstr "Paràmetres globals"
+
+#: includes/settings/tools.php:258
+msgid "Please Note: We do not recommend updating to a beta version on production sites."
+msgstr "Nota: no recomanem actualitzar a versions betes en llocs web en producció."
+
+#: includes/settings/tools.php:250
+msgid "Beta Tester"
+msgstr "Verificadors de beta"
+
+#: includes/settings/tools.php:243
+msgid "Turn-on Beta Tester, to get notified when a new beta version of Elementor or E-Pro is available. The Beta version will not install automatically. You always have the option to ignore it."
+msgstr "Convertiu-vos en provador de betes, per ser notificats quan una versió beta nova de l'Elementor o de l'E-Pro estigui disponible. La versió beta no s'instal·larà automàticament. Teniu sempre l'opció d'ignorar-ho."
+
+#: includes/settings/tools.php:241
+msgid "Become a Beta Tester"
+msgstr "Converteix-te en un verificador de beta"
+
+#: includes/settings/tools.php:235
+msgid "Warning: Please backup your database before making the rollback."
+msgstr "Avís: feu una còpia de seguretat de la base de dades abans de tornar enrere."
+
+#. translators: %s: Elementor previous stable version
+#: includes/settings/tools.php:231
+msgid "Reinstall v%s"
+msgstr "Reinstal·la v%s"
+
+#: includes/settings/tools.php:223
+msgid "Rollback Version"
+msgstr "Torna enrere en la versió"
+
+#. translators: %s: Elementor version
+#: includes/settings/tools.php:214
+msgid "Experiencing an issue with Elementor version %s? Rollback to a previous version before the issue appeared."
+msgstr "Heu experimentat un problema amb la versió %s de l'Elementor? Torneu a una versió anterior abans que aparegui el problema."
+
+#: core/common/modules/finder/categories/tools.php:59
+#: includes/settings/tools.php:207
+msgid "Version Control"
+msgstr "Control de versió"
+
+#: includes/settings/settings.php:582
+msgid "Switch Editor Loader Method"
+msgstr "Canvia el mètode de carregador de l'editor"
+
+#: includes/settings/settings.php:561
+msgid "Integrations"
+msgstr "Integracions"
+
+#: core/settings/general/model.php:113 includes/settings/settings.php:491
+msgid "Sets the default space between widgets (Default: 20)"
+msgstr "Defineix l'amplada entre ginys (predeterminat:20)"
+
+#: includes/settings/settings.php:483
+msgid "Space Between Widgets"
+msgstr "Espai entre els ginys"
+
+#: core/admin/admin.php:738 includes/rollback.php:162
+#: includes/settings/tools.php:115 includes/settings/tools.php:210
+msgid "Rollback to Previous Version"
+msgstr "Tornat a la versió anterior"
+
+#: includes/elements/column.php:877 includes/elements/section.php:1282
+#: includes/widgets/common.php:178
+msgid "Animation Delay"
+msgstr "Retard de l'animació"
+
+#: includes/elements/column.php:777 includes/elements/section.php:1202
+#: includes/widgets/common.php:99
+msgid "Z-Index"
+msgstr "Z-Index"
+
+#: includes/elements/column.php:340 includes/elements/column.php:496
+#: includes/elements/column.php:603 includes/elements/section.php:608
+#: includes/elements/section.php:764 includes/elements/section.php:870
+#: includes/widgets/google-maps.php:226 includes/widgets/image-box.php:315
+#: includes/widgets/image.php:390 includes/widgets/common.php:238
+#: includes/widgets/common.php:342
+msgid "Transition Duration"
+msgstr "Durada de la transició"
+
+#: core/settings/general/model.php:109 includes/elements/column.php:259
+msgid "Widgets Space"
+msgstr "Espai entre els ginys"
+
+#. translators: %s: Column label
+#. translators: %s: Section label
+#: includes/elements/column.php:140 includes/elements/section.php:221
+msgid "Add %s"
+msgstr "Afegeix %s"
+
+#: includes/editor.php:592
+msgid "Attention: Importing may override previous settings."
+msgstr "Atenció: la importació por sobreescriure la configuració prèvia."
+
+#: includes/editor.php:591
+msgid "Do you want to also import the document settings of the template?"
+msgstr "Voleu també importar els paràmetres de document de la plantilla?"
+
+#: includes/controls/url.php:114
+msgid "Add nofollow"
+msgstr "Afegeix nofollow"
+
+#: includes/controls/url.php:110
+msgid "Open in new window"
+msgstr "Obre a una finestra nova"
+
+#: includes/controls/url.php:103
+msgid "Link Options"
+msgstr "Opcions d'enllaç"
+
+#: includes/controls/groups/box-shadow.php:72
+msgctxt "Box Shadow Control"
+msgid "Outline"
+msgstr "Contorn"
+
+#: includes/controls/groups/box-shadow.php:69
+msgctxt "Box Shadow Control"
+msgid "Position"
+msgstr "Posició"
+
+#. translators: %s: Element name.
+#. translators: %s: Section label
+#: includes/editor.php:551 includes/elements/section.php:226
+msgid "Edit %s"
+msgstr "Edita %s"
+
+#. translators: %s: Column label
+#. translators: %s: Widget label
+#: includes/elements/column.php:145 includes/base/widget-base.php:318
+msgid "Remove %s"
+msgstr "Suprimeix %s"
+
+#. translators: %s: Column label
+#. translators: %s: Section label
+#. translators: %s: Widget label
+#: includes/elements/column.php:135 includes/elements/section.php:235
+#: includes/base/widget-base.php:313
+msgid "Duplicate %s"
+msgstr "Duplica %s"
+
+#: includes/base/widget-base.php:300
+msgid "Widget"
+msgstr "Giny"
+
+#: core/admin/admin.php:737
+msgid "Are you sure you want to reinstall previous version?"
+msgstr "Segur que voleu reinstal·lar la versió anterior?"
+
+#. translators: %s: WordPress version
+#: elementor.php:97
+msgid "Elementor requires WordPress version %s+. Because you are using an earlier version, the plugin is currently NOT RUNNING."
+msgstr "L'Elementor necessita una versió %s o superior del WordPress. Com esteu fent servir una versió anterior, l'extensió no està activa actualment."
+
+#: includes/settings/settings.php:578
+msgid "Use internal CSS that is embedded in the head of the page. For troubleshooting server configuration conflicts and managing development environments."
+msgstr "Useu CSS internament que s'incrusta a la capçalera de la pàgina. Per conflictes de configuració del servidor i gestió d'entorns de desenvolupament."
+
+#: includes/settings/settings.php:578
+msgid "Use external CSS files for all generated stylesheets. Choose this setting for better performance (recommended)."
+msgstr "Useu fitxers CSS externs per a tots els fulls d'estil. Trieu aquest paràmetre per a un millor funcionament."
+
+#: includes/settings/settings.php:576
+msgid "Internal Embedding"
+msgstr "Incrustació interna"
+
+#: includes/settings/settings.php:575
+msgid "External File"
+msgstr "Fitxer extern"
+
+#: includes/settings/settings.php:570
+msgid "CSS Print Method"
+msgstr "Mètode d'impressió CSS"
+
+#: includes/settings/settings.php:589
+msgid "For troubleshooting server configuration conflicts."
+msgstr "Per solucionar conflictes de configuració del servidor."
+
+#: modules/safe-mode/module.php:46 core/debug/inspector.php:55
+#: includes/settings/settings.php:587 includes/settings/tools.php:256
+msgid "Enable"
+msgstr "Habilita"
+
+#: modules/safe-mode/module.php:45 core/debug/inspector.php:54
+#: includes/settings/settings.php:586 includes/settings/tools.php:255
+msgid "Disable"
+msgstr "Inhabilita"
+
+#: core/base/document.php:477
+msgid "Status"
+msgstr "Estat"
+
+#: includes/widgets/spacer.php:108 includes/widgets/text-editor.php:328
+msgid "Space"
+msgstr "Espai"
+
+#: includes/widgets/text-editor.php:120 includes/widgets/text-editor.php:243
+msgid "Drop Cap"
+msgstr "Inicial majúscula"
+
+#: core/settings/general/model.php:130 includes/settings/settings.php:513
+msgid "Elementor lets you hide the page title. This works for themes that have \"h1.entry-title\" selector. If your theme's selector is different, please enter it above."
+msgstr "Elementor us permet ocultar el títol de la pàgina. Això funciona en temes que tenen el selector \"h1.entry-title\" activat. Si el selector de la plantilla és diferent, escriu-lo més amunt."
+
+#: core/settings/general/model.php:127 includes/settings/settings.php:506
+msgid "Page Title Selector"
+msgstr "Selector de títol de pàgina"
+
+#: includes/settings/controls.php:156
+#: includes/admin-templates/new-template.php:61
+msgid "Select"
+msgstr "Selecciona"
+
+#: includes/editor-templates/hotkeys.php:51 includes/editor.php:669
+msgid "Paste Style"
+msgstr "Enganxa l'estil"
+
+#: modules/history/module.php:53
+#: core/common/modules/finder/categories/edit.php:115
+msgid "Template"
+msgstr "Plantilla"
+
+#. translators: %s: Setting page link
+#: core/document-types/post.php:118
+msgid "Not working? You can set a different selector for the title in the <a href=\"%s\" target=\"_blank\">Settings page</a>."
+msgstr "No funciona? Podeu posar un selector diferent per al títol en <a href=\"%s\" target=\"_blank\">la pàgina de configuració</a>."
+
+#: core/document-types/post.php:114
+msgid "Hide Title"
+msgstr "Amaga el títol"
+
+#: includes/maintenance-mode.php:269
+msgid "Maintenance Mode ON"
+msgstr "Mode manteniment activat"
+
+#: includes/maintenance-mode.php:238
+msgid "Choose Template"
+msgstr "Tria el tema"
+
+#: includes/maintenance-mode.php:347
+msgid "Select one or go ahead and <a target=\"_blank\" href=\"%s\">create one</a> now."
+msgstr "Seleccioneu un o seguir endavant i <a target=\"_blank\" href=\"%s\"> crear un ara </a>."
+
+#: includes/maintenance-mode.php:346
+msgid "To enable maintenance mode you have to set a template for the maintenance mode page."
+msgstr "Per habilitar el mode de manteniment, heu d'establir una plantilla per a la pàgina de mode de manteniment."
+
+#: includes/maintenance-mode.php:276 includes/maintenance-mode.php:345
+msgid "Edit Template"
+msgstr "Edita el tema"
+
+#: includes/maintenance-mode.php:230
+msgid "Roles"
+msgstr "Rols"
+
+#: includes/maintenance-mode.php:224
+msgid "Logged In"
+msgstr "Connectat"
+
+#: includes/maintenance-mode.php:218
+msgid "Who Can Access"
+msgstr "Qui pot accedir"
+
+#: includes/maintenance-mode.php:213
+msgid "Coming Soon returns HTTP 200 code, meaning the site is ready to be indexed."
+msgstr "Pròximament retorna el codi HTTP 200 i vol dir que el lloc és a punt per ser indexat."
+
+#: includes/maintenance-mode.php:210
+msgid "Maintenance Mode returns HTTP 503 code, so search engines know to come back a short time later. It is not recommended to use this mode for more than a couple of days."
+msgstr "El mode de manteniment retorna el codi HTTP 503, per això els motors de cerca entenen que es dona l'opció de tornar després d'un curt període de temps. No es recomana utilitzar aquest codi per més d'un parell de dies."
+
+#: includes/maintenance-mode.php:207
+msgid "Choose between Coming Soon mode (returning HTTP 200 code) or Maintenance Mode (returning HTTP 503 code)."
+msgstr "Tria entre el mode torna aviat (retorna el codi HTTP 200) o mode de manteniment (retorna el codi HTTP 503)."
+
+#: includes/maintenance-mode.php:204
+msgid "Maintenance"
+msgstr "Manteniment"
+
+#: includes/maintenance-mode.php:203
+msgid "Coming Soon"
+msgstr "Properament"
+
+#: includes/maintenance-mode.php:202
+msgid "Disabled"
+msgstr "Desactivat"
+
+#: includes/maintenance-mode.php:198
+msgid "Choose Mode"
+msgstr "Tria el mode"
+
+#: includes/maintenance-mode.php:194
+msgid "Set your entire website as MAINTENANCE MODE, meaning the site is offline temporarily for maintenance, or set it as COMING SOON mode, meaning the site is offline until it is ready to be launched."
+msgstr "Posar el lloc web en MODE MANTENIMENT vol dir que el lloc estarà fora de servei temporalment per manteniment. Posar el lloc en mode PROPERAMENT vol dir que estarà fora de servei fins que estigui llest per ser publicat."
+
+#: core/common/modules/finder/categories/tools.php:65
+#: includes/maintenance-mode.php:190
+msgid "Maintenance Mode"
+msgstr "Mode de manteniment"
+
+#: includes/elements/section.php:1045
+msgid "Bring to Front"
+msgstr "Porta al davant"
+
+#: core/settings/general/model.php:138 core/settings/general/manager.php:208
+#: includes/widgets/image-gallery.php:156
+#: includes/widgets/image-carousel.php:215 includes/widgets/image.php:216
+#: includes/widgets/video.php:547 includes/widgets/video.php:667
+msgid "Lightbox"
+msgstr "Lightbox"
+
+#: includes/elements/column.php:220 includes/elements/column.php:246
+#: includes/widgets/toggle.php:225 includes/widgets/icon-list.php:189
+msgid "Space Between"
+msgstr "Espai entre"
+
+#: includes/widgets/icon-list.php:181
+msgid "List"
+msgstr "Llista"
+
+#: includes/shapes.php:208
+msgctxt "Shapes"
+msgid "Book"
+msgstr "Llibre"
+
+#: includes/shapes.php:204
+msgctxt "Shapes"
+msgid "Split"
+msgstr "Divisió"
+
+#: includes/shapes.php:200
+msgctxt "Shapes"
+msgid "Arrow"
+msgstr "Fletxa"
+
+#: includes/shapes.php:196
+msgctxt "Shapes"
+msgid "Waves Pattern"
+msgstr "Ondulat"
+
+#: includes/shapes.php:192
+msgctxt "Shapes"
+msgid "Waves Brush"
+msgstr "Ones pinzellades"
+
+#: includes/shapes.php:187
+msgctxt "Shapes"
+msgid "Waves"
+msgstr "Ones"
+
+#: includes/shapes.php:182
+msgctxt "Shapes"
+msgid "Curve Asymmetrical"
+msgstr "Corba asimètrica"
+
+#: includes/shapes.php:178
+msgctxt "Shapes"
+msgid "Curve"
+msgstr "Corba"
+
+#: includes/shapes.php:175
+msgctxt "Shapes"
+msgid "Fan Opacity"
+msgstr "Ventall amb opacitats"
+
+#: includes/shapes.php:171
+msgctxt "Shapes"
+msgid "Tilt Opacity"
+msgstr "Inclinació amb opacitats"
+
+#: includes/shapes.php:166
+msgctxt "Shapes"
+msgid "Tilt"
+msgstr "Inclinació"
+
+#: includes/shapes.php:161
+msgctxt "Shapes"
+msgid "Triangle Asymmetrical"
+msgstr "Triangle asimètric"
+
+#: includes/shapes.php:157
+msgctxt "Shapes"
+msgid "Triangle"
+msgstr "Triangle"
+
+#: includes/shapes.php:152
+msgctxt "Shapes"
+msgid "Pyramids"
+msgstr "Piràmides"
+
+#: includes/shapes.php:149
+msgctxt "Shapes"
+msgid "Zigzag"
+msgstr "Ziga-zaga"
+
+#: includes/shapes.php:143
+msgctxt "Shapes"
+msgid "Clouds"
+msgstr "Núvols"
+
+#: includes/shapes.php:137
+msgctxt "Shapes"
+msgid "Drops"
+msgstr "Gotes"
+
+#: includes/shapes.php:133
+msgctxt "Shapes"
+msgid "Mountains"
+msgstr "Muntanyes"
+
+#: includes/elements/section.php:1032
+msgid "Invert"
+msgstr "Inverteix"
+
+#: includes/elements/section.php:1018
+msgid "Flip"
+msgstr "Volteja"
+
+#: includes/elements/section.php:914
+msgid "Shape Divider"
+msgstr "Divisor de forma"
+
+#: includes/elements/column.php:658 includes/elements/section.php:1077
+msgid "Note: The following colors won't work if Default Colors are enabled."
+msgstr "Nota: els següents colors no funcionaran si els colors predeterminats estan habilitats."
+
+#: includes/widgets/tabs.php:171
+msgid "Navigation Width"
+msgstr "Ample de la barra de navegació"
+
+#: includes/elements/column.php:325 includes/elements/column.php:450
+#: includes/elements/column.php:568 includes/elements/section.php:593
+#: includes/elements/section.php:718 includes/elements/section.php:835
+#: includes/widgets/icon.php:241 includes/widgets/google-maps.php:211
+#: includes/widgets/image-box.php:336 includes/widgets/image.php:357
+#: includes/widgets/icon-list.php:385 includes/widgets/icon-list.php:443
+#: includes/widgets/icon-box.php:285 includes/widgets/common.php:223
+#: includes/widgets/common.php:307 includes/widgets/button.php:329
+msgid "Hover"
+msgstr "En passar per sobre"
+
+#: includes/elements/column.php:796 includes/elements/section.php:1221
+#: includes/widgets/common.php:119 includes/widgets/button.php:261
+msgid "Add your custom id WITHOUT the Pound key. e.g: my-id"
+msgstr "Afegiu el vostre  identificador personalitzat SENSE el símbol del coixinet (#). Ex.: el meu-identificador"
+
+#: includes/elements/column.php:790 includes/elements/section.php:1215
+#: includes/widgets/common.php:113
+msgid "CSS ID"
+msgstr "Identificador de CSS"
+
+#: includes/controls/groups/background.php:196
+msgctxt "Background Control"
+msgid "Angle"
+msgstr "Angle"
+
+#: includes/controls/groups/background.php:185
+msgctxt "Background Control"
+msgid "Radial"
+msgstr "Radial"
+
+#: includes/controls/groups/background.php:184
+msgctxt "Background Control"
+msgid "Linear"
+msgstr "Lineal"
+
+#: includes/controls/groups/background.php:181
+msgctxt "Background Control"
+msgid "Type"
+msgstr "Tipus"
+
+#: includes/controls/groups/background.php:155
+msgctxt "Background Control"
+msgid "Second Color"
+msgstr "Segon color"
+
+#: includes/controls/groups/background.php:140
+#: includes/controls/groups/background.php:166
+msgctxt "Background Control"
+msgid "Location"
+msgstr "Ubicació"
+
+#: includes/controls/groups/background.php:96
+msgctxt "Background Control"
+msgid "Gradient"
+msgstr "Degradat"
+
+#: includes/settings/settings.php:433
+msgid "Checking this box will disable Elementor's Default Fonts, and make Elementor inherit the fonts from your theme."
+msgstr "En marcar aquesta casella deshabilitareu les tipografies predeterminades d'Elementor, i això farà que s'hereten els tipus de lletra del tema."
+
+#: includes/settings/settings.php:425
+msgid "Checking this box will disable Elementor's Default Colors, and make Elementor inherit the colors from your theme."
+msgstr "En marcar aquesta casella deshabilitareu els colors predeterminats de l'Elementor, i fareu que l'Elementor hereti els colors del tema."
+
+#: core/admin/admin.php:297
+msgid "Video Tutorials"
+msgstr "Vídeo tutorials"
+
+#: core/admin/admin.php:297
+msgid "View Elementor Video Tutorials"
+msgstr "Mostra els vídeo tutorials de l'Elementor"
+
+#: core/admin/admin.php:296
+msgid "Docs & FAQs"
+msgstr "Documents i preguntes freqüents"
+
+#: core/admin/admin.php:296
+msgid "View Elementor Documentation"
+msgstr "Mostra la documentació de l'Elementor"
+
+#: includes/utils.php:218
+msgid "The `from` and `to` URL's must be different"
+msgstr "Els URL `De` i `A` han de ser diferents"
+
+#: includes/utils.php:223
+msgid "The `from` and `to` URL's must be valid URL's"
+msgstr "Els URL `De` i `A` han de ser vàlids"
+
+#: includes/settings/tools.php:199
+msgid "Enter your old and new URLs for your WordPress installation, to update all Elementor data (Relevant for domain transfers or move to 'HTTPS')."
+msgstr "Introdueix els URLs antics i nous de la instal·lació del WordPress, per actualitzar totes les dades de l'Elementor (rellevant per a la transferència de dominis o per moure a 'HTTPS')."
+
+#: includes/settings/tools.php:195
+msgid "Update Site Address (URL)"
+msgstr "Actualitza l'adreça del lloc (URL)"
+
+#. translators: %s: Codex URL
+#: includes/settings/tools.php:186
+msgid "<strong>Important:</strong> It is strongly recommended that you <a target=\"_blank\" href=\"%s\">backup your database</a> before using Replace URL."
+msgstr "<strong>Important:</strong> és molt recomanable que feu <a target=\"_blank\" href=\"%s\">una còpia de la base de dades</a> abans de fer servir la substitució d'URL."
+
+#: core/common/modules/finder/categories/tools.php:53
+#: includes/settings/tools.php:180 includes/settings/tools.php:198
+msgid "Replace URL"
+msgstr "Reemplaça l'URL"
+
+#. translators: 1: Minimum recommended_memory, 2: Codex URL
+#: includes/settings/system-info/classes/wordpress.php:91
+msgctxt "System Info"
+msgid "We recommend setting memory to at least %1$s. For more information, read about <a href=\"%2$s\">how to Increase memory allocated to PHP</a>."
+msgstr "Recomanem una memòria d'almenys %1$s. Per més informació, llegiu sobre <a href=\"%2$s\">com incrementar la memòria assignada al PHP</a>."
+
+#: modules/history/revisions-manager.php:286
+msgid "Cannot delete this revision."
+msgstr "No es pot eliminar aquesta revisió."
+
+#. translators: 1: Human readable time difference, 2: Date
+#: modules/history/revisions-manager.php:171
+msgid "%1$s ago (%2$s)"
+msgstr "fa %1$s (%2$s)"
+
+#: modules/history/revisions-manager.php:146
+msgctxt "revision date format"
+msgid "M j @ H:i"
+msgstr "M j @ H:i"
+
+#: includes/editor.php:686
+msgid "Autosave"
+msgstr "Desa automàticament"
+
+#: modules/history/revisions-manager.php:377
+msgid "Revision"
+msgstr "Revisió"
+
+#. translators: %s: Codex URL
+#: modules/history/revisions-manager.php:382
+msgid "Learn more about <a target=\"_blank\" href=\"%s\">WordPress revisions</a>"
+msgstr "Aprèn més sobre <a target=\"_blank\" href=\"%s\">les revisions del WordPress</a>"
+
+#: modules/history/revisions-manager.php:379
+msgid "It looks like the post revision feature is unavailable in your website."
+msgstr "Sembla que la funcionalitat de revisió d'entrades no està disponible."
+
+#: modules/history/revisions-manager.php:372
+msgid "Start designing your page and you'll be able to see the entire revision history here."
+msgstr "Comenceu a dissenyar la pàgina i podreu veure l'historial sencer de revisions aquí mateix."
+
+#: modules/history/revisions-manager.php:371
+msgid "Revision history lets you save your previous versions of your work, and restore them any time."
+msgstr "L'historial de revisions us permet desar les versions prèvies del vostre treball, i restaurar-les en qualsevol moment."
+
+#: modules/history/views/revisions-panel-template.php:48
+msgid "By"
+msgstr "Per"
+
+#: modules/history/views/revisions-panel-template.php:34
+msgid "No Revisions Saved Yet"
+msgstr "Encara no hi ha revisions guardades"
+
+#: includes/widgets/counter.php:155
+msgid "Thousand Separator"
+msgstr "Separador de milers"
+
+#: includes/controls/groups/background.php:266
+#: includes/controls/groups/background.php:425
+#: includes/controls/groups/background.php:456
+#: includes/controls/groups/background.php:477
+msgctxt "Background Control"
+msgid "Default"
+msgstr "Per defecte"
+
+#: includes/managers/controls.php:884
+msgid "Custom CSS lets you add CSS code to any widget, and see it render live right in the editor."
+msgstr "El CSS personalitzat us permet afegir codi CSS a qualsevol giny, i veure el seu resultat en viu a la dreta en l'editor."
+
+#: includes/managers/controls.php:881
+msgid "Meet Our Custom CSS"
+msgstr "Coneixeu el nostre CSS personalitzat"
+
+#: includes/managers/controls.php:869
+msgid "Custom CSS"
+msgstr "CSS personalitzat"
+
+#: includes/managers/controls.php:887
+#: includes/editor-templates/panel-elements.php:57
+msgid "This feature is only available on Elementor Pro."
+msgstr "Aquesta funcionalitat està únicament disponible amb l'Elementor Pro."
+
+#: includes/editor-templates/panel-elements.php:56
+msgid "With this feature, you can save a widget as global, then add it to multiple areas. All areas will be editable from one single place."
+msgstr "Amb aquesta funcionalitat, podeu guardar un giny a nivell global, i després afegir-l'ho a múltiples àrees. Totes les àrees seran editables des d'un únic lloc."
+
+#: includes/editor-templates/panel-elements.php:55
+msgid "Meet Our Global Widget"
+msgstr "Coneixeu el nostre giny global"
+
+#: core/admin/admin.php:271 core/admin/admin.php:576
+#: core/role-manager/role-manager.php:168 includes/managers/controls.php:890
+#: includes/editor-templates/templates.php:203
+#: includes/editor-templates/panel-elements.php:26
+#: includes/editor-templates/panel-elements.php:58
+#: includes/settings/settings.php:144 includes/settings/settings.php:281
+#: includes/settings/settings.php:302 includes/settings/settings.php:323
+msgid "Go Pro"
+msgstr "Go Pro"
+
+#: includes/editor-templates/panel-elements.php:25
+msgid "Get more with Elementor Pro"
+msgstr "Aconsegueix més amb Elementor Pro"
+
+#: includes/editor-templates/panel-elements.php:14
+msgid "Global"
+msgstr "Global"
+
+#: includes/widgets/text-editor.php:122 includes/widgets/icon-list.php:235
+#: includes/widgets/video.php:550
+msgid "Off"
+msgstr "Desactivat"
+
+#: includes/widgets/text-editor.php:123 includes/widgets/icon-list.php:236
+#: includes/widgets/video.php:551
+msgid "On"
+msgstr "Activat"
+
+#: includes/widgets/button.php:93
+msgid "Extra Large"
+msgstr "Extra gran"
+
+#: includes/widgets/button.php:89
+msgid "Extra Small"
+msgstr "Extra petit"
+
+#: includes/settings/tools.php:164
+msgid "Styles set in Elementor are saved in CSS files in the uploads folder. Recreate those files, according to the most recent settings."
+msgstr "Els estils configurats en l'Elementor són guardats en fitxers CSS a la carpeta de pujades. Recreeu aquests fitxers d'acord als paràmetres més recents."
+
+#: includes/settings/tools.php:163
+msgid "Regenerate Files"
+msgstr "Regenera els fitxers"
+
+#: includes/settings/tools.php:160
+msgid "Regenerate CSS"
+msgstr "Regenera els CSS"
+
+#: includes/settings/settings.php:439
+msgid "Improve Elementor"
+msgstr "Millora l'Elementor"
+
+#: includes/frontend.php:926
+msgid "Invalid Data: The Template ID cannot be the same as the currently edited template. Please choose a different one."
+msgstr "Dades incorrectes: l'identificador de la plantilla no pot ser el mateix que el de la plantilla editada actualment. Trieu un de diferent."
+
+#: includes/base/widget-base.php:268 includes/base/widget-base.php:277
+msgid "Skin"
+msgstr "Aparença"
+
+#: includes/schemes/color-picker.php:66
+msgid "Choose which colors appear in the editor's color picker. This makes accessing the colors you chose for the site much easier."
+msgstr "Trieu quins colors apareixeran al selector de colors de l'editor. Això fa que accediu als colors que trieu per al lloc web més fàcilment."
+
+#: includes/editor.php:572
+msgid "Descending order"
+msgstr "Ordre descendent"
+
+#: includes/editor.php:571
+msgid "Ascending order"
+msgstr "Ordre ascendent"
+
+#: includes/editor.php:576
+msgid "Attention: We are going to DELETE ALL CONTENT from this page. Are you sure you want to do that?"
+msgstr "Atenció: anem a ELIMINAR TOT EL CONTINGUT d'aquesta pàgina. Esteu segur que voleu fer això?"
+
+#: includes/editor.php:575 includes/editor.php:675
+msgid "Delete All Content"
+msgstr "Suprimeix tot el contingut"
+
+#: includes/editor-templates/panel.php:172
+msgid "%s are disabled"
+msgstr "%s estan desactivats"
+
+#: includes/editor-templates/panel.php:161
+msgid "Update changes to page"
+msgstr "Actualitza els canvis a la pàgina"
+
+#: includes/schemes/color-picker.php:228 includes/editor.php:557
+msgid "Color Picker"
+msgstr "Selector de color"
+
+#: includes/tracker.php:291
+msgid "No thanks"
+msgstr "No, gràcies"
+
+#: core/settings/general/model.php:122 includes/settings/settings.php:502
+msgid "Enter parent element selector to which stretched sections will fit to (e.g. #primary / .wrapper / main etc). Leave blank to fit to page width."
+msgstr "Introduïu el selector d’element pare al qual s’adaptaran les seccions estirades (per exemple, #Primary / .wrapper / main etc). Deixeu en blanc per ajustar-se a l'amplada de la pàgina."
+
+#: core/settings/general/model.php:119 includes/settings/settings.php:495
+msgid "Stretched Section Fit To"
+msgstr "Ajust de la secció ampliada"
+
+#: core/settings/general/model.php:103 includes/settings/settings.php:479
+msgid "Sets the default width of the content area (Default: 1140)"
+msgstr "Defineix l'amplada predeterminada de l'àrea de contingut (predeterminat: 1140)"
+
+#: includes/elements/section.php:312
+msgid "Stretch the section to the full width of the page using JS."
+msgstr "Amplieu la secció a l'amplada completa de la pàgina fent servir JS."
+
+#: includes/elements/section.php:306
+msgid "Stretch Section"
+msgstr "Estira la secció"
+
+#: includes/controls/groups/background.php:584
+msgid "This cover image will replace the background video on mobile and tablet devices."
+msgstr "Aquest imatge reemplaçarà el fons del vídeo en dispositius mòbils i tauletes."
+
+#: includes/elements/section.php:312 includes/settings/settings.php:447
+#: includes/tracker.php:289
+msgid "Learn more."
+msgstr "Aprèn més."
+
+#: includes/elements/section.php:1309 includes/elements/section.php:1320
+msgid "Reverse Columns"
+msgstr "Inverteix les columnes"
+
+#: includes/editor-templates/panel.php:89 includes/elements/section.php:1320
+msgid "Mobile"
+msgstr "Mòbil"
+
+#: includes/editor-templates/panel.php:79
+msgid "Default Preview"
+msgstr "Vista prèvia predeterminada"
+
+#: includes/controls/dimensions.php:121 includes/controls/dimensions.php:124
+msgid "Link values together"
+msgstr "Enllaça els valors junts"
+
+#: includes/widgets/shortcode.php:42 includes/widgets/shortcode.php:99
+msgid "Shortcode"
+msgstr "Codi"
+
+#: includes/template-library/sources/remote.php:46
+msgid "Remote"
+msgstr "Remot"
+
+#: includes/template-library/sources/local.php:888
+msgid "Import Now"
+msgstr "Importa"
+
+#: includes/template-library/sources/local.php:879
+msgid "Import Templates"
+msgstr "Importa les plantilles"
+
+#: includes/template-library/sources/local.php:851
+msgid "Export Template"
+msgstr "Exporta la plantilla"
+
+#: includes/template-library/sources/local.php:459
+msgid "(no title)"
+msgstr "(sense títol)"
+
+#: includes/template-library/sources/local.php:269
+msgctxt "Template Library"
+msgid "Type"
+msgstr "Tipus"
+
+#: includes/template-library/sources/local.php:229
+msgctxt "Template Library"
+msgid "No Templates found in Trash"
+msgstr "No s'han trobat plantilles a la paperera"
+
+#: includes/template-library/sources/local.php:228
+msgctxt "Template Library"
+msgid "No Templates found"
+msgstr "No s'han trobat plantilles"
+
+#: includes/template-library/sources/local.php:227
+msgctxt "Template Library"
+msgid "Search Template"
+msgstr "Cerca una plantilla"
+
+#: includes/template-library/sources/local.php:226
+msgctxt "Template Library"
+msgid "View Template"
+msgstr "Mostra la plantilla"
+
+#: includes/template-library/sources/local.php:225
+msgctxt "Template Library"
+msgid "All Templates"
+msgstr "Totes les plantilles"
+
+#: includes/template-library/sources/local.php:224
+msgctxt "Template Library"
+msgid "New Template"
+msgstr "Plantilla nova"
+
+#: includes/template-library/sources/local.php:223
+msgctxt "Template Library"
+msgid "Edit Template"
+msgstr "Edita la plantilla"
+
+#: includes/template-library/sources/local.php:222
+msgctxt "Template Library"
+msgid "Add New Template"
+msgstr "Afegeix"
+
+#: includes/template-library/sources/local.php:221
+msgctxt "Template Library"
+msgid "Add New"
+msgstr "Afegeix"
+
+#: includes/template-library/sources/local.php:220
+msgctxt "Template Library"
+msgid "Template"
+msgstr "Plantilla"
+
+#: includes/template-library/sources/local.php:201
+msgid "Local"
+msgstr "Local"
+
+#: includes/settings/tools.php:172
+msgid "Elementor Library automatically updates on a daily basis. You can also manually update it by clicking on the sync button."
+msgstr "La biblioteca Elementor s'actualitza automàticament cada dia. També podeu actualitzar-lo manualment fent clic al botó de sincronització."
+
+#: includes/editor-templates/templates.php:14
+#: includes/editor-templates/templates.php:15 includes/settings/tools.php:168
+#: includes/settings/tools.php:171
+msgid "Sync Library"
+msgstr "Sincronitza la llibreria"
+
+#: core/common/modules/finder/categories/tools.php:29
+#: core/common/modules/finder/categories/tools.php:47
+#: includes/settings/tools.php:36 includes/settings/tools.php:37
+#: includes/settings/tools.php:279
+msgid "Tools"
+msgstr "Eines"
+
+#: includes/editor.php:589
+msgid "Are you sure you want to delete this template?"
+msgstr "Segur que voleu suprimir aquesta plantilla?"
+
+#: includes/editor.php:588
+msgid "Delete Template"
+msgstr "Suprimeix la plantilla"
+
+#: modules/library/documents/page.php:65 core/document-types/post.php:64
+#: includes/editor.php:595
+msgid "Page"
+msgstr "Pàgina"
+
+#. translators: %s: Template type.
+#: includes/editor.php:597
+msgid "Save Your %s to Library"
+msgstr "Desa %s a la llibreria"
+
+#: includes/editor.php:606
+msgid "The following error(s) occurred while processing the request:"
+msgstr "S'han produït el següent(s) error(s) en processar la sol·licitud:"
+
+#: includes/editor.php:586 includes/utils.php:236
+msgid "An error occurred"
+msgstr "S'ha produït un error"
+
+#: includes/editor.php:600
+msgid "This is where your templates should be. Design it. Save it. Reuse it."
+msgstr "Aquí és on han d'estar les plantilles. Dissenyeu-les. Deseu-les. Reutilitzeu-les."
+
+#: includes/editor.php:601
+msgid "Haven’t Saved Templates Yet?"
+msgstr "Encara no has desat les plantilles?"
+
+#: includes/editor-templates/templates.php:216
+msgid "Enter Template Name"
+msgstr "Introdueix el nom de la plantilla"
+
+#: includes/editor.php:598
+msgid "Your designs will be available for export and reuse on any page or website"
+msgstr "Els dissenys estaran disponibles per exportar i reutilitzar en qualsevol pàgina o web"
+
+#: includes/template-library/sources/local.php:1066
+#: includes/editor-templates/templates.php:186
+msgid "Export"
+msgstr "Exporta"
+
+#: includes/editor-templates/templates.php:131
+msgid "Stay tuned! More awesome templates coming real soon."
+msgstr "Esteu al lloro! Més plantilles meravelloses es faran realitat aviat."
+
+#: includes/editor-templates/templates.php:37
+msgid "Back to Library"
+msgstr "Torna a la llibreria"
+
+#: includes/editor-templates/templates.php:172
+#: includes/editor-templates/templates.php:196
+msgid "Insert"
+msgstr "Insereix"
+
+#: includes/editor.php:610
+msgid "My Templates"
+msgstr "Plantilles"
+
+#: includes/editor.php:593
+msgid "Library"
+msgstr "Mediateca"
+
+#: includes/editor-templates/library-layout.php:15
+#: includes/editor-templates/library-layout.php:16
+#: includes/editor-templates/global.php:22
+msgid "Close"
+msgstr "Tanca"
+
+#: includes/template-library/sources/local.php:364
+#: includes/template-library/sources/local.php:1561
+msgid "Saved Templates"
+msgstr "Plantilles desades"
+
+#: includes/editor-templates/hotkeys.php:135
+msgid "Template Library"
+msgstr "Biblioteca de plantilles"
+
+#: includes/editor-templates/global.php:34
+msgid "Select your Structure"
+msgstr "Seleccioneu l'estructura"
+
+#: includes/editor-templates/global.php:28
+msgid "Add Template"
+msgstr "Afegeix"
+
+#. translators: %s: Codex URL
+#: includes/settings/system-info/classes/theme.php:192
+msgctxt "System Info"
+msgid "If you want to modify the source code of your theme, we recommend using a <a href=\"%s\">child theme</a>."
+msgstr "Si voleu modificar el codi font del tema, recomanem fer servir un <a href=\"%s\">tema fill</a>."
+
+#: modules/safe-mode/mu-plugin/elementor-safe-mode.php:88
+#: modules/safe-mode/module.php:340 includes/editor.php:618
+msgid "Learn More"
+msgstr "Aprèn més"
+
+#: includes/widgets/icon.php:277 includes/widgets/image-box.php:273
+#: includes/widgets/image.php:407 includes/widgets/icon-box.php:321
+#: includes/widgets/social-icons.php:435 includes/widgets/button.php:372
+msgid "Hover Animation"
+msgstr "Animació en passar el ratolí"
+
+#: includes/controls/groups/background.php:480
+msgctxt "Background Control"
+msgid "Contain"
+msgstr "Contén"
+
+#: includes/widgets/google-maps.php:163
+msgid "Prevent Scroll"
+msgstr "Impedeix el desplaçament"
+
+#: includes/elements/column.php:865 includes/elements/section.php:1270
+#: includes/widgets/common.php:166
+msgid "Fast"
+msgstr "Ràpid"
+
+#: includes/elements/column.php:863 includes/elements/section.php:1268
+#: includes/widgets/common.php:164
+msgid "Slow"
+msgstr "Lent"
+
+#: core/admin/feedback.php:82
+msgid "Submit & Deactivate"
+msgstr "Enviar i desactivar"
+
+#: includes/settings/settings.php:421
+msgid "Disable Default Colors"
+msgstr "Desactiva els colors predeterminades"
+
+#: includes/schemes/typography.php:78 includes/editor.php:560
+msgid "Default Fonts"
+msgstr "Fonts predeterminades"
+
+#: includes/schemes/color.php:78
+msgid "Color Palettes"
+msgstr "Paletes de color"
+
+#: includes/elements/column.php:850 includes/elements/section.php:1255
+#: includes/widgets/common.php:151 includes/widgets/video.php:752
+msgid "Entrance Animation"
+msgstr "Animació d'entrada"
+
+#: includes/editor-templates/panel.php:173
+msgid "You can enable it from the <a href=\"%s\" target=\"_blank\">Elementor settings page</a>."
+msgstr "Podeu activar-ho des de la <a href=\"%s\" target=\"_blank\">pàgina de configuració de l'Elementor</a>."
+
+#: includes/controls/groups/box-shadow.php:73
+msgctxt "Box Shadow Control"
+msgid "Inset"
+msgstr "Inserció"
+
+#: includes/controls/groups/box-shadow.php:61
+#: includes/controls/groups/box-shadow.php:96
+msgctxt "Box Shadow Control"
+msgid "Box Shadow"
+msgstr "Ombra de la caixa"
+
+#: includes/controls/box-shadow.php:73 includes/controls/text-shadow.php:76
+#: includes/widgets/tabs.php:151
+msgid "Vertical"
+msgstr "Vertical"
+
+#: includes/controls/box-shadow.php:68 includes/controls/text-shadow.php:71
+#: includes/widgets/tabs.php:150
+msgid "Horizontal"
+msgstr "Horitzontal"
+
+#: includes/controls/box-shadow.php:83
+msgid "Spread"
+msgstr "Escampament"
+
+#: includes/controls/box-shadow.php:78 includes/controls/text-shadow.php:66
+msgid "Blur"
+msgstr "Difuminació"
+
+#: core/admin/feedback.php:83
+msgid "Skip & Deactivate"
+msgstr "Salta i desactiva"
+
+#: includes/widgets/testimonial.php:168
+msgid "Aside"
+msgstr "Anotació"
+
+#: includes/widgets/testimonial.php:42 includes/widgets/testimonial.php:85
+msgid "Testimonial"
+msgstr "Testimoni"
+
+#: includes/widgets/social-icons.php:260
+msgid "Official Color"
+msgstr "Color oficial"
+
+#: includes/widgets/social-icons.php:200
+msgid "Rounded"
+msgstr "Arrodonit"
+
+#: includes/widgets/social-icons.php:42 includes/widgets/social-icons.php:85
+#: includes/widgets/social-icons.php:175
+msgid "Social Icons"
+msgstr "Icones socials"
+
+#: includes/widgets/progress.php:98
+msgid "My Skill"
+msgstr "El meu perfil"
+
+#: includes/widgets/audio.php:232
+msgid "Username"
+msgstr "Nom d'usuari"
+
+#: includes/widgets/audio.php:221
+msgid "Play Counts"
+msgstr "Comptador"
+
+#: includes/widgets/audio.php:210
+msgid "Comments"
+msgstr "Comentaris"
+
+#: includes/widgets/audio.php:199
+msgid "Share Button"
+msgstr "Botó per compartir"
+
+#: includes/widgets/audio.php:174 includes/widgets/video.php:441
+msgid "Download Button"
+msgstr "Botó de descàrrega"
+
+#: includes/widgets/audio.php:163
+msgid "Like Button"
+msgstr "Botó de m'agrada"
+
+#: includes/widgets/audio.php:152
+msgid "Buy Button"
+msgstr "Botó de compra"
+
+#: includes/widgets/audio.php:122
+msgid "Visual Player"
+msgstr "Reproductor visual"
+
+#: includes/widgets/audio.php:53 includes/widgets/audio.php:96
+msgid "SoundCloud"
+msgstr "SoundCloud"
+
+#: includes/elements/column.php:366 includes/elements/section.php:634
+msgid "Background Overlay"
+msgstr "Capa de fons"
+
+#: includes/elements/section.php:364
+msgid "Extended"
+msgstr "Estès"
+
+#: core/admin/feedback.php:139
+msgid "If you have a moment, please share why you are deactivating Elementor:"
+msgstr "Si teniu un moment, compartiu per què esteu desactivant l'Elementor:"
+
+#: core/admin/feedback.php:131
+msgid "Quick Feedback"
+msgstr "Resposta ràpida"
+
+#: core/admin/feedback.php:123
+msgid "Please share the reason"
+msgstr "Comparteix la raó"
+
+#: core/admin/feedback.php:122
+msgid "Other"
+msgstr "Un altre"
+
+#: core/admin/feedback.php:113
+msgid "It's a temporary deactivation"
+msgstr "Aquesta és una desactivació temporal"
+
+#: core/admin/feedback.php:109
+msgid "I couldn't get the plugin to work"
+msgstr "No he pogut fer que l'extensió funcioni"
+
+#: core/admin/feedback.php:106
+msgid "Please share which plugin"
+msgstr "Comparteix quina extensió"
+
+#: core/admin/feedback.php:105
+msgid "I found a better plugin"
+msgstr "He trobat una extensió millor"
+
+#: core/admin/feedback.php:101
+msgid "I no longer need the plugin"
+msgstr "No necessito aquesta extensió"
+
+#: core/admin/admin.php:392 core/base/db-upgrades-manager.php:76
+msgid "Update Now"
+msgstr "Actualitza ara"
+
+#. translators: %s: Elementor version
+#: core/admin/admin.php:379
+msgid "View Elementor version %s details"
+msgstr "Mostra els detall de la versió %s de l'Elementor"
+
+#. translators: 1: Details URL, 2: Accessibility text, 3: Version number, 4:
+#. Update URL, 5: Accessibility text
+#: core/admin/admin.php:375
+msgid "There is a new version of Elementor Page Builder available. <a href=\"%1$s\" class=\"thickbox open-plugin-details-modal\" aria-label=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s\" class=\"update-link\" aria-label=\"%5$s\">update now</a>."
+msgstr "Hi ha una versió nova disponible del constructor de pàgines Elementor. <a href=\"%1$s\" class=\"thickbox open-plugin-details-modal\" aria-label=\"%2$s\">Mostra els detalls de la versió %3$s</a> o <a href=\"%4$s\" class=\"update-link\" aria-label=\"%5$s\">actualitza ara</a>."
+
+#: includes/widgets/image-carousel.php:194 includes/widgets/image.php:192
+msgid "Custom URL"
+msgstr "URL personalitzat"
+
+#: includes/editor-templates/hotkeys.php:43 includes/editor.php:667
+msgid "Paste"
+msgstr "Enganxa"
+
+#: includes/elements/column.php:298 includes/elements/section.php:552
+#: includes/widgets/accordion.php:240 includes/widgets/accordion.php:398
+#: includes/widgets/toggle.php:260 includes/widgets/toggle.php:418
+#: includes/widgets/common.php:196
+msgid "Background"
+msgstr "Fons"
+
+#: includes/elements/section.php:366
+msgid "Wider"
+msgstr "Més ample"
+
+#: core/common/modules/finder/categories/general.php:28
+#: core/role-manager/role-manager.php:57 includes/managers/elements.php:338
+#: includes/settings/settings.php:400 includes/settings/tools.php:155
+msgid "General"
+msgstr "General"
+
+#: includes/widgets/video.php:427
+msgid "Intro Byline"
+msgstr "Text d'introducció"
+
+#: includes/widgets/image-gallery.php:205 includes/widgets/star-rating.php:273
+#: includes/widgets/accordion.php:367 includes/widgets/image-carousel.php:505
+#: includes/widgets/image-box.php:222 includes/widgets/image-box.php:436
+#: includes/widgets/image.php:538 includes/widgets/toggle.php:387
+#: includes/widgets/icon-box.php:333 includes/widgets/icon-box.php:500
+#: includes/widgets/social-icons.php:342
+msgid "Spacing"
+msgstr "Espaiat"
+
+#: includes/widgets/image-carousel.php:388
+#: includes/widgets/image-carousel.php:449
+msgid "Outside"
+msgstr "Fora"
+
+#: includes/widgets/image-carousel.php:387
+#: includes/widgets/image-carousel.php:450
+msgid "Inside"
+msgstr "Dins"
+
+#: includes/widgets/image-carousel.php:344
+msgid "Direction"
+msgstr "Direcció"
+
+#: includes/widgets/image-carousel.php:258 includes/widgets/audio.php:135
+msgid "Additional Options"
+msgstr "Opcions adicionals"
+
+#: includes/widgets/image-carousel.php:176
+msgid "Arrows and Dots"
+msgstr "Fletxes i punts"
+
+#: includes/widgets/alert.php:186
+msgid "Left Border Width"
+msgstr "Amplada de la vora esquerra"
+
+#: includes/elements/column.php:859 includes/elements/section.php:1264
+#: includes/widgets/common.php:160 includes/widgets/counter.php:144
+msgid "Animation Duration"
+msgstr "Durada de l'animació"
+
+#: includes/widgets/image-carousel.php:159
+msgid "Image Stretch"
+msgstr "Estirament d'imatge"
+
+#: includes/widgets/image-carousel.php:43
+#: includes/widgets/image-carousel.php:100
+msgid "Image Carousel"
+msgstr "Carrusel d'imatges"
+
+#: includes/widgets/image-carousel.php:334
+msgid "Animation Speed"
+msgstr "Velocitat de l'animació"
+
+#: includes/controls/groups/image-size.php:276
+msgid "You can crop the original image size to any custom size. You can also set a single value for height or width in order to keep the original size ratio."
+msgstr "Podeu escapçar la mida de la imatge original a qualsevol altra. Podeu també definir un valor en particular de l'alçada o amplada per mantenir la ràtio de la mida original."
+
+#: includes/editor.php:620
+msgid "You must call 'the_content' function in the current template, in order for Elementor to work on this page."
+msgstr "Heu de fer una crida a la funció 'the_content' en la plantilla actual, perquè funcioni l'Elementor en aquesta pàgina."
+
+#: includes/editor.php:619
+msgid "Sorry, the content area was not found in your page."
+msgstr "No s'ha trobat l'àrea de contingut a la pàgina."
+
+#: includes/widgets/audio.php:243 includes/widgets/video.php:358
+msgid "Controls Color"
+msgstr "Controls de color"
+
+#: includes/widgets/video.php:413
+msgid "Intro Portrait"
+msgstr "Imatge de la introducció"
+
+#: includes/widgets/video.php:399
+msgid "Intro Title"
+msgstr "Títol de la introducció"
+
+#: includes/widgets/video.php:293
+msgid "Loop"
+msgstr "Llaç (Loop)"
+
+#: includes/widgets/video.php:268
+msgid "Video Options"
+msgstr "Opcions de vídeo"
+
+#: includes/widgets/video.php:115
+msgid "Vimeo"
+msgstr "Vimeo"
+
+#: includes/widgets/video.php:44 includes/widgets/video.php:103
+#: includes/widgets/video.php:565
+msgid "Video"
+msgstr "Vídeo"
+
+#: includes/widgets/image-gallery.php:277
+msgid "Display"
+msgstr "Visualització"
+
+#: includes/controls/image-dimensions.php:81
+msgid "The server does not have ImageMagick or GD installed and/or enabled! Any of these libraries are required for WordPress to be able to resize images. Please contact your server administrator to enable this before continuing."
+msgstr "El servidor no té instal·lat i/o activat ImageMagick o GD. Qualsevol d'aquestes biblioteques és necessària perquè WordPress pugui canviar la mida de les imatges. Poseu-vos en contacte amb l’administrador del vostre servidor per activar-lo abans de continuar."
+
+#: includes/editor.php:630
+msgid "Insert Media"
+msgstr "Insereix un mèdia"
+
+#. translators: %s: The number of images.
+#: includes/editor.php:628
+msgid "%s Images Selected"
+msgstr "%s imatges seleccionades"
+
+#: includes/controls/groups/image-size.php:274
+msgctxt "Image Size Control"
+msgid "Image Dimension"
+msgstr "Dimensió de la imatge"
+
+#: includes/controls/groups/image-size.php:357
+msgctxt "Image Size Control"
+msgid "Custom"
+msgstr "Personalitzat"
+
+#: includes/controls/groups/border.php:67
+msgctxt "Border Control"
+msgid "Dashed"
+msgstr "Línia discontínua"
+
+#: includes/controls/groups/border.php:66
+msgctxt "Border Control"
+msgid "Dotted"
+msgstr "Puntejat"
+
+#: includes/controls/groups/border.php:65
+msgctxt "Border Control"
+msgid "Double"
+msgstr "Doble"
+
+#: includes/controls/groups/border.php:64
+msgctxt "Border Control"
+msgid "Solid"
+msgstr "Sòlid"
+
+#: includes/editor.php:629
+msgid "No Images Selected"
+msgstr "No s'han seleccionat imatges"
+
+#: includes/widgets/image-carousel.php:322
+msgid "Fade"
+msgstr "Esvaït"
+
+#: includes/widgets/image-carousel.php:317
+msgid "Effect"
+msgstr "Efecte"
+
+#: includes/editor.php:626
+msgid "Are you sure you want to reset this gallery?"
+msgstr "Segur que voleu reiniciar aquesta galeria d'imatges?"
+
+#: includes/controls/groups/image-size.php:354
+msgctxt "Image Size Control"
+msgid "Full"
+msgstr "Complet"
+
+#: includes/editor.php:625
+msgid "Reset Gallery"
+msgstr "Reinicialitza la galeria"
+
+#: includes/widgets/image-box.php:412 includes/widgets/icon-box.php:476
+msgid "Vertical Alignment"
+msgstr "Alineació vertical"
+
+#: includes/widgets/image-carousel.php:303
+msgid "Infinite Loop"
+msgstr "Bucle infinit"
+
+#: includes/widgets/image-carousel.php:178
+#: includes/widgets/image-carousel.php:433
+msgid "Dots"
+msgstr "Punts"
+
+#: includes/controls/structure.php:54
+msgid "Reset Structure"
+msgstr "Reinicialitza l'estructura"
+
+#: includes/controls/groups/image-size.php:268
+msgctxt "Image Size Control"
+msgid "Image Size"
+msgstr "Mida de la imatge"
+
+#: includes/controls/groups/typography.php:172
+msgctxt "Typography Control"
+msgid "None"
+msgstr "Cap"
+
+#: includes/widgets/accordion.php:169 includes/widgets/image-box.php:183
+#: includes/widgets/toggle.php:166 includes/widgets/icon-box.php:208
+msgid "Title HTML Tag"
+msgstr "Etiqueta HTML del título"
+
+#: includes/widgets/text-editor.php:114 includes/widgets/accordion.php:124
+#: includes/widgets/accordion.php:128 includes/widgets/image-box.php:134
+#: includes/widgets/toggle.php:121 includes/widgets/toggle.php:125
+#: includes/widgets/icon-box.php:156 includes/widgets/tabs.php:123
+#: includes/widgets/tabs.php:127
+msgid "Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+msgstr "Feu clic al botó d'edició per canviar aquest text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+
+#: includes/widgets/image-box.php:120 includes/widgets/icon-box.php:142
+msgid "This is the heading"
+msgstr "Aquest és l'encapçalament"
+
+#: includes/elements/column.php:812 includes/elements/section.php:1237
+#: includes/widgets/common.php:134
+msgid "Add your custom class WITHOUT the dot. e.g: my-class"
+msgstr "Afegiu la classe personalitzada SENSE el punt, per exemple: ma-classe"
+
+#: includes/elements/column.php:903 includes/elements/section.php:1340
+#: includes/widgets/common.php:710
+msgid "Attention: The display settings (show/hide for mobile, tablet or desktop) will only take effect once you are on the preview or live page, and not while you're in editing mode in Elementor."
+msgstr "Atenció: els paràmetres de visualització (mostra/amaga per al mòbil, tauleta o ordinador) solament tindran efecte una vegada esteu en la previsualització o en la pàgina real, no mentre esteu en mode edició a l'Elementor."
+
+#: core/settings/general/model.php:96 includes/settings/settings.php:466
+msgid "The list of fonts used if the chosen font is not available."
+msgstr "Llistat de fonts utilitzades si la font seleccionada no està disponible."
+
+#: core/settings/general/model.php:93 includes/settings/settings.php:461
+msgid "Default Generic Fonts"
+msgstr "Fonts genèriques predeterminades"
+
+#: includes/managers/elements.php:367
+msgid "Pojo Themes"
+msgstr "Plantilles Pojo"
+
+#: includes/widgets/wordpress.php:225
+msgid "Form"
+msgstr "Formulari"
+
+#: includes/settings/system-info/classes/server.php:122
+msgctxt "System Info"
+msgid "We recommend to use php 5.4 or higher"
+msgstr "Recomanem fer servir php 5.4 o superior"
+
+#: includes/controls/groups/background.php:551
+msgid "YouTube link or video file (mp4 is recommended)."
+msgstr "Enllaç de Youtube o fitxer de vídeo (es recomana mp4)"
+
+#: includes/editor-templates/panel-elements.php:13
+msgid "Elements"
+msgstr "Elements"
+
+#. Description of the plugin
+msgid "The most advanced frontend drag & drop page builder. Create high-end, pixel perfect websites at record speeds. Any theme, any page, any design."
+msgstr "El més avançat constructor de pàgines arrossega i desa. Creeu pàgines web de qualitat a velocitats de rècord. Qualsevol tema, qualsevol pàgina, qualsevol disseny."
+
+#: includes/settings/settings.php:447
+msgid "Opt-in to our anonymous plugin data collection and to updates. We guarantee no sensitive data is collected."
+msgstr "Inicieu la sessió a la nostra col·lecció anònima d'extensions i actualitzacions. Garantim que no es recullen dades sensibles."
+
+#: core/dynamic-tags/base-tag.php:170 core/admin/admin.php:267
+#: core/common/modules/finder/categories/settings.php:28
+#: includes/managers/controls.php:289 includes/editor-templates/panel.php:57
+#: includes/editor.php:562 includes/settings/settings.php:363
+msgid "Settings"
+msgstr "Opcions"
+
+#: includes/controls/groups/typography.php:159
+msgctxt "Typography Control"
+msgid "Oblique"
+msgstr "Obliqua"
+
+#: includes/controls/groups/typography.php:158
+msgctxt "Typography Control"
+msgid "Italic"
+msgstr "Itàlica"
+
+#: includes/controls/groups/typography.php:147
+#: includes/controls/groups/typography.php:157
+msgctxt "Typography Control"
+msgid "Normal"
+msgstr "Normal"
+
+#: includes/controls/groups/typography.php:146
+msgctxt "Typography Control"
+msgid "Capitalize"
+msgstr "Escriu en majúscules"
+
+#: includes/controls/groups/typography.php:145
+msgctxt "Typography Control"
+msgid "Lowercase"
+msgstr "Minúscules"
+
+#: includes/controls/groups/typography.php:144
+msgctxt "Typography Control"
+msgid "Uppercase"
+msgstr "Majúscules"
+
+#. Author of the plugin
+msgid "Elementor.com"
+msgstr "Elementor.com"
+
+#: includes/widgets/video.php:534 includes/widgets/video.php:599
+msgid "Play Icon"
+msgstr "Icona de reproducció"
+
+#: includes/widgets/video.php:476 includes/widgets/video.php:483
+msgid "Image Overlay"
+msgstr "Superposició de la imatge"
+
+#: includes/widgets/video.php:304
+msgid "Player Controls"
+msgstr "Control del reproductor"
+
+#: includes/widgets/video.php:383
+msgid "Suggested Videos"
+msgstr "Vídeos suggerits"
+
+#: includes/widgets/video.php:573
+msgid "Aspect Ratio"
+msgstr "Relació d’aspecte"
+
+#: includes/widgets/video.php:114
+msgid "YouTube"
+msgstr "YouTube"
+
+#: includes/widgets/toggle.php:107
+msgid "Toggle Content"
+msgstr "Commuta el contingut"
+
+#: includes/widgets/toggle.php:97
+msgid "Toggle Title"
+msgstr "Commuta el títol"
+
+#: includes/widgets/toggle.php:124
+msgid "Toggle #2"
+msgstr "Commutador núm. 2"
+
+#: includes/widgets/toggle.php:120
+msgid "Toggle #1"
+msgstr "Commutador núm. 1"
+
+#: includes/widgets/toggle.php:115
+msgid "Toggle Items"
+msgstr "Elements del commutador"
+
+#: includes/widgets/toggle.php:43 includes/widgets/toggle.php:86
+#: includes/widgets/toggle.php:187
+msgid "Toggle"
+msgstr "Botó de commutació"
+
+#: includes/widgets/text-editor.php:43 includes/widgets/text-editor.php:102
+#: includes/widgets/text-editor.php:134
+msgid "Text Editor"
+msgstr "Editor de text"
+
+#: includes/widgets/tabs.php:107 includes/widgets/tabs.php:108
+msgid "Tab Content"
+msgstr "Contingut de la pestanya"
+
+#: includes/widgets/tabs.php:97 includes/widgets/tabs.php:98
+msgid "Tab Title"
+msgstr "Títol de la pestanya"
+
+#: includes/widgets/tabs.php:126
+msgid "Tab #2"
+msgstr "Pestanya núm. 2"
+
+#: includes/widgets/tabs.php:122
+msgid "Tab #1"
+msgstr "Pestanya núm. 1"
+
+#: includes/widgets/tabs.php:117
+msgid "Tabs Items"
+msgstr "Elements de les pestanyes"
+
+#: includes/widgets/tabs.php:43 includes/widgets/tabs.php:86
+#: includes/widgets/tabs.php:163
+msgid "Tabs"
+msgstr "Pestanyes"
+
+#: includes/widgets/image-carousel.php:265
+msgid "Pause on Hover"
+msgstr "Pausa en passar per sobre"
+
+#: includes/widgets/image-carousel.php:293
+msgid "Autoplay Speed"
+msgstr "Velocitat de reproducció automàtica"
+
+#: includes/widgets/image-carousel.php:177
+#: includes/widgets/image-carousel.php:371
+msgid "Arrows"
+msgstr "Fletxes"
+
+#: includes/widgets/image-carousel.php:321
+msgid "Slide"
+msgstr "Diapositiva"
+
+#: includes/widgets/sidebar.php:89 includes/widgets/sidebar.php:107
+msgid "Choose Sidebar"
+msgstr "Tria la barra lateral"
+
+#: includes/widgets/sidebar.php:87
+msgid "No sidebars were found"
+msgstr "No s'han trobat barres laterals"
+
+#: includes/widgets/sidebar.php:42 includes/widgets/sidebar.php:102
+msgid "Sidebar"
+msgstr "Barra lateral"
+
+#: includes/widgets/progress.php:217
+msgid "Title Style"
+msgstr "Estil del títol"
+
+#: includes/widgets/progress.php:204
+msgid "Inner Text Color"
+msgstr "Color del text intern"
+
+#: includes/widgets/progress.php:151
+msgid "Web Designer"
+msgstr "Dissenyador web"
+
+#: includes/widgets/progress.php:150
+msgid "e.g. Web Designer"
+msgstr "exemple: Dissenyador web"
+
+#: includes/widgets/progress.php:145
+msgid "Inner Text"
+msgstr "Text interior"
+
+#: includes/widgets/progress.php:133
+msgid "Display Percentage"
+msgstr "Mostra el percentage"
+
+#: includes/widgets/progress.php:122
+msgid "Percentage"
+msgstr "Percentatge"
+
+#: includes/widgets/progress.php:42 includes/widgets/progress.php:85
+#: includes/widgets/progress.php:170
+msgid "Progress Bar"
+msgstr "Barra de progrés"
+
+#: includes/widgets/menu-anchor.php:95
+msgid "For Example: About"
+msgstr "Per exemple: Quant a"
+
+#: includes/widgets/menu-anchor.php:93
+msgid "The ID of Menu Anchor."
+msgstr "L'identificador de l'àncora del menú."
+
+#: includes/widgets/menu-anchor.php:96
+msgid "This ID will be the CSS ID you will have to use in your own page, Without #."
+msgstr "Aquest identificador serà l'identificador CSS que haure de fer servir a la pàgina, sense #."
+
+#: includes/widgets/menu-anchor.php:86
+msgid "Anchor"
+msgstr "Àncora"
+
+#: includes/widgets/menu-anchor.php:43
+msgid "Menu Anchor"
+msgstr "Àncora del menú"
+
+#: includes/widgets/image-box.php:158 includes/widgets/testimonial.php:164
+msgid "Image Position"
+msgstr "Posició de la imatge"
+
+#: includes/widgets/image-gallery.php:222
+#: includes/widgets/image-carousel.php:521
+msgid "Image Spacing"
+msgstr "Espai de la imatge"
+
+#: includes/widgets/testimonial.php:266
+msgid "Image Size"
+msgstr "Mida de la imatge"
+
+#: includes/widgets/image-box.php:42 includes/widgets/image-box.php:85
+msgid "Image Box"
+msgstr "Caixa de la imatge"
+
+#: includes/widgets/social-icons.php:382
+msgid "Icon Hover"
+msgstr "Icona amb el ratolí a sobre"
+
+#: includes/widgets/icon.php:341 includes/widgets/text-editor.php:367
+#: includes/widgets/accordion.php:198 includes/widgets/toggle.php:195
+#: includes/widgets/icon-box.php:408 includes/widgets/tabs.php:194
+msgid "Border Width"
+msgstr "Ample de la vora"
+
+#: includes/widgets/icon.php:326 includes/widgets/icon-box.php:393
+msgid "Rotate"
+msgstr "Gira"
+
+#: includes/widgets/icon.php:223 includes/widgets/icon.php:261
+#: includes/widgets/text-editor.php:291 includes/widgets/icon-box.php:267
+#: includes/widgets/icon-box.php:305 includes/widgets/social-icons.php:283
+#: includes/widgets/social-icons.php:405
+msgid "Secondary Color"
+msgstr "Color secundari"
+
+#: includes/widgets/icon.php:206 includes/widgets/icon.php:248
+#: includes/widgets/text-editor.php:272 includes/widgets/icon-box.php:250
+#: includes/widgets/icon-box.php:292 includes/widgets/social-icons.php:269
+#: includes/widgets/social-icons.php:390
+msgid "Primary Color"
+msgstr "Color principal"
+
+#: includes/widgets/icon.php:136 includes/widgets/icon-box.php:123
+#: includes/widgets/social-icons.php:201
+msgid "Square"
+msgstr "Quadrat"
+
+#: includes/widgets/icon.php:135 includes/widgets/icon-box.php:122
+#: includes/widgets/social-icons.php:202
+msgid "Circle"
+msgstr "Cercle"
+
+#: includes/widgets/icon.php:132 includes/widgets/icon-box.php:119
+#: includes/widgets/social-icons.php:196
+msgid "Shape"
+msgstr "Forma"
+
+#: includes/widgets/icon.php:122 includes/widgets/text-editor.php:259
+#: includes/widgets/icon-box.php:106
+msgid "Framed"
+msgstr "Tramat"
+
+#: includes/widgets/icon.php:121 includes/widgets/text-editor.php:258
+#: includes/widgets/icon-box.php:105
+msgid "Stacked"
+msgstr "Apilat"
+
+#: includes/widgets/icon-list.php:455
+msgid "Text Indent"
+msgstr "Sagnat del text"
+
+#: includes/widgets/icon-list.php:121 includes/widgets/icon-list.php:122
+msgid "List Item"
+msgstr "Element de llista"
+
+#: includes/widgets/icon-list.php:168
+msgid "List Item #3"
+msgstr "Element núm. 3 de la llista"
+
+#: includes/widgets/icon-list.php:164
+msgid "List Item #2"
+msgstr "Element núm. 2 de la llista"
+
+#: includes/widgets/icon-list.php:160
+msgid "List Item #1"
+msgstr "Element núm. 1 de la llista"
+
+#: includes/widgets/icon-list.php:42 includes/widgets/icon-list.php:85
+msgid "Icon List"
+msgstr "Llista de icones"
+
+#: includes/widgets/icon.php:154 includes/widgets/image-carousel.php:204
+#: includes/widgets/image-box.php:150 includes/widgets/image.php:205
+#: includes/widgets/icon-list.php:148 includes/widgets/icon-box.php:172
+#: includes/widgets/testimonial.php:157 includes/widgets/social-icons.php:168
+#: includes/widgets/button.php:151
+msgid "https://your-link.com"
+msgstr "https://your-link.com"
+
+#: includes/widgets/button.php:226
+msgid "Icon Spacing"
+msgstr "Espaiat entre icones"
+
+#: includes/widgets/icon-box.php:42 includes/widgets/icon-box.php:85
+msgid "Icon Box"
+msgstr "Caixa de la icona"
+
+#: includes/widgets/html.php:85
+msgid "HTML Code"
+msgstr "Codi HTML"
+
+#: includes/widgets/html.php:42
+msgid "HTML"
+msgstr "HTML"
+
+#: includes/elements/column.php:286 includes/elements/section.php:529
+#: includes/widgets/heading.php:153
+msgid "HTML Tag"
+msgstr "Etiqueta HTML"
+
+#: includes/widgets/image-box.php:121 includes/widgets/icon-box.php:143
+#: includes/widgets/alert.php:111 includes/widgets/progress.php:97
+#: includes/widgets/heading.php:113
+msgid "Enter your title"
+msgstr "Escriu el títol"
+
+#: includes/widgets/heading.php:42
+msgid "Heading"
+msgstr "Capçalera"
+
+#: includes/widgets/google-maps.php:107
+msgid "London Eye, London, United Kingdom"
+msgstr "L'ull de Londres, Londres, el Regne Unit"
+
+#: includes/widgets/google-maps.php:103 includes/widgets/google-maps.php:186
+msgid "Map"
+msgstr "Mapa"
+
+#: includes/widgets/google-maps.php:44
+msgid "Google Maps"
+msgstr "Google Maps"
+
+#: includes/widgets/image-gallery.php:269
+#: includes/widgets/image-carousel.php:232
+#: includes/widgets/image-carousel.php:238
+#: includes/widgets/image-carousel.php:569 includes/widgets/image.php:156
+#: includes/widgets/image.php:453
+msgid "Caption"
+msgstr "Llegenda"
+
+#: includes/widgets/image-gallery.php:197
+msgid "Images"
+msgstr "Imatges"
+
+#: includes/widgets/image-gallery.php:177
+msgid "Random"
+msgstr "Aleatori"
+
+#: includes/widgets/image-gallery.php:146
+#: includes/widgets/image-carousel.php:193 includes/widgets/image.php:191
+msgid "Media File"
+msgstr "Mèdia"
+
+#: includes/widgets/image-gallery.php:147
+msgid "Attachment Page"
+msgstr "Pàgina de les adjuncions"
+
+#: includes/controls/gallery.php:86 includes/widgets/image-gallery.php:108
+#: includes/widgets/image-carousel.php:107
+msgid "Add Images"
+msgstr "Afegeix imatges"
+
+#: includes/widgets/image-gallery.php:42 includes/widgets/image-gallery.php:101
+msgid "Image Gallery"
+msgstr "Galeria d'imatges"
+
+#: includes/widgets/star-rating.php:228 includes/widgets/divider.php:216
+msgid "Gap"
+msgstr "Espai"
+
+#: includes/elements/section.php:956 includes/controls/box-shadow.php:110
+#: includes/controls/text-shadow.php:103 includes/widgets/star-rating.php:291
+#: includes/widgets/accordion.php:251 includes/widgets/accordion.php:339
+#: includes/widgets/accordion.php:409 includes/widgets/image-carousel.php:419
+#: includes/widgets/image-carousel.php:481 includes/widgets/image-box.php:453
+#: includes/widgets/image-box.php:487 includes/widgets/toggle.php:271
+#: includes/widgets/toggle.php:359 includes/widgets/toggle.php:429
+#: includes/widgets/icon-list.php:340 includes/widgets/icon-list.php:369
+#: includes/widgets/icon-box.php:517 includes/widgets/icon-box.php:551
+#: includes/widgets/divider.php:147 includes/widgets/social-icons.php:256
+#: includes/widgets/tabs.php:246 includes/widgets/tabs.php:294
+#: includes/widgets/progress.php:178 includes/widgets/video.php:612
+msgid "Color"
+msgstr "Color"
+
+#: includes/widgets/icon-list.php:269 includes/widgets/divider.php:127
+msgid "Weight"
+msgstr "Pes"
+
+#: includes/widgets/spacer.php:42 includes/widgets/spacer.php:101
+msgid "Spacer"
+msgstr "Espaiador"
+
+#: includes/widgets/icon-list.php:233 includes/widgets/divider.php:43
+#: includes/widgets/divider.php:102
+msgid "Divider"
+msgstr "Separador"
+
+#: includes/widgets/counter.php:204
+msgid "Number"
+msgstr "Número"
+
+#: includes/widgets/counter.php:185 includes/widgets/counter.php:186
+msgid "Cool Number"
+msgstr "Número genial"
+
+#: includes/widgets/counter.php:137
+msgid "Plus"
+msgstr "Més"
+
+#: includes/widgets/counter.php:134
+msgid "Number Suffix"
+msgstr "Sufix del número"
+
+#: includes/widgets/counter.php:124
+msgid "Number Prefix"
+msgstr "Prefixe del número"
+
+#: includes/widgets/counter.php:115
+msgid "Ending Number"
+msgstr "Número de terminació"
+
+#: includes/widgets/counter.php:106
+msgid "Starting Number"
+msgstr "Número inicial"
+
+#: includes/widgets/counter.php:42 includes/widgets/counter.php:99
+msgid "Counter"
+msgstr "Comptador"
+
+#: includes/widgets/image-carousel.php:279 includes/widgets/audio.php:144
+#: includes/widgets/video.php:277
+msgid "Autoplay"
+msgstr "Reprodueix automàticament"
+
+#: includes/widgets/image-carousel.php:143
+msgid "Slides to Scroll"
+msgstr "Diapositives a desplaçar"
+
+#: includes/widgets/image-carousel.php:131
+msgid "Slides to Show"
+msgstr "Diapositives a mostrar"
+
+#: includes/widgets/image-box.php:92 includes/widgets/image.php:108
+#: includes/widgets/testimonial.php:105 includes/widgets/video.php:493
+msgid "Choose Image"
+msgstr "Tria una imatge"
+
+#: includes/widgets/image-carousel.php:497 includes/widgets/image-box.php:214
+#: includes/widgets/image.php:42 includes/widgets/image.php:101
+#: includes/widgets/image.php:244 includes/widgets/testimonial.php:255
+msgid "Image"
+msgstr "Imatge"
+
+#: includes/elements/column.php:521 includes/elements/section.php:790
+#: includes/widgets/common.php:260
+msgid "Border"
+msgstr "Contorn"
+
+#: core/dynamic-tags/tag.php:100 includes/widgets/button.php:215
+msgid "After"
+msgstr "Després"
+
+#: core/dynamic-tags/tag.php:93 includes/widgets/button.php:214
+msgid "Before"
+msgstr "Abans"
+
+#: includes/widgets/icon-box.php:180 includes/widgets/button.php:210
+msgid "Icon Position"
+msgstr "Posició de l’icona"
+
+#: includes/widgets/icon.php:42 includes/widgets/icon.php:101
+#: includes/widgets/icon.php:108 includes/widgets/icon.php:189
+#: includes/widgets/star-rating.php:116 includes/widgets/accordion.php:147
+#: includes/widgets/accordion.php:304 includes/widgets/toggle.php:144
+#: includes/widgets/toggle.php:324 includes/widgets/icon-list.php:132
+#: includes/widgets/icon-list.php:361 includes/widgets/icon-box.php:92
+#: includes/widgets/icon-box.php:230 includes/widgets/social-icons.php:94
+#: includes/widgets/social-icons.php:248 includes/widgets/button.php:200
+msgid "Icon"
+msgstr "Icona"
+
+#: includes/widgets/icon.php:289 includes/widgets/star-rating.php:256
+#: includes/widgets/text-editor.php:306 includes/widgets/image-carousel.php:399
+#: includes/widgets/image-carousel.php:461 includes/widgets/icon-list.php:397
+#: includes/widgets/icon-box.php:356 includes/widgets/social-icons.php:297
+#: includes/widgets/button.php:189 includes/widgets/heading.php:136
+#: includes/widgets/video.php:627
+msgid "Size"
+msgstr "Mida"
+
+#: includes/widgets/image-gallery.php:309 includes/widgets/star-rating.php:177
+#: includes/widgets/text-editor.php:158 includes/widgets/image-carousel.php:596
+#: includes/widgets/image-box.php:399 includes/widgets/image.php:480
+#: includes/widgets/icon-box.php:463 includes/widgets/button.php:177
+#: includes/widgets/heading.php:189
+msgid "Justified"
+msgstr "Justificat"
+
+#: includes/widgets/icon.php:161 includes/widgets/image-gallery.php:293
+#: includes/widgets/star-rating.php:161 includes/widgets/text-editor.php:142
+#: includes/widgets/accordion.php:315 includes/widgets/image-carousel.php:580
+#: includes/widgets/image-box.php:383 includes/widgets/image.php:131
+#: includes/widgets/image.php:464 includes/widgets/toggle.php:335
+#: includes/widgets/icon-list.php:210 includes/widgets/icon-box.php:447
+#: includes/widgets/divider.php:190 includes/widgets/testimonial.php:182
+#: includes/widgets/social-icons.php:211 includes/widgets/button.php:161
+#: includes/widgets/heading.php:173
+msgid "Alignment"
+msgstr "Alineació"
+
+#: includes/widgets/heading.php:145
+msgid "XXL"
+msgstr "XXL"
+
+#: includes/widgets/heading.php:144
+msgid "XL"
+msgstr "XL"
+
+#: includes/widgets/button.php:92 includes/widgets/heading.php:143
+msgid "Large"
+msgstr "Gran"
+
+#: includes/widgets/button.php:91 includes/widgets/heading.php:142
+msgid "Medium"
+msgstr "Mitjana"
+
+#: includes/widgets/button.php:90 includes/widgets/heading.php:141
+msgid "Small"
+msgstr "Petit"
+
+#: includes/widgets/button.php:43 includes/widgets/button.php:109
+#: includes/widgets/button.php:274
+msgid "Button"
+msgstr "Botó"
+
+#: core/common/modules/finder/categories/edit.php:30
+#: includes/elements/column.php:126 includes/controls/popover-toggle.php:69
+#: includes/base/widget-base.php:304
+msgid "Edit"
+msgstr "Edita"
+
+#: includes/elements/column.php:938 includes/elements/section.php:1375
+#: includes/widgets/common.php:745
+msgid "Hide On Mobile"
+msgstr "Amaga al mòbil"
+
+#: includes/elements/column.php:925 includes/elements/section.php:1362
+#: includes/widgets/common.php:732
+msgid "Hide On Tablet"
+msgstr "Amaga a la tauleta"
+
+#: includes/elements/column.php:912 includes/elements/section.php:1349
+#: includes/widgets/common.php:719
+msgid "Hide On Desktop"
+msgstr "Amaga a l'ordinador"
+
+#: includes/elements/column.php:546 includes/elements/column.php:583
+#: includes/elements/section.php:814 includes/elements/section.php:850
+#: includes/widgets/icon.php:355 includes/widgets/image-gallery.php:255
+#: includes/widgets/text-editor.php:348 includes/widgets/image-carousel.php:555
+#: includes/widgets/image.php:428 includes/widgets/icon-box.php:422
+#: includes/widgets/testimonial.php:293 includes/widgets/social-icons.php:368
+#: includes/widgets/common.php:285 includes/widgets/common.php:322
+#: includes/widgets/button.php:393
+msgid "Border Radius"
+msgstr "Radi de la vora"
+
+#: includes/compatibility.php:142 includes/widgets/image-carousel.php:239
+#: includes/widgets/image-box.php:478 includes/widgets/icon-box.php:542
+#: includes/widgets/alert.php:235
+msgid "Description"
+msgstr "Descripció"
+
+#: core/base/document.php:454 includes/elements/column.php:175
+#: includes/elements/section.php:297 includes/widgets/star-rating.php:152
+#: includes/widgets/star-rating.php:193 includes/widgets/accordion.php:232
+#: includes/widgets/image-carousel.php:237 includes/widgets/image-box.php:427
+#: includes/widgets/toggle.php:252 includes/widgets/icon-box.php:491
+#: includes/widgets/testimonial.php:140 includes/widgets/testimonial.php:344
+#: includes/widgets/alert.php:205 includes/widgets/common.php:66
+#: includes/widgets/tabs.php:237 includes/widgets/progress.php:92
+#: includes/widgets/counter.php:182 includes/widgets/counter.php:238
+#: includes/widgets/heading.php:101 includes/widgets/heading.php:108
+#: includes/widgets/heading.php:214
+msgid "Title"
+msgstr "Títol"
+
+#: core/settings/general/model.php:154 includes/widgets/image.php:510
+#: includes/widgets/alert.php:164 includes/widgets/tabs.php:225
+#: includes/widgets/progress.php:193 includes/widgets/button.php:312
+#: includes/widgets/button.php:347 includes/widgets/video.php:680
+msgid "Background Color"
+msgstr "Color de fons"
+
+#: includes/elements/section.php:1353 includes/elements/section.php:1366
+#: includes/elements/section.php:1379 includes/settings/settings.php:598
+#: includes/widgets/image-gallery.php:282 includes/widgets/alert.php:137
+#: includes/widgets/audio.php:154 includes/widgets/audio.php:165
+#: includes/widgets/audio.php:176 includes/widgets/audio.php:187
+#: includes/widgets/audio.php:201 includes/widgets/audio.php:212
+#: includes/widgets/audio.php:223 includes/widgets/audio.php:234
+#: includes/widgets/progress.php:138 includes/widgets/counter.php:159
+#: includes/widgets/video.php:306 includes/widgets/video.php:320
+#: includes/widgets/video.php:346 includes/widgets/video.php:401
+#: includes/widgets/video.php:415 includes/widgets/video.php:429
+#: includes/widgets/video.php:443 includes/widgets/video.php:485
+msgid "Hide"
+msgstr "Amaga"
+
+#: includes/elements/section.php:1354 includes/elements/section.php:1367
+#: includes/elements/section.php:1380 includes/settings/settings.php:599
+#: includes/widgets/image-gallery.php:281 includes/widgets/alert.php:136
+#: includes/widgets/audio.php:155 includes/widgets/audio.php:166
+#: includes/widgets/audio.php:177 includes/widgets/audio.php:188
+#: includes/widgets/audio.php:202 includes/widgets/audio.php:213
+#: includes/widgets/audio.php:224 includes/widgets/audio.php:235
+#: includes/widgets/progress.php:137 includes/widgets/counter.php:158
+#: includes/widgets/video.php:307 includes/widgets/video.php:321
+#: includes/widgets/video.php:347 includes/widgets/video.php:402
+#: includes/widgets/video.php:416 includes/widgets/video.php:430
+#: includes/widgets/video.php:444 includes/widgets/video.php:486
+msgid "Show"
+msgstr "Mostra"
+
+#: includes/widgets/alert.php:132
+msgid "Dismiss Button"
+msgstr "Botó de descartar"
+
+#: includes/widgets/alert.php:123
+msgid "I am a description. Click the edit button to change this text."
+msgstr "Sóc una descripció. Feu clic al botó d'edició per canviar aquest text."
+
+#: includes/widgets/accordion.php:95 includes/widgets/image-box.php:115
+#: includes/widgets/toggle.php:95 includes/widgets/icon-box.php:137
+#: includes/widgets/alert.php:109 includes/widgets/tabs.php:95
+msgid "Title & Description"
+msgstr "Títol i descripció"
+
+#: includes/widgets/alert.php:100 includes/widgets/progress.php:114
+#: includes/widgets/button.php:124
+msgid "Danger"
+msgstr "Perill"
+
+#: includes/widgets/alert.php:99 includes/widgets/progress.php:113
+#: includes/widgets/button.php:123
+msgid "Warning"
+msgstr "Atenció"
+
+#: includes/widgets/alert.php:98 includes/widgets/progress.php:112
+#: includes/widgets/button.php:122
+msgid "Success"
+msgstr "Èxit"
+
+#: includes/widgets/alert.php:97 includes/widgets/progress.php:111
+#: includes/widgets/button.php:121
+msgid "Info"
+msgstr "Informació"
+
+#: includes/template-library/sources/local.php:1532
+#: includes/editor-templates/templates.php:112
+#: includes/elements/section.php:945 includes/widgets/alert.php:93
+#: includes/widgets/tabs.php:146 includes/widgets/progress.php:106
+#: includes/widgets/button.php:116
+msgid "Type"
+msgstr "Tipus"
+
+#: includes/widgets/alert.php:43 includes/widgets/alert.php:86
+#: includes/widgets/alert.php:156
+msgid "Alert"
+msgstr "Alerta"
+
+#: includes/widgets/accordion.php:266 includes/widgets/accordion.php:353
+#: includes/widgets/toggle.php:286 includes/widgets/toggle.php:373
+#: includes/widgets/tabs.php:261
+msgid "Active Color"
+msgstr "Color actiu"
+
+#: includes/widgets/accordion.php:217 includes/widgets/toggle.php:213
+#: includes/widgets/social-icons.php:420 includes/widgets/alert.php:175
+#: includes/widgets/tabs.php:214 includes/widgets/button.php:358
+msgid "Border Color"
+msgstr "Color de la vora"
+
+#: includes/widgets/icon.php:117 includes/widgets/google-maps.php:175
+#: includes/widgets/image-gallery.php:186 includes/widgets/spacer.php:128
+#: includes/widgets/text-editor.php:254 includes/widgets/accordion.php:138
+#: includes/widgets/image-carousel.php:247 includes/widgets/image-box.php:203
+#: includes/widgets/image.php:233 includes/widgets/toggle.php:135
+#: includes/widgets/icon-box.php:101 includes/widgets/divider.php:236
+#: includes/widgets/testimonial.php:207 includes/widgets/social-icons.php:237
+#: includes/widgets/alert.php:145 includes/widgets/tabs.php:137
+#: includes/widgets/audio.php:251 includes/widgets/progress.php:159
+#: includes/widgets/counter.php:193 includes/widgets/button.php:246
+#: includes/widgets/heading.php:203 includes/widgets/video.php:465
+msgid "View"
+msgstr "Visualitza"
+
+#: includes/widgets/accordion.php:110
+msgid "Accordion Content"
+msgstr "Contingut de l'acordií"
+
+#: includes/widgets/accordion.php:97
+msgid "Accordion Title"
+msgstr "Títol de l'acordió"
+
+#: includes/widgets/accordion.php:127
+msgid "Accordion #2"
+msgstr "Acordió núm. 2"
+
+#: includes/widgets/accordion.php:123
+msgid "Accordion #1"
+msgstr "Acordió núm. 1"
+
+#: includes/widgets/accordion.php:118
+msgid "Accordion Items"
+msgstr "Elements de l'acordió"
+
+#: includes/widgets/accordion.php:43 includes/widgets/accordion.php:86
+#: includes/widgets/accordion.php:190
+msgid "Accordion"
+msgstr "Acordió"
+
+#: includes/tracker.php:291
+msgid "Sure! I'd love to help"
+msgstr "Segur! M'agradaria ajudar"
+
+#: includes/tracker.php:268
+msgid "Love using Elementor? Become a super contributor by opting in to our anonymous plugin data collection and to our updates. We guarantee no sensitive data is collected."
+msgstr "Us encanta l'Elementor? Convertiu-vos en un col·laborador en incorporar-vos al nostre recollidor de dades anònim de l'extensió i de les nostres actualitzacions. Garantim que no es recullen dades sensibles."
+
+#: includes/settings/system-info/main.php:196
+msgid "You don't have permissions to download this file"
+msgstr "No teniu permisos per baixaraquest fitxer"
+
+#: includes/settings/system-info/main.php:178
+msgid "Download System Info"
+msgstr "Informació de sistema de descàrrega"
+
+#: includes/settings/system-info/main.php:157
+msgid "You can copy the below info as simple text with Ctrl+C / Ctrl+V:"
+msgstr "Podeu copiar la informació següent com un text simple amb Ctrl+C / Ctrl+V:"
+
+#: includes/settings/system-info/main.php:155
+msgid "Copy & Paste Info"
+msgstr "Informació per copiar i enganxar"
+
+#: core/common/modules/finder/categories/general.php:50
+#: includes/settings/system-info/main.php:153
+#: includes/settings/system-info/main.php:316
+msgid "System Info"
+msgstr "Informació del sistema"
+
+#: includes/editor-templates/templates.php:108
+#: includes/widgets/testimonial.php:128 includes/widgets/testimonial.php:308
+msgid "Name"
+msgstr "Nom"
+
+#: core/common/modules/finder/categories/site.php:62
+msgid "Themes"
+msgstr "Temes"
+
+#: includes/editor.php:594 includes/controls/switcher.php:74
+#: includes/widgets/image-gallery.php:162
+#: includes/widgets/image-carousel.php:163
+#: includes/widgets/image-carousel.php:221
+#: includes/widgets/image-carousel.php:270
+#: includes/widgets/image-carousel.php:284
+#: includes/widgets/image-carousel.php:308 includes/widgets/image.php:222
+#: includes/widgets/audio.php:127
+msgid "No"
+msgstr "No"
+
+#: includes/editor.php:607 includes/controls/switcher.php:75
+#: includes/widgets/image-gallery.php:161
+#: includes/widgets/image-carousel.php:164
+#: includes/widgets/image-carousel.php:220
+#: includes/widgets/image-carousel.php:269
+#: includes/widgets/image-carousel.php:283
+#: includes/widgets/image-carousel.php:307 includes/widgets/image.php:221
+#: includes/widgets/audio.php:126
+msgid "Yes"
+msgstr "Sí"
+
+#: includes/settings/settings.php:442
+msgid "Usage Data Tracking"
+msgstr "Seguiment de l'ús de dades"
+
+#: core/role-manager/role-manager.php:62
+msgid "Exclude Roles"
+msgstr "Exclou els rols"
+
+#: includes/settings/settings.php:412
+msgid "Post Types"
+msgstr "Tipus d'entrades"
+
+#: core/common/modules/finder/categories/settings.php:46
+#: core/base/document.php:446
+msgid "General Settings"
+msgstr "Configuració general"
+
+#: includes/schemes/typography.php:96
+msgid "Accent Text"
+msgstr "Text destacat"
+
+#: includes/schemes/typography.php:95
+msgid "Body Text"
+msgstr "Cos del text"
+
+#: includes/schemes/typography.php:94
+msgid "Secondary Headline"
+msgstr "Titular secundari"
+
+#: includes/schemes/typography.php:93
+msgid "Primary Headline"
+msgstr "Titular principal"
+
+#: includes/schemes/color.php:96
+msgid "Accent"
+msgstr "Accent"
+
+#: includes/schemes/color.php:95 includes/widgets/icon-list.php:118
+#: includes/widgets/icon-list.php:419 includes/widgets/button.php:133
+msgid "Text"
+msgstr "Text"
+
+#: includes/schemes/color.php:94
+msgid "Secondary"
+msgstr "Secundari"
+
+#: includes/schemes/color.php:93
+msgid "Primary"
+msgstr "Primari"
+
+#: includes/managers/elements.php:372
+msgid "WordPress"
+msgstr "WordPress"
+
+#: includes/widgets/image-carousel.php:172
+#: includes/widgets/image-carousel.php:360
+msgid "Navigation"
+msgstr "Navegació"
+
+#: includes/managers/elements.php:331
+msgid "Basic"
+msgstr "Bàsic"
+
+#: includes/elements/section.php:1331
+msgid "Visibility"
+msgstr "Visibilitat"
+
+#: includes/elements/section.php:482 includes/widgets/video.php:733
+msgid "Content Position"
+msgstr "Posició del contingut"
+
+#: includes/elements/column.php:218 includes/elements/section.php:469
+#: includes/elements/section.php:488 includes/widgets/image-box.php:416
+#: includes/widgets/icon-box.php:480
+msgid "Middle"
+msgstr "Al mig"
+
+#: includes/elements/section.php:467
+msgid "Stretch"
+msgstr "Estira"
+
+#: includes/elements/section.php:463
+msgid "Column Position"
+msgstr "Posició de la columna"
+
+#: includes/elements/section.php:390 includes/elements/section.php:439
+msgid "Minimum Height"
+msgstr "Alçada mínima"
+
+#: includes/elements/section.php:380 includes/elements/section.php:429
+msgid "Min Height"
+msgstr "Alçada mínima"
+
+#: includes/elements/section.php:379
+msgid "Fit To Screen"
+msgstr "Ajusta a la pantalla"
+
+#: includes/elements/section.php:374 includes/elements/section.php:424
+#: includes/elements/section.php:999 includes/controls/image-dimensions.php:102
+#: includes/widgets/google-maps.php:146 includes/widgets/icon-list.php:311
+msgid "Height"
+msgstr "Alçada"
+
+#: includes/elements/section.php:365
+msgid "Wide"
+msgstr "Ample"
+
+#: includes/elements/section.php:363
+msgid "Narrow"
+msgstr "Estret"
+
+#: includes/elements/section.php:362
+msgid "No Gap"
+msgstr "Sense espai"
+
+#: includes/elements/section.php:357 includes/widgets/text-editor.php:212
+msgid "Columns Gap"
+msgstr "Espai entre columnes"
+
+#: core/settings/general/model.php:100 includes/elements/section.php:321
+#: includes/elements/section.php:335 includes/settings/settings.php:470
+#: includes/widgets/video.php:714
+msgid "Content Width"
+msgstr "Ample del contingut"
+
+#: includes/elements/section.php:326 includes/widgets/common.php:379
+msgid "Full Width"
+msgstr "Ample total"
+
+#: includes/elements/section.php:325
+msgid "Boxed"
+msgstr "Encaixonat"
+
+#: includes/elements/section.php:970 includes/controls/image-dimensions.php:96
+#: includes/widgets/image-box.php:245 includes/widgets/image.php:252
+#: includes/widgets/icon-list.php:293 includes/widgets/divider.php:163
+#: includes/widgets/common.php:374
+msgid "Width"
+msgstr "Amplada"
+
+#: includes/managers/controls.php:288 includes/elements/column.php:167
+#: includes/elements/section.php:289 includes/widgets/icon-list.php:92
+msgid "Layout"
+msgstr "Format"
+
+#: includes/editor.php:673
+msgid "Add New Column"
+msgstr "Afegeix una columna nova"
+
+#: includes/elements/column.php:184
+msgid "Column Width"
+msgstr "Ample de la columna"
+
+#: includes/elements/column.php:805 includes/elements/section.php:1230
+#: includes/widgets/common.php:128
+msgid "CSS Classes"
+msgstr "Classes CSS"
+
+#: core/document-types/post.php:163 includes/elements/column.php:765
+#: includes/elements/section.php:1190 includes/widgets/icon.php:306
+#: includes/widgets/accordion.php:290 includes/widgets/accordion.php:433
+#: includes/widgets/toggle.php:310 includes/widgets/toggle.php:453
+#: includes/widgets/icon-box.php:373 includes/widgets/social-icons.php:314
+#: includes/widgets/common.php:87 includes/widgets/button.php:413
+msgid "Padding"
+msgstr "Separació"
+
+#: includes/elements/column.php:753 includes/elements/section.php:1171
+#: includes/widgets/common.php:75
+msgid "Margin"
+msgstr "Marge"
+
+#: includes/elements/column.php:244 includes/elements/column.php:724
+#: includes/elements/section.php:1143 includes/widgets/icon.php:169
+#: includes/widgets/image-gallery.php:301 includes/widgets/star-rating.php:169
+#: includes/widgets/text-editor.php:150 includes/widgets/image-carousel.php:588
+#: includes/widgets/image-box.php:391 includes/widgets/image.php:139
+#: includes/widgets/image.php:472 includes/widgets/icon-list.php:218
+#: includes/widgets/icon-box.php:455 includes/widgets/divider.php:198
+#: includes/widgets/testimonial.php:191 includes/widgets/social-icons.php:219
+#: includes/widgets/common.php:442 includes/widgets/button.php:169
+#: includes/widgets/heading.php:181 includes/widgets/video.php:737
+msgid "Center"
+msgstr "Centrat"
+
+#: includes/elements/column.php:716 includes/elements/section.php:1135
+msgid "Text Align"
+msgstr "Alineació del text"
+
+#: includes/elements/column.php:704 includes/elements/section.php:1123
+msgid "Link Hover Color"
+msgstr "Color de l'enllaç amb el ratolí a sobre"
+
+#: includes/elements/column.php:692 includes/elements/section.php:1111
+msgid "Link Color"
+msgstr "Color de l'enllaç"
+
+#: includes/elements/column.php:667 includes/elements/section.php:1086
+msgid "Heading Color"
+msgstr "Color de la capçalera"
+
+#: includes/elements/column.php:680 includes/elements/section.php:1099
+#: includes/widgets/image-gallery.php:326 includes/widgets/star-rating.php:204
+#: includes/widgets/text-editor.php:171 includes/widgets/image-carousel.php:610
+#: includes/widgets/image.php:494 includes/widgets/icon-list.php:427
+#: includes/widgets/testimonial.php:227 includes/widgets/testimonial.php:316
+#: includes/widgets/testimonial.php:352 includes/widgets/alert.php:213
+#: includes/widgets/alert.php:243 includes/widgets/progress.php:225
+#: includes/widgets/counter.php:212 includes/widgets/counter.php:246
+#: includes/widgets/button.php:300 includes/widgets/button.php:336
+#: includes/widgets/heading.php:222
+msgid "Text Color"
+msgstr "Color del text"
+
+#: includes/schemes/typography.php:64 includes/elements/column.php:647
+#: includes/elements/section.php:1067
+msgid "Typography"
+msgstr "Tipografia"
+
+#: modules/history/module.php:55
+msgid "Removed"
+msgstr "Eliminat"
+
+#: includes/elements/column.php:70 includes/elements/column.php:122
+msgid "Column"
+msgstr "Columna"
+
+#: modules/library/documents/section.php:44 includes/editor.php:599
+#: includes/elements/section.php:91 includes/elements/section.php:216
+msgid "Section"
+msgstr "Secció"
+
+#: includes/elements/section.php:539 includes/controls/structure.php:47
+msgid "Structure"
+msgstr "Estructura"
+
+#: includes/managers/controls.php:287 includes/elements/column.php:895
+#: includes/elements/section.php:1301 includes/widgets/common.php:702
+msgid "Responsive"
+msgstr "Responsiu"
+
+#: core/dynamic-tags/tag.php:86
+#: core/common/modules/finder/categories/settings.php:56
+#: includes/managers/controls.php:286 includes/elements/column.php:744
+#: includes/elements/section.php:1163 includes/settings/settings.php:565
+#: includes/widgets/common.php:58
+msgid "Advanced"
+msgstr "Avançat"
+
+#: core/common/modules/finder/categories/settings.php:51
+#: core/settings/general/model.php:90 includes/managers/controls.php:285
+#: includes/editor.php:561 includes/settings/settings.php:456
+#: includes/widgets/icon-list.php:247 includes/widgets/divider.php:109
+msgid "Style"
+msgstr "Estil"
+
+#: includes/managers/controls.php:284 includes/widgets/accordion.php:108
+#: includes/widgets/accordion.php:390 includes/widgets/image-box.php:129
+#: includes/widgets/image-box.php:375 includes/widgets/toggle.php:105
+#: includes/widgets/toggle.php:410 includes/widgets/icon-box.php:439
+#: includes/widgets/testimonial.php:92 includes/widgets/testimonial.php:219
+#: includes/widgets/alert.php:120 includes/widgets/tabs.php:106
+#: includes/widgets/tabs.php:285
+msgid "Content"
+msgstr "Contingut"
+
+#: includes/widgets/image-gallery.php:132 includes/widgets/text-editor.php:199
+msgid "Columns"
+msgstr "Columnes"
+
+#: includes/editor.php:556
+msgid "About Elementor"
+msgstr "Quant a l'Elementor"
+
+#: modules/history/revisions-manager.php:378
+msgid "Revision History"
+msgstr "Històric de revisions"
+
+#: includes/editor.php:691
+msgid "Soon"
+msgstr "Aviat"
+
+#: includes/schemes/color.php:64
+msgid "Colors"
+msgstr "Colors"
+
+#: includes/editor.php:645
+msgid "Please note: All unsaved changes will be lost."
+msgstr "Nota: tots els canvis sense desar es perdran."
+
+#: includes/editor.php:649
+msgid "Saved"
+msgstr "S'ha desat"
+
+#: includes/editor.php:635
+msgid "Go Back"
+msgstr "Torna enrere"
+
+#: includes/editor.php:636
+msgid "Take Over"
+msgstr "Encarregar-me"
+
+#: core/admin/admin.php:740 includes/editor.php:547
+msgid "Cancel"
+msgstr "Cancel·la"
+
+#. translators: %s: User name.
+#: includes/editor.php:634
+msgid "%s has taken over and is currently editing. Do you want to take over this page editing?"
+msgstr "%s ha pres el control i està editant ara mateix. Voleu controlar vosaltres l'edició d'aquesta pàgina?"
+
+#. translators: %s: Template type.
+#: includes/editor.php:642
+msgid "Are you sure you want to remove this %s?"
+msgstr "Segur que voleu suprimir aquest %s?"
+
+#: includes/schemes/color.php:145
+msgid "More Palettes"
+msgstr "Més paletes"
+
+#: includes/schemes/color.php:284
+msgid "Color Palette"
+msgstr "Paleta de color"
+
+#: modules/history/views/revisions-panel-template.php:18
+#: includes/editor-templates/panel.php:163 includes/schemes/base.php:172
+#: includes/controls/image-dimensions.php:104
+msgid "Apply"
+msgstr "Aplica"
+
+#: modules/history/views/revisions-panel-template.php:13
+#: includes/schemes/base.php:168
+msgid "Discard"
+msgstr "Descarta"
+
+#: includes/schemes/base.php:162
+msgid "Reset"
+msgstr "Reinicialitza"
+
+#: includes/editor-templates/templates.php:168
+msgid "Preview"
+msgstr "Previsualitza"
+
+#: includes/editor-templates/hotkeys.php:75
+#: includes/editor-templates/templates.php:18
+#: includes/editor-templates/templates.php:19
+#: includes/editor-templates/templates.php:210
+#: includes/editor-templates/templates.php:221 includes/editor.php:648
+msgid "Save"
+msgstr "Desa"
+
+#: core/admin/admin.php:569
+msgid "Help"
+msgstr "Ajuda"
+
+#: includes/editor-templates/panel.php:83 includes/elements/section.php:1309
+msgid "Tablet"
+msgstr "Tauleta"
+
+#: includes/editor-templates/panel.php:78
+msgid "Desktop"
+msgstr "Escriptori"
+
+#: includes/editor-templates/hotkeys.php:108
+#: includes/editor-templates/panel.php:70
+#: includes/editor-templates/panel.php:72
+msgid "Responsive Mode"
+msgstr "Mode responsiu"
+
+#: includes/editor.php:564
+msgid "View Page"
+msgstr "Mostra la pàgina"
+
+#: includes/editor-templates/panel.php:51
+#: includes/editor-templates/panel.php:52
+msgid "Widgets Panel"
+msgstr "Panell de ginys"
+
+#: includes/editor-templates/panel.php:46
+#: includes/editor-templates/panel.php:47
+msgid "Menu"
+msgstr "Menú"
+
+#: includes/editor-templates/panel-elements.php:37
+msgid "Search Widget..."
+msgstr "Cerca un giny..."
+
+#: includes/editor-templates/global.php:25
+msgid "Add New Section"
+msgstr "Afegeix"
+
+#: modules/gutenberg/module.php:116 core/admin/admin.php:171
+#: includes/editor-templates/templates.php:50
+#: includes/editor-templates/editor-wrapper.php:51
+msgid "Loading"
+msgstr "S'està carregant"
+
+#. Plugin Name of the plugin
+#: core/documents-manager.php:351 core/admin/admin.php:219
+#: core/admin/admin.php:422 core/admin/admin.php:490
+#: core/upgrade/manager.php:34 includes/editor-templates/editor-wrapper.php:31
+#: includes/editor.php:545 includes/settings/settings.php:74
+#: includes/settings/settings.php:75 includes/settings/settings.php:622
+msgid "Elementor"
+msgstr "Elementor"
+
+#: includes/controls/structure.php:60
+msgid "More Structures"
+msgstr "Més estructures"
+
+#: includes/controls/repeater.php:172
+msgid "Add Item"
+msgstr "Afegeix un element"
+
+#: modules/history/views/revisions-panel-template.php:56
+#: includes/editor-templates/hotkeys.php:60
+#: includes/editor-templates/templates.php:181 includes/editor.php:546
+#: includes/controls/media.php:145
+msgid "Delete"
+msgstr "Suprimeix"
+
+#: includes/controls/icon.php:872 includes/controls/icon.php:873
+msgid "Select Icon"
+msgstr "Selecciona icona"
+
+#: includes/maintenance-mode.php:225 includes/widgets/image-gallery.php:209
+#: includes/widgets/image-carousel.php:509
+#: includes/widgets/social-icons.php:261 includes/widgets/common.php:381
+msgid "Custom"
+msgstr "Personalitzat"
+
+#: includes/controls/groups/typography.php:289
+msgctxt "Typography Control"
+msgid "Typography"
+msgstr "Tipografia"
+
+#: includes/controls/groups/typography.php:199
+msgctxt "Typography Control"
+msgid "Letter Spacing"
+msgstr "Espaiat entre lletres"
+
+#: includes/controls/groups/typography.php:177
+msgctxt "Typography Control"
+msgid "Line-Height"
+msgstr "Alçada de la línia"
+
+#: includes/elements/column.php:308 includes/elements/column.php:379
+#: includes/elements/column.php:428 includes/elements/column.php:531
+#: includes/elements/column.php:864 includes/elements/section.php:562
+#: includes/elements/section.php:647 includes/elements/section.php:696
+#: includes/elements/section.php:800 includes/elements/section.php:1269
+#: includes/widgets/icon.php:199 includes/widgets/google-maps.php:195
+#: includes/widgets/image-box.php:282 includes/widgets/image.php:323
+#: includes/widgets/icon-box.php:243 includes/widgets/common.php:165
+#: includes/widgets/common.php:206 includes/widgets/common.php:270
+#: includes/widgets/button.php:293 includes/widgets/heading.php:258
+msgid "Normal"
+msgstr "Normal"
+
+#: includes/controls/groups/typography.php:152
+msgctxt "Typography Control"
+msgid "Style"
+msgstr "Estil"
+
+#: includes/controls/groups/typography.php:139
+msgctxt "Typography Control"
+msgid "Transform"
+msgstr "Transformació"
+
+#: includes/controls/groups/typography.php:132
+msgctxt "Typography Control"
+msgid "Weight"
+msgstr "Pes"
+
+#: includes/controls/groups/typography.php:98
+msgctxt "Typography Control"
+msgid "Family"
+msgstr "Família"
+
+#: includes/controls/groups/typography.php:105
+msgctxt "Typography Control"
+msgid "Size"
+msgstr "Mida"
+
+#: includes/controls/groups/border.php:88
+msgctxt "Border Control"
+msgid "Color"
+msgstr "Color"
+
+#: includes/controls/groups/border.php:76
+msgctxt "Border Control"
+msgid "Width"
+msgstr "Ample"
+
+#: includes/widgets/icon-list.php:253 includes/widgets/divider.php:115
+msgid "Dashed"
+msgstr "Línia discontínua"
+
+#: includes/widgets/icon-list.php:252 includes/widgets/divider.php:114
+msgid "Dotted"
+msgstr "Puntejat"
+
+#: includes/widgets/icon-list.php:251 includes/widgets/divider.php:113
+msgid "Double"
+msgstr "Doble"
+
+#: includes/widgets/star-rating.php:137 includes/widgets/icon-list.php:250
+#: includes/widgets/divider.php:112
+msgid "Solid"
+msgstr "Sòlid"
+
+#: includes/elements/section.php:922 includes/controls/groups/border.php:63
+#: includes/controls/hover-animation.php:119
+#: includes/controls/animation.php:149 includes/widgets/image-gallery.php:148
+#: includes/widgets/image-carousel.php:179
+#: includes/widgets/image-carousel.php:192
+#: includes/widgets/image-carousel.php:236 includes/widgets/image.php:159
+#: includes/widgets/image.php:190
+msgid "None"
+msgstr "Cap"
+
+#: includes/controls/groups/border.php:60
+msgctxt "Border Control"
+msgid "Border Type"
+msgstr "Tipus de vora"
+
+#: includes/controls/groups/background.php:583
+msgctxt "Background Control"
+msgid "Background Fallback"
+msgstr "Fons alternatiu"
+
+#: includes/controls/groups/background.php:548
+msgctxt "Background Control"
+msgid "Video Link"
+msgstr "Enllaç de vídeo"
+
+#: includes/controls/groups/background.php:479
+msgctxt "Background Control"
+msgid "Cover"
+msgstr "Coberta"
+
+#: includes/controls/groups/background.php:478
+msgctxt "Background Control"
+msgid "Auto"
+msgstr "Auto"
+
+#: includes/controls/groups/background.php:472
+msgctxt "Background Control"
+msgid "Size"
+msgstr "Mida"
+
+#: includes/controls/groups/background.php:460
+msgctxt "Background Control"
+msgid "Repeat-y"
+msgstr "Repeteix y"
+
+#: includes/controls/groups/background.php:459
+msgctxt "Background Control"
+msgid "Repeat-x"
+msgstr "Repeteix x"
+
+#: includes/controls/groups/background.php:457
+msgctxt "Background Control"
+msgid "No-repeat"
+msgstr "Sense repetir"
+
+#: includes/controls/groups/background.php:451
+#: includes/controls/groups/background.php:458
+msgctxt "Background Control"
+msgid "Repeat"
+msgstr "Repetició"
+
+#: includes/controls/groups/background.php:427
+msgctxt "Background Control"
+msgid "Fixed"
+msgstr "Fix"
+
+#: includes/controls/groups/background.php:426
+msgctxt "Background Control"
+msgid "Scroll"
+msgstr "Desplaçament"
+
+#: includes/controls/groups/background.php:421
+msgctxt "Background Control"
+msgid "Attachment"
+msgstr "Adjunt"
+
+#: includes/controls/groups/background.php:230
+#: includes/controls/groups/background.php:275
+msgctxt "Background Control"
+msgid "Bottom Right"
+msgstr "Part inferior dreta"
+
+#: includes/controls/groups/background.php:228
+#: includes/controls/groups/background.php:274
+msgctxt "Background Control"
+msgid "Bottom Center"
+msgstr "Centrat part inferior"
+
+#: includes/controls/groups/background.php:229
+#: includes/controls/groups/background.php:273
+msgctxt "Background Control"
+msgid "Bottom Left"
+msgstr "Part inferior esquerra"
+
+#: includes/controls/groups/background.php:224
+#: includes/controls/groups/background.php:272
+msgctxt "Background Control"
+msgid "Center Right"
+msgstr "Centrat a la dreta"
+
+#: includes/controls/groups/background.php:222
+#: includes/controls/groups/background.php:271
+msgctxt "Background Control"
+msgid "Center Center"
+msgstr "Centrat"
+
+#: includes/controls/groups/background.php:223
+#: includes/controls/groups/background.php:270
+msgctxt "Background Control"
+msgid "Center Left"
+msgstr "Centrat a l'esquerra"
+
+#: includes/controls/groups/background.php:227
+#: includes/controls/groups/background.php:269
+msgctxt "Background Control"
+msgid "Top Right"
+msgstr "Superior dret"
+
+#: includes/controls/groups/background.php:225
+#: includes/controls/groups/background.php:268
+msgctxt "Background Control"
+msgid "Top Center"
+msgstr "Centrat dalt"
+
+#: includes/controls/groups/background.php:226
+#: includes/controls/groups/background.php:267
+msgctxt "Background Control"
+msgid "Top Left"
+msgstr "A dalt a l'esquerra"
+
+#: includes/controls/groups/background.php:219
+#: includes/controls/groups/background.php:261
+msgctxt "Background Control"
+msgid "Position"
+msgstr "Posició"
+
+#: includes/controls/groups/background.php:250
+msgctxt "Background Control"
+msgid "Background Image"
+msgstr "Imatge de fons"
+
+#: includes/controls/groups/background.php:244
+msgctxt "Background Control"
+msgid "Image"
+msgstr "Imatge"
+
+#: includes/controls/groups/background.php:130
+msgctxt "Background Control"
+msgid "Background Color"
+msgstr "Color de fons"
+
+#: includes/controls/groups/background.php:127
+msgctxt "Background Control"
+msgid "Color"
+msgstr "Color"
+
+#: includes/controls/groups/background.php:120
+msgctxt "Background Control"
+msgid "Background Type"
+msgstr "Tipus de fons"
+
+#: includes/controls/groups/background.php:493
+msgctxt "Background Control"
+msgid "Width"
+msgstr "Ample"
+
+#: includes/controls/groups/background.php:100
+msgctxt "Background Control"
+msgid "Background Video"
+msgstr "Vídeo de fons"
+
+#: includes/controls/groups/background.php:92
+msgctxt "Background Control"
+msgid "Classic"
+msgstr "Clàssic"
+
+#: includes/fonts.php:68
+msgid "Google"
+msgstr "Google"
+
+#: includes/fonts.php:67
+msgid "System"
+msgstr "Sistema"
+
+#: includes/widgets/icon.php:149 includes/widgets/image-gallery.php:142
+#: includes/widgets/image-carousel.php:188
+#: includes/widgets/image-carousel.php:202 includes/widgets/image-box.php:145
+#: includes/widgets/image.php:186 includes/widgets/image.php:200
+#: includes/widgets/icon-list.php:142 includes/widgets/icon-box.php:167
+#: includes/widgets/testimonial.php:152 includes/widgets/social-icons.php:162
+#: includes/widgets/audio.php:103 includes/widgets/button.php:146
+#: includes/widgets/heading.php:121 includes/widgets/video.php:125
+#: includes/widgets/video.php:146 includes/widgets/video.php:167
+msgid "Link"
+msgstr "Enllaç"
+
+#: includes/elements/column.php:720 includes/elements/section.php:1139
+#: includes/controls/dimensions.php:91 includes/widgets/icon.php:165
+#: includes/widgets/image-gallery.php:297 includes/widgets/star-rating.php:165
+#: includes/widgets/text-editor.php:146 includes/widgets/image-carousel.php:348
+#: includes/widgets/image-carousel.php:584 includes/widgets/image-box.php:163
+#: includes/widgets/image-box.php:387 includes/widgets/image.php:135
+#: includes/widgets/image.php:468 includes/widgets/icon-list.php:214
+#: includes/widgets/icon-box.php:185 includes/widgets/icon-box.php:451
+#: includes/widgets/divider.php:194 includes/widgets/testimonial.php:187
+#: includes/widgets/social-icons.php:215 includes/widgets/common.php:489
+#: includes/widgets/common.php:490 includes/widgets/button.php:165
+#: includes/widgets/heading.php:177
+msgid "Left"
+msgstr "Esquerra"
+
+#: includes/elements/column.php:219 includes/elements/section.php:470
+#: includes/elements/section.php:489 includes/elements/section.php:931
+#: includes/controls/dimensions.php:90 includes/widgets/image-box.php:417
+#: includes/widgets/icon-box.php:481 includes/widgets/common.php:610
+msgid "Bottom"
+msgstr "A baix"
+
+#: includes/elements/column.php:728 includes/elements/section.php:1147
+#: includes/controls/dimensions.php:89 includes/widgets/icon.php:173
+#: includes/widgets/image-gallery.php:305 includes/widgets/star-rating.php:173
+#: includes/widgets/text-editor.php:154 includes/widgets/image-carousel.php:349
+#: includes/widgets/image-carousel.php:592 includes/widgets/image-box.php:171
+#: includes/widgets/image-box.php:395 includes/widgets/image.php:143
+#: includes/widgets/image.php:476 includes/widgets/icon-list.php:222
+#: includes/widgets/icon-box.php:193 includes/widgets/icon-box.php:459
+#: includes/widgets/divider.php:202 includes/widgets/testimonial.php:195
+#: includes/widgets/social-icons.php:223 includes/widgets/common.php:489
+#: includes/widgets/common.php:490 includes/widgets/button.php:173
+#: includes/widgets/heading.php:185
+msgid "Right"
+msgstr "Dreta"
+
+#: includes/elements/column.php:217 includes/elements/section.php:468
+#: includes/elements/section.php:487 includes/elements/section.php:930
+#: includes/controls/dimensions.php:88 includes/widgets/image-box.php:167
+#: includes/widgets/image-box.php:415 includes/widgets/icon-box.php:189
+#: includes/widgets/icon-box.php:479 includes/widgets/testimonial.php:169
+#: includes/widgets/common.php:606 includes/widgets/video.php:738
+msgid "Top"
+msgstr "A dalt"
+
+#: modules/page-templates/module.php:259
+#: includes/editor-templates/panel.php:212 includes/elements/column.php:216
+#: includes/elements/column.php:242 includes/elements/column.php:280
+#: includes/elements/section.php:361 includes/elements/section.php:378
+#: includes/elements/section.php:428 includes/elements/section.php:486
+#: includes/elements/section.php:502 includes/elements/section.php:523
+#: includes/controls/groups/typography.php:124
+#: includes/controls/groups/typography.php:143
+#: includes/controls/groups/typography.php:156
+#: includes/controls/groups/typography.php:168 includes/controls/font.php:67
+#: includes/controls/animation.php:148 includes/base/widget-base.php:253
+#: includes/widgets/icon.php:120 includes/widgets/image-gallery.php:160
+#: includes/widgets/image-gallery.php:176
+#: includes/widgets/image-gallery.php:208 includes/widgets/text-editor.php:194
+#: includes/widgets/text-editor.php:257 includes/widgets/image-carousel.php:134
+#: includes/widgets/image-carousel.php:147
+#: includes/widgets/image-carousel.php:219
+#: includes/widgets/image-carousel.php:508 includes/widgets/image.php:220
+#: includes/widgets/icon-list.php:97 includes/widgets/icon-box.php:104
+#: includes/widgets/common.php:378 includes/widgets/common.php:480
+#: includes/widgets/progress.php:110 includes/widgets/button.php:120
+#: includes/widgets/heading.php:140
+msgid "Default"
+msgstr "Predeterminada"
+
+#: includes/controls/gallery.php:83
+msgid "Clear"
+msgstr "Neteja"
+
+#: modules/gutenberg/module.php:95 modules/gutenberg/module.php:105
+#: core/admin/admin.php:152 core/admin/admin.php:160 core/base/document.php:401
+#: includes/frontend.php:880
+msgid "Edit with Elementor"
+msgstr "Edita amb l'Elementor"
+
+#: modules/gutenberg/module.php:92
+msgid "&#8592; Back to WordPress Editor"
+msgstr "&#8592; torna a l'editor del WordPress"
+
+#. translators: %s: PHP version
+#: elementor.php:81
+msgid "Elementor requires PHP version %s+, plugin is currently NOT RUNNING."
+msgstr "L'Elementor necessita una versió %s o superior del PHP, l'extensió no està activa actualment."
