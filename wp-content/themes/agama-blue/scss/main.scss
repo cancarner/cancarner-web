@@ -1,0 +1,9 @@
+@import 'variables';
+
+body {
+    @import 'layout/header';
+    @import 'layout/content';
+    @import 'layout/footer';
+
+    @import 'templates/page';
+}

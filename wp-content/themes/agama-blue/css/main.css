@@ -1,0 +1,74 @@
+@media screen and (min-width: 993px) {
+  body header .sticky-header {
+    position: fixed;
+    background: white; }
+  body header .sticky-header .logo {
+    margin-left: 0;
+    padding-left: 0; } }
+body header nav#vision-mobile-nav li.highlight > a {
+  font-size: 1.2em;
+  color: #dd3333; }
+body header nav#vision-primary-nav li.highlight > a {
+  color: #dd3333;
+  border: 3px solid #dd3333;
+  padding: 5px 10px;
+  border-radius: 5px; }
+  body header nav#vision-primary-nav li.highlight > a:hover {
+    background: #dd3333;
+    color: white !important; }
+body header nav#vision-mobile-nav ul li.menu-item.social a:hover,
+body header nav#vision-primary-nav ul li.menu-item.social a:hover {
+  color: orange !important; }
+body header nav#vision-mobile-nav ul li.menu-item.natura a:hover,
+body header nav#vision-primary-nav ul li.menu-item.natura a:hover {
+  color: green !important; }
+body header .post-thumbnail {
+  overflow: hidden;
+  position: relative; }
+  body header .post-thumbnail img {
+    height: 80vh;
+    max-height: 450px;
+    object-fit: cover; }
+  body header .post-thumbnail h2 {
+    font-size: 4vw;
+    font-style: italic;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    left: 50%;
+    bottom: 0px;
+    margin-bottom: 0;
+    transform: translateX(-50%);
+    color: white;
+    text-shadow: 1px 1px 1px #111111;
+    font-weight: bold;
+    position: absolute; }
+body header .post-thumbnail-blank {
+  min-height: 91px; }
+body div#content a {
+  color: #dd3333; }
+  body div#content a:hover {
+    text-decoration: underline; }
+body div#content .wp-block-columns.has-2-columns.divide-3-2 > .wp-block-column:first-child {
+  flex: 2; }
+body div#content .wp-block-columns.has-2-columns.divide-3-2 > .wp-block-column:last-child {
+  flex: 1; }
+body div#content p.box-cohabitatge {
+  background: #f7cccc;
+  padding: 30px 20px; }
+  body div#content p.box-cohabitatge.color2 {
+    background: #efa0a0; }
+  body div#content p.box-cohabitatge a {
+    color: #111111;
+    text-decoration: underline; }
+body div#content .edit-link {
+  display: none; }
+body footer .social {
+  padding-right: 0; }
+body.page .vision-row {
+  max-width: 1200px;
+  padding-top: 0;
+  padding-bottom: 30px; }
+  body.page .vision-row .entry-header .entry-title {
+    font-family: 'Pt sans';
+    font-size: 30px; }
