@@ -40,32 +40,103 @@ header {
         }
     }
 
+    $padding-lateral: '(100vw - 1167px) / 2';
+    $space_1_3: '1167px / 3';
+
     .post-thumbnail{
         overflow: hidden;
-        position:relative;
-
-        img{
-            height: 80vh;
-            max-height: 450px;
-            object-fit: cover;
-        }
-        h2{
-            font-size: 4vw;
-            font-style: italic;
+        img {
             width: 100%;
-            max-width: 1200px;
-            padding: 0 20px;
-            left: 50%;
-            bottom: 0px;
-            margin-bottom: 0;
-            transform: translateX(-50%);
-            color: $white;
-            text-shadow: 1px 1px 1px $black;
-            font-weight: bold;
-            position:absolute;
+            @media #{$min-desktop} {
+                width: calc(#{$padding-lateral} + #{$space_1_3} * 2 + 10px);
+                height: 350px;
+                object-fit: cover;
+                float: right;
+            }
+        }
+        .info {
+            background: rgba($black,.4);
+            .info-inner {
+                padding: 20px 0;
+                text-align: center;
+                h2 {
+                    font-size: 1.25em;
+                    line-height: 1.25em;
+                    color: $white;
+                    text-shadow: 1px 1px rgba(0,0,0,.2);
+                    margin: 0;
+                    text-align: center;
+                }
+                h3 {
+                    margin: 20px 0 0;
+                    font-family: 'Josefin Sans', sans-serif;
+                    font-weight: 700;
+                    text-align: center;
+                    font-size: 1.5em;
+                    line-height: normal;
+                    letter-spacing: -2px;
+                    word-spacing: 2px;
+                    // font-style: bold;
+                }
+            }
+        }
+        @media #{$min-desktop} {
+            position:relative;
+            .info {
+                overflow: hidden;
+                position:absolute;
+                top:0;
+                left:0;
+                bottom: 0;
+                padding-left: calc(#{$padding-lateral} - 15px);
+                // margin-left: 20px;
+                width: calc(#{$padding-lateral} + #{$space_1_3} - 15px);
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+
+                .info-inner{
+                    margin: 15px 10px;
+
+                    h2 {
+                        text-align: left;
+                        padding-right: 30px;
+                    }
+
+                    h3{
+                        color: $black;
+                        font-size: 1.7em;
+                        text-align: left;
+                        // text-align: justify;
+                        i {
+                            display:inline-block;
+                            width: 10px;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        &.no-title{
+            img {
+                width: 100%;
+            }
         }
     }
     .post-thumbnail-blank{
         min-height: 91px;
+    }
+}
+
+#main-wrapper{
+    &.webtype_cohabitatge header .post-thumbnail .info {
+        background: rgba($cohabitatge,.7);
+    }
+    &.webtype_social header .post-thumbnail .info {
+        background: rgba($social,.7);
+    }
+    &.webtype_natura header .post-thumbnail .info {
+        background: rgba($natura,.7);
     }
 }

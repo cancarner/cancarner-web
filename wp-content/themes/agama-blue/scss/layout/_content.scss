@@ -1,6 +1,19 @@
+@media screen and (min-width: 960px){
+    .site {
+        padding: 0!important;
+    }
+}
+.site-content {
+    padding: 0 10px;
+}
 div#content {
+    .entry-header {
+        h1 {
+            margin-top: 40px;
+            border-bottom: 3px solid $black;
+        }
+    }
     a {
-        color: $red;
         &:hover{
             text-decoration: underline;
         }
@@ -19,11 +32,11 @@ div#content {
         }
     }
 
-    p.box-cohabitatge{
-        background: lighten($cohabitatge, 35%);
+    p.box{
+        background: lighten($black, 80%);
         padding: 30px 20px;
         &.color2{
-            background: lighten($cohabitatge, 25%);
+            background: lighten($black, 70%);
         }
         a{
             color: $black;
@@ -34,4 +47,53 @@ div#content {
     .edit-link{
         display:none;
     }
+}
+
+#main-wrapper{
+    &.webtype_cohabitatge div#content {
+        .entry-header  h1 {
+            color: $cohabitatge;
+            border-color: $cohabitatge;
+        }
+        a {
+            color: $cohabitatge;
+        }
+        p.box{
+            background: lighten($cohabitatge, 35%);
+            &.color2{
+                background: lighten($cohabitatge, 25%);
+            }
+        }
+    }
+    &.webtype_social div#content {
+        .entry-header  h1 {
+            color: $social;
+            border-color: $social;
+        }
+        a {
+            color: $social;
+        }
+        p.box{
+            background: lighten($social, 40%);
+            &.color2{
+                background: lighten($social, 35%);
+            }
+        }
+    }
+    &.webtype_natura div#content {
+        .entry-header  h1 {
+            color: $natura;
+            border-color: $natura;
+        }
+        a {
+            color: $natura;
+        }
+        p.box{
+            background: lighten($natura, 65%);
+            &.color2{
+                background: lighten($natura, 55%);
+            }
+        }
+    }
+
 }

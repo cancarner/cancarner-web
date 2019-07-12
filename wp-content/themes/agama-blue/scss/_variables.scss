@@ -1,10 +1,17 @@
 $red: #dd3333;
-$orange: orange;
+$yellow: orange;
 $green: green;
 $white: #fff;
 $black: #111;
 
 
 $cohabitatge: $red;
-$social: $orange;
-$natura: $green
+$social: $yellow;
+$natura: $green;
+
+$max-mobile: "only screen and (max-width: 767px)";
+$min-tablet: "only screen and (min-width: 768px)";
+$max-tablet: "only screen and (max-width: 992px)";
+$min-desktop: "only screen and (min-width: 993px)";
+$max-desktop: "only screen and (max-width: 1199px)";
+$min-big-desktop: "only screen and (min-width: 1200px)";

@@ -30,6 +30,8 @@ if( ! defined( 'ABSPATH' ) ) {
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:700&display=swap" rel="stylesheet">
+
 	<?php wp_head(); ?>
 
 </head>
@@ -37,7 +39,7 @@ if( ! defined( 'ABSPATH' ) ) {
 <body <?php body_class('stretched'); ?>>
 
 <!-- Main Wrapper Start -->
-<div id="main-wrapper">
+<div id="main-wrapper" class="webtype_<?=get_post_meta(get_the_ID(), 'cancarner_webtype', TRUE) ?:'cohabitatge'; ?>">
 
 	<!-- Header Start -->
 	<header id="masthead" class="site-header <?php Agama::header_class(); ?> clearfix" role="banner">
@@ -46,11 +48,16 @@ if( ! defined( 'ABSPATH' ) ) {
 
 		<?php //Agama_Helper::get_header_image(); ?>
         <?php if(has_post_thumbnail()): ?>
-            <div class="post-thumbnail">
+            <?php $postHighline = get_post_meta(get_the_ID(), 'cancarner_highline', TRUE); ?>
+            <div class="post-thumbnail<?=$postHighline ? '' : ' no-title'?>">
                 <?php the_post_thumbnail('full'); ?>
-                <?php $postHighline = get_post_meta(get_the_ID(), 'cancarner_highline', TRUE); ?>
                 <?php if($postHighline): ?>
-                    <h2><?= $postHighline ?></h2>
+                    <div class="info">
+                        <div class="info-inner">
+                            <h2><?= $postHighline ?></h2>
+                            <h3>ARRELEM CAN CARNER<i></i>!</h3>
+                        </div>
+                    </div>
                 <?php endif; ?>
             </div>
         <?php else: ?>
