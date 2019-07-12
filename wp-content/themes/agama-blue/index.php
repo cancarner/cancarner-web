@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * The main template file
  *
@@ -10,7 +10,7 @@
 // Do not allow direct access to the file.
 if( ! defined( 'ABSPATH' ) ) {
     exit;
-} 
+}
 
 global $wp_query; ?>
 
@@ -65,15 +65,15 @@ global $wp_query; ?>
                         </div>
                     </nav>
                 <?php endif; ?>
-                
+
                 <?php wp_reset_query(); ?>
 
             <?php endif; ?>
 
         </div>
-        
+
         <?php Agama_Helper::get_infinite_scroll_load_more_btn(); ?>
-        
+
     </div>
 
 <?php endif; ?>

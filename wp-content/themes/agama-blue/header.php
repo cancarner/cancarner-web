@@ -47,7 +47,8 @@ if( ! defined( 'ABSPATH' ) ) {
 		<?php Agama_Helper::get_header(); ?>
 
 		<?php //Agama_Helper::get_header_image(); ?>
-        <?php if(has_post_thumbnail()): ?>
+
+        <?php if(has_post_thumbnail() && get_page_template_slug(get_the_ID()) == ''): ?>
             <?php $postHighline = get_post_meta(get_the_ID(), 'cancarner_highline', TRUE); ?>
             <div class="post-thumbnail<?=$postHighline ? '' : ' no-title'?>">
                 <?php the_post_thumbnail('full'); ?>

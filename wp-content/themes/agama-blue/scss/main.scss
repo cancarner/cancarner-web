@@ -1,9 +1,12 @@
 @import 'variables';
 
 body {
+    @import 'typography';
+
     @import 'layout/header';
     @import 'layout/content';
     @import 'layout/footer';
 
     @import 'templates/page';
+    @import 'templates/template-home';
 }

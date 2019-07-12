@@ -1,7 +1,13 @@
 &.page {
-    .vision-row {
-        max-width: 1200px;
+    .vision-row{
+        max-width: none;
+        margin: initial;
         padding-top: 0;
+    }
+    .site-content {
+        float: none;
+        margin: 0 auto;
+        max-width: 1200px;
         padding-bottom: 30px;
 
         .entry-header {
