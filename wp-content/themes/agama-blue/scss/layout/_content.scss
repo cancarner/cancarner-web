@@ -11,6 +11,8 @@ div#content {
         h1 {
             margin-top: 40px;
             border-bottom: 3px solid $black;
+            font-size: 1.5em;
+            text-transform: uppercase;
         }
     }
     a {
@@ -19,28 +21,45 @@ div#content {
         }
     }
     .wp-block-columns.has-2-columns{
-        &.divide-3-2{
-            >.wp-block-column{
-                &:first-child{
-                    flex: 2;
-                }
-                &:last-child{
-                    flex: 1;
+        &.divide-2-1{
+            @media #{$min-desktop} {
+                >.wp-block-column{
+                    &:first-child{
+                        flex: 2;
+                        padding-right: 30px;
+                    }
+                    &:last-child{
+                        flex: 1;
+                    }
                 }
             }
-
+        }
+    }
+    .wp-block-column{
+        h2{
+            margin-top:0;
         }
     }
 
-    p.box{
-        background: lighten($black, 80%);
-        padding: 30px 20px;
-        &.color2{
-            background: lighten($black, 70%);
+    p{
+        &.box,
+        &.box-transparent{
+            padding: 30px 20px;
         }
-        a{
-            color: $black;
-            text-decoration: underline;
+
+        &.box{
+            background: lighten($black, 80%);
+            &.color2{
+                background: lighten($black, 70%);
+            }
+            a{
+                color: $black;
+                text-decoration: underline;
+            }
+        }
+        &.box-transparent{
+            font-size: 1.15em;
+            border: 3px solid lighten($black, 80%);
         }
     }
 
@@ -53,15 +72,20 @@ div#content {
     &.webtype_cohabitatge div#content {
         .entry-header  h1 {
             color: $cohabitatge;
-            border-color: $cohabitatge;
+            border-color: $cohabitatge2;
         }
-        a {
+        a, h2 {
             color: $cohabitatge;
         }
-        p.box{
-            background: lighten($cohabitatge, 35%);
-            &.color2{
-                background: lighten($cohabitatge, 25%);
+        p{
+            &.box{
+                background: lighten($cohabitatge, 35%);
+                &.color2{
+                    background: lighten($cohabitatge, 25%);
+                }
+            }
+            &.box-transparent{
+                border-color: $cohabitatge2;
             }
         }
     }
@@ -73,10 +97,15 @@ div#content {
         a {
             color: $social;
         }
-        p.box{
-            background: lighten($social, 40%);
-            &.color2{
-                background: lighten($social, 35%);
+        p{
+            &.box{
+                background: lighten($social, 40%);
+                &.color2{
+                    background: lighten($social, 35%);
+                }
+            }
+            &.box-transparent{
+                border-color: $social2;
             }
         }
     }
@@ -88,10 +117,15 @@ div#content {
         a {
             color: $natura;
         }
-        p.box{
-            background: lighten($natura, 65%);
-            &.color2{
-                background: lighten($natura, 55%);
+        p{
+            &.box{
+                background: lighten($natura, 65%);
+                &.color2{
+                    background: lighten($natura, 55%);
+                }
+            }
+            &.box-transparent{
+                border-color: $natura2;
             }
         }
     }

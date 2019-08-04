@@ -1,18 +1,23 @@
+h2 {
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}
 h3 {
     margin: 20px 0 0;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Assistant', sans-serif;
     font-weight: 700;
     text-align: center;
     font-size: 1.5em;
     line-height: normal;
-    letter-spacing: -2px;
-    word-spacing: 2px;
+    word-spacing: 5px;
     text-transform: uppercase;
     color: $black;
+    letter-spacing: 1px;
     // font-style: bold;
     i {
         display:inline-block;
-        width: 10px;
+        width: 5px;
     }
 }
 

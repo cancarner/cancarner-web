@@ -30,7 +30,7 @@ if( ! defined( 'ABSPATH' ) ) {
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arimo:700i|Assistant:800&display=swap" rel="stylesheet">
 
 	<?php wp_head(); ?>
 
@@ -54,10 +54,8 @@ if( ! defined( 'ABSPATH' ) ) {
                 <?php the_post_thumbnail('full'); ?>
                 <?php if($postHighline): ?>
                     <div class="info">
-                        <div class="info-inner">
-                            <h2><?= $postHighline ?></h2>
-                            <h3>ARRELEM CAN CARNER<i></i>!</h3>
-                        </div>
+                        <h2><?= $postHighline ?></h2>
+                        <h3>ARRELEM CAN CARNER<i></i>!</h3>
                     </div>
                 <?php endif; ?>
             </div>

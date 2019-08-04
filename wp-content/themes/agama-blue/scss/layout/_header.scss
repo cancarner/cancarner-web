@@ -48,28 +48,26 @@ header {
         img {
             width: 100%;
             @media #{$min-desktop} {
-                width: calc(#{$padding-lateral} + #{$space_1_3} * 2 + 10px);
+                width: calc(50% - 5px);
                 height: 350px;
                 object-fit: cover;
-                float: right;
+                // float: right;
             }
         }
         .info {
             background: rgba($black,.4);
-            .info-inner {
-                padding: 20px 0;
-                text-align: center;
-                h2 {
-                    font-size: 1.25em;
-                    line-height: 1.25em;
-                    color: $white;
-                    text-shadow: 1px 1px rgba(0,0,0,.2);
-                    margin: 0;
-                    text-align: center;
-                }
-                h3 {
-                    margin: 20px 0 0;
-                }
+            padding: 15px 30px;
+            h2 {
+                font-size: 1.25em;
+                line-height: 1.15em;
+                color: $white;
+                text-shadow: 1px 1px rgba(0,0,0,.2);
+                margin: 0;
+                text-align: left;
+            }
+            h3 {
+                text-align: right;
+                margin: 20px 0 0;
             }
         }
         @media #{$min-desktop} {
@@ -78,28 +76,24 @@ header {
                 overflow: hidden;
                 position:absolute;
                 top:0;
-                left:0;
+                right:0;
                 bottom: 0;
-                padding-left: calc(#{$padding-lateral} - 15px);
-                // margin-left: 20px;
-                width: calc(#{$padding-lateral} + #{$space_1_3} - 15px);
+                padding-right: calc(#{$padding-lateral});
+                padding-left: 35px;
+                padding-top: 120px;
+                padding-bottom: 30px;
+                width: calc(50% - 5px);
                 display: flex;
-                flex-direction: row;
-                align-items: flex-end;
+                flex-direction: column;
+                justify-content: space-between;
+                h2 {
+                    font-size: 2em;
+                    padding-right: 30px;
+                }
 
-                .info-inner{
-                    margin: 15px 10px;
-
-                    h2 {
-                        text-align: left;
-                        padding-right: 30px;
-                    }
-
-                    h3{
-                        color: $black;
-                        font-size: 1.7em;
-                        text-align: left;
-                    }
+                h3{
+                    color: $black;
+                    font-size: 1.7em;
                 }
 
             }
@@ -118,12 +112,12 @@ header {
 
 #main-wrapper{
     &.webtype_cohabitatge header .post-thumbnail .info {
-        background: rgba($cohabitatge,.7);
+        background: $cohabitatge2;
     }
     &.webtype_social header .post-thumbnail .info {
         background: rgba($social,.7);
     }
     &.webtype_natura header .post-thumbnail .info {
-        background: rgba($natura,.7);
+        background: $natura;
     }
 }

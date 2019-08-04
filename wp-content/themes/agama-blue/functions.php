@@ -48,3 +48,11 @@ function nt_js() {
      wp_enqueue_script( 'main-js', get_stylesheet_directory_uri() . '/js/main.js', array( 'jquery' ),  '20190319');
 }
 // add_action('wp_enqueue_scripts', 'nt_js');
+
+
+function create_referencia_field_ct7( $posted_data )
+{
+    $posted_data['referencia'] = sprintf('%06x', mt_rand(0, 0xffff)    );
+    return $posted_data;
+};
+add_filter( 'wpcf7_posted_data', 'create_referencia_field_ct7', 10, 1 );
