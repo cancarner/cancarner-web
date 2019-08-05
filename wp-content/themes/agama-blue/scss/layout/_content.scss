@@ -7,20 +7,38 @@
     padding: 0 10px;
 }
 div#content {
-    .entry-header {
-        h1 {
-            margin-top: 40px;
-            border-bottom: 3px solid $black;
-            font-size: 1.5em;
-            text-transform: uppercase;
-        }
-    }
     a {
         &:hover{
             text-decoration: underline;
         }
     }
     .wp-block-columns.has-2-columns{
+        &.divide-1-3{
+            @media #{$min-desktop} {
+                >.wp-block-column{
+                    &:first-child{
+                        flex: 1;
+                        // padding-right: 30px;
+                    }
+                    &:last-child{
+                        flex: 3;
+                    }
+                }
+            }
+        }
+        &.divide-1-2{
+            @media #{$min-desktop} {
+                >.wp-block-column{
+                    &:first-child{
+                        flex: 1;
+                        padding-right: 30px;
+                    }
+                    &:last-child{
+                        flex: 2;
+                    }
+                }
+            }
+        }
         &.divide-2-1{
             @media #{$min-desktop} {
                 >.wp-block-column{
@@ -34,6 +52,35 @@ div#content {
                 }
             }
         }
+        &.divide-3-1{
+            @media #{$min-desktop} {
+                >.wp-block-column{
+                    &:first-child{
+                        flex: 3;
+                        padding-right: 30px;
+                    }
+                    &:last-child{
+                        flex: 1;
+                    }
+                }
+            }
+        }
+        &.divide-2-1{
+            @media #{$min-desktop} {
+                >.wp-block-column{
+                    &:first-child{
+                        flex: 2;
+                        padding-right: 30px;
+                    }
+                    &:last-child{
+                        flex: 1;
+                    }
+                }
+            }
+        }
+        &.line-between > .wp-block-column:not(:last-child) {
+            border-right: 1px solid lighten($black, 80%);
+        }
     }
     .wp-block-column{
         h2{
@@ -41,9 +88,16 @@ div#content {
         }
     }
 
+    blockquote.wp-block-quote {
+        border-color: lighten($black, 80%);
+        margin-bottom: 20px;
+    }
+
     p{
         &.box,
         &.box-transparent{
+            font-family: 'Arimo', sans-serif;
+            line-height: 1.25em;
             padding: 30px 20px;
         }
 
@@ -62,19 +116,70 @@ div#content {
             border: 3px solid lighten($black, 80%);
         }
     }
+    h1 {
+        text-align: left;
+        margin-top: 40px;
+        border-bottom: 3px solid $black;
+        font-size: 1.75em;
+        text-transform: uppercase;
+    }
+    h2{
+        font-size: 1.5em;
+    }
+    h3{
+        font-size: 1.15em;
+        margin: 0;
+    }
+    h1, h2,h3,h4{
+        line-height: normal;
+        font-weight: bold;
+    }
+    ul{
+        li{
+            margin-left: 15px;
+            margin-top: 15px;
+        }
+    }
 
     .edit-link{
         display:none;
+    }
+    .wp-block-ugb-feature-grid{
+        margin-top: 20px;
+    }
+    .ugb-feature-grid__item{
+        padding-top: 45px;
+        padding-bottom: 45px;
+        .ugb-feature-grid__content{
+            margin-top: 0;
+        }
+        h5.ugb-feature-grid__title{
+            font-weight: bold;
+            font-size: 1em;
+        }
+    }
+    .ugb-image-box__item{
+        .ugb-image-box__title{
+            font-size: 2em;
+            font-weight: bold;
+            text-shadow: 1px 1px black;
+        }
     }
 }
 
 #main-wrapper{
     &.webtype_cohabitatge div#content {
-        .entry-header  h1 {
+        .button {
+            background: $cohabitatge2;
+            &:hover{
+                background: $cohabitatge2!important;
+            }
+        }
+        h1 {
             color: $cohabitatge;
             border-color: $cohabitatge2;
         }
-        a, h2 {
+        a, h2, h3 {
             color: $cohabitatge;
         }
         p{
@@ -88,13 +193,28 @@ div#content {
                 border-color: $cohabitatge2;
             }
         }
+        .wp-block-columns.has-2-columns.line-between > .wp-block-column:not(:last-child) {
+            border-color: $cohabitatge2;
+        }
+        .ugb-feature-grid__item{
+            border: 1px solid $cohabitatge2;
+        }
+        blockquote.wp-block-quote {
+            border-color: $cohabitatge2;
+        }
     }
     &.webtype_social div#content {
-        .entry-header  h1 {
+        .button {
+            background: $social2;
+            &:hover{
+                background: $social2!important;
+            }
+        }
+        h1 {
             color: $social;
             border-color: $social;
         }
-        a {
+        a, h2, h3 {
             color: $social;
         }
         p{
@@ -108,13 +228,28 @@ div#content {
                 border-color: $social2;
             }
         }
+        .wp-block-columns.has-2-columns.line-between > .wp-block-column:not(:last-child) {
+            border-color: $social2;
+        }
+        .ugb-feature-grid__item{
+            border: 1px solid $social2;
+        }
+        blockquote.wp-block-quote {
+            border-color: $social2;
+        }
     }
     &.webtype_natura div#content {
-        .entry-header  h1 {
+        .button {
+            background: $natura2;
+            &:hover{
+                background: $natura2!important;
+            }
+        }
+        h1 {
             color: $natura;
             border-color: $natura;
         }
-        a {
+        a, h2, h3 {
             color: $natura;
         }
         p{
@@ -127,6 +262,15 @@ div#content {
             &.box-transparent{
                 border-color: $natura2;
             }
+        }
+        .wp-block-columns.has-2-columns.line-between > .wp-block-column:not(:last-child) {
+            border-color: $natura2;
+        }
+        .ugb-feature-grid__item{
+            border: 1px solid $natura2;
+        }
+        blockquote.wp-block-quote {
+            border-color: $natura2;
         }
     }
 

@@ -31,11 +31,39 @@ header {
     nav#vision-mobile-nav,
     nav#vision-primary-nav {
         ul li.menu-item{
-            &.social a:hover {
-                color: $social!important;
+            &.current-menu-ancestor,
+            &.current-menu-item{
+                 > a{
+                    color: $cohabitatge;
+                }
             }
-            &.natura a:hover {
-                color: $natura!important;
+            &.social{
+                a{
+                    border-color: $social!important;
+                    &:hover {
+                        color: $social!important;
+                    }
+                }
+                &.current-menu-ancestor,
+                &.current-menu-item{
+                     > a{
+                        color: $social;
+                    }
+                }
+            }
+            &.natura{
+                a{
+                    border-color: $natura!important;
+                    &:hover {
+                        color: $natura!important;
+                    }
+                }
+                &.current-menu-ancestor,
+                &.current-menu-item{
+                     > a{
+                        color: $natura;
+                    }
+                }
             }
         }
     }
@@ -45,13 +73,35 @@ header {
 
     .post-thumbnail{
         overflow: hidden;
+        h2 {
+            font-family: 'Arimo', sans-serif;
+            font-weight: bold;
+            font-style: italic;
+        }
+        h3 {
+            margin: 20px 0 0;
+            font-family: 'Assistant', sans-serif;
+            font-weight: 700;
+            text-align: center;
+            font-size: 1.5em;
+            line-height: normal;
+            word-spacing: 5px;
+            text-transform: uppercase;
+            color: $black;
+            letter-spacing: 1px;
+            // font-style: bold;
+            i {
+                display:inline-block;
+                width: 5px;
+            }
+        }
         img {
             width: 100%;
             @media #{$min-desktop} {
                 width: calc(50% - 5px);
-                height: 350px;
+                height: 300px;
                 object-fit: cover;
-                // float: right;
+                object-position: 50% 30%;
             }
         }
         .info {
@@ -115,9 +165,9 @@ header {
         background: $cohabitatge2;
     }
     &.webtype_social header .post-thumbnail .info {
-        background: rgba($social,.7);
+        background: $social2;
     }
     &.webtype_natura header .post-thumbnail .info {
-        background: $natura;
+        background: $natura2;
     }
 }

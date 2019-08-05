@@ -21,5 +21,17 @@
                 }
             }
         }
+
+        &.option-for-line{
+            .wpcf7-list-item{
+                display: block;
+            }
+        }
+    }
+    p{
+        margin:0;
+    }
+    .button{
+        margin-bottom:0;
     }
 }
