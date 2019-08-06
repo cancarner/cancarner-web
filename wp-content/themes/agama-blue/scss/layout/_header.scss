@@ -68,8 +68,7 @@ header {
         }
     }
 
-    $padding-lateral: '(100vw - 1167px) / 2';
-    $space_1_3: '1167px / 3';
+
 
     .post-thumbnail{
         overflow: hidden;
@@ -98,8 +97,8 @@ header {
         img {
             width: 100%;
             @media #{$min-desktop} {
-                width: calc(50% - 5px);
-                height: 300px;
+                width: 50%;
+                height: 325px;
                 object-fit: cover;
                 object-position: 50% 30%;
             }
@@ -116,6 +115,7 @@ header {
                 text-align: left;
             }
             h3 {
+
                 text-align: right;
                 margin: 20px 0 0;
             }
@@ -131,8 +131,8 @@ header {
                 padding-right: calc(#{$padding-lateral});
                 padding-left: 35px;
                 padding-top: 120px;
-                padding-bottom: 30px;
-                width: calc(50% - 5px);
+                padding-bottom: 10px;
+                width: 50%;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -144,6 +144,10 @@ header {
                 h3{
                     color: $black;
                     font-size: 1.7em;
+                    position: absolute;
+                    bottom: 10px;
+                    padding-right: calc(#{$padding-lateral});
+                    right: 0;
                 }
 
             }

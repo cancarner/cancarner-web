@@ -54,7 +54,7 @@ if( ! defined( 'ABSPATH' ) ) {
                 <?php the_post_thumbnail('full'); ?>
                 <?php if($postHighline): ?>
                     <div class="info">
-                        <h2><?= $postHighline ?></h2>
+                        <h2><?= $postHighline ?></br>...</h2>
                         <h3>ARRELEM CAN CARNER<i></i>!</h3>
                     </div>
                 <?php endif; ?>

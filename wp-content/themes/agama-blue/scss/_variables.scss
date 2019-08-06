@@ -1,10 +1,11 @@
 $red: #db3832;
 $yellow: #dd9f3c;
-$green: #92af48;
+$green: #767B1C;
 $white: #fff;
 $black: #111;
 
 $red2: #e26e52;
+$green2: #919525;
 
 
 $cohabitatge: $red;
@@ -12,7 +13,7 @@ $cohabitatge2: $red2;
 $social: $yellow;
 $social2: $social;
 $natura: $green;
-$natura2: $natura;
+$natura2: $green2;
 
 $max-mobile: "only screen and (max-width: 767px)";
 $min-tablet: "only screen and (min-width: 768px)";
@@ -20,3 +21,7 @@ $max-tablet: "only screen and (max-width: 992px)";
 $min-desktop: "only screen and (min-width: 993px)";
 $max-desktop: "only screen and (max-width: 1199px)";
 $min-big-desktop: "only screen and (min-width: 1200px)";
+
+
+$padding-lateral: '(100vw - 1180px) / 2';
+$space_1_3: '1180px / 3';

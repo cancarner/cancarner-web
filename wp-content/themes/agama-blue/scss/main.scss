@@ -3,6 +3,7 @@
 body {
     @import 'typography';
 
+    @import 'layout/general';
     @import 'layout/header';
     @import 'layout/contactform';
     @import 'layout/content';

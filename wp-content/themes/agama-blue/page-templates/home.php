@@ -9,6 +9,9 @@
 
 get_header(); ?>
 	<div class="fullscreen">
+		<div class="thumbnail-mobile">
+			<?php the_post_thumbnail('full'); ?>
+		</div>
 		<div class="video-wrapper">
 			<video autoplay muted loop>
 			  <source src="<?=get_post_meta(get_the_ID(), 'background', TRUE); ?>" type="video/mp4">
@@ -16,11 +19,11 @@ get_header(); ?>
 		</div>
 		<div class="info">
 			<?php $postHighline = get_post_meta(get_the_ID(), 'cancarner_highline', TRUE); ?>
-			<h3>Arrelem a Can Carner<i></i>!</h3>
+			<h3>Arrelem Can Carner<i></i>!</h3>
 			<?php if($postHighline): ?>
 				<h1><?=$postHighline?></h1>
 			<?php endif; ?>
-			<a class="btn" href="<?=get_post_meta(get_the_ID(), 'cancarner_link', TRUE); ?>">Saber més</a>
+			<a class="btn" href="<?=get_post_meta(get_the_ID(), 'cancarner_link', TRUE); ?>">Saber-ne més</a>
 		</div>
 	</div>
 	<div id="primary" class="site-content">
