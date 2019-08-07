@@ -21,6 +21,79 @@ div#content {
     .entry-title{
         margin-bottom: 15px;
     }
+    .info-campanya{
+        font-style: normal;
+        overflow:hidden;
+        .hashtag{
+            margin-bottom: 20px;
+            display:block;
+            font-weight: bold;
+        }
+        .info-money{
+            overflow:hidden;
+            .left,.right{
+                margin-top: 2px;
+                float: left;
+                font-size: .8em;
+                // font-weight: bold;
+                &.big{
+                    font-size: 1em;
+                    font-weight: bold;
+                    font-style: normal;
+                }
+                i{
+                    margin-left: 5px;
+                }
+            }
+            .left{
+                font-style: italic;
+            }
+            .right{
+                float:right;
+            }
+
+        }
+        .bar-wrapper{
+            height: 20px;
+            position:relative;
+            background: $white;
+            border-radius: 10px;
+            // margin-bottom: 10px;
+
+            .bar {
+            	height:18px;
+            	margin:1px 2px;
+            	position:absolute;
+            	border-radius:10px;
+            	-moz-box-shadow: 0 1px 0px #fcfcfc inset, 0 1px 0 #bebbb9;
+            	-webkit-box-shadow: 0 1px 0px #fcfcfc inset, 0 1px 0 #bebbb9;
+            	box-shadow: 0 1px 0px #fcfcfc inset, 0 1px 0 #bebbb9;
+                &.graphic-design {
+                	width:100%;
+                	-moz-animation:graphic-design 2s ease-out;
+                	-webkit-animation:graphic-design 2s ease-out;
+                	background-color: $cohabitatge2;
+                }
+            }
+
+        }
+        .claim{
+            margin-top: 10px;
+            font-size: .8em;
+        }
+        .btn{
+            float: right;
+            margin-top: 10px;
+            display: inline-block;
+            border-color: $cohabitatge2;
+            color: $cohabitatge2;
+            font-size: 1em;
+            &:hover{
+                background: $cohabitatge2;
+            }
+        }
+    }
+
 
     .wp-block-embed-youtube{
         .wp-block-embed__wrapper{

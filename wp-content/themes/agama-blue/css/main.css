@@ -175,6 +175,59 @@ body .wp-block-ugb-separator {
   width: 100vw; }
 body div#content .entry-title {
   margin-bottom: 15px; }
+body div#content .info-campanya {
+  font-style: normal;
+  overflow: hidden; }
+  body div#content .info-campanya .hashtag {
+    margin-bottom: 20px;
+    display: block;
+    font-weight: bold; }
+  body div#content .info-campanya .info-money {
+    overflow: hidden; }
+    body div#content .info-campanya .info-money .left, body div#content .info-campanya .info-money .right {
+      margin-top: 2px;
+      float: left;
+      font-size: .8em; }
+      body div#content .info-campanya .info-money .left.big, body div#content .info-campanya .info-money .right.big {
+        font-size: 1em;
+        font-weight: bold;
+        font-style: normal; }
+      body div#content .info-campanya .info-money .left i, body div#content .info-campanya .info-money .right i {
+        margin-left: 5px; }
+    body div#content .info-campanya .info-money .left {
+      font-style: italic; }
+    body div#content .info-campanya .info-money .right {
+      float: right; }
+  body div#content .info-campanya .bar-wrapper {
+    height: 20px;
+    position: relative;
+    background: white;
+    border-radius: 10px; }
+    body div#content .info-campanya .bar-wrapper .bar {
+      height: 18px;
+      margin: 1px 2px;
+      position: absolute;
+      border-radius: 10px;
+      -moz-box-shadow: 0 1px 0px #fcfcfc inset, 0 1px 0 #bebbb9;
+      -webkit-box-shadow: 0 1px 0px #fcfcfc inset, 0 1px 0 #bebbb9;
+      box-shadow: 0 1px 0px #fcfcfc inset, 0 1px 0 #bebbb9; }
+      body div#content .info-campanya .bar-wrapper .bar.graphic-design {
+        width: 100%;
+        -moz-animation: graphic-design 2s ease-out;
+        -webkit-animation: graphic-design 2s ease-out;
+        background-color: #e26e52; }
+  body div#content .info-campanya .claim {
+    margin-top: 10px;
+    font-size: .8em; }
+  body div#content .info-campanya .btn {
+    float: right;
+    margin-top: 10px;
+    display: inline-block;
+    border-color: #e26e52;
+    color: #e26e52;
+    font-size: 1em; }
+    body div#content .info-campanya .btn:hover {
+      background: #e26e52; }
 body div#content .wp-block-embed-youtube .wp-block-embed__wrapper {
   position: relative;
   padding-bottom: 56.25%; }
