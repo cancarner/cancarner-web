@@ -1,4 +1,5 @@
 .wpcf7-form{
+    margin-bottom: 30px;
     max-width: 600px;
     .contact-form-field{
         margin-bottom: 10px;
@@ -21,6 +22,27 @@
                 }
             }
         }
+        textarea{
+            border-width: 1px;
+            border-color: lighten($black, 50%);
+            width: 70%!important;
+            border-radius: 4px;
+            &.wpcf7-not-valid{
+                border-color: #f00;
+            }
+        }
+
+        .wpcf7-radio{
+            display:block;
+            margin: 5px 0;
+        }
+
+        .wpcf7-acceptance,
+        .wpcf7-checkbox{
+            .wpcf7-list-item{
+                margin: 5px 0;
+            }
+        }
 
         &.option-for-line{
             .wpcf7-list-item{
@@ -31,7 +53,42 @@
     p{
         margin:0;
     }
-    .button{
-        margin-bottom:0;
+
+    div.wpcf7-response-output{
+        margin: 10px 0 0;
+        padding: 10px 10px;
     }
+
+    .button-submit{
+        input[type="submit"]{
+            margin-left: 0;
+            margin-bottom:0;
+            border-radius: 5px;
+
+            text-shadow:none;
+            height: auto;
+            font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
+            background: $white!important;
+            border: 3px solid $cohabitatge;
+            color: $cohabitatge;
+            line-height: normal;
+            // text-transform: none;
+            letter-spacing: initial;
+            padding: 5px 10px;
+            font-weight: 700;
+            font-size: 16px;
+
+            &:disabled{
+                pointer-events: none;
+                opacity: .5;
+            }
+
+            &:hover{
+                color: $white;
+            }
+        }
+
+    }
+
+
 }

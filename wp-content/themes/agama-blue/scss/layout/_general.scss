@@ -1,6 +1,20 @@
-@media screen and (min-width: 960px){
-    .site {
-        padding: 0!important;
+.site {
+    padding: 0!important;
+    .site-content {
+        float: none;
+        margin: 0 auto;
+        max-width: $big-desktop;
+        padding: 0 $padding-inner 30px;
+        article{
+            hyphens: initial!important;
+        }
+
+        .entry-header {
+            .entry-title {
+                font-family: 'Pt sans';
+                font-size: 30px;
+            }
+        }
     }
 }
 
@@ -11,8 +25,5 @@ img{
     text-align: left;
 }
 .site-content {
-    padding: 0 10px;
-    article{
-        hyphens: initial!important;
-    }
+
 }

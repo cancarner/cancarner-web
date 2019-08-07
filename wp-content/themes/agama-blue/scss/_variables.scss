@@ -1,27 +1,31 @@
-$red: #db3832;
-$yellow: #dd9f3c;
-$green: #767B1C;
+$red: #D03C15;
+$yellow: #D87A06;
+$green: #547723;
 $white: #fff;
 $black: #111;
 
-$red2: #e26e52;
-$green2: #919525;
+$red2: #D03C15;
+$green2: #869921;
+$social2: #DD8A00;
 
 
 $cohabitatge: $red;
 $cohabitatge2: $red2;
 $social: $yellow;
-$social2: $social;
+$social2: $social2;
 $natura: $green;
 $natura2: $green2;
+
+$big-desktop: 1200px;
+$padding-inner: 15px;
 
 $max-mobile: "only screen and (max-width: 767px)";
 $min-tablet: "only screen and (min-width: 768px)";
 $max-tablet: "only screen and (max-width: 992px)";
 $min-desktop: "only screen and (min-width: 993px)";
-$max-desktop: "only screen and (max-width: 1199px)";
-$min-big-desktop: "only screen and (min-width: 1200px)";
+$max-desktop: "only screen and (max-width: #{$big-desktop - 1})";
+$min-big-desktop: "only screen and (min-width: #{$big-desktop})";
 
 
-$padding-lateral: '(100vw - 1180px) / 2';
-$space_1_3: '1180px / 3';
+$padding-lateral: '(100vw - #{$big-desktop - $padding-inner * 2}) / 2';
+$space_1_3: '#{$big-desktop - $padding-inner * 2} / 3';

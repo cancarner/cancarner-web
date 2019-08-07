@@ -13,8 +13,19 @@
 }
 
 .wp-block-ugb-separator{
-    margin-left: calc(-1 * #{$padding-lateral})!important;
+    margin-left: -$padding-inner;
     width: 100vw;
+    @media #{$min-big-desktop}{
+        margin-left: calc(-1 * #{$padding-lateral})!important;
+    }
+
+    .ugb-separator__svg-inner {
+        svg {
+            fill: $cohabitatge2!important;
+        }
+    }
+
+
 }
 
 div#content {
@@ -82,12 +93,16 @@ div#content {
             font-size: .8em;
         }
         .btn{
-            float: right;
+            font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
+            float: left;
             margin-top: 10px;
             display: inline-block;
             border-color: $cohabitatge2;
             color: $cohabitatge2;
-            font-size: 1em;
+            font-size: 16px;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            transition: all 0.3s;
             &:hover{
                 background: $cohabitatge2;
             }
@@ -142,12 +157,15 @@ div#content {
         &:before{
             z-index:0;
             content:'';
-            position:absolute;
-            left: calc(-1 * #{$padding-lateral})!important;
+            position: absolute;
+            left: -$padding-inner;
             width: 100vw;
             top: 0;
             bottom: 0;
             background: $cohabitatge2;
+            @media #{$min-big-desktop}{
+                left: calc(-1 * #{$padding-lateral})!important;
+            }
         }
 
     }
@@ -158,32 +176,65 @@ div#content {
             text-decoration: underline;
         }
     }
-    .ugb-image-box__item{
-        position:relative;
-        .ugb-image-box__content{
-            position:absolute;
-            bottom:0;
-            left: 0;
-            right: 0;
-            width: 100%;
-            background: rgba($white,1);
-            h4{
-                font-size: 1.15em;
-                color: $black!important;
-                text-shadow: none;
+    .wp-block-ugb-image-box{
+        .ugb-image-box__item{
+            position:relative;
+            .ugb-image-box__content{
+                position:absolute;
+                bottom:0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: rgba($white,1);
+                h4{
+                    font-size: 1.15em;
+                    color: $black!important;
+                    text-shadow: none;
+                }
+                margin:0;
+                padding: 10px 10px;
             }
-            border: 1px solid #dddddd!important;
-            margin:0;
-            padding: 10px 10px;
+        }
+        &.colored-grid{
+            .ugb-image-box__item{
+                .ugb-image-box__content h4{
+                    color: $white!important;
+                }
+                &:nth-child(1) .ugb-image-box__content{
+                    background: $cohabitatge2;
+                }
+                &:nth-child(2) .ugb-image-box__content{
+                    background: $cohabitatge2;
+                }
+                &:nth-child(3) .ugb-image-box__content{
+                    background: $natura2;
+                }
+                &:nth-child(4) .ugb-image-box__content{
+                    background: $social2;
+                }
+            }
         }
     }
+
     .wp-block-columns.has-2-columns{
         div.wp-block-column:last-child{
             blockquote.wp-block-quote{
+                background: #eeeeee;
                 margin-left: 0;
                 margin-right: 0;
                 font-size: 1.25em;
                 word-wrap: break-word!important;
+                a.social-icons{
+                    color: $black!important;
+                    font-style: normal;
+                    font-size: 1.25em;
+                    cursor: pointer;
+                    &:hover{
+                        text-decoration: none;
+                        color: $cohabitatge!important;
+                    }
+                }
+
             }
             figure.wp-block-image img{
                 width: 100%;
@@ -278,10 +329,22 @@ div#content {
         max-width: 400px;
         text-align: center;
         .ugb-content-wrapper{
-            padding: 30px 30px 35px;
+            padding: 30px;
             > svg{
                 width: 50px!important;
             }
+        }
+
+        &.quote-big{
+            .ugb-blockquote__text{
+                line-height: 1.5em;
+                font-size: 1.5em;
+            }
+
+        }
+
+        &.sticky-wrapper{
+            z-index: 10px;
         }
 
     }

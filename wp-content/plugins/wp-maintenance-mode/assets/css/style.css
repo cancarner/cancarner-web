@@ -10,6 +10,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     display: block;
 }
+.wrap{
+    text-shadow: 1px 1px black;
+}
 body {
     line-height: 1;
 }

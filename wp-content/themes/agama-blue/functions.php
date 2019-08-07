@@ -45,7 +45,7 @@ add_action('wp_enqueue_scripts', 'nt_css');
 
 /* JS IN WORDPRESS */
 function nt_js() {
-     wp_enqueue_script( 'main-js', get_stylesheet_directory_uri() . '/js/main.js', array( 'jquery' ),  '20190319');
+     wp_enqueue_script( 'main-js', get_stylesheet_directory_uri() . '/js/main.js', array( 'jquery' ),  '20190807-3');
 }
 // add_action('wp_enqueue_scripts', 'nt_js');
 
@@ -62,6 +62,9 @@ add_filter( 'wpcf7_posted_data', 'create_referencia_field_ct7', 10, 1 );
 * [statebar total="200000" actual="100000"][/statebar]
 */
 function statebar_shortcode( $atts, $content = null ) {
+    wp_enqueue_script( 'sticky-js', get_stylesheet_directory_uri() . '/js/jquery.sticky.js', array( 'jquery' ));
+    wp_enqueue_script( 'shortcode-sticky-js', get_stylesheet_directory_uri() . '/js/shortcode-sticky.js', array( 'jquery' ));
+
 	$statebar_atts = shortcode_atts( array(
 		'total' => 200000,
 		'actual' => 100000,
@@ -72,7 +75,14 @@ function statebar_shortcode( $atts, $content = null ) {
     $percentatge = $actual / $total * 100;
     // $dataFinal = New Date();
 
-    $statebar = '<blockquote class="wp-block-quote"><div class="info-campanya">';
+    $deadline = strtotime('2019/08/08 00:00');
+    $now = strtotime("now");
+    $diferencia= $deadline - $now ;
+    $dias = $diferencia / 86400 - 1;
+    $horas = $diferencia / 3600;
+    // var_dump($dias, $horas);
+
+    $statebar = '<blockquote class="wp-block-quote sticky-shortcode"><div class="info-campanya">';
     $statebar .= '<span class="hashtag">#ArrelemCanCarner</span>';
     $statebar .= '<div class="info-money">';
     $statebar .=   '<div class="left big">'. number_format($actual, 0, ',', '.') .'€</div>';
@@ -84,7 +94,7 @@ function statebar_shortcode( $atts, $content = null ) {
     $statebar .= '<div class="info-money">';
     $statebar .=   '<div class="left">'. $percentatge .'% de ' . number_format($total, 0, ',', '.') . '€</div>';
     $statebar .= '</div>';
-    $statebar .= '<p class="claim">La campanya encara esta en marxa, no perdis l\'oportunitat de formar-hi part!</p>';
+    $statebar .= '<p class="claim">La campanya encara està en marxa, no perdis l\'oportunitat de formar-hi part!</p>';
     $statebar .= '<div class="participa-link btn">Vull participar</div>';
 	$statebar .='</div></blockquote>';
 

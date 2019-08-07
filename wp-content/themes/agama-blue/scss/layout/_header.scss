@@ -1,17 +1,17 @@
-header {
-
-    @media screen and (min-width: 993px){
-        .sticky-header {
-            position: fixed;
-            background: $white;
+header.site-header {
+    .sticky-header {
+        top: 0;
+        position: fixed!important;
+        background: white;
+        .sticky-header-inner{
+            padding-left: $padding-inner;
+            padding-right: $padding-inner;
         }
-        .sticky-header .logo {
+        .logo {
             margin-left: 0;
             padding-left: 0;
         }
     }
-
-
 
     nav#vision-mobile-nav li.highlight > a{
         font-size: 1.2em;

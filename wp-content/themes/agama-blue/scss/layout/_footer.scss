@@ -1,5 +1,36 @@
-footer {
-    .social{
-        padding-right: 0;
+footer[role="contentinfo"] {
+    padding-left:0;
+    padding-right:0;
+    .footer-sub-wrapper{
+        padding-left: $padding-inner;
+        padding-right: $padding-inner;
+        max-width: $big-desktop;
+
+        .site-info{
+            text-align: center;
+            padding: 0;
+            margin-bottom: 15px;
+            @media #{$min-desktop}{
+                text-align: left;
+                margin-bottom: 0;
+            }
+        }
+        .social{
+            text-align:center;
+            padding: 0;
+            margin-right: -10px;
+            a{
+                &:last-child{
+                    // padding-right: 0;
+                }
+            }
+            @media #{$min-desktop}{
+                text-align: right;
+            }
+        }
     }
+
+
+
+
 }
