@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: Admin Menu Editor Pro |  VestaThemes.com
+Plugin Name: Admin Menu Editor Pro
 Plugin URI: http://adminmenueditor.com/
-Description: Lets you directly edit the WordPress admin menu. You can re-order, hide or rename existing menus, add custom menus and more. 
+Description: Lets you directly edit the WordPress admin menu. You can re-order, hide or rename existing menus, add custom menus and more.
 Version: 2.8.1
 Author: Janis Elsts
 Author URI: http://w-shadow.com/
