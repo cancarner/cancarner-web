@@ -9,11 +9,50 @@
 
         .sticky-header{
             transition: all .2s;
+            #agama-logo{
+                .logo.logo-tablet{
+                    top: 0;
+                    position:absolute;
+                    display: block;
+                    opacity: 0;
+                }
+                // opacity: .5!important;
+            }
             &:not(.sticky-header-shrink){
-                background-color: transparent;
-                box-shadow:none;
-                #vision-primary-nav > ul > li:not(.highlight) > a {
-                    color: $white;
+                @media #{$min-desktop} {
+                    background-color: transparent;
+                    box-shadow:none;
+                    #vision-primary-nav > ul > li:not(.highlight) > a {
+                        color: $white;
+                        text-shadow: 1px 1px $black;
+                        &:hover{
+                            color: $white!important;
+                            text-decoration: underline;
+                        }
+                        &::after{
+                            display: inline-block;
+                        }
+                    }
+                    #vision-primary-nav > ul > li.highlight > a {
+                        border-color: $white;
+                        color: $white;
+                        &:hover{
+                            color: $cohabitatge!important;
+                            background: transparent;
+                            border-color: $cohabitatge;
+                        }
+                    }
+                    #agama-logo{
+                        .logo{
+                            &.logo-desktop{
+                                opacity: 0;
+                            }
+                            &.logo-tablet{
+                                max-height: 90px;
+                                opacity: 1;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -66,9 +105,9 @@
             left: 50%;
             transform: translate(-50%,-50%);
             text-align: center;
-            width: 100%;
             max-width: 700px;
             padding: 0 15px;
+            width: 100vw;
 
             h3 {
                 margin: 20px 0 0;

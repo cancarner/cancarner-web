@@ -11,7 +11,23 @@ header.site-header {
             margin-left: 0;
             padding-left: 0;
         }
+        #agama-logo{
+            .logo{
+                &.logo-mobile,
+                &.logo-tablet{
+                    display:none;
+                }
+                &.logo-desktop{
+                    display:block;
+                    @media #{$max-tablet} {
+                        height: 65px;
+                    }
+                }
+            }
+
+        }
     }
+
 
     nav#vision-mobile-nav li.highlight > a{
         font-size: 1.2em;
@@ -162,6 +178,16 @@ header.site-header {
     .post-thumbnail-blank{
         min-height: 91px;
     }
+}
+
+#masthead.header_v3 #vision-mobile-nav{
+    margin-top: 65px!important;
+    position: fixed;
+left: 0px;
+right: 0px;
+top: -1px;
+z-index: 50;
+    // opacity: .5;
 }
 
 #main-wrapper{

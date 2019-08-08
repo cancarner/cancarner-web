@@ -39,13 +39,13 @@ function agamablue_setup_options() {
 
 /* SASS IN WORDPRESS */
 function nt_css() {
-    wp_enqueue_style( 'main-css', get_stylesheet_directory_uri() . '/css/main.css', array(), '20190806');
+    wp_enqueue_style( 'main-css', get_stylesheet_directory_uri() . '/css/main.css', array(), '20190808-2');
 }
 add_action('wp_enqueue_scripts', 'nt_css');
 
 /* JS IN WORDPRESS */
 function nt_js() {
-     wp_enqueue_script( 'main-js', get_stylesheet_directory_uri() . '/js/main.js', array( 'jquery' ),  '20190807-3');
+     wp_enqueue_script( 'main-js', get_stylesheet_directory_uri() . '/js/main.js', array( 'jquery' ),  '20190808');
 }
 // add_action('wp_enqueue_scripts', 'nt_js');
 
@@ -56,55 +56,3 @@ function create_referencia_field_ct7( $posted_data )
     return $posted_data;
 };
 add_filter( 'wpcf7_posted_data', 'create_referencia_field_ct7', 10, 1 );
-
-/**
-* Crea shortcode [statebar]
-* [statebar total="200000" actual="100000"][/statebar]
-*/
-function statebar_shortcode( $atts, $content = null ) {
-    wp_enqueue_script( 'sticky-js', get_stylesheet_directory_uri() . '/js/jquery.sticky.js', array( 'jquery' ));
-    wp_enqueue_script( 'shortcode-sticky-js', get_stylesheet_directory_uri() . '/js/shortcode-sticky.js', array( 'jquery' ));
-
-	$statebar_atts = shortcode_atts( array(
-		'total' => 200000,
-		'actual' => 100000,
-	), $atts );
-
-    $total = esc_attr( $statebar_atts['total'] );
-    $actual = esc_attr( $statebar_atts['actual'] );
-    $percentatge = $actual / $total * 100;
-    // $dataFinal = New Date();
-
-    $deadline = strtotime('2019/08/08 00:00');
-    $now = strtotime("now");
-    $diferencia= $deadline - $now ;
-    $dias = $diferencia / 86400 - 1;
-    $horas = $diferencia / 3600;
-    // var_dump($dias, $horas);
-
-    $statebar = '<blockquote class="wp-block-quote sticky-shortcode"><div class="info-campanya">';
-    $statebar .= '<span class="hashtag">#ArrelemCanCarner</span>';
-    $statebar .= '<div class="info-money">';
-    $statebar .=   '<div class="left big">'. number_format($actual, 0, ',', '.') .'€</div>';
-    $statebar .=   '<div class="right"> ' . 5 . ' dies<i class="far fa-clock"></i></div>';
-    $statebar .= '</div>';
-    $statebar .= '<div class="bar-wrapper">' ;
-    $statebar .=   '<span class="bar graphic-design" style="width:' . $percentatge . '%"></span>';
-    $statebar .= '</div>';
-    $statebar .= '<div class="info-money">';
-    $statebar .=   '<div class="left">'. $percentatge .'% de ' . number_format($total, 0, ',', '.') . '€</div>';
-    $statebar .= '</div>';
-    $statebar .= '<p class="claim">La campanya encara està en marxa, no perdis l\'oportunitat de formar-hi part!</p>';
-    $statebar .= '<div class="participa-link btn">Vull participar</div>';
-	$statebar .='</div></blockquote>';
-
-	return $statebar;
-
-// <h3>Total recaudat: 100.000€</h3>
-// <p>(BARRA DE PROGRÉS)</p><p>
-//
-// <span>Falten X díes per acabar la campanya</span>
-// </p><p>(BOTO AJUDA’NS</p>
-
-}
-add_shortcode( 'statebar', 'statebar_shortcode' );

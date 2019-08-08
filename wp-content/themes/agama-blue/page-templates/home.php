@@ -7,14 +7,22 @@
  * @since 1.0
  */
 
-get_header(); ?>
+get_header();
+
+$videoMp4 = get_post_meta(get_the_ID(), 'cancarner_background_mp4', TRUE);
+$videoWebm = get_post_meta(get_the_ID(), 'cancarner_background_webm', TRUE);
+$videoOgg = get_post_meta(get_the_ID(), 'cancarner_background_ogg', TRUE);
+
+?>
 	<div class="fullscreen">
 		<div class="thumbnail-mobile">
 			<?php the_post_thumbnail('full'); ?>
 		</div>
 		<div class="video-wrapper">
 			<video autoplay muted loop>
-			  <source src="<?=get_post_meta(get_the_ID(), 'background', TRUE); ?>" type="video/mp4">
+			  <?= $videoMp4 ? '<source src="'. $videoMp4 .'" type="video/mp4">' : ''; ?>
+			  <?= $videoWebm ? '<source src="'. $videoWebm .'" type="video/webm">' : ''; ?>
+			  <?= $videoOgg ? '<source src="'. $videoOgg .'" type="video/ogg">' : ''; ?>
 			</video>
 		</div>
 		<div class="info">

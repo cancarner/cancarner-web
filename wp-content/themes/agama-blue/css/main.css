@@ -41,6 +41,13 @@ body header.site-header .sticky-header {
   body header.site-header .sticky-header .logo {
     margin-left: 0;
     padding-left: 0; }
+  body header.site-header .sticky-header #agama-logo .logo.logo-mobile, body header.site-header .sticky-header #agama-logo .logo.logo-tablet {
+    display: none; }
+  body header.site-header .sticky-header #agama-logo .logo.logo-desktop {
+    display: block; }
+    @media only screen and (max-width: 992px) {
+      body header.site-header .sticky-header #agama-logo .logo.logo-desktop {
+        height: 65px; } }
 body header.site-header nav#vision-mobile-nav li.highlight > a {
   font-size: 1.2em;
   color: #d03c15; }
@@ -148,6 +155,13 @@ body header.site-header .post-thumbnail {
     width: 100%; }
 body header.site-header .post-thumbnail-blank {
   min-height: 91px; }
+body #masthead.header_v3 #vision-mobile-nav {
+  margin-top: 65px !important;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: -1px;
+  z-index: 50; }
 body #main-wrapper.webtype_cohabitatge header .post-thumbnail .info {
   background: #d03c15; }
 body #main-wrapper.webtype_social header .post-thumbnail .info {
@@ -250,20 +264,18 @@ body div#content .info-campanya {
     height: 20px;
     position: relative;
     background: white;
-    border-radius: 10px; }
+    border-radius: 10px;
+    margin-bottom: 2px;
+    overflow: hidden; }
     body div#content .info-campanya .bar-wrapper .bar {
-      height: 18px;
-      margin: 1px 2px;
-      position: absolute;
+      height: 20px;
+      left: 0;
+      top: 0;
+      display: block;
       border-radius: 10px;
-      -moz-box-shadow: 0 1px 0px #fcfcfc inset, 0 1px 0 #bebbb9;
-      -webkit-box-shadow: 0 1px 0px #fcfcfc inset, 0 1px 0 #bebbb9;
-      box-shadow: 0 1px 0px #fcfcfc inset, 0 1px 0 #bebbb9; }
-      body div#content .info-campanya .bar-wrapper .bar.graphic-design {
-        width: 100%;
-        -moz-animation: graphic-design 2s ease-out;
-        -webkit-animation: graphic-design 2s ease-out;
-        background-color: #d03c15; }
+      -moz-animation: graphic-design 2s ease-out;
+      -webkit-animation: graphic-design 2s ease-out;
+      background-color: #d03c15; }
   body div#content .info-campanya .claim {
     margin-top: 10px;
     font-size: .8em; }
@@ -351,6 +363,25 @@ body div#content .wp-block-ugb-image-box.colored-grid .ugb-image-box__item:nth-c
   background: #869921; }
 body div#content .wp-block-ugb-image-box.colored-grid .ugb-image-box__item:nth-child(4) .ugb-image-box__content {
   background: #dd8a00; }
+body div#content .wp-block-ugb-accordion.ugb-accordion--design-plain {
+  margin: 0 0 10px;
+  border-left: 3px solid #d03c15;
+  background: #eee;
+  overflow: hidden;
+  padding: 15px 10px; }
+  body div#content .wp-block-ugb-accordion.ugb-accordion--design-plain .ugb-accordion__heading {
+    background: none; }
+    body div#content .wp-block-ugb-accordion.ugb-accordion--design-plain .ugb-accordion__heading h4 {
+      font-size: 16px;
+      font-weight: normal; }
+    body div#content .wp-block-ugb-accordion.ugb-accordion--design-plain .ugb-accordion__heading svg {
+      height: 15px;
+      width: 15px; }
+  body div#content .wp-block-ugb-accordion.ugb-accordion--design-plain .ugb-accordion__text {
+    font-style: italic; }
+  body div#content .wp-block-ugb-accordion.ugb-accordion--design-plain.ugb-accordion--open .ugb-accordion__text {
+    margin-top: 15px !important;
+    margin-bottom: 0px !important; }
 body div#content .wp-block-columns.has-2-columns div.wp-block-column:last-child blockquote.wp-block-quote {
   background: #eeeeee;
   margin-left: 0;
@@ -566,11 +597,35 @@ body.page-template-home header {
   background-color: transparent !important; }
   body.page-template-home header .sticky-header {
     transition: all .2s; }
-    body.page-template-home header .sticky-header:not(.sticky-header-shrink) {
-      background-color: transparent;
-      box-shadow: none; }
-      body.page-template-home header .sticky-header:not(.sticky-header-shrink) #vision-primary-nav > ul > li:not(.highlight) > a {
-        color: white; }
+    body.page-template-home header .sticky-header #agama-logo .logo.logo-tablet {
+      top: 0;
+      position: absolute;
+      display: block;
+      opacity: 0; }
+    @media only screen and (min-width: 993px) {
+      body.page-template-home header .sticky-header:not(.sticky-header-shrink) {
+        background-color: transparent;
+        box-shadow: none; }
+        body.page-template-home header .sticky-header:not(.sticky-header-shrink) #vision-primary-nav > ul > li:not(.highlight) > a {
+          color: white;
+          text-shadow: 1px 1px #111111; }
+          body.page-template-home header .sticky-header:not(.sticky-header-shrink) #vision-primary-nav > ul > li:not(.highlight) > a:hover {
+            color: white !important;
+            text-decoration: underline; }
+          body.page-template-home header .sticky-header:not(.sticky-header-shrink) #vision-primary-nav > ul > li:not(.highlight) > a::after {
+            display: inline-block; }
+        body.page-template-home header .sticky-header:not(.sticky-header-shrink) #vision-primary-nav > ul > li.highlight > a {
+          border-color: white;
+          color: white; }
+          body.page-template-home header .sticky-header:not(.sticky-header-shrink) #vision-primary-nav > ul > li.highlight > a:hover {
+            color: #d03c15 !important;
+            background: transparent;
+            border-color: #d03c15; }
+        body.page-template-home header .sticky-header:not(.sticky-header-shrink) #agama-logo .logo.logo-desktop {
+          opacity: 0; }
+        body.page-template-home header .sticky-header:not(.sticky-header-shrink) #agama-logo .logo.logo-tablet {
+          max-height: 90px;
+          opacity: 1; } }
 body.page-template-home .fullscreen {
   position: relative;
   overflow: hidden;
@@ -611,9 +666,9 @@ body.page-template-home .fullscreen {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    width: 100%;
     max-width: 700px;
-    padding: 0 15px; }
+    padding: 0 15px;
+    width: 100vw; }
     body.page-template-home .fullscreen .info h3 {
       margin: 20px 0 0;
       font-family: 'Assistant', sans-serif;

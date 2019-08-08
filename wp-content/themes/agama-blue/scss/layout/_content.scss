@@ -69,22 +69,18 @@ div#content {
             position:relative;
             background: $white;
             border-radius: 10px;
-            // margin-bottom: 10px;
+            margin-bottom: 2px;
+            overflow: hidden;
 
             .bar {
-            	height:18px;
-            	margin:1px 2px;
-            	position:absolute;
-            	border-radius:10px;
-            	-moz-box-shadow: 0 1px 0px #fcfcfc inset, 0 1px 0 #bebbb9;
-            	-webkit-box-shadow: 0 1px 0px #fcfcfc inset, 0 1px 0 #bebbb9;
-            	box-shadow: 0 1px 0px #fcfcfc inset, 0 1px 0 #bebbb9;
-                &.graphic-design {
-                	width:100%;
-                	-moz-animation:graphic-design 2s ease-out;
-                	-webkit-animation:graphic-design 2s ease-out;
-                	background-color: $cohabitatge2;
-                }
+            	height: 20px;
+            	left: 0;
+                top: 0;
+                display:block;
+            	border-radius: 10px;
+            	-moz-animation:graphic-design 2s ease-out;
+            	-webkit-animation:graphic-design 2s ease-out;
+            	background-color: $cohabitatge2;
             }
 
         }
@@ -214,6 +210,40 @@ div#content {
                 }
             }
         }
+    }
+
+    .wp-block-ugb-accordion.ugb-accordion--design-plain{
+        margin: 0 0 10px;
+        // max-width: 500px;
+        border-left: 3px solid $cohabitatge;
+        background: #eee;
+        overflow: hidden;
+        padding: 15px 10px;
+        .ugb-accordion__heading{
+            background: none;
+            h4{
+                font-size: 16px;
+                font-weight: normal;
+            }
+            svg{
+                height: 15px;
+                width: 15px;
+            }
+        }
+
+
+
+        .ugb-accordion__text{
+            font-style: italic;
+        }
+
+        &.ugb-accordion--open{
+            .ugb-accordion__text{
+                margin-top: 15px!important;
+                margin-bottom: 0px!important;
+            }
+        }
+
     }
 
     .wp-block-columns.has-2-columns{
