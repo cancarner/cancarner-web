@@ -116,3 +116,37 @@ if ( ! function_exists( 'can_carner_campaign_init' ) ) {
         add_shortcode( 'statebar', 'statebar_shortcode' );
     }
 }
+
+function getTotalObtained() {
+    $campaigns = get_posts( ['post_type'=> 'campaign', 'order'    => 'ASC'] );
+    if(sizeof($campaigns) > 0){
+        $campaign = $campaigns[0];
+        $contactFormId = esc_attr(get_post_meta($campaign->ID, 'cancarner_contactFormId', TRUE));
+
+        if($contactFormId){
+            global $wpdb;
+            $prefix = $wpdb->base_prefix;
+
+            $subquery =
+                "SELECT lead.id
+                FROM `" . $prefix . "vxcf_leads` as lead
+                LEFT JOIN `" . $prefix . "vxcf_leads_detail` as detail
+                ON lead.id = detail.lead_id
+                WHERE lead.form_id LIKE 'cf_$contactFormId'
+                AND lead.status = 0
+                AND detail.name = 'ingres-rebut'
+                AND detail.value != 0";
+
+            $sum = $wpdb->get_results("SELECT SUM(detail.value) as sum
+                FROM `" . $prefix . "vxcf_leads_detail` as detail
+                WHERE detail.name = 'import-total'
+                AND detail.lead_id IN ($subquery)");
+
+            if(sizeof($sum) > 0){
+                echo '<div style="margin-top: 5px;font-size: 1.25em;display: inline-block;margin-left: 10px;">Total aconseguit: <strong>' . number_format($sum[0]->sum, 0, ',', '.') . '€</strong></div>';
+            }
+        }
+    }
+
+}
+add_action( 'vxcf_entries_btns_end', 'getTotalObtained' );

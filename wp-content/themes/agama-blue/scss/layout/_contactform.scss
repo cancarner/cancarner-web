@@ -92,3 +92,19 @@
 
 
 }
+#main-wrapper.webtype_social div#content .wpcf7-form .button-submit input[type="submit"].button{
+    border-color: $social;
+    color: $social;
+    &:hover{
+        background: $social!important;
+        color: $white;
+    }
+}
+
+#main-wrapper.webtype_natura div#content .wpcf7-form .button-submit input[type="submit"]{
+    border-color: $natura;
+    color: $natura;
+    &:hover{
+        color: $white;
+    }
+}

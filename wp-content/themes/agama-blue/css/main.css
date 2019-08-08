@@ -221,6 +221,17 @@ body .wpcf7-form {
       opacity: .5; }
     body .wpcf7-form .button-submit input[type="submit"]:hover {
       color: white; }
+body #main-wrapper.webtype_social div#content .wpcf7-form .button-submit input[type="submit"].button {
+  border-color: #d87a06;
+  color: #d87a06; }
+  body #main-wrapper.webtype_social div#content .wpcf7-form .button-submit input[type="submit"].button:hover {
+    background: #d87a06 !important;
+    color: white; }
+body #main-wrapper.webtype_natura div#content .wpcf7-form .button-submit input[type="submit"] {
+  border-color: #547723;
+  color: #547723; }
+  body #main-wrapper.webtype_natura div#content .wpcf7-form .button-submit input[type="submit"]:hover {
+    color: white; }
 body .entry-content, body .entry-content p, body .entry-summary, body .entry-summary p, body .mu_register, body .mu_register p {
   line-height: 1.33em; }
 body .entry-content p, body .entry-summary p, body .mu_register p {
