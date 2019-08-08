@@ -76,7 +76,7 @@ class Wpvr {
 	 * @since    1.0.0
 	 */
 	public function __construct() {
-		
+
 		if ( defined( 'WPVR' ) ) {
 			$this->version = WPVR;
 		} else {
@@ -187,11 +187,11 @@ class Wpvr {
 				else {
 					$plugin_admin = new Wpvr_Admin( $this->get_plugin_name(), $this->get_version(), $this->get_post_type() );
 				}
-				
+
 			}
 			else {
 				$plugin_admin = new Wpvr_Admin( $this->get_plugin_name(), $this->get_version(), $this->get_post_type() );
-			}			
+			}
 		}else {
 			$plugin_admin = new Wpvr_Admin( $this->get_plugin_name(), $this->get_version(), $this->get_post_type() );
 		}
@@ -204,11 +204,11 @@ class Wpvr {
 				else {
 					$plugin_admin_page = new Wpvr_Admin_Pages();
 				}
-				
+
 			}
 			else {
 				$plugin_admin_page = new Wpvr_Admin_Pages();
-			}			
+			}
 		}else {
 			$plugin_admin_page = new Wpvr_Admin_Pages();
 		}
@@ -229,6 +229,7 @@ class Wpvr {
 		$this->loader->add_action( 'wp_ajax_wpvr_save', $plugin_admin_ajax, 'wpvr_save_data' );
 		$this->loader->add_action( 'wp_ajax_wpvr_save', $plugin_admin_ajax, 'wpvr_save_data' );
 		$this->loader->add_action( 'wp_ajax_wpvrvideo_preview', $plugin_admin_ajax, 'wpvrvideo_preview' );
+		$this->loader->add_action( 'wp_ajax_wpvr_file_import', $plugin_admin_ajax, 'wpvr_file_import' );
 
 	}
 
@@ -250,11 +251,11 @@ class Wpvr {
 				else {
 					$plugin_public = new Wpvr_Public( $this->get_plugin_name(), $this->get_version() );
 				}
-				
+
 			}
 			else {
 				$plugin_public = new Wpvr_Public( $this->get_plugin_name(), $this->get_version() );
-			}			
+			}
 		}else {
 			$plugin_public = new Wpvr_Public( $this->get_plugin_name(), $this->get_version() );
 		}

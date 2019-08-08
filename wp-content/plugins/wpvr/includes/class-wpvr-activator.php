@@ -30,7 +30,12 @@ class Wpvr_Activator {
 	 * @since    1.0.0
 	 */
 	public static function activate() {
-
+		// $upload = wp_upload_dir();
+	 //    $upload_dir = $upload['basedir'];
+	 //    $upload_dir = $upload_dir . '/wpvr/temp';
+	 //    if (! is_dir($upload_dir)) {
+	 //       mkdir( $upload_dir, 0700 );
+	 //    }
 	}
 
 }

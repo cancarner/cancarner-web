@@ -76,8 +76,8 @@ class Wpvr_Public {
 		wp_enqueue_style( $this->plugin_name . 'fontawesome', 'https://use.fontawesome.com/releases/v5.7.2/css/all.css', array(), $this->version, 'all' );
 		wp_enqueue_style('panellium-css', plugin_dir_url( __FILE__ ) . 'lib/pannellum/src/css/pannellum.css', array(), true);
 		wp_enqueue_style('videojs-css', plugin_dir_url( __FILE__ ) . 'lib/pannellum/src/css/video-js.css', array(), true);
+		wp_enqueue_style( 'owl-css', plugin_dir_url( __FILE__ ) . 'css/owl.carousel.css', array(), $this->version, 'all' );
 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/wpvr-public.css', array(), $this->version, 'all' );
-
 	}
 
 	/**
@@ -102,6 +102,7 @@ class Wpvr_Public {
 		wp_enqueue_script('panelliumlib-js', plugin_dir_url( __FILE__ ) . 'lib/pannellum/src/js/libpannellum.js', array(), true);
 		wp_enqueue_script('videojs-js', plugin_dir_url( __FILE__ ) . 'js/video.js', array(), true);
 		wp_enqueue_script('panelliumvid-js', plugin_dir_url( __FILE__ ) . 'lib/pannellum/src/js/videojs-pannellum-plugin.js', array(), true);
+		wp_enqueue_script( 'owl-js', plugin_dir_url( __FILE__ ) . 'js/owl.carousel.js', array( 'jquery' ), false );
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/wpvr-public.js', array( 'jquery' ), $this->version, false );
 
 	}
@@ -128,7 +129,7 @@ class Wpvr_Public {
 					'id' => 0,
 					'width' => NULL,
 					'height' => NULL,
-					'class' => NULL
+					'radius' => NULL
 				), $atts
 			)
 		);
@@ -196,6 +197,11 @@ class Wpvr_Public {
 		$control = false;
 		if (isset($postdata['showControls'])) {
 			$control = $postdata['showControls'];
+		}
+
+		$vrgallery = false;
+		if (isset($postdata['vrgallery'])) {
+			$vrgallery = $postdata['vrgallery'];
 		}
 
 		$gyro = false;
@@ -527,7 +533,58 @@ class Wpvr_Public {
           }			
 				
 	    $html .= '</style>';
-	    $html .= '<div id="pano'.$id.'" class="pano-wrap" style=" text-align:center; width: '.$width.'; height: '.$height.'; margin: 0 auto;">';
+	    if ($width == 'fullwidth') {
+	    	if (wpvr_isMobileDevice()) {
+	    		if ($radius) {
+	    			$html .= '<div id="pano'.$id.'" class="pano-wrap" style="text-align:center; border-radius:'.$radius.';">';
+	    		}
+	    		else {
+	    			$html .= '<div id="pano'.$id.'" class="pano-wrap" style="text-align:center;">';
+	    		}
+	    		
+	    	}
+	    	else {
+	    		if ($radius) {
+	    			$html .= '<div id="pano'.$id.'" class="pano-wrap vrfullwidth" style=" text-align:center; height: '.$height.'; border-radius:'.$radius.';" >';
+	    		}
+	    		else {
+	    			$html .= '<div id="pano'.$id.'" class="pano-wrap vrfullwidth" style=" text-align:center; height: '.$height.';" >';
+	    		}
+	    		
+	    	}
+	    }
+	    else {
+	    	if ($radius) {
+	    		$html .= '<div id="pano'.$id.'" class="pano-wrap" style=" text-align:center; width: '.$width.'; height: '.$height.'; margin: 0 auto; border-radius:'.$radius.';">';
+	    	}
+	    	else {
+	    		$html .= '<div id="pano'.$id.'" class="pano-wrap" style=" text-align:center; width: '.$width.'; height: '.$height.'; margin: 0 auto;">';
+	    	}
+	    	
+	    }
+
+	    	if ($vrgallery) {
+	    		//===Carousal setup===//
+	    		$html .= '<div id="vrgcontrols">';
+
+	    			$html .= '<div class="vrgctrl vrbounce">';
+	    			$html .= '</div>';
+	    		$html .= '</div>';
+
+		    	$html .= '<div id="sccontrols" class="scene-gallery vrowl-carousel owl-theme">';
+		    		if (isset($panodata["scene-list"])) {
+		    			foreach ($panodata["scene-list"] as $panoscenes) {
+		    				$scene_key = $panoscenes['scene-id'];
+		    				$img_src_url = $panoscenes['scene-attachment-url'];
+		    				$html .= '<ul style="width:150px;"><li title="Double click to view scene"><img class="scctrl" id="'.$scene_key.'_gallery_'.$id.'" src="'.$img_src_url.'"></li></ul>';
+		    			}
+		    		}
+		    	$html .= '</div>';
+		    
+		    	//===Carousal setup end===//	
+	    	}
+
+
 	        $html .= '<i class="fa fa-times cross"></i>';
 	        $html .= '<div class="custom-ifram" style="display: none;">';
 	        $html .= '</div>';
@@ -549,8 +606,34 @@ class Wpvr_Public {
 	                    $html .= '}';   
 	                $html .= '}';    
 	            $html .= '}';
-	        $html .= '}';    
-	        $html .= 'pannellum.viewer(response[0]["panoid"], scenes);';
+	        $html .= '}';  
+
+	        $html .= 'var panoshow'.$id.' = pannellum.viewer(response[0]["panoid"], scenes);';
+	        $html .= 'var touchtime = 0;';
+	        if ($vrgallery) {
+	        	if (isset($panodata["scene-list"])) {
+	    			foreach ($panodata["scene-list"] as $panoscenes) {
+	    				$scene_key = $panoscenes['scene-id'];
+	    				$scene_key_gallery = $panoscenes['scene-id'].'_gallery_'.$id;
+	    				$img_src_url = $panoscenes['scene-attachment-url'];
+	    				$html .= 'document.getElementById("'.$scene_key_gallery.'").addEventListener("click", function(e) { ';
+	    					$html .= 'if (touchtime == 0) {';
+	    						$html .= 'touchtime = new Date().getTime();';
+	    					$html .= '} else {';
+	    						$html .= 'if (((new Date().getTime()) - touchtime) < 800) {';
+	    							$html .= 'panoshow'.$id.'.loadScene("'.$scene_key.'");';
+	    							$html .= 'touchtime = 0;';
+	    						$html .= '} else {';
+	    							$html .= 'touchtime = new Date().getTime();';
+	    						$html .= '}';
+
+	    					$html .= '}';
+	    					 
+	    				$html .= '});';
+	    			}
+	    		}	
+	        }
+	        
 	    $html .= '</script>';
 	    //script end
 

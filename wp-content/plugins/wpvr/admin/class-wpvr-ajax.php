@@ -306,7 +306,7 @@ class Wpvr_Ajax {
       $scene_data = array();
 
       foreach ($panodata["scene-list"] as $panoscenes) {
- 
+
         if (!empty($panoscenes['scene-id'])) {
 
           $scene_ititle = '';
@@ -376,7 +376,7 @@ class Wpvr_Ajax {
                 "sceneId"=>$hotspot_data["hotspot-scene"],
                 "targetPitch"=>(float)$hotspot_data["hotspot-scene-pitch"],
                 "targetYaw"=>(float)$hotspot_data["hotspot-scene-yaw"]);
-              array_push($hotspots, $hotspot_info); 
+              array_push($hotspots, $hotspot_info);
               if (empty($hotspot_data["hotspot-scene"])) {
                 unset($hotspot_info['targetPitch']);
                 unset($hotspot_info['targetYaw']);
@@ -398,7 +398,7 @@ class Wpvr_Ajax {
           if (empty($panoscenes["scene-author"])) {
             unset($scene_info['author']);
           }
-          
+
           if ($panoscenes["cvgscene"] == "off") {
              unset($scene_info['maxPitch']);
              unset($scene_info['minPitch']);
@@ -434,7 +434,7 @@ class Wpvr_Ajax {
           $scene_array = array(
             $panoscenes["scene-id"]=>$scene_info
           );
-          $scene_data[$panoscenes["scene-id"]] = $scene_info; 
+          $scene_data[$panoscenes["scene-id"]] = $scene_info;
           }
 
       }
@@ -486,7 +486,7 @@ class Wpvr_Ajax {
         $foundid = $explodeid[1];
         $html = '';
         $html .= '<iframe width="600" height="400" src="https://www.youtube.com/embed/'.$foundid.'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-        
+
       } elseif (strpos($videourl, 'youtu.be') > 0) {
         $vidtype = 'youtube';
         $explodeid = '';
@@ -495,7 +495,7 @@ class Wpvr_Ajax {
         $foundid = $explodeid[3];
         $html = '';
         $html .= '<iframe width="600" height="400" src="https://www.youtube.com/embed/'.$foundid.'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-        
+
       }
       elseif (strpos($videourl, 'vimeo') > 0) {
         $vidtype = 'vimeo';
@@ -505,7 +505,7 @@ class Wpvr_Ajax {
         $foundid = $explodeid[3];
         $html = '';
         $html .= '<iframe src="https://player.vimeo.com/video/'.$foundid.'" width="600" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
-        
+
       } else {
         $vidtype = 'selfhost';
         $vidautoplay = '';
@@ -532,7 +532,7 @@ class Wpvr_Ajax {
           $html .= '<p class="vjs-no-js">';
             $html .= 'To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com html5-video-support/" target="_blank">supports HTML5 video</a>';
             $html .= '</p>';
-        $html .= '</video>';  
+        $html .= '</video>';
       }
 
       $response = array();
@@ -564,7 +564,7 @@ class Wpvr_Ajax {
           $foundid = $explodeid[1];
           $html = '';
           $html .= '<iframe width="600" height="400" src="https://www.youtube.com/embed/'.$foundid.'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-          
+
         } elseif (strpos($videourl, 'youtu.be') > 0) {
           $vidtype = 'youtube';
           $explodeid = '';
@@ -573,7 +573,7 @@ class Wpvr_Ajax {
           $foundid = $explodeid[3];
           $html = '';
           $html .= '<iframe width="600" height="400" src="https://www.youtube.com/embed/'.$foundid.'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-          
+
         }
 
         elseif (strpos($videourl, 'vimeo') > 0) {
@@ -584,7 +584,7 @@ class Wpvr_Ajax {
           $foundid = $explodeid[3];
           $html = '';
           $html .= '<iframe src="https://player.vimeo.com/video/'.$foundid.'" width="600" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
-          
+
         } else {
           $vidtype = 'selfhost';
           $vidautoplay = '';
@@ -613,11 +613,11 @@ class Wpvr_Ajax {
               $html .= '</p>';
           $html .= '</video>';
         }
-        
+
         $videoarray = array();
-        $videoarray = array(__( "panoid" )=>$panoid,__( "panoviddata" )=>$html,__( "vidid" )=>$vidid,__( "vidurl" )=>$videourl,__( "vidautoplay" )=>$vidautoplay,__( "vidcontrol" )=>$vidcontrol,__( "vidtype" )=>$vidtype); 
+        $videoarray = array(__( "panoid" )=>$panoid,__( "panoviddata" )=>$html,__( "vidid" )=>$vidid,__( "vidurl" )=>$videourl,__( "vidautoplay" )=>$vidautoplay,__( "vidcontrol" )=>$vidcontrol,__( "vidtype" )=>$vidtype);
         update_post_meta( $postid, 'panodata', $videoarray );
-        die();      
+        die();
       }
 
 
@@ -629,6 +629,14 @@ class Wpvr_Ajax {
         $control = false;
       }
 
+      $vrgallery = sanitize_text_field($_POST['vrgallery']);
+      if ($vrgallery == 'on') {
+        $vrgallery = true;
+      }
+      else {
+        $vrgallery = false;
+      }
+
       $gyro = sanitize_text_field($_POST['gyro']);
 
       if ($gyro == 'on') {
@@ -637,7 +645,7 @@ class Wpvr_Ajax {
       else {
         $gyro = false;
       }
-      
+
       $compass = sanitize_text_field($_POST['compass']);
       if ($compass == 'on') {
         $compass = true;
@@ -697,7 +705,7 @@ class Wpvr_Ajax {
 
       if ($panodata["scene-list"] != "") {
         foreach ($panodata["scene-list"] as $scenes_val) {
-         
+
           $scene_id_validate = $scenes_val["scene-id"];
           if (!empty($scene_id_validate)) {
             $scene_id_validated = preg_replace('/[^0-9a-zA-Z_]/',"",$scene_id_validate);
@@ -917,22 +925,22 @@ class Wpvr_Ajax {
       }
 
       $panolength = count($panodata["scene-list"]);
-      for ($i=0; $i < $panolength; $i++) { 
+      for ($i=0; $i < $panolength; $i++) {
         if (empty($panodata["scene-list"][$i]['scene-id'])) {
           unset($panodata["scene-list"][$i]);
         }
         else {
           $panohotspotlength = count($panodata["scene-list"][$i]['hotspot-list']);
-          for ($j=0; $j < $panohotspotlength; $j++) { 
+          for ($j=0; $j < $panohotspotlength; $j++) {
             if (empty($panodata["scene-list"][$i]['hotspot-list'][$j]['hotspot-title'])) {
               unset($panodata["scene-list"][$i]['hotspot-list'][$j]);
-            } 
+            }
           }
         }
       }
 
       $pano_array = array();
-      $pano_array = array(__( "panoid" )=>$panoid,__( "autoLoad" )=>$autoload,__( "showControls" )=>$control,__( "gyro" )=>$gyro,__( "compass" )=>$compass,__( "autoRotate" )=>$autorotation,__( "autoRotateInactivityDelay" )=>$autorotationinactivedelay,__( "autoRotateStopDelay" )=>$autorotationstopdelay,__( "preview" )=>$preview,__( "defaultscene" )=>$default_scene,__( "scenefadeduration" )=>$scene_fade_duration,__( "panodata" )=>$panodata);
+      $pano_array = array(__( "panoid" )=>$panoid,__( "autoLoad" )=>$autoload,__( "showControls" )=>$control,__( "vrgallery" )=>$vrgallery,__( "gyro" )=>$gyro,__( "compass" )=>$compass,__( "autoRotate" )=>$autorotation,__( "autoRotateInactivityDelay" )=>$autorotationinactivedelay,__( "autoRotateStopDelay" )=>$autorotationstopdelay,__( "preview" )=>$preview,__( "defaultscene" )=>$default_scene,__( "scenefadeduration" )=>$scene_fade_duration,__( "panodata" )=>$panodata);
 
       if ($rotation == 'off') {
         unset($pano_array['autoRotate']);
@@ -950,8 +958,103 @@ class Wpvr_Ajax {
       if (empty($autorotationstopdelay)) {
           unset($pano_array['autoRotateStopDelay']);
       }
-      
+
       update_post_meta( $postid, 'panodata', $pano_array );
       die();
+  }
+
+  function wpvr_file_import() {
+    set_time_limit(20000000000000000);
+    wpvr_delete_temp_file();
+    if ($_POST['fileurl']) {
+      WP_Filesystem();
+      $file_save_url = wp_upload_dir();
+      $fileurl = $_POST['fileurl'];
+      $attachment_id = $_POST['data_id'];
+      $zip_file_path = get_attached_file( $attachment_id );
+      $unzipfile = unzip_file($zip_file_path,$file_save_url['basedir'].'/wpvr/temp/'); 
+
+      if ( is_wp_error( $unzipfile ) ) {
+        wpvr_delete_temp_file();
+        wp_send_json_error('Failed to unzip file');
+      }
+      $result = glob($file_save_url["basedir"].'/wpvr/temp/*.json');
+      if (!$result) {
+        wpvr_delete_temp_file();
+        wp_send_json_error('Tour json file not found');
+      }
+      $tour_json = $result[0];
+      $arrContextOptions=array(
+        "ssl"=>array(
+              "verify_peer"=>false,
+              "verify_peer_name"=>false,
+          ),
+      );
+      $getfile = file_get_contents($tour_json, false, stream_context_create($arrContextOptions));
+      $file_content = json_decode($getfile, true);
+
+      $new_title = $file_content['title'];
+      $new_data = $file_content['data'];
+      $new_post_id = wp_insert_post( array(
+          'post_title'    => $new_title,
+          'post_type'     => 'wpvr_item',
+          'post_status'     => 'publish',
+      ) );
+      if ($new_post_id) {
+        if ($new_data['panoid']) {
+            $new_data['panoid'] = 'pano'.$new_post_id;
+        }
+        if ($new_data['preview']) {
+          $preview_url = $file_save_url['baseurl'].'/wpvr/temp/scene_preview.jpg';
+          $media_get = wpvr_handle_media_import($preview_url, $new_post_id);
+          if ($media_get['status'] == 'error') {
+              wp_delete_post($new_post_id, true);
+              wpvr_delete_temp_file();
+              wp_send_json_error($media_get['message']);
+          }
+          elseif ($media_get['status'] == 'success') {
+            $new_data['preview'] = $media_get['message'];
+          }
+          else {
+            wp_delete_post($new_post_id, true);
+            wpvr_delete_temp_file();
+            wp_send_json_error('Media transfer process failed');
+          }
+        }
+        if ($new_data['panodata']) {
+
+          if ($new_data['panodata']["scene-list"]) {
+            
+            foreach ($new_data['panodata']["scene-list"] as $key => $panoscenes) {
+              if ($panoscenes["scene-attachment-url"]) {
+                $scene_id = $panoscenes['scene-id'];
+                $url = $file_save_url['baseurl'].'/wpvr/temp/'.$scene_id.'.jpg';
+                $media_get = wpvr_handle_media_import($url, $new_post_id);
+                if ($media_get['status'] == 'error') {
+                    wp_delete_post($new_post_id, true);
+                    wpvr_delete_temp_file();
+                    wp_send_json_error($media_get['message']);
+                }
+                elseif ($media_get['status'] == 'success') {
+                  $new_data['panodata']["scene-list"][$key]['scene-attachment-url'] = $media_get['message'];
+                }
+                else {
+                  wp_delete_post($new_post_id, true);
+                  wpvr_delete_temp_file();
+                  wp_send_json_error('Media transfer process failed');
+                }
+              }
+            }
+          }
+          update_post_meta( $new_post_id, 'panodata', $new_data );
+          wpvr_delete_temp_file();
+        }
+      }
+    }
+    else {
+      wpvr_delete_temp_file();
+      wp_send_json_error('No file found to import');
+    }
+    die();
   }
 }

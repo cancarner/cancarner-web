@@ -23,6 +23,13 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
                         <li class="tab col s3"><a href="#tab1"><i class="material-icons">settings</i><?php _e('General','wpvr'); ?></a></li>
                         <li class="tab col s3"><a href="#tab2"><i class="material-icons">perm_media</i><?php _e('Video Tutorials','wpvr'); ?></a></li>
                         <li class="tab col s3"><a href="#tab3"><i class="material-icons">thumb_up_alt</i><?php _e('Go Premium','wpvr'); ?></a></li>
+                        <?php
+                        if(is_plugin_active( 'wpvr-pro/wpvr-pro.php' )) {
+                            ?>
+                                <li class="tab col s3"><a href="#tab4"><i class="material-icons">add</i><?php _e('Import','wpvr'); ?></a></li>
+                            <?php
+                        }
+                        ?>
                     </ul>
                 </div>
 
@@ -152,11 +159,39 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
                                 <div class="item"><?php _e('Hotspot based scene face support','wpvr'); ?></div>
                                 <div class="item"><?php _e('Gyroscope support','wpvr'); ?></div>
                                 <div class="item"><?php _e('Duplicate tour support','wpvr'); ?></div>
+                                <div class="item"><?php _e('File import & export system','wpvr'); ?></div>
+                                <div class="item"><?php _e('Custom scene gallery','wpvr'); ?></div>
                                 <div class="item"><?php _e('Personalized support on both support forum and our support e-mail.','wpvr'); ?></div>
                             </div>
                             <a href="https://rextheme.com/wpvr/" target="_blank" class="waves-effect waves-light btn wpvr-btn"><?php _e('Get Premium Version','wpvr'); ?></a>
                         </div>
                     </div>
+                    <?php
+                    if(is_plugin_active( 'wpvr-pro/wpvr-pro.php' )) {
+                        ?>
+                        <div id="tab4" class="block-wrapper">
+                            <div class="rex-upgrade">
+                                <h4><?php _e('Import tour file: ','wpvr'); ?></h4>
+                                <p style="color: red;"><?php _e('Do not close or refresh the page during import process. It may take few minutes.','wpvr'); ?></p>
+                                <div class="parent" style="width:100%;">
+                                  <form id="wpvr_import_from">
+                                      <a class="btn-floating btn-large waves-effect waves-light red" id="wpvr_button_upload"><i class="material-icons">add</i></a>
+                                      <div class="file-path-wrapper">
+                                        <input class="file-path validate" id="wpvr_file_url" type="text" value="" data-value="" >
+                                      </div>
+                                      <div id="wpvr_progress" class="progress" style="display:none;">
+                                          <div class="indeterminate"></div>
+                                      </div>
+                                      <button class="btn waves-effect waves-light" type="submit" id="wpvr_button_submit" >Submit
+                                        <i class="material-icons right">send</i>
+                                      </button>
+                                  </form>
+                                </div>
+                            </div>
+                        </div>
+                        <?php
+                    }
+                    ?>
             </div>
         </div>
 

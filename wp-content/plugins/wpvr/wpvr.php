@@ -16,7 +16,7 @@
  * Plugin Name:       WP VR
  * Plugin URI:        https://rextheme.com/wpvr/
  * Description:       WP VR - 360 Panorama and virtual tour creator for WordPress is a customized panaroma & virtual builder tool for WordPress Website.
- * Version:           2.8.0
+ * Version:           3.2.0
  * Author:            Rextheme
  * Author URI:        http://rextheme.com/
  * License:           GPL-2.0+
@@ -102,7 +102,7 @@ function wpvr_activation_redirect( $plugin )
 }
 
 add_action( 'activated_plugin', 'wpvr_activation_redirect' );
- 
+
 
 /**
  * Initialize the plugin tracker
@@ -110,16 +110,16 @@ add_action( 'activated_plugin', 'wpvr_activation_redirect' );
  * @return void
  */
 function appsero_init_tracker_wpvr() {
- 
+
     if ( ! class_exists( 'AppSero\WPVRInsights' ) ) {
         require_once __DIR__ . '/wpvrinsights.php';
     }
     $insights = new AppSero\WPVRInsights( 'cab9761e-b067-4824-9c71-042df5d58598', 'WP VR', __FILE__);
     $insights->optin();
     $insights->init_plugin();
-    
+
 }
- 
+
 add_action( 'init', 'appsero_init_tracker_wpvr' );
 
 function wpvr_block() {
@@ -129,10 +129,10 @@ function wpvr_block() {
         array( 'wp-blocks', 'wp-element', 'wp-components', 'wp-editor' )
     );
     wp_enqueue_style(
-		'gutyblocks/guty-block',
+    'gutyblocks/guty-block',
         plugins_url( 'src/view.css', __FILE__ ),
         array()
-	);
+  );
 
     if (function_exists('register_block_type')) {
          register_block_type( 'wpvr/wpvr-block', array(
@@ -149,6 +149,10 @@ function wpvr_block() {
                 'type' => 'string',
                 'default' => '400',
             ),
+            'radius' => array(
+              'type' => 'string',
+              'default' => '0',
+          ),
             'content' => array(
                 'type' => 'string',
                 'source'=> 'html',
@@ -157,7 +161,7 @@ function wpvr_block() {
         ),
         'editor_script' => 'wpvr-block',
         'render_callback' => 'wpvr_block_render',
-    ) ); 
+    ) );
     }
 }
 add_action( 'init', 'wpvr_block' );
@@ -177,7 +181,9 @@ function wpvr_block_render( $attributes ) {
     if (isset($attributes['height'])) {
         $height = $attributes['height'];
     }
-    
+    if(isset($attributes['radius'])) {
+      $radius = $attributes['radius'].'px';
+    }
 
     $postdata = get_post_meta( $id, 'panodata', true );
     $panoid = 'pano'.$id;
@@ -224,13 +230,18 @@ function wpvr_block_render( $attributes ) {
             $html .= '</div>';
         }
         return $html;
-    } 
+    }
 
     $control = false;
     if (isset($postdata['showControls'])) {
         $control = $postdata['showControls'];
     }
-    
+
+    $vrgallery = false;
+    if (isset($postdata['vrgallery'])) {
+      $vrgallery = $postdata['vrgallery'];
+    }
+
     $gyro = false;
     if (isset($postdata['gyro'])) {
       $gyro = $postdata['gyro'];
@@ -240,13 +251,13 @@ function wpvr_block_render( $attributes ) {
     if (isset($postdata['compass'])) {
       $compass = $postdata['compass'];
     }
-    
+
     $autoload = false;
 
     if (isset($postdata['autoLoad'])) {
         $autoload = $postdata['autoLoad'];
     }
-    
+
     $default_scene = '';
     if (isset($postdata['defaultscene'])) {
         $default_scene = $postdata['defaultscene'];
@@ -269,12 +280,12 @@ function wpvr_block_render( $attributes ) {
     if (isset($postdata["autoRotateStopDelay"])) {
       $autorotationstopdelay = $postdata["autoRotateStopDelay"];
     }
-    
+
     $scene_fade_duration = '';
     if (isset($postdata['scenefadeduration'])) {
         $scene_fade_duration = $postdata['scenefadeduration'];
     }
-    
+
     $panodata = '';
     if (isset($postdata['panodata'])) {
         $panodata = $postdata['panodata'];
@@ -293,17 +304,17 @@ function wpvr_block_render( $attributes ) {
             if (isset($panoscenes["scene-ititle"])) {
               $scene_ititle = sanitize_text_field($panoscenes["scene-ititle"]);
             }
-                
+
             $scene_author = '';
             if (isset($panoscenes["scene-author"])) {
               $scene_author = sanitize_text_field($panoscenes["scene-author"]);
-            }  
+            }
 
             $default_scene_pitch = '';
             if (isset($panoscenes["scene-pitch"])) {
               $default_scene_pitch = $panoscenes["scene-pitch"];
             }
-            
+
             $default_scene_yaw = '';
             if (isset($panoscenes["scene-yaw"])) {
               $default_scene_yaw = $panoscenes["scene-yaw"];
@@ -313,30 +324,30 @@ function wpvr_block_render( $attributes ) {
             if (isset($panoscenes["scene-maxpitch"])) {
               $scene_max_pitch = (float)$panoscenes["scene-maxpitch"];
             }
-            
+
 
             $scene_min_pitch = '';
             if (isset($panoscenes["scene-minpitch"])) {
               $scene_min_pitch = (float)$panoscenes["scene-minpitch"];
             }
-            
+
 
             $scene_max_yaw = '';
             if (isset($panoscenes["scene-maxyaw"])) {
               $scene_max_yaw = (float)$panoscenes["scene-maxyaw"];
             }
-            
+
 
             $scene_min_yaw = '';
             if (isset($panoscenes["scene-minyaw"])) {
               $scene_min_yaw = (float)$panoscenes["scene-minyaw"];
             }
-                  
+
             $default_zoom = 100;
             if (isset($panoscenes["scene-zoom"])) {
               $default_zoom = $panoscenes["scene-zoom"];
             }
-            
+
             if (!empty($default_zoom)) {
               $default_zoom = (int)$default_zoom;
             }
@@ -348,7 +359,7 @@ function wpvr_block_render( $attributes ) {
             if (isset($panoscenes["scene-maxzoom"])) {
               $max_zoom = $panoscenes["scene-maxzoom"];
             }
-            
+
             if (!empty($max_zoom)) {
               $max_zoom = (int)$max_zoom;
             }
@@ -360,26 +371,26 @@ function wpvr_block_render( $attributes ) {
             if (isset($panoscenes["scene-minzoom"])) {
               $min_zoom = $panoscenes["scene-minzoom"];
             }
-            
+
             if (!empty($min_zoom)) {
               $min_zoom = (int)$min_zoom;
             }
             else {
               $min_zoom = 50;
-            } 
+            }
 
             $hotspot_datas = array();
             if (isset($panoscenes['hotspot-list'])) {
                 $hotspot_datas = $panoscenes['hotspot-list'];
             }
-            
+
             $hotspots = array();
             foreach ($hotspot_datas as $hotspot_data) {
                 $status  = get_option( 'wpvr_edd_license_status' );
                 if( $status !== false && $status == 'valid' ) {
                     if (isset($hotspot_data["hotspot-customclass-pro"]) && $hotspot_data["hotspot-customclass-pro"] != 'none') {
                       $hotspot_data["hotspot-customclass"] = $hotspot_data["hotspot-customclass-pro"];
-                      $hotspoticoncolor = $hotspot_data["hotspot-customclass-color-icon-value"];  
+                      $hotspoticoncolor = $hotspot_data["hotspot-customclass-color-icon-value"];
                     }
                     if (isset($hotspot_data['hotspot-blink'])) {
                       $hotspotblink = $hotspot_data['hotspot-blink'];
@@ -466,13 +477,13 @@ function wpvr_block_render( $attributes ) {
                   unset($scene_info['minHfov']);
                 }
             }
-            
+
             $scene_array = array();
             $scene_array = array(
               $panoscenes['scene-id']=>$scene_info
             );
             $scene_data[$panoscenes['scene-id']] = $scene_info;
-        }   
+        }
       }
 
       $pano_id_array = array();
@@ -490,7 +501,7 @@ function wpvr_block_render( $attributes ) {
       if (empty($autorotationstopdelay)) {
           unset($pano_response['autoRotateStopDelay']);
       }
-      
+
       $response = array();
       $response = array($pano_id_array,$pano_response);
       if (!empty($response)) {
@@ -502,17 +513,17 @@ function wpvr_block_render( $attributes ) {
     if (empty($height)) {
         $height = '400';
     }
-    
+
     $foreground_color = '#fff';
-	$pulse_color = wpvr_hex2rgb($hotspoticoncolor);
-	$rgb = wpvr_HTMLToRGB($hotspoticoncolor);
-	$hsl = wpvr_RGBToHSL($rgb);
-	if($hsl->lightness > 200) {
-	  $foreground_color = '#000000';
-	}
-	else {
-		$foreground_color = '#fff';
-	}
+  $pulse_color = wpvr_hex2rgb($hotspoticoncolor);
+  $rgb = wpvr_HTMLToRGB($hotspoticoncolor);
+  $hsl = wpvr_RGBToHSL($rgb);
+  if($hsl->lightness > 200) {
+    $foreground_color = '#000000';
+  }
+  else {
+    $foreground_color = '#fff';
+  }
 
     $class = 'myclass';
     $html = 'test';
@@ -521,10 +532,10 @@ function wpvr_block_render( $attributes ) {
       $html .= '#'.$panoid.' div.pnlm-hotspot-base.fas,
           #'.$panoid.' div.pnlm-hotspot-base.fab,
           #'.$panoid.' div.pnlm-hotspot-base.far {
-              display: block !important; 
+              display: block !important;
               background-color: '.$hotspoticoncolor.';
               color: '.$foreground_color.';
-              border-radius: 100%; 
+              border-radius: 100%;
               width: 30px;
               height: 30px;
               animation: icon-pulse'.$panoid.' 1.5s infinite cubic-bezier(.25, 0, 0, 1);
@@ -545,7 +556,7 @@ function wpvr_block_render( $attributes ) {
                 100% {
                     box-shadow: 0 0 0 10px rgba('.$pulse_color[0].', 0);
                 }
-            }'; 
+            }';
           }
 
           $status  = get_option( 'wpvr_edd_license_status' );
@@ -553,18 +564,48 @@ function wpvr_block_render( $attributes ) {
             if (!$gyro) {
               $html .= '#'.$panoid.' div.pnlm-orientation-button {
                     display: none;
-                }';   
-            } 
+                }';
+            }
           }
           else {
             $html .= '#'.$panoid.' div.pnlm-orientation-button {
                     display: none;
                 }';
           }
-       
+
       $html .= '</style>';
 
-    $html .= '<div id="pano'.$id.'" class="pano-wrap" style=" text-align:center; width: '.$width.'px; height: '.$height.'px; margin: 0 auto;">';
+    if ($width == 'fullwidth') {
+      if (wpvr_isMobileDevice()) {
+        $html .= '<div id="pano'.$id.'" class="pano-wrap" style="text-align:center; border-radius:'.$radius.';" >';
+      }
+      else {
+        $html .= '<div id="pano'.$id.'" class="pano-wrap vrfullwidth" style=" text-align:center; height: '.$height.'px; border-radius:'.$radius.'; " >';
+      }
+    }
+    else {
+      $html .= '<div id="pano'.$id.'" class="pano-wrap" style=" text-align:center; width: '.$width.'px; height: '.$height.'px; margin: 0 auto; border-radius:'.$radius.';">';
+    } 
+        if ($vrgallery) {
+          //===Carousal setup===//
+          $html .= '<div id="vrgcontrols">';
+
+            $html .= '<div class="vrgctrl vrbounce">';
+            $html .= '</div>';
+          $html .= '</div>';
+          
+          $html .= '<div id="sccontrols" class="scene-gallery vrowl-carousel owl-theme">';
+            if (isset($panodata["scene-list"])) {
+              foreach ($panodata["scene-list"] as $panoscenes) {
+                $scene_key = $panoscenes['scene-id'];
+                $img_src_url = $panoscenes['scene-attachment-url'];
+                $html .= '<ul style="width:150px;"><li title="Double click to view scene"><img class="scctrl" id="'.$scene_key.'_gallery_'.$id.'" src="'.$img_src_url.'"></li></ul>';
+              }
+            }
+          $html .= '</div>';
+          //===Carousal setup end===//  
+        }
+
         $html .= '<i class="fa fa-times  cross"></i>';
         $html .= '<div class="custom-ifram" style="display: none;">';
         $html .= '</div>';
@@ -581,14 +622,36 @@ function wpvr_block_render( $attributes ) {
                 $html .= 'for(var i = 0; i < scenehotspot.length; i++) {';
                     $html .= 'if(scenehotspot[i]["clickHandlerArgs"] != "") {';
                         $html .= 'scenehotspot[i]["clickHandlerFunc"] = wpvrhotspot;';
-                    $html .= '}'; 
+                    $html .= '}';
                     $html .= 'if(scenehotspot[i]["createTooltipArgs"] != "") {';
                         $html .= 'scenehotspot[i]["createTooltipFunc"] = wpvrtooltip;';
-                    $html .= '}';   
-                $html .= '}';    
+                    $html .= '}';
+                $html .= '}';
             $html .= '}';
-        $html .= '}';    
-        $html .= 'pannellum.viewer(response[0]["panoid"], scenes);';
+        $html .= '}';
+        $html .= 'var panoshow'.$id.' = pannellum.viewer(response[0]["panoid"], scenes);';
+        $html .= 'var touchtime = 0;';
+        if ($vrgallery) {
+            if (isset($panodata["scene-list"])) {
+            foreach ($panodata["scene-list"] as $panoscenes) {
+              $scene_key = $panoscenes['scene-id'];
+              $scene_key_gallery = $panoscenes['scene-id'].'_gallery_'.$id;
+              $img_src_url = $panoscenes['scene-attachment-url'];
+              $html .= 'document.getElementById("'.$scene_key_gallery.'").addEventListener("click", function(e) { ';
+                $html .= 'if (touchtime == 0) {';
+                  $html .= 'touchtime = new Date().getTime();';
+                $html .= '} else {';
+                  $html .= 'if (((new Date().getTime()) - touchtime) < 800) {';
+                    $html .= 'panoshow'.$id.'.loadScene("'.$scene_key.'");';
+                    $html .= 'touchtime = 0;';
+                  $html .= '} else {';
+                    $html .= 'touchtime = new Date().getTime();';
+                  $html .= '}';
+                $html .= '}';                
+              $html .= '});';
+            }
+          } 
+        }
     $html .= '</script>';
     //script end
     return $html;
@@ -676,7 +739,7 @@ function wpvr_RGBToHSL($RGB) {
       if($b == $maxC)
         $h = 4.0 + ($r - $g) / ($maxC - $minC);
 
-      $h = $h / 6.0; 
+      $h = $h / 6.0;
     }
 
     $h = (int)round(255.0 * $h);
@@ -698,7 +761,7 @@ function wpvr_rest_data_set() {
         'post_type' => 'wpvr_item',
         'posts_per_page' => -1,
     ));
-    
+
     $wpvr_list = array();
     $list_none = array('value'=>'0','label'=>'None');
     array_push($wpvr_list,$list_none);
@@ -706,9 +769,45 @@ function wpvr_rest_data_set() {
         $query->the_post();
         $title = get_the_title();
         $post_id = get_the_ID();
+        $title = $title.' : '.$post_id;
         $list_ob = array('value'=>$post_id,'label'=>$title);
         array_push($wpvr_list,$list_ob);
     }
     return $wpvr_list;
 }
 
+function wpvr_isMobileDevice() {
+    return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
+}
+
+function wpvr_directory() {
+    $upload = wp_upload_dir();
+    $upload_dir = $upload['basedir'];
+    $upload_dir_temp = $upload_dir . '/wpvr/temp/';
+    if (! is_dir($upload_dir_temp)) {
+       wp_mkdir_p( $upload_dir_temp, 0700 );
+    }
+}
+
+add_action('admin_init','wpvr_directory');
+function wpvr_delete_temp_file() {
+  $file_save_url = wp_upload_dir();
+  $rootPath = realpath( $file_save_url['basedir'].'/wpvr/temp/');
+  $files = new RecursiveIteratorIterator(
+      new RecursiveDirectoryIterator($rootPath),
+      RecursiveIteratorIterator::LEAVES_ONLY
+  );
+  foreach ($files as $name => $file)
+  {
+      if (!$file->isDir())
+      {
+          $filePath = $file->getRealPath();
+          $filesToDelete[] = $filePath;
+      }
+  }
+
+  foreach ($filesToDelete as $file)
+  {
+      unlink($file);
+  }
+}

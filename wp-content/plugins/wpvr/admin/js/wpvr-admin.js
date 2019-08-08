@@ -31,12 +31,19 @@
 	 * practising this, we should strive to set a better example in our own work.
 	 */
 
+	$(document).ready(function(){
+		$(".vrowl-carousel").owlCarousel({
+			margin:10,
+		    autoWidth:true,
+		});
+	}); 
+
 	jQuery(document).ready(function($){
 
 
 		j= $('#scene-1').find('.hotspot-nav li').eq(-2).find('span').attr('data-index');
 	 	var ajaxurl = wpvr_obj.ajaxurl;
-		$('#panolenspreview').on('click', function(e){			
+		$('#panolenspreview').on('click', function(e){
 			e.preventDefault();
 			var postid = $("#post_ID").val();
 			var autoload = $("input[name='autoload']:checked").val();
@@ -55,7 +62,7 @@
 		  	jQuery.ajax({
 			    type:    "POST",
 			    url:     ajaxurl,
-			    data: { 
+			    data: {
 			      action: "wpvr_preview",
 			      postid: postid,
 			      compass: compass,
@@ -71,7 +78,7 @@
 			      preview: preview,
 			      scenefadeduration: scenefadeduration,
 			    },
-		    	
+
 			    success: function( response ){
 			    	if (response.success == true) {
 			    		$('#error_occured').hide();
@@ -80,18 +87,48 @@
 			    		var scenes = response.data[1];
 
 			    		if (scenes) {
-				    		$.each(scenes.scenes, function (i) {		
-							    $.each(scenes.scenes[i]['hotSpots'], function (key, val) {						
+				    		$.each(scenes.scenes, function (i) {
+							    $.each(scenes.scenes[i]['hotSpots'], function (key, val) {
 							        if (val["clickHandlerArgs"] != "") {
 							        	val["clickHandlerFunc"] = wpvrhotspot;
 							        }
 							        if (val["createTooltipArgs"] != "") {
 							        	val["createTooltipFunc"] = wpvrtooltip;
-							        }								 
+							        }
 							    });
 							});
 			    		}
-			    		var panoshow = pannellum.viewer(response.data[0]["panoid"], scenes);	
+			    		if (scenes) {
+		    		  		$('.scene-gallery').trigger('destroy.owl.carousel');
+						    $('.scene-gallery').empty();
+						    $(".vrowl-carousel").owlCarousel({
+								margin:10,
+							    autoWidth:true,
+							});
+						    $.each(scenes.scenes, function (key, val) {
+						      $('.owl-stage').append('<div class="owl-item" style="width: auto; margin-right: 10px;" ><ul style="width:150px;" ><li>'+key+'</li><li title="Double click to view scene"><img class="scctrl" id="'+key+'_gallery" src="'+val.panorama+'"></li></ul></div>');
+						    });
+					  	}
+			    		var panoshow = pannellum.viewer(response.data[0]["panoid"], scenes);
+			    		var touchtime = 0;
+			    		if (scenes) {
+					      $.each(scenes.scenes, function (key, val) {
+					        document.getElementById(''+key+'_gallery').addEventListener('click', function(e) {
+					            if (touchtime == 0) {
+						            touchtime = new Date().getTime();
+						          }
+						          else {
+						            if (((new Date().getTime()) - touchtime) < 800) {
+						              panoshow.loadScene(key);
+						              touchtime = 0;
+						            }
+						            else {
+						              touchtime = new Date().getTime();
+						            }
+						          }
+					        });
+					      });
+					    }
 			    	}
 			    	else {
 			    		$('#error_occured').show();
@@ -106,27 +143,27 @@
 		  		}
 			});
 		});
-	}); 
+	});
 
 	jQuery(document).ready(function($){
 	 	var ajaxurl = wpvr_obj.ajaxurl;
-		$('#videopreview').on('click', function(e){			
+		$('#videopreview').on('click', function(e){
 			e.preventDefault();
 			var postid = $("#post_ID").val();
 			var videourl = $("input[name='video-attachment-url']").val();
 			var vidautoplay = $("input[name='playvideo']:checked").val();
-			var vidcontrol = $("input[name='playcontrol']:checked").val();			
+			var vidcontrol = $("input[name='playcontrol']:checked").val();
 		  	jQuery.ajax({
 			    type:    "POST",
 			    url:     ajaxurl,
-			    data: { 
+			    data: {
 			      action: "wpvrvideo_preview",
 			      postid: postid,
 			      videourl: videourl,
 			      vidautoplay: vidautoplay,
 			      vidcontrol: vidcontrol,
 			    },
-		    	
+
 			    success: function( response ){
 			    	if (response.success == true) {
 			    		$('#'+response.data["panoid"]).empty();
@@ -168,7 +205,7 @@
 				var autorotationstopdelay = $("input[name='auto-rotation-stop-delay']").val();
 
 				var scenefadeduration = $("input[name='scene-fade-duration']").val();
-			
+
 				if ($('.scene-setup')[0]) {
 				    var panodata = $('.scene-setup').repeaterVal();
 				    var panolist = JSON.stringify(panodata);
@@ -180,7 +217,7 @@
 
 				    type:    "POST",
 				    url:     ajaxurl,
-				    data: { 
+				    data: {
 				      action: "wpvr_save",
 				      postid: postid,
 				      panovideo: panovideo,
@@ -197,7 +234,7 @@
 		      		  autorotationstopdelay: autorotationstopdelay,
 				      scenefadeduration: scenefadeduration,
 				      },
-	    	
+
 			    	success: function( response ){
 			    		if (response.success == false) {
 			    			$('#error_occured').show();
@@ -216,8 +253,8 @@
 			    		}
 		    		}
 		  		});
-		    }   
-		});	
+		    }
+		});
     });
 
     jQuery(document).ready(function($){
@@ -225,11 +262,11 @@
            $("#error_occured").hide();
            $('body').removeClass('error-overlay');
         });
-        
+
 	   $("#panolenspreview, #error_occured").on("click", function(e){
            e.stopPropagation();
         });
-    });  
+    });
 
     jQuery(document).ready(function($){
 
@@ -252,7 +289,7 @@
 				var autorotationstopdelay = $("input[name='auto-rotation-stop-delay']").val();
 
 				var scenefadeduration = $("input[name='scene-fade-duration']").val();
-			
+
 				if ($('.scene-setup')[0]) {
 				    var panodata = $('.scene-setup').repeaterVal();
 				    var panolist = JSON.stringify(panodata);
@@ -264,7 +301,7 @@
 
 				    type:    "POST",
 				    url:     ajaxurl,
-				    data: { 
+				    data: {
 				      action: "wpvr_save",
 				      postid: postid,
 				      panovideo: panovideo,
@@ -281,7 +318,7 @@
 		      		  autorotationstopdelay: autorotationstopdelay,
 				      scenefadeduration: scenefadeduration,
 				      },
-	    	
+
 			    	success: function( response ){
 			    		if (response.success == false) {
 			    			$('#error_occured').show();
@@ -300,9 +337,9 @@
 			    		}
 		    		}
 		  		});
-		    }   
-		});	
-    }); 
+		    }
+		});
+    });
 
     function wpvrhotspot(hotSpotDiv, args) {
 	    var argst = args.replace(/\\/g, '');
@@ -334,9 +371,9 @@
 
         var i = $('.scene-nav li').eq(-2).find('span').attr('data-index');
         i = parseInt(i);
-            
+
 		$('.scene-setup').repeater({
-            
+
 	        defaultValues: {
 	        	'scene-type': 'equirectangular',
 				'dscene': 'off',
@@ -348,19 +385,19 @@
 	        show: function () {
 
 	        	if( $(this).parents(".scene-setup").attr("data-limit").length > 0 ){
-	        		
+
 					if( $(this).parents(".scene-setup").find("div[data-repeater-item]:not(.hotspot-setup div[data-repeater-item])").length <= $(this).parents(".scene-setup").attr("data-limit") ){
-						
+
 						$(this).slideDown();
 						$(this).removeClass('active');
 
 		                i=i+1;
 		                var scene = 'scene-'+i;
-		                
+
 		                $(this).find(".title .scene-num").html(i);
-		                
+
 		                $('<li><span data-index="'+ i +'" data-href="#'+ scene +'"><i class="fa fa-image"></i></span></li>').insertBefore($(this).parent().parent('.scene-setup').find('.scene-nav ul li:last-child'));
-		                
+
 		                $(this).attr('id', scene);
 		                changehotspotid(i);
 		                $(this).siblings('.active').removeClass('active');
@@ -374,15 +411,15 @@
 				} else {
 					jQuery(this).slideDown();
 	                $(this).removeClass('active');
-	                
+
 	                i=i+1;
 	                var scene = 'scene-'+i;
 
-	                
+
 	                $(this).find(".title .scene-num").html(i);
-	                
+
 	                $('<li><span data-index="'+ i +'" data-href="#'+ scene +'"><i class="fa fa-image"></i></span></li>').insertBefore($(this).parent().parent('.scene-setup').find('.scene-nav ul li:last-child'));
-	                
+
 	                $(this).attr('id', scene);
 	                changehotspotid(i);
 				}
@@ -390,13 +427,13 @@
 				$(this).hide();
 	        },
 	        hide: function (deleteElement) {
-               
+
                 var hide_id = $(this).attr("id");
                 hide_id = "#"+hide_id;
-                
+
                 var current = $(this).attr('id');
                 var fchild = $('.single-scene:nth-child(2)').attr('id');
-                
+
 	            if(confirm('Are you sure you want to delete?')) {
 	                jQuery(this).slideUp(deleteElement);
                     if(current == fchild){
@@ -412,7 +449,7 @@
                     }
                     $(this).parent().parent('.scene-setup').find('.scene-nav li span[data-href="'+hide_id+'"]').parent("li").remove();
                     setTimeout(deleteinfodata, 1000);
-	            }     
+	            }
 	        },
 
 	        repeaters: [{
@@ -424,7 +461,7 @@
 	            show: function () {
 
 	            	if( $(this).parents(".hotspot-setup").attr("data-limit").length > 0 ){
-		        		
+
 						if( $(this).parents(".hotspot-setup").find("div[data-repeater-item]").length <= $(this).parents(".hotspot-setup").attr("data-limit") ){
 
 							$(this).slideDown();
@@ -433,18 +470,18 @@
 		                	$(this).addClass('active');
 		                    j = parseInt(j);
 		                    j=j+1;
-		                    var parent_scene = $(this).parent().parent().parent('.single-scene.active').attr('id');  
+		                    var parent_scene = $(this).parent().parent().parent('.single-scene.active').attr('id');
 		                    var hotspot = parent_scene+'-hotspot-'+ j;
-		                    
+
 		                    var replace_string =parent_scene.replace("scene-", "");
-		                      
+
 		                    $(this).find(".title .hotspot-num").html(j);
 		                    $(this).find(".title .scene-num").html(replace_string);
-		                
+
 		                    $('<li><span data-index="'+ j +'" data-href="#'+ hotspot +'"><i class="far fa-dot-circle"></i></span></li>').insertBefore($(this).parent().parent('.hotspot-setup').find('.hotspot-nav ul li:last-child'));
 
 		                    $(this).attr('id', hotspot);
-		                    
+
 		                    setTimeout(changeicon, 1000);
 						} else {
                             $('.pano-alert > p').html('You can only add 5 hotspots for free version');
@@ -456,14 +493,14 @@
 	                    $(this).removeClass('active');
 	                    j = parseInt(j);
 	                    j=j+1;
-	                    var parent_scene = $(this).parent().parent().parent('.single-scene.active').attr('id');  
+	                    var parent_scene = $(this).parent().parent().parent('.single-scene.active').attr('id');
 	                    var hotspot = parent_scene+'-hotspot-'+ j;
-	                    
+
 	                    var replace_string =parent_scene.replace("scene-", "");
-	                      
+
 	                    $(this).find(".title .hotspot-num").html(j);
 	                    $(this).find(".title .scene-num").html(replace_string);
-	                
+
 	                    $('<li><span data-index="'+ j +'" data-href="#'+ hotspot +'"><i class="far fa-dot-circle"></i></span></li>').insertBefore($(this).parent().parent('.hotspot-setup').find('.hotspot-nav ul li:last-child'));
 
 	                    $(this).attr('id', hotspot);
@@ -473,7 +510,7 @@
 
                     var hotspot_hide_id = $(this).attr("id");
                     hotspot_hide_id = "#"+hotspot_hide_id;
-                   
+
 
                     var hotspot_current = $(this).attr('id');
                     var hotspot_fchild = $(this).parent().children(":first").attr('id');
@@ -482,32 +519,32 @@
                         if(hotspot_current == hotspot_fchild){
                             $(this).next().addClass("active");
                             $(this).parent().parent('.hotspot-setup').find('.hotspot-nav li span[data-href="'+hotspot_hide_id+'"]').parent("li").next().addClass("active");
-                            
+
                         }
                         else {
                             $(this).prev().addClass("active");
                             $(this).parent().parent('.hotspot-setup').find('.hotspot-nav li span[data-href="'+hotspot_hide_id+'"]').parent("li").prev().addClass("active");
                         }
-                    
+
                         $(this).parent().parent('.hotspot-setup').find('.hotspot-nav li:not(:last-child) span[data-href="'+hotspot_hide_id+'"]').parent("li").remove();
 		        },
 
 	        }]
-	    });       
-	}); 
-    
+	    });
+	});
+
 
 	var file_frame;
 	var parent;
     $(document).on("click",".scene-upload",function(event) {
 		event.preventDefault();
-        parent = $(this).parent( '.form-group' );	
+        parent = $(this).parent( '.form-group' );
 
         if ( file_frame ) {
             file_frame.open();
             return;
         }
-        
+
         file_frame = wp.media.frames.file_frame = wp.media({
             title: $( this ).data( 'uploader_title' ),
             button: {
@@ -516,7 +553,7 @@
             library: {
                 type: [ 'image']
             },
-            multiple: false 
+            multiple: false
         });
 
         file_frame.on( 'select', function() {
@@ -533,13 +570,13 @@
     $(document).on("click",".video-upload",function(event) {
 		event.preventDefault();
 
-        parent = $(this).parent( '.form-group' );	
+        parent = $(this).parent( '.form-group' );
 
         if ( file_frames ) {
             file_frames.open();
             return;
         }
-        
+
         file_frames = wp.media.frames.file_frames = wp.media({
             title: $( this ).data( 'uploader_title' ),
             button: {
@@ -548,7 +585,7 @@
             library: {
                 type: [ 'video/mp4']
             },
-            multiple: false 
+            multiple: false
         });
 
         file_frames.on( 'select', function() {
@@ -565,13 +602,13 @@
 		event.preventDefault();
 
 
-        parent = $(this).parent( '.form-group' );	
+        parent = $(this).parent( '.form-group' );
 
         if ( file_fram ) {
             file_fram.open();
             return;
         }
-        
+
         file_fram = wp.media.frames.file_fram = wp.media({
             title: $( this ).data( 'uploader_title' ),
             button: {
@@ -580,7 +617,7 @@
             library: {
                 type: [ 'image']
             },
-            multiple: false 
+            multiple: false
         });
 
         file_fram.on( 'select', function() {
@@ -649,7 +686,7 @@ $(document).on("change","input[type=radio][name=panovideo]",function(event) {
     $(document).on("change","select[name*=hotspot-customclass-pro]",function(event) {
     	var getval = $(this).val();
     	$(this).parent('.hotspot-setting').children('span.change-icon').html('<i class="'+getval+'"></i>');
-    	
+
 	});
 
     $(document).on("change",".hotspot-customclass-color",function(event) {
@@ -673,15 +710,15 @@ $(document).on("change","input[type=radio][name=panovideo]",function(event) {
 	}
 
     //------------panolens tab js------------------
-  
-    
+
+
      $(document).on("click",".scene-nav ul li:not(:last-child) span",function() {
-         
+
         var scene_id = $(this).data('index');
         scene_id = '#scene-'+ scene_id;
-        
+
         j = $(scene_id).find('.hotspot-nav li').eq(-2).find('span').attr('data-index');
-        
+
         $([$(this).parent()[0], $($(this).data('href'))[0]]).addClass('active').siblings('.active').removeClass('active');
 
     });
@@ -708,7 +745,7 @@ $(document).on("change","input[type=radio][name=panovideo]",function(event) {
     });
 
     //end add click
-    
+
     $(document).on("click",".hotspot-nav ul li:not(:last-child) span",function() {
         $([$(this).parent()[0], $($(this).data('href'))[0]]).addClass('active').siblings('.active').removeClass('active');
 
@@ -730,21 +767,21 @@ $(document).on("change","input[type=radio][name=panovideo]",function(event) {
 	    $('.trtr').trigger('change');
 	    $('.hotspot-customclass-pro-select').fontIconPicker();
 	    $('span.change-icon').hide();
-	    
+
     });
 
     function changehotspotid(id){
         var scene_id = '#scene-'+ id;
-        var hotspot_id = 'scene-'+ id +'-hotspot-1'; 
+        var hotspot_id = 'scene-'+ id +'-hotspot-1';
         $(scene_id).find('.hotspot-nav li span').attr('data-href', '#'+hotspot_id+'');
         $(scene_id).find('.single-hotspot').attr('id', hotspot_id);
-      
+
     }
-    
+
     $(document).on("click",".rex-pano-nav-menu.main-nav ul li span",function() {
         $([$(this).parent()[0], $($(this).data('href'))[0]]).addClass('active').siblings('.active').removeClass('active');
     });
-    
+
     //----------alert dismiss--------//
     $(document).on("click","body",function() {
         $('.pano-alert').hide();
@@ -755,15 +792,15 @@ $(document).on("change","input[type=radio][name=panovideo]",function(event) {
     $(document).on("click",".pano-alert, .rex-pano-sub-tabs .rex-pano-tab-nav li.add",function(e) {
         e.stopPropagation();
     });
-    
-    
+
+
     $(document).on("click",".main-nav li.hotspot span",function() {
         $(".hotspot-setup.rex-pano-sub-tabs").show();
         $(".scene-setup > nav.scene-nav").hide();
         $(".scene-setup .single-scene > .scene-content").hide();
         $(".scene-setup .delete-scene").hide();
     });
-    
+
     $(document).on("click",".main-nav li.scene span",function() {
         $(".hotspot-setup.rex-pano-sub-tabs").hide();
         $(".scene-setup > nav.scene-nav").show();
@@ -808,7 +845,7 @@ $(document).on("change","input[type=radio][name=panovideo]",function(event) {
 	}
 
 	$(document).on("change",".hotspotscene",function() {
-		
+
 		var chanheghtptpval = $(this).val();
 		if(chanheghtptpval != "none") {
 			$(this).parent('.hotspot-scene').siblings('.hotspot-scene').children('.hotspotsceneinfodata').val(chanheghtptpval);
@@ -820,14 +857,14 @@ $(document).on("change","input[type=radio][name=panovideo]",function(event) {
 
 	$(document).on("click",".hotpitch",function(event) {
 		var datacoords = $('#panodata').text().split(',');
-		var pitchsplit = datacoords[0]; 
+		var pitchsplit = datacoords[0];
 		var pitch = pitchsplit.split(':');
 		$(this).parent().parent('.hotspot-setting').children('.hotspot-pitch').val(pitch[1]);
 	});
 
 	$(document).on("click",".hotyaw",function(event) {
 		var datacoords = $('#panodata').text().split(',');
-		var yawsplit = datacoords[1]; 
+		var yawsplit = datacoords[1];
 		var yaw = yawsplit.split(':');
 		$(this).parent().parent('.hotspot-setting').children('.hotspot-yaw').val(yaw[1]);
 	});
@@ -849,12 +886,12 @@ $(document).on("change","input[type=radio][name=panovideo]",function(event) {
     });
 
     $(document).on("click",".toppitch",function(event) {
-		var datacoords = $('#panodata').text().split(','); 
-		var pitchsplit = datacoords[0]; 
+		var datacoords = $('#panodata').text().split(',');
+		var pitchsplit = datacoords[0];
 		var pitch = pitchsplit.split(':');
-		var yawsplit = datacoords[1]; 
-		var yaw = yawsplit.split(':'); 
-		
+		var yawsplit = datacoords[1];
+		var yaw = yawsplit.split(':');
+
 		$('div.single-scene.rex-pano-tab.active').children('div.hotspot-setup.rex-pano-sub-tabs').children('div.rex-pano-tab-content').children('div.single-hotspot.rex-pano-tab.active.clearfix').find('.hotspot-pitch').val(pitch[1]);
 		$('div.single-scene.rex-pano-tab.active').children('div.hotspot-setup.rex-pano-sub-tabs').children('div.rex-pano-tab-content').children('div.single-hotspot.rex-pano-tab.active.clearfix').find('.hotspot-yaw').val(yaw[1]);
 	});

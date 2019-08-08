@@ -137,6 +137,16 @@ class Wpvr_Widget extends Widget_Base {
             ]
         );
 
+        $this->add_control(
+            'vr_radius',
+            [
+                'label' => __( 'Radius:', 'wpvr' ),
+                'type' => Controls_Manager::TEXT,
+                'input_type' => 'text',
+                'placeholder' => __( '', 'wpvr' ),
+            ]
+        );
+
         $this->end_controls_section();
 
     }
@@ -156,19 +166,23 @@ class Wpvr_Widget extends Widget_Base {
         $id = 0;
         $width = "600px";
         $height = "400px";
+        $radius = "0px";
         $id = $settings['vr_id'];
         $width = $settings['vr_width'];
         $height = $settings['vr_height'];
+        $radius = $settings['vr_radius'];
         if (empty($width)) {
             $width = "600px";
         }
         if (empty($height)) {
             $height = "400px";
         }
-
+        if (empty($radius)) {
+            $radius = "0px";
+        }
         
         if ($id) {
-            $shortcode = do_shortcode( shortcode_unautop( '[wpvr id="'.$id.'" width="'.$width.'" height="'.$height.'"]'  ) );
+            $shortcode = do_shortcode( shortcode_unautop( '[wpvr id="'.$id.'" width="'.$width.'" height="'.$height.'" radius="'.$radius.'"]'  ) );
             echo $shortcode;
         }
     }

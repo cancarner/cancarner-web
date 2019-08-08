@@ -95,8 +95,9 @@ class Wpvr_Admin {
 		 if ($screen->id=="wpvr_item") {
 		 	wp_enqueue_style( 'icon-picker-css', plugin_dir_url( __FILE__ ) . 'css/jquery.fonticonpicker.min.css', array(), $this->version, 'all' );
 			wp_enqueue_style( 'icon-picker-css-theme', plugin_dir_url( __FILE__ ) . 'css/jquery.fonticonpicker.grey.min.css', array(), $this->version, 'all' );
+			wp_enqueue_style( 'owl-css', plugin_dir_url( __FILE__ ) . 'css/owl.carousel.css', array(), $this->version, 'all' );
 		 }
-		
+
 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/wpvr-admin.css', array(), $this->version, 'all' );
 
 	}
@@ -121,7 +122,6 @@ class Wpvr_Admin {
 		 */
 		wp_enqueue_script( 'wp-api' );
 		$adscreen = get_current_screen();
-
 		wp_enqueue_media();
 		if ($adscreen->id=="wpvr_item") {
 			wp_enqueue_script('icon-picker', plugin_dir_url( __FILE__ ) . 'lib/jquery.fonticonpicker.min.js', array(), true);
@@ -130,7 +130,7 @@ class Wpvr_Admin {
 		wp_enqueue_script('panelliumlib-js', plugin_dir_url( __FILE__ ) . 'lib/pannellum/src/js/libpannellum.js', array(), true);
 		wp_enqueue_script( 'videojs-js', plugin_dir_url( __FILE__ ) .'js/video.js', array('jquery'), true);
 		wp_enqueue_script('panelliumvid-js', plugin_dir_url( __FILE__ ) . 'lib/pannellum/src/js/videojs-pannellum-plugin.js', array(), true);
-		
+
 
         if ($adscreen->id=="toplevel_page_wpvr") {
         	wp_enqueue_script( 'materialize-js', plugin_dir_url( __FILE__ ) . 'js/materialize.min.js', array( 'jquery' ), $this->version, false );
@@ -138,9 +138,10 @@ class Wpvr_Admin {
 		wp_enqueue_script( 'jquery-repeater', plugin_dir_url( __FILE__ ) .'js/jquery.repeater.min.js', array('jquery'), true);
 		if ($adscreen->id=="wpvr_item") {
 			wp_enqueue_script('icon-picker', plugin_dir_url( __FILE__ ) . 'lib/jquery.fonticonpicker.min.js', array(), true);
+			wp_enqueue_script( 'owl', plugin_dir_url( __FILE__ ) . 'js/owl.carousel.js', array( 'jquery' ), false );
 			wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/wpvr-admin.js', array( 'jquery' ), $this->version, false );
 		}
-		
+
 		wp_localize_script( $this->plugin_name, 'wpvr_obj', array(
 	        'ajaxurl' => admin_url( 'admin-ajax.php' ),
 	        'ajax_nonce' => wp_create_nonce('wpvr'),
@@ -159,7 +160,7 @@ class Wpvr_Admin {
 		 */
 
 		add_meta_box(
-			$this->post_type . '_builder_box', 
+			$this->post_type . '_builder_box',
 			__('Tour Preview', $this->plugin_name),
 			array($this, 'wpvr_display_meta_box_builder'),
 			$this->post_type,
@@ -168,7 +169,7 @@ class Wpvr_Admin {
 		);
 
 		add_meta_box(
-			$this->post_type . '_shortcode_box', 
+			$this->post_type . '_shortcode_box',
 			__('Using this VR', $this->plugin_name),
 			array($this, 'wpvr_display_meta_box_shortcode'),
 			$this->post_type,
@@ -197,7 +198,7 @@ class Wpvr_Admin {
 			'all_items'         => __( 'All Tours', $this->plugin_name ),
 			'menu_name'         => __( 'Wpvr', $this->plugin_name ),
 		);
-		
+
 		$args = array(
 			'labels'          => $labels,
 			'public'          => false,
@@ -206,7 +207,7 @@ class Wpvr_Admin {
 			'menu_position'   => 100,
 			'supports'        => array( 'title' ),
 		);
-		
+
 		/**
 		 * Documentation : https://codex.wordpress.org/Function_Reference/register_post_type
 		 */
@@ -220,7 +221,7 @@ class Wpvr_Admin {
 	 */
 	function wpvr_manage_posts_custom_column( $column_name ){
 		$post = get_post();
-		
+
 		switch( $column_name ) {
 			case 'shortcode' :
 				echo '<code>[wpvr id="' . $post->ID . '"]</code>';
@@ -254,7 +255,7 @@ class Wpvr_Admin {
 	public function wpvr_post_updated_messages( $messages ) {
 		$messages[$this->post_type][1] = __( 'Wpvr item updated.', $this->plugin_name);
 		$messages[$this->post_type][4] = __( 'Wpvr item updated.', $this->plugin_name);
-		
+
 		return $messages;
 	}
 
@@ -264,7 +265,7 @@ class Wpvr_Admin {
 	 * @since 1.0.0
 	 */
 	public function wpvr_display_meta_box_shortcode() {
-	
+
 		include_once( 'partials/wpvr-meta-box-shortcode-display.php' );
 	}
 
@@ -285,7 +286,7 @@ class Wpvr_Admin {
     }
 	public function wpvr_setup($post) {
 
-		
+
 		$data_limit = 5;
 
 		$scene_limit = $data_limit + 1;
@@ -296,12 +297,12 @@ class Wpvr_Admin {
 		if (isset($postdata["autoLoad"])) {
 			$autoload = $postdata["autoLoad"];
 		}
-		
+
 		$control = true;
 		if (isset($postdata["showControls"])) {
 			$control = $postdata["showControls"];
 		}
-		
+
 		$default_scene = '';
 		if (isset($postdata["defaultscene"])) {
 			$default_scene = $postdata["defaultscene"];
@@ -328,12 +329,12 @@ class Wpvr_Admin {
 		if (isset($postdata["autoRotateStopDelay"])) {
 			$autorotationstopdelay = $postdata["autoRotateStopDelay"];
 		}
-		
+
 		$scene_fade_duration = '';
 		if (isset($postdata["scenefadeduration"])) {
 			$scene_fade_duration = $postdata["scenefadeduration"];
 		}
-		
+
 		$pano_data = '';
 		if (isset($postdata["panodata"])) {
 			$pano_data = $postdata["panodata"];
@@ -343,14 +344,14 @@ class Wpvr_Admin {
 		$custom_icon = $custom_icon_array->icon;
 
 		$html = '';
-		
+
 		$html .= '<div class="pano-setup">';
-        
+
         $html .= '<div class="pano-alert scene-alert">';
             $html .= '<span class="destroy"><i class="fa fa-times"></i></span>';
             $html .= '<p></p>';
         $html .= '</div>';
-        
+
         $html .='<div class="rex-pano-tabs">';
             $html .='<nav class="rex-pano-tab-nav rex-pano-nav-menu main-nav">';
                 $html .='<ul>';
@@ -360,10 +361,10 @@ class Wpvr_Admin {
                     $html .='<li class="video"><span data-href="#video"><i class="fas fa-video"></i> '.__('Video','wpvr').'</span></li>';
                 $html .='</ul>';
             $html .='</nav>';
-            
+
             $html .='<div class="rex-pano-tab-content">';
                 $html .='<div class="rex-pano-tab general active" id="general">';
-                        
+
                         $html .= '<h6 class="title"> '.__('General Settings : ','wpvr').'</h6>';
 
                         //=Control Setup=
@@ -375,7 +376,7 @@ class Wpvr_Admin {
                                         $html .= '<input class="styled-radio" id="styled-radio-3" type="radio" name="controls" value="off" checked>';
                                         $html .= '<label for="styled-radio-3">Off</label>';
                                     $html .= '</li>';
-                            
+
                                     $html .= '<li class="radio-btn">';
                                         $html .= '<input class="styled-radio" id="styled-radio-4" type="radio" name="controls" value="on" >';
                                         $html .= '<label for="styled-radio-4">On</label>';
@@ -391,7 +392,7 @@ class Wpvr_Admin {
                                         $html .= '<input class="styled-radio" id="styled-radio-3" type="radio" name="controls" value="off" >';
                                         $html .= '<label for="styled-radio-3">Off</label>';
                                     $html .= '</li>';
-                            
+
                                     $html .= '<li class="radio-btn">';
                                         $html .= '<input class="styled-radio" id="styled-radio-4" type="radio" name="controls" value="on" checked>';
                                         $html .= '<label for="styled-radio-4">On</label>';
@@ -403,21 +404,21 @@ class Wpvr_Admin {
 
                         //=scene fade duration=//
                         $html .= '<div class="single-settings scene-fade-duration">';
-                            $html .= '<span>'.__('Scene Fade Duration: ','wpvr').'</span>';        
+                            $html .= '<span>'.__('Scene Fade Duration: ','wpvr').'</span>';
                             $html .= '<input type="number" name="scene-fade-duration" value="'.$scene_fade_duration.'" />';
                         $html .= '</div>';
                         //=scene fade duration End=//
-                        
+
         				//=Autoload setup=//
                         if ($autoload == true) {
-                            $html .= '<div class="single-settings autoload">';					
+                            $html .= '<div class="single-settings autoload">';
                                 $html .= '<span>'.__('Autoload: ','wpvr').'</span>';
                                 $html .= '<ul>';
                                     $html .= '<li class="radio-btn">';
                                         $html .= '<input class="styled-radio" id="styled-radio-1" type="radio" name="autoload" value="off">';
                                         $html .= '<label for="styled-radio-1">Off</label>';
                                     $html .= '</li>';
-                            
+
                                     $html .= '<li class="radio-btn">';
                                         $html .= '<input class="styled-radio" id="styled-radio-2" type="radio" name="autoload" value="on" checked >';
                                         $html .= '<label for="styled-radio-2">On</label>';
@@ -426,14 +427,14 @@ class Wpvr_Admin {
                             $html .= '</div>';
                         }
                         else {
-                            $html .= '<div class="single-settings autoload">';					
+                            $html .= '<div class="single-settings autoload">';
                                 $html .= '<span>'.__('Autoload: ','wpvr').' </span>';
                                 $html .= '<ul>';
                                     $html .= '<li class="radio-btn">';
                                         $html .= '<input class="styled-radio" id="styled-radio-1" type="radio" name="autoload" value="off" checked >';
                                         $html .= '<label for="styled-radio-1">Off</label>';
                                     $html .= '</li>';
-                            
+
                                     $html .= '<li class="radio-btn">';
                                         $html .= '<input class="styled-radio" id="styled-radio-2" type="radio" name="autoload" value="on">';
                                         $html .= '<label for="styled-radio-2">On</label>';
@@ -448,18 +449,18 @@ class Wpvr_Admin {
                         	$html .= '<div class="single-settings preview-setting">';
                                 $html .= '<span>'.__('Preview Upload or add link : ','wpvr').'</span>';
 	                            $html .= '<div class="form-group">';
-	                                $html .= '<img class="prev-img" src="'.$preview.'">';	
-	                                $html .= '<input type="text" name="preview-attachment-url" class="preview-attachment-url" value="'.$preview.'"><br>';						
+	                                $html .= '<img class="prev-img" src="'.$preview.'">';
+	                                $html .= '<input type="text" name="preview-attachment-url" class="preview-attachment-url" value="'.$preview.'"><br>';
 	                                $html .= '<input type="button" class="preview-upload" data-info="" value="Upload"/>';
 	                            $html .= '</div>';
 	                        $html .= '</div>';
                         }
                         else {
                         	$html .= '<div class="single-settings preview-setting">';
-	                            $html .= '<span>'.__('Preview Upload or add link : ','wpvr').'</span>';	
+	                            $html .= '<span>'.__('Preview Upload or add link : ','wpvr').'</span>';
 	                            $html .= '<div class="form-group">';
 	                                $html .= '<img class="prev-img" src="" style="display: none;">';
-	                                $html .= '<input type="text" name="preview-attachment-url" class="preview-attachment-url" value=""><br>';							
+	                                $html .= '<input type="text" name="preview-attachment-url" class="preview-attachment-url" value=""><br>';
 	                                $html .= '<input type="button" class="preview-upload" data-info="" value="Upload"/>';
 	                            $html .= '</div>';
 	                        $html .= '</div>';
@@ -468,14 +469,14 @@ class Wpvr_Admin {
 
                         //===Autorotation on off set==//
                         if (isset($postdata["autoRotate"])) {
-                        	$html .= '<div class="single-settings autoload">';					
+                        	$html .= '<div class="single-settings autoload">';
 	                            $html .= '<span>'.__('Auto Rotation: ','wpvr').' </span>';
 	                            $html .= '<ul>';
 	                                $html .= '<li class="radio-btn">';
 	                                    $html .= '<input class="styled-radio" id="styled-radio-11" type="radio" name="autorotation" value="off" >';
 	                                    $html .= '<label for="styled-radio-11">Off</label>';
 	                                $html .= '</li>';
-	                        
+
 	                                $html .= '<li class="radio-btn">';
 	                                    $html .= '<input class="styled-radio" id="styled-radio-12" type="radio" name="autorotation" value="on" checked >';
 	                                    $html .= '<label for="styled-radio-12">On</label>';
@@ -484,14 +485,14 @@ class Wpvr_Admin {
 	                        $html .= '</div>';
                         }
                         else {
-                        	$html .= '<div class="single-settings autoload">';					
+                        	$html .= '<div class="single-settings autoload">';
 	                            $html .= '<span>'.__('Auto Rotation: ','wpvr').' </span>';
 	                            $html .= '<ul>';
 	                                $html .= '<li class="radio-btn">';
 	                                    $html .= '<input class="styled-radio" id="styled-radio-11" type="radio" name="autorotation" value="off" checked >';
 	                                    $html .= '<label for="styled-radio-11">Off</label>';
 	                                $html .= '</li>';
-	                        
+
 	                                $html .= '<li class="radio-btn">';
 	                                    $html .= '<input class="styled-radio" id="styled-radio-12" type="radio" name="autorotation" value="on">';
 	                                    $html .= '<label for="styled-radio-12">On</label>';
@@ -503,7 +504,7 @@ class Wpvr_Admin {
 
                         //=Auto Rotation=//
                         $html .= '<div class="single-settings scene-fade-duration autorotationdata" >';
-                            $html .= '<span>'.__('Auto Rotation: ','wpvr').'</span>';        
+                            $html .= '<span>'.__('Auto Rotation: ','wpvr').'</span>';
                             $html .= '<input type="number" name="auto-rotation" value="'.$autorotation.'" placeholder="-5" />';
                             $html .= '<div class="field-tooltip">';
                                 $html .= '<i class="fa fa-question-circle"></i>';
@@ -514,7 +515,7 @@ class Wpvr_Admin {
 
                         //=Auto rotation inactive delay=//
                         $html .= '<div class="single-settings scene-fade-duration autorotationdata" >';
-                            $html .= '<span>'.__('Auto Rotation Inactive Delay: ','wpvr').'</span>';        
+                            $html .= '<span>'.__('Auto Rotation Inactive Delay: ','wpvr').'</span>';
                             $html .= '<input type="number" name="auto-rotation-inactive-delay" value="'.$autorotationinactivedelay.'" placeholder="2000" />';
                             $html .= '<div class="field-tooltip">';
                                 $html .= '<i class="fa fa-question-circle"></i>';
@@ -525,7 +526,7 @@ class Wpvr_Admin {
 
                         //=Auto rotation stop delay=//
                         $html .= '<div class="single-settings scene-fade-duration autorotationdata" >';
-                            $html .= '<span>'.__('Auto Rotation Stop Delay: ','wpvr').'</span>';        
+                            $html .= '<span>'.__('Auto Rotation Stop Delay: ','wpvr').'</span>';
                             $html .= '<input type="number" name="auto-rotation-stop-delay" value="'.$autorotationstopdelay.'" placeholder="2000" />';
                             $html .= '<div class="field-tooltip">';
                                 $html .= '<i class="fa fa-question-circle"></i>';
@@ -533,32 +534,32 @@ class Wpvr_Admin {
                             $html .= '</div>';
                         $html .= '</div>';
                         //=Auto rotation stop delay=//
-        
+
                 $html .='</div>';
                 //---end general tab----
-        
+
                 $html .='<div class="rex-pano-tab" id="scenes">';
-                    
+
                     //=Scene and Hotspot repeater=//
                     if (empty($pano_data)) {
                         $html .= '<div class="scene-setup rex-pano-sub-tabs" data-limit="'.$scene_limit.'">';
-                              
+
                             $html .= '<nav class="rex-pano-tab-nav rex-pano-nav-menu scene-nav">';
                                 $html .= '<ul>';
                                     $html .= '<li class="active"><span data-index="1" data-href="#scene-1"><i class="fa fa-image"></i></span></li>';
                                     $html .= '<li class="add" data-repeater-create><span><i class="fa fa-plus-circle"></i></span></li>';
                                 $html .= '</ul>';
                             $html .= '</nav>';
-                            
+
                             $html .= '<div data-repeater-list="scene-list" class="rex-pano-tab-content">';
 
                             	$html .= '<div data-repeater-item class="single-scene rex-pano-tab" data-title="0" id="scene-0">';
-                                    
+
                                     $html .= '<div class="scene-content">';
                                         $html .= '<h6 class="title"><i class="fa fa-cog"></i> Scene Setting </h6>';
 
                                         //==Set Default Scene==//
-			                        	$html .= '<div class="single-settings dscene">';					
+			                        	$html .= '<div class="single-settings dscene">';
 			                                $html .= '<span>'.__('Set as default: ','wpvr').'</span>';
 			                                $html .= '<select class="dscen" name="dscene">';
                                                 $html .= '<option value="on"> Yes</option>';
@@ -577,30 +578,30 @@ class Wpvr_Admin {
                                         $html .= '</div>';
 
                                         $html .= '<div class=scene-setting>';
-                                            $html .= '<label for="scene-upload">'.__('Scene Upload: ','wpvr').'</label>';	
+                                            $html .= '<label for="scene-upload">'.__('Scene Upload: ','wpvr').'</label>';
                                             $html .= '<div class="form-group">';
-                                                $html .= '<img src="" style="display: none;"><br>';							
+                                                $html .= '<img src="" style="display: none;"><br>';
                                                 $html .= '<input type="button" class="scene-upload" data-info="" value="Upload"/>';
                                                 $html .= '<input type="hidden" name="scene-attachment-url" class="scene-attachment-url" value="">';
                                             $html .= '</div>';
                                         $html .= '</div>';
                                     $html .= '</div>';
-                                    
+
                                     //--hotspot setup--
                                     $html .= '<div class="hotspot-setup rex-pano-sub-tabs" data-limit="'.$data_limit.'">';
-                                        
+
                                         $html .= '<nav class="rex-pano-tab-nav rex-pano-nav-menu hotspot-nav">';
                                             $html .= '<ul>';
                                                 $html .= '<li class="active"><span data-index="1" data-href="#scene-0-hotspot-1"><i class="far fa-dot-circle"></i></span></li>';
                                                 $html .= '<li class="add" data-repeater-create><span><i class="fa fa-plus-circle"></i> </span></li>';
                                             $html .= '</ul>';
                                         $html .= '</nav>';
-                        
+
                                         $html .= '<div data-repeater-list="hotspot-list" class="rex-pano-tab-content">';
                                             $html .= '<div data-repeater-item class="single-hotspot rex-pano-tab active clearfix" id="scene-0-hotspot-1">';
-                                                
+
                                                 $html .= '<h6 class="title"><i class="fa fa-cog"></i> Hotspot Setting </h6>';
-                                                
+
                                                 $html .= '<div class="wrapper">';
                                                     $html .= '<div class="hotspot-setting">';
                                                         $html .= '<label for="hotspot-title">'.__('Hotspot ID : ','wpvr').'</label>';
@@ -620,10 +621,10 @@ class Wpvr_Admin {
 													$html .= '<div class="hotspot-setting">';
                                                     	$html .= '<label for="hotspot-customclass">'.__('Hotspot custom icon class: ','wpvr').'</label>';
                                                     	$html .= '<input type="text" id="hotspot-customclass" name="hotspot-customclass"/>';
-                                                	$html .= '</div>';	
-                                                    
+                                                	$html .= '</div>';
+
                                                 $html .= '</div>';
-                                                
+
                                                 $html .= '<div class="hotspot-type hotspot-setting">';
                                                     $html .= '<label for="hotspot-type">'.__('Hotspot-Type: ','wpvr').'</label>';
                                                     $html .= '<select name="hotspot-type">';
@@ -635,12 +636,12 @@ class Wpvr_Admin {
                                                         $html .= '<label for="hotspot-url">'.__('URL: ','wpvr').' </label>';
                                                         $html .= '<input type="url" name="hotspot-url" value="" />';
                                                     $html .= '</div>';
-                        
+
                                                     $html .= '<div class="hotspot-content">';
                                                         $html .= '<label for="hotspot-content">'.__('On click Content: ','wpvr').'</label>';
                                                         $html .= '<textarea name="hotspot-content"></textarea>';
                                                     $html .= '</div>';
-                        
+
                                                     $html .= '<div class="hotspot-hover">';
                                                         $html .= '<label for="hotspot-hover">'.__('On hover Content: ','wpvr').'</label>';
                                                         $html .= '<textarea name="hotspot-hover"></textarea>';
@@ -652,30 +653,30 @@ class Wpvr_Admin {
                                                         	$html .= '<option value="none" selected> None</option>';
                                                     	$html .= '</select>';
                                                     $html .= '</div>';
-                        
+
                                                     $html .= '<div class="hotspot-scene" style="display:none;" >';
                                                         $html .= '<label for="hotspot-scene">'.__('Target Scene ID: ','wpvr').' </label>';
                                                         $html .= '<input class="hotspotsceneinfodata" type="text" name="hotspot-scene" disabled/>';
                                                     $html .= '</div>';
-                        
+
                                                 $html .= '</div>';
                                                 //=Hotspot type End=//
                                                 $html .= '<button data-repeater-delete title="Delete Hotspot" type="button" class="delete-hotspot"><i class="far fa-trash-alt"></i></button>';
                                             $html .= '</div>';
                                         $html .= '</div>';
-                                        
+
                                     $html .= '</div>';
                                     $html .= '<button data-repeater-delete type="button" title="Delete Scene" class="delete-scene"><i class="far fa-trash-alt"></i></button>';
                            		$html .= '</div>';
 
 
                                 $html .= '<div data-repeater-item class="single-scene rex-pano-tab active" data-title="1" id="scene-1">';
-                                    
+
                                     $html .= '<div class="scene-content">';
                                         $html .= '<h6 class="title"><i class="fa fa-cog"></i> Scene Setting </h6>';
 
                                         //==Set Default Scene==//
-			                        	$html .= '<div class="single-settings dscene">';					
+			                        	$html .= '<div class="single-settings dscene">';
 			                                $html .= '<span>'.__('Set as default: ','wpvr').'</span>';
 			                                $html .= '<select class="dscen" name="dscene">';
                                                 $html .= '<option value="on"> Yes</option>';
@@ -692,33 +693,33 @@ class Wpvr_Admin {
                                         $html .= '<div class=scene-setting>';
                                             $html .= '<label for="scene-type">'.__('Scene Type : ','wpvr').'</label>';
                                             $html .= '<input type="text" name="scene-type" value="equirectangular" disabled/>';
-                                        $html .= '</div>';  
+                                        $html .= '</div>';
 
                                         $html .= '<div class=scene-setting>';
-                                            $html .= '<label for="scene-upload">'.__('Scene Upload: ','wpvr').'</label>';	
+                                            $html .= '<label for="scene-upload">'.__('Scene Upload: ','wpvr').'</label>';
                                             $html .= '<div class="form-group">';
-                                                $html .= '<img src="" style="display: none;"><br>';							
+                                                $html .= '<img src="" style="display: none;"><br>';
                                                 $html .= '<input type="button" class="scene-upload" data-info="" value="Upload"/>';
                                                 $html .= '<input type="hidden" name="scene-attachment-url" class="scene-attachment-url" value="">';
                                             $html .= '</div>';
                                         $html .= '</div>';
                                     $html .= '</div>';
-                                    
+
                                     //--hotspot setup--//
                                     $html .= '<div class="hotspot-setup rex-pano-sub-tabs" data-limit="'.$data_limit.'">';
-                                        
+
                                         $html .= '<nav class="rex-pano-tab-nav rex-pano-nav-menu hotspot-nav">';
                                             $html .= '<ul>';
                                                 $html .= '<li class="active"><span data-index="1" data-href="#scene-1-hotspot-1"><i class="far fa-dot-circle"></i></span></li>';
                                                 $html .= '<li class="add" data-repeater-create><span><i class="fa fa-plus-circle"></i> </span></li>';
                                             $html .= '</ul>';
                                         $html .= '</nav>';
-                        
+
                                         $html .= '<div data-repeater-list="hotspot-list" class="rex-pano-tab-content">';
                                             $html .= '<div data-repeater-item class="single-hotspot rex-pano-tab active clearfix" id="scene-1-hotspot-1">';
-                                                
+
                                                 $html .= '<h6 class="title"><i class="fa fa-cog"></i> Hotspot Setting </h6>';
-                                                
+
                                                 $html .= '<div class="wrapper">';
                                                     $html .= '<div class="hotspot-setting">';
                                                         $html .= '<label for="hotspot-title">'.__('Hotspot ID : ','wpvr').'</label>';
@@ -738,10 +739,10 @@ class Wpvr_Admin {
 													$html .= '<div class="hotspot-setting">';
                                                     	$html .= '<label for="hotspot-customclass">'.__('Hotspot custom icon class: ','wpvr').'</label>';
                                                     	$html .= '<input type="text" id="hotspot-customclass" name="hotspot-customclass"/>';
-                                                	$html .= '</div>';	
+                                                	$html .= '</div>';
 
                                                 $html .= '</div>';
-                                                
+
                                                 $html .= '<div class="hotspot-type hotspot-setting">';
                                                     $html .= '<label for="hotspot-type">'.__('Hotspot-Type: ','wpvr').'</label>';
                                                     $html .= '<select name="hotspot-type">';
@@ -753,17 +754,17 @@ class Wpvr_Admin {
                                                         $html .= '<label for="hotspot-url">'.__('URL: ','wpvr').'</label>';
                                                         $html .= '<input type="url" name="hotspot-url" value="" />';
                                                     $html .= '</div>';
-                        
+
                                                     $html .= '<div class="hotspot-content">';
                                                         $html .= '<label for="hotspot-content">'.__('On click Content: ','wpvr').'</label>';
                                                         $html .= '<textarea name="hotspot-content"></textarea>';
                                                     $html .= '</div>';
-                        
+
                                                     $html .= '<div class="hotspot-hover">';
                                                         $html .= '<label for="hotspot-hover">'.__('On hover Content: ','wpvr').'</label>';
                                                         $html .= '<textarea name="hotspot-hover"></textarea>';
                                                     $html .= '</div>';
-                        
+
                                                     $html .= '<div class="hotspot-scene" style="display:none;" >';
                                                         $html .= '<label for="hotspot-scene">'.__('Select Target Scene from List: ','wpvr').'</label>';
                                                         $html .= '<select class="hotspotscene" name="hotspot-scene-list">';
@@ -774,22 +775,22 @@ class Wpvr_Admin {
                                                         $html .= '<label for="hotspot-scene">'.__('Target Scene ID: ','wpvr').'</label>';
                                                         $html .= '<input class="hotspotsceneinfodata" type="text" name="hotspot-scene" disabled/>';
                                                     $html .= '</div>';
-                        
+
                                                 $html .= '</div>';
                                                 //=Hotspot type End=//
                                                 $html .= '<button data-repeater-delete title="Delete Hotspot" type="button" class="delete-hotspot"><i class="far fa-trash-alt"></i></button>';
                                             $html .= '</div>';
-                                        $html .= '</div>';   
+                                        $html .= '</div>';
                                     $html .= '</div>';
                                     $html .= '<button data-repeater-delete type="button" title="Delete Scene" class="delete-scene"><i class="far fa-trash-alt"></i></button>';
                                 $html .= '</div>';
                             $html .= '</div>';
-                            
-                        $html .= '</div>';	
+
+                        $html .= '</div>';
                     }
                     else {
                         $html .= '<div class="scene-setup rex-pano-sub-tabs" data-limit="'.$scene_limit.'">';
-                            
+
                             $html .= '<nav class="rex-pano-tab-nav rex-pano-nav-menu scene-nav">';
                                 $html .= '<ul>';
                                 $i = 1;
@@ -806,18 +807,18 @@ class Wpvr_Admin {
                                     $html .= '<li class="add" data-repeater-create><span><i class="fa fa-plus-circle"></i></span></li>';
                                 $html .= '</ul>';
                             $html .= '</nav>';
-                            
+
 
                             $html .= '<div data-repeater-list="scene-list" class="rex-pano-tab-content">';
 
                              //===Default empty repeater declared by nazmus sakib===//
                             $html .= '<div data-repeater-item class="single-scene rex-pano-tab" data-title="0" id="scene-0">';
-                                    
+
                                     $html .= '<div class="scene-content">';
                                         $html .= '<h6 class="title"><i class="fa fa-cog"></i> Scene Setting </h6>';
 
                                         //==Set Default Scene==//
-			                        	$html .= '<div class="single-settings dscene">';					
+			                        	$html .= '<div class="single-settings dscene">';
 			                                $html .= '<span>'.__('Set as default: ','wpvr').'</span>';
 			                                $html .= '<select class="dscen" name="dscene">';
                                                 $html .= '<option value="on"> Yes</option>';
@@ -836,30 +837,30 @@ class Wpvr_Admin {
                                         $html .= '</div>';
 
                                         $html .= '<div class=scene-setting>';
-                                            $html .= '<label for="scene-upload">'.__('Scene Upload: ','wpvr').'</label>';	
+                                            $html .= '<label for="scene-upload">'.__('Scene Upload: ','wpvr').'</label>';
                                             $html .= '<div class="form-group">';
-                                                $html .= '<img src="" style="display: none;"><br>';							
+                                                $html .= '<img src="" style="display: none;"><br>';
                                                 $html .= '<input type="button" class="scene-upload" data-info="" value="Upload"/>';
                                                 $html .= '<input type="hidden" name="scene-attachment-url" class="scene-attachment-url" value="">';
                                             $html .= '</div>';
                                         $html .= '</div>';
                                     $html .= '</div>';
-                                    
+
                                     //--hotspot setup--//
                                     $html .= '<div class="hotspot-setup rex-pano-sub-tabs" data-limit="'.$data_limit.'">';
-                                        
+
                                         $html .= '<nav class="rex-pano-tab-nav rex-pano-nav-menu hotspot-nav">';
                                             $html .= '<ul>';
                                                 $html .= '<li class="active"><span data-index="1" data-href="#scene-0-hotspot-1"><i class="far fa-dot-circle"></i></span></li>';
                                                 $html .= '<li class="add" data-repeater-create><span><i class="fa fa-plus-circle"></i> </span></li>';
                                             $html .= '</ul>';
                                         $html .= '</nav>';
-                        
+
                                         $html .= '<div data-repeater-list="hotspot-list" class="rex-pano-tab-content">';
                                             $html .= '<div data-repeater-item class="single-hotspot rex-pano-tab active clearfix" id="scene-0-hotspot-1">';
-                                                
+
                                                 $html .= '<h6 class="title"><i class="fa fa-cog"></i> Hotspot Setting </h6>';
-                                                
+
                                                 $html .= '<div class="wrapper">';
                                                     $html .= '<div class="hotspot-setting">';
                                                         $html .= '<label for="hotspot-title">'.__('Hotspot ID : ','wpvr').'</label>';
@@ -879,10 +880,10 @@ class Wpvr_Admin {
 													$html .= '<div class="hotspot-setting">';
                                                     	$html .= '<label for="hotspot-customclass">'.__('Hotspot custom icon class: ','wpvr').'</label>';
                                                     	$html .= '<input type="text" id="hotspot-customclass" name="hotspot-customclass"/>';
-                                                	$html .= '</div>';	
+                                                	$html .= '</div>';
 
                                                 $html .= '</div>';
-                                                
+
                                                 $html .= '<div class="hotspot-type hotspot-setting">';
                                                     $html .= '<label for="hotspot-type">'.__('Hotspot-Type: ','wpvr').'</label>';
                                                     $html .= '<select name="hotspot-type">';
@@ -894,12 +895,12 @@ class Wpvr_Admin {
                                                         $html .= '<label for="hotspot-url">'.__('URL: ','wpvr').' </label>';
                                                         $html .= '<input type="url" name="hotspot-url" value="" />';
                                                     $html .= '</div>';
-                        
+
                                                     $html .= '<div class="hotspot-content">';
                                                         $html .= '<label for="hotspot-content">'.__('On click Content: ','wpvr').'</label>';
                                                         $html .= '<textarea name="hotspot-content"></textarea>';
                                                     $html .= '</div>';
-                        
+
                                                     $html .= '<div class="hotspot-hover">';
                                                         $html .= '<label for="hotspot-hover">'.__('On hover Content: ','wpvr').'</label>';
                                                         $html .= '<textarea name="hotspot-hover"></textarea>';
@@ -911,18 +912,18 @@ class Wpvr_Admin {
                                                         	$html .= '<option value="none" selected> None</option>';
                                                     	$html .= '</select>';
                                                     $html .= '</div>';
-                        
+
                                                     $html .= '<div class="hotspot-scene" style="display:none;" >';
                                                         $html .= '<label for="hotspot-scene">'.__('Target Scene ID: ','wpvr').' </label>';
                                                         $html .= '<input class="hotspotsceneinfodata" type="text" name="hotspot-scene" disabled/>';
                                                     $html .= '</div>';
-                        
+
                                                 $html .= '</div>';
                                                 //=Hotspot type End=//
                                                 $html .= '<button data-repeater-delete title="Delete Hotspot" type="button" class="delete-hotspot"><i class="far fa-trash-alt"></i></button>';
                                             $html .= '</div>';
                                         $html .= '</div>';
-                                        
+
                                     $html .= '</div>';
                                     $html .= '<button data-repeater-delete type="button" title="Delete Scene" class="delete-scene"><i class="far fa-trash-alt"></i></button>';
                             $html .= '</div>';
@@ -945,26 +946,26 @@ class Wpvr_Admin {
                                     if (isset($pano_scenes["hotspot-list"])) {
                                     	$pano_hotspots = $pano_scenes["hotspot-list"];
                                     }
-                                    
+
                                     $firstvalueset = reset($pano_data["scene-list"]);
                                     if ($pano_scenes['scene-id'] == $firstvalueset['scene-id']) {
 	                                    $html .= '<div data-repeater-item  class="single-scene rex-pano-tab active" data-title="1" id="scene-'.$s.'">';
-	                                        
+
 	                                        $html .= '<div class="scene-content">';
 	                                            $html .= '<h6 class="title"><i class="fa fa-cog"></i> Scene Setting </h6>';
 	                                            //==Set Default Scene==//
 	                                            if ($dscene == 'on') {
-	                                            	$html .= '<div class="single-settings dscene">';					
+	                                            	$html .= '<div class="single-settings dscene">';
 						                                $html .= '<span>'.__('Set as default: ','wpvr').'</span>';
 						                                $html .= '<select class="dscen" name="dscene">';
 			                                                $html .= '<option value="on" selected > Yes</option>';
 			                                                $html .= '<option value="off"> No</option>';
 			                                            $html .= '</select>';
 					                            	$html .= '</div>';
-	                                            	
+
 	                                            }
 	                                            else {
-	                                            	$html .= '<div class="single-settings dscene">';					
+	                                            	$html .= '<div class="single-settings dscene">';
 						                                $html .= '<span>'.__('Set as default: ','wpvr').'</span>';
 						                                $html .= '<select class="dscen" name="dscene">';
 			                                                $html .= '<option value="on"> Yes</option>';
@@ -984,18 +985,18 @@ class Wpvr_Admin {
 	                                            $html .= '</div>';
 
 	                                            $html .= '<div class=scene-setting>';
-	                                                $html .= '<label for="scene-upload">'.__('Scene Upload: ','wpvr').'</label>';	
+	                                                $html .= '<label for="scene-upload">'.__('Scene Upload: ','wpvr').'</label>';
 	                                                $html .= '<div class="form-group">';
-	                                                    $html .= '<img name ="scene-photo" src="'.$scene_photo.'"> <br/>';							
+	                                                    $html .= '<img name ="scene-photo" src="'.$scene_photo.'"> <br/>';
 	                                                    $html .= '<input type="button" class="scene-upload" data-info="" value="Upload"/>';
 	                                                    $html .= '<input type="hidden" name="scene-attachment-url" class="scene-attachment-url" value="'.$scene_photo.'">';
 	                                                $html .= '</div>';
 	                                            $html .= '</div>';
-	                                        $html .= '</div>';    
-	                                    
+	                                        $html .= '</div>';
+
 	                                        if (!empty($pano_hotspots)) {
 	                                            $html .= '<div class="hotspot-setup rex-pano-sub-tabs" data-limit="'.$data_limit.'">';
-	                                            
+
 	                                                $html .= '<nav class="rex-pano-tab-nav rex-pano-nav-menu hotspot-nav">';
 	                                                    $html .= '<ul>';
 	                                                    $j = 1;
@@ -1003,17 +1004,17 @@ class Wpvr_Admin {
 	                                                    foreach ($pano_hotspots as $pano_hotspot) {
 
 	                                                    	if ($pano_hotspot['hotspot-title'] == $firstvaluehotspot['hotspot-title']) {
-	                                                        	$html .= '<li class="active"><span data-index="'.$j.'" data-href="#scene-'.$s.'-hotspot-'.$j.'"><i class="far fa-dot-circle"></i></span></li>';	
+	                                                        	$html .= '<li class="active"><span data-index="'.$j.'" data-href="#scene-'.$s.'-hotspot-'.$j.'"><i class="far fa-dot-circle"></i></span></li>';
 	                                                    	}
 	                                                    	else {
-	                                                        $html .= '<li><span data-index="'.$j.'" data-href="#scene-'.$s.'-hotspot-'.$j.'"><i class="far fa-dot-circle"></i></span></li>';	
+	                                                        $html .= '<li><span data-index="'.$j.'" data-href="#scene-'.$s.'-hotspot-'.$j.'"><i class="far fa-dot-circle"></i></span></li>';
 	                                                    	}
 	                                                    $j++;
 	                                                    }
 	                                                        $html .= '<li class="add" data-repeater-create><span><i class="fa fa-plus-circle"></i></span></li>';
 	                                                    $html .= '</ul>';
 	                                                $html .= '</nav>';
-	                                            
+
 	                                                $html .= '<div data-repeater-list="hotspot-list" class="rex-pano-tab-content">';
 
 	                                            	$h = 1;
@@ -1042,9 +1043,9 @@ class Wpvr_Admin {
 
 	                                                    if ($pano_hotspot['hotspot-title'] == $firstvaluehotspotset['hotspot-title']) {
 		                                                    $html .= '<div data-repeater-item class="single-hotspot rex-pano-tab active clearfix" id="scene-'.$s.'-hotspot-'.$h.'">';
-		                                                        
+
 		                                                        $html .= '<h6 class="title"><i class="fa fa-cog"></i> Hotspot Setting </h6>';
-		                                                
+
 		                                                        $html .= '<div class="wrapper">';
 		                                                            $html .= '<div class="hotspot-setting">';
 		                                                                $html .= '<label for="hotspot-title">'.__('Hotspot ID : ','wpvr').'</label>';
@@ -1065,13 +1066,13 @@ class Wpvr_Admin {
 																	$html .= '<div class="hotspot-setting">';
 	                                                                	$html .= '<label for="hotspot-customclass">'.__('Hotspot custom icon class: ','wpvr').'</label>';
 	                                                                	$html .= '<input type="text" id="hotspot-customclass" name="hotspot-customclass" value="'.$hotspot_custom_class.'"/>';
-	                                                            	$html .= '</div>';	
+	                                                            	$html .= '</div>';
 
 		                                                        $html .= '</div>';
-		                                                        
+
 		                                                        //=Hotspot type=//
 		                                                        if ($hotspot_type == "info") {
-		                                                            
+
 		                                                            $html .= '<div class="hotspot-type hotspot-setting">';
 		                                                                $html .= '<label for="hotspot-type">'.__('Hotspot-Type: ','wpvr').'</label>';
 		                                                                $html .= '<select name="hotspot-type">';
@@ -1107,10 +1108,10 @@ class Wpvr_Admin {
 		                                                                $html .= '</div>';
 
 		                                                            $html .= '</div>';
-		                                                            
+
 		                                                        }
 		                                                        else {
-		                                                            
+
 		                                                            $html .= '<div class="hotspot-type hotspot-setting">';
 		                                                                $html .= '<label for="hotspot-type">'.__('Hotspot-Type: ','wpvr').'</label>';
 		                                                                $html .= '<select class="trtr" name="hotspot-type">';
@@ -1146,17 +1147,17 @@ class Wpvr_Admin {
 		                                                                $html .= '</div>';
 
 		                                                            $html .= '</div>';
-		                                                            
+
 		                                                        }
 		                                                        //=Hotspot type End=//
-		                                                        $html .= '<button data-repeater-delete type="button" title="Delete Hotspot" class="delete-hotspot"><i class="far fa-trash-alt"></i></button>';	
-		                                                    $html .= '</div>';	
+		                                                        $html .= '<button data-repeater-delete type="button" title="Delete Hotspot" class="delete-hotspot"><i class="far fa-trash-alt"></i></button>';
+		                                                    $html .= '</div>';
 	                                                    }
 	                                                    else {
 	                                                    	$html .= '<div data-repeater-item class="single-hotspot rex-pano-tab clearfix" id="scene-'.$s.'-hotspot-'.$h.'">';
-		                                                        
+
 		                                                        $html .= '<h6 class="title"><i class="fa fa-cog"></i> Hotspot Setting </h6>';
-		                                                
+
 		                                                        $html .= '<div class="wrapper">';
 		                                                            $html .= '<div class="hotspot-setting">';
 		                                                                $html .= '<label for="hotspot-title">'.__('Hotspot ID : ','wpvr').'</label>';
@@ -1176,13 +1177,13 @@ class Wpvr_Admin {
 																	$html .= '<div class="hotspot-setting">';
 	                                                                	$html .= '<label for="hotspot-customclass">'.__('Hotspot custom icon class: ','wpvr').'</label>';
 	                                                                	$html .= '<input type="text" id="hotspot-customclass" name="hotspot-customclass" value="'.$hotspot_custom_class.'"/>';
-	                                                            	$html .= '</div>';	
+	                                                            	$html .= '</div>';
 
 		                                                        $html .= '</div>';
-		                                                        
+
 		                                                        //=Hotspot type=//
 		                                                        if ($hotspot_type == "info") {
-		                                                            
+
 		                                                            $html .= '<div class="hotspot-type hotspot-setting">';
 		                                                                $html .= '<label for="hotspot-type">'.__('Hotspot-Type: ','wpvr').'</label>';
 		                                                                $html .= '<select name="hotspot-type">';
@@ -1218,10 +1219,10 @@ class Wpvr_Admin {
 		                                                                $html .= '</div>';
 
 		                                                            $html .= '</div>';
-		                                                            
+
 		                                                        }
 		                                                        else {
-		                                                            
+
 		                                                            $html .= '<div class="hotspot-type hotspot-setting">';
 		                                                                $html .= '<label for="hotspot-type">'.__('Hotspot-Type: ','wpvr').'</label>';
 		                                                                $html .= '<select class="trtr" name="hotspot-type">';
@@ -1257,32 +1258,32 @@ class Wpvr_Admin {
 		                                                                $html .= '</div>';
 
 		                                                            $html .= '</div>';
-		                                                            
+
 		                                                        }
 		                                                        //=Hotspot type End=//
-		                                                        $html .= '<button data-repeater-delete type="button" title="Delete Hotspot" class="delete-hotspot"><i class="far fa-trash-alt"></i></button>';	
+		                                                        $html .= '<button data-repeater-delete type="button" title="Delete Hotspot" class="delete-hotspot"><i class="far fa-trash-alt"></i></button>';
 		                                                    $html .= '</div>';
 	                                                    }
 	                                                $h++;
 	                                                }
 	                                                $html .= '</div>';
-	                                            $html .= '</div>';	
+	                                            $html .= '</div>';
 	                                        }
 	                                        else {
 	                                        	$html .= '<div class="hotspot-setup rex-pano-sub-tabs" data-limit="'.$data_limit.'">';
-                                        
+
 			                                        $html .= '<nav class="rex-pano-tab-nav rex-pano-nav-menu hotspot-nav">';
 			                                            $html .= '<ul>';
 			                                                $html .= '<li class="active"><span data-index="1" data-href="#scene-'.$s.'-hotspot-1"><i class="far fa-dot-circle"></i></span></li>';
 			                                                $html .= '<li class="add" data-repeater-create><span><i class="fa fa-plus-circle"></i> </span></li>';
 			                                            $html .= '</ul>';
 			                                        $html .= '</nav>';
-			                        
+
 			                                        $html .= '<div data-repeater-list="hotspot-list" class="rex-pano-tab-content">';
 			                                            $html .= '<div data-repeater-item class="single-hotspot rex-pano-tab active clearfix" id="scene-'.$s.'-hotspot-1">';
-			                                                
+
 			                                                $html .= '<h6 class="title"><i class="fa fa-cog"></i> Hotspot Setting </h6>';
-			                                                
+
 			                                                $html .= '<div class="wrapper">';
 			                                                    $html .= '<div class="hotspot-setting">';
 			                                                        $html .= '<label for="hotspot-title">'.__('Hotspot ID : ','wpvr').'</label>';
@@ -1302,10 +1303,10 @@ class Wpvr_Admin {
 																$html .= '<div class="hotspot-setting">';
 		                                                        	$html .= '<label for="hotspot-customclass">'.__('Hotspot custom icon class: ','wpvr').'</label>';
 		                                                        	$html .= '<input type="text" id="hotspot-customclass" name="hotspot-customclass"/>';
-		                                                    	$html .= '</div>';	
+		                                                    	$html .= '</div>';
 
 			                                                $html .= '</div>';
-			                                                
+
 			                                                $html .= '<div class="hotspot-type hotspot-setting">';
 			                                                    $html .= '<label for="hotspot-type">'.__('Hotspot-Type: ','wpvr').'</label>';
 			                                                    $html .= '<select name="hotspot-type">';
@@ -1317,17 +1318,17 @@ class Wpvr_Admin {
 			                                                        $html .= '<label for="hotspot-url">'.__('URL: ','wpvr').'</label>';
 			                                                        $html .= '<input type="url" name="hotspot-url" value="" />';
 			                                                    $html .= '</div>';
-			                        
+
 			                                                    $html .= '<div class="hotspot-content">';
 			                                                        $html .= '<label for="hotspot-content">'.__('On click Content: ','wpvr').'</label>';
 			                                                        $html .= '<textarea name="hotspot-content"></textarea>';
 			                                                    $html .= '</div>';
-			                        
+
 			                                                    $html .= '<div class="hotspot-hover">';
 			                                                        $html .= '<label for="hotspot-hover">'.__('On hover Content: ','wpvr').'</label>';
 			                                                        $html .= '<textarea name="hotspot-hover"></textarea>';
 			                                                    $html .= '</div>';
-			                        
+
 			                                                    $html .= '<div class="hotspot-scene" style="display:none;" >';
 			                                                        $html .= '<label for="hotspot-scene">'.__('Select Target Scene from List: ','wpvr').'</label>';
 			                                                        $html .= '<select class="hotspotscene" name="hotspot-scene-list">';
@@ -1338,12 +1339,12 @@ class Wpvr_Admin {
 			                                                        $html .= '<label for="hotspot-scene">'.__('Target Scene ID: ','wpvr').'</label>';
 			                                                        $html .= '<input class="hotspotsceneinfodata" type="text" name="hotspot-scene" disabled/>';
 			                                                    $html .= '</div>';
-			                        
+
 			                                                $html .= '</div>';
 			                                                //=Hotspot type End=//
 			                                                $html .= '<button data-repeater-delete title="Delete Hotspot" type="button" class="delete-hotspot"><i class="far fa-trash-alt"></i></button>';
 			                                            $html .= '</div>';
-			                                        $html .= '</div>';   
+			                                        $html .= '</div>';
 			                                    $html .= '</div>';
 	                                        }
 	                                        $html .= '<button data-repeater-delete type="button" title="Delete Scene" class="delete-scene"><i class="far fa-trash-alt"></i></button>';
@@ -1351,23 +1352,23 @@ class Wpvr_Admin {
                                     }
                                     else {
                                     	$html .= '<div data-repeater-item  class="single-scene rex-pano-tab" data-title="1" id="scene-'.$s.'">';
-	                                        
+
 	                                        $html .= '<div class="scene-content">';
 	                                            $html .= '<h6 class="title"><i class="fa fa-cog"></i> Scene Setting </h6>';
 
 	                                            //==Set Default Scene==//
 												if ($dscene == 'on') {
-													$html .= '<div class="single-settings dscene">';					
+													$html .= '<div class="single-settings dscene">';
 												        $html .= '<span>'.__('Set as default: ','wpvr').'</span>';
 												        $html .= '<select class="dscen" name="dscene">';
 			                                                $html .= '<option value="on" selected > Yes</option>';
 			                                                $html .= '<option value="off"> No</option>';
 			                                            $html .= '</select>';
 													$html .= '</div>';
-													
+
 												}
 												else {
-													$html .= '<div class="single-settings dscene">';					
+													$html .= '<div class="single-settings dscene">';
 												        $html .= '<span>'.__('Set as default: ','wpvr').'</span>';
 												        $html .= '<select class="dscen" name="dscene">';
 			                                                $html .= '<option value="on"> Yes</option>';
@@ -1388,36 +1389,36 @@ class Wpvr_Admin {
 	                                            $html .= '</div>';
 
 	                                            $html .= '<div class=scene-setting>';
-	                                                $html .= '<label for="scene-upload">'.__('Scene Upload: ','wpvr').'</label>';	
+	                                                $html .= '<label for="scene-upload">'.__('Scene Upload: ','wpvr').'</label>';
 	                                                $html .= '<div class="form-group">';
-	                                                    $html .= '<img name ="scene-photo" src="'.$scene_photo.'"> <br/>';							
+	                                                    $html .= '<img name ="scene-photo" src="'.$scene_photo.'"> <br/>';
 	                                                    $html .= '<input type="button" class="scene-upload" data-info="" value="Upload"/>';
 	                                                    $html .= '<input type="hidden" name="scene-attachment-url" class="scene-attachment-url" value="'.$scene_photo.'">';
 	                                                $html .= '</div>';
 	                                            $html .= '</div>';
-	                                        $html .= '</div>';    
-	                                    
+	                                        $html .= '</div>';
+
 	                                        if (!empty($pano_hotspots)) {
 	                                            $html .= '<div class="hotspot-setup rex-pano-sub-tabs" data-limit="'.$data_limit.'">';
-	                                            
+
 	                                                $html .= '<nav class="rex-pano-tab-nav rex-pano-nav-menu hotspot-nav">';
 	                                                    $html .= '<ul>';
 	                                                    $j = 1;
 	                                                    foreach ($pano_hotspots as $pano_hotspot) {
 	                                                    	if ($pano_hotspot['hotspot-title'] == $pano_hotspots[0]['hotspot-title']) {
-	                                                        	$html .= '<li class="active"><span data-index="'.$j.'" data-href="#scene-'.$s.'-hotspot-'.$j.'"><i class="far fa-dot-circle"></i></span></li>';	
+	                                                        	$html .= '<li class="active"><span data-index="'.$j.'" data-href="#scene-'.$s.'-hotspot-'.$j.'"><i class="far fa-dot-circle"></i></span></li>';
 	                                                    	}
 	                                                    	else {
-	                                                        $html .= '<li><span data-index="'.$j.'" data-href="#scene-'.$s.'-hotspot-'.$j.'"><i class="far fa-dot-circle"></i></span></li>';	
+	                                                        $html .= '<li><span data-index="'.$j.'" data-href="#scene-'.$s.'-hotspot-'.$j.'"><i class="far fa-dot-circle"></i></span></li>';
 	                                                    	}
 	                                                    $j++;
 	                                                    }
 	                                                        $html .= '<li class="add" data-repeater-create><span><i class="fa fa-plus-circle"></i></span></li>';
 	                                                    $html .= '</ul>';
 	                                                $html .= '</nav>';
-	                                            
+
 	                                                $html .= '<div data-repeater-list="hotspot-list" class="rex-pano-tab-content">';
-	                                            
+
 	                                            	$h = 1;
 	                                                foreach ($pano_hotspots as $pano_hotspot) {
 	                                                    $hotspot_title = '';
@@ -1443,9 +1444,9 @@ class Wpvr_Admin {
 
 	                                                    if ($pano_hotspot['hotspot-title'] == $pano_hotspots[0]['hotspot-title']) {
 		                                                    $html .= '<div data-repeater-item class="single-hotspot rex-pano-tab active clearfix" id="scene-'.$s.'-hotspot-'.$h.'">';
-		                                                        
+
 		                                                        $html .= '<h6 class="title"><i class="fa fa-cog"></i> Hotspot Setting </h6>';
-		                                                
+
 		                                                        $html .= '<div class="wrapper">';
 		                                                            $html .= '<div class="hotspot-setting">';
 		                                                                $html .= '<label for="hotspot-title">'.__('Hotspot ID : ','wpvr').'</label>';
@@ -1465,13 +1466,13 @@ class Wpvr_Admin {
 																	$html .= '<div class="hotspot-setting">';
 	                                                                	$html .= '<label for="hotspot-customclass">'.__('Hotspot custom icon class: ','wpvr').'</label>';
 	                                                                	$html .= '<input type="text" id="hotspot-customclass" name="hotspot-customclass" value="'.$hotspot_custom_class.'"/>';
-	                                                            	$html .= '</div>';	
+	                                                            	$html .= '</div>';
 
 		                                                        $html .= '</div>';
-		                                                        
+
 		                                                        //=Hotspot type=//
 		                                                        if ($hotspot_type == "info") {
-		                                                            
+
 		                                                            $html .= '<div class="hotspot-type hotspot-setting">';
 		                                                                $html .= '<label for="hotspot-type">'.__('Hotspot-Type: ','wpvr').'</label>';
 		                                                                $html .= '<select name="hotspot-type">';
@@ -1507,10 +1508,10 @@ class Wpvr_Admin {
 		                                                                $html .= '</div>';
 
 		                                                            $html .= '</div>';
-		                                                            
+
 		                                                        }
 		                                                        else {
-		                                                            
+
 		                                                            $html .= '<div class="hotspot-type hotspot-setting">';
 		                                                                $html .= '<label for="hotspot-type">'.__('Hotspot-Type: ','wpvr').'</label>';
 		                                                                $html .= '<select class="trtr" name="hotspot-type">';
@@ -1546,17 +1547,17 @@ class Wpvr_Admin {
 		                                                                $html .= '</div>';
 
 		                                                            $html .= '</div>';
-		                                                            
+
 		                                                        }
 		                                                        //=Hotspot type End=//
-		                                                        $html .= '<button data-repeater-delete type="button" title="Delete Hotspot" class="delete-hotspot"><i class="far fa-trash-alt"></i></button>';	
-		                                                    $html .= '</div>';	
+		                                                        $html .= '<button data-repeater-delete type="button" title="Delete Hotspot" class="delete-hotspot"><i class="far fa-trash-alt"></i></button>';
+		                                                    $html .= '</div>';
 	                                                    }
 	                                                    else {
 	                                                    	$html .= '<div data-repeater-item class="single-hotspot rex-pano-tab clearfix" id="scene-'.$s.'-hotspot-'.$h.'">';
-		                                                        
+
 		                                                        $html .= '<h6 class="title"><i class="fa fa-cog"></i> Hotspot Setting</h6>';
-		                                                
+
 		                                                        $html .= '<div class="wrapper">';
 		                                                            $html .= '<div class="hotspot-setting">';
 		                                                                $html .= '<label for="hotspot-title">'.__('Hotspot ID : ','wpvr').'</label>';
@@ -1576,13 +1577,13 @@ class Wpvr_Admin {
 																	$html .= '<div class="hotspot-setting">';
 	                                                                	$html .= '<label for="hotspot-customclass">'.__('Hotspot custom icon class: ','wpvr').'</label>';
 	                                                                	$html .= '<input type="text" id="hotspot-customclass" name="hotspot-customclass" value="'.$hotspot_custom_class.'"/>';
-	                                                            	$html .= '</div>';	
+	                                                            	$html .= '</div>';
 
 		                                                        $html .= '</div>';
-		                                                        
+
 		                                                        //=Hotspot type=//
 		                                                        if ($hotspot_type == "info") {
-		                                                            
+
 		                                                            $html .= '<div class="hotspot-type hotspot-setting">';
 		                                                                $html .= '<label for="hotspot-type">'.__('Hotspot-Type: ','wpvr').'</label>';
 		                                                                $html .= '<select name="hotspot-type">';
@@ -1618,10 +1619,10 @@ class Wpvr_Admin {
 		                                                                $html .= '</div>';
 
 		                                                            $html .= '</div>';
-		                                                            
+
 		                                                        }
 		                                                        else {
-		                                                            
+
 		                                                            $html .= '<div class="hotspot-type hotspot-setting">';
 		                                                                $html .= '<label for="hotspot-type">'.__('Hotspot-Type: ','wpvr').'</label>';
 		                                                                $html .= '<select class="trtr" name="hotspot-type">';
@@ -1657,32 +1658,32 @@ class Wpvr_Admin {
 		                                                                $html .= '</div>';
 
 		                                                            $html .= '</div>';
-		                                                            
+
 		                                                        }
 		                                                        //=Hotspot type End=//
-		                                                        $html .= '<button data-repeater-delete type="button" title="Delete Hotspot" class="delete-hotspot"><i class="far fa-trash-alt"></i></button>';	
+		                                                        $html .= '<button data-repeater-delete type="button" title="Delete Hotspot" class="delete-hotspot"><i class="far fa-trash-alt"></i></button>';
 		                                                    $html .= '</div>';
 	                                                    }
 	                                                $h++;
 	                                                }
 	                                                $html .= '</div>';
-	                                            $html .= '</div>';	
+	                                            $html .= '</div>';
 	                                        }
 	                                        else {
 	                                        	$html .= '<div class="hotspot-setup rex-pano-sub-tabs" data-limit="'.$data_limit.'">';
-                                        
+
 			                                        $html .= '<nav class="rex-pano-tab-nav rex-pano-nav-menu hotspot-nav">';
 			                                            $html .= '<ul>';
 			                                                $html .= '<li class="active"><span data-index="1" data-href="#scene-'.$s.'-hotspot-1"><i class="far fa-dot-circle"></i></span></li>';
 			                                                $html .= '<li class="add" data-repeater-create><span><i class="fa fa-plus-circle"></i> </span></li>';
 			                                            $html .= '</ul>';
 			                                        $html .= '</nav>';
-			                        
+
 			                                        $html .= '<div data-repeater-list="hotspot-list" class="rex-pano-tab-content">';
 			                                            $html .= '<div data-repeater-item class="single-hotspot rex-pano-tab active clearfix" id="scene-'.$s.'-hotspot-1">';
-			                                                
+
 			                                                $html .= '<h6 class="title"><i class="fa fa-cog"></i> Hotspot Setting </h6>';
-			                                                
+
 			                                                $html .= '<div class="wrapper">';
 			                                                    $html .= '<div class="hotspot-setting">';
 			                                                        $html .= '<label for="hotspot-title">'.__('Hotspot ID : ','wpvr').'</label>';
@@ -1702,10 +1703,10 @@ class Wpvr_Admin {
 																$html .= '<div class="hotspot-setting">';
 		                                                        	$html .= '<label for="hotspot-customclass">'.__('Hotspot custom icon class: ','wpvr').'</label>';
 		                                                        	$html .= '<input type="text" id="hotspot-customclass" name="hotspot-customclass"/>';
-		                                                    	$html .= '</div>';	
+		                                                    	$html .= '</div>';
 
 			                                                $html .= '</div>';
-			                                                
+
 			                                                $html .= '<div class="hotspot-type hotspot-setting">';
 			                                                    $html .= '<label for="hotspot-type">'.__('Hotspot-Type: ','wpvr').'</label>';
 			                                                    $html .= '<select name="hotspot-type">';
@@ -1717,17 +1718,17 @@ class Wpvr_Admin {
 			                                                        $html .= '<label for="hotspot-url">'.__('URL: ','wpvr').'</label>';
 			                                                        $html .= '<input type="url" name="hotspot-url" value="" />';
 			                                                    $html .= '</div>';
-			                        
+
 			                                                    $html .= '<div class="hotspot-content">';
 			                                                        $html .= '<label for="hotspot-content">'.__('On click Content: ','wpvr').'</label>';
 			                                                        $html .= '<textarea name="hotspot-content"></textarea>';
 			                                                    $html .= '</div>';
-			                        
+
 			                                                    $html .= '<div class="hotspot-hover">';
 			                                                        $html .= '<label for="hotspot-hover">'.__('On hover Content: ','wpvr').'</label>';
 			                                                        $html .= '<textarea name="hotspot-hover"></textarea>';
 			                                                    $html .= '</div>';
-			                        
+
 			                                                    $html .= '<div class="hotspot-scene" style="display:none;" >';
 			                                                        $html .= '<label for="hotspot-scene">'.__('Select Target Scene from List: ','wpvr').'</label>';
 			                                                        $html .= '<select class="hotspotscene" name="hotspot-scene-list">';
@@ -1738,12 +1739,12 @@ class Wpvr_Admin {
 			                                                        $html .= '<label for="hotspot-scene">'.__('Target Scene ID: ','wpvr').'</label>';
 			                                                        $html .= '<input class="hotspotsceneinfodata" type="text" name="hotspot-scene" disabled/>';
 			                                                    $html .= '</div>';
-			                        
+
 			                                                $html .= '</div>';
 			                                                //=Hotspot type End=//
 			                                                $html .= '<button data-repeater-delete title="Delete Hotspot" type="button" class="delete-hotspot"><i class="far fa-trash-alt"></i></button>';
 			                                            $html .= '</div>';
-			                                        $html .= '</div>';   
+			                                        $html .= '</div>';
 			                                    $html .= '</div>';
 	                                        }
 	                                        $html .= '<button data-repeater-delete type="button" title="Delete Scene" class="delete-scene"><i class="far fa-trash-alt"></i></button>';
@@ -1752,13 +1753,13 @@ class Wpvr_Admin {
                                 	$s++;
                                 }
                             $html .= '</div>';
-                            
+
                         $html .= '</div>';
                     }
-                    
+
                     $html .= '<div class="preview-btn-wrapper">';
                         $html .= '<div class="preview-btn-area clearfix">';
-                             
+
                              $html .= '<button id="panolenspreview">'.__('Preview','wpvr').'</button>';
                         $html .= '</div>';
 			        $html .= '</div>';
@@ -1789,26 +1790,26 @@ class Wpvr_Admin {
                 		else {
                 			$vidcontrol_off = 'checked';
                 		}
-						$html .= '<div class="single-settings videosetup">';					
+						$html .= '<div class="single-settings videosetup">';
                             $html .= '<span>Enable Video: </span>';
                             $html .= '<ul>';
                                 $html .= '<li class="radio-btn">';
                                     $html .= '<input class="styled-radio" id="styled-radio" type="radio" name="panovideo" value="off" >';
                                     $html .= '<label for="styled-radio">Off</label>';
                                 $html .= '</li>';
-                        
+
                                 $html .= '<li class="radio-btn">';
                                     $html .= '<input class="styled-radio" id="styled-radio-0" type="radio" name="panovideo" value="on" checked>';
                                     $html .= '<label for="styled-radio-0">On</label>';
                                 $html .= '</li>';
                             $html .= '</ul>';
                         $html .= '</div>';
-                        
+
 
                         $html .= '<div class="video-setting" style="display:none;">';
-                            $html .= '<div class="single-settings">';	
-                                $html .= '<span>Upload or add link: </span>';	
-                                $html .= '<div class="form-group">';							
+                            $html .= '<div class="single-settings">';
+                                $html .= '<span>Upload or add link: </span>';
+                                $html .= '<div class="form-group">';
                                     $html .= '<input type="text" name="video-attachment-url" placeholder="Paste Youtube or Vimeo link or upload" class="video-attachment-url" value="'.$postdata['vidurl'].'">';
                                     $html .= '<input type="button" class="video-upload" data-info="" value="Upload" />';
                                 $html .= '</div>';
@@ -1817,28 +1818,28 @@ class Wpvr_Admin {
                         $html .= '</div>';
 					}
 					else {
-						$html .= '<div class="single-settings videosetup">';					
+						$html .= '<div class="single-settings videosetup">';
                             $html .= '<span>Enable Video: </span>';
                             $html .= '<ul>';
                                 $html .= '<li class="radio-btn">';
                                     $html .= '<input class="styled-radio" id="styled-radio" type="radio" name="panovideo" value="off" checked >';
                                     $html .= '<label for="styled-radio">Off</label>';
                                 $html .= '</li>';
-                        
+
                                 $html .= '<li class="radio-btn">';
                                     $html .= '<input class="styled-radio" id="styled-radio-0" type="radio" name="panovideo" value="on" >';
                                     $html .= '<label for="styled-radio-0">On</label>';
                                 $html .= '</li>';
                             $html .= '</ul>';
                         $html .= '</div>';
-                        
+
                     //==Video setup end==//
-                        
+
                     //==Video Setting==/
                         $html .= '<div class="video-setting" style="display:none;">';
-                            $html .= '<div class="single-settings">';	
-                                $html .= '<span>Upload or add link: </span>';	
-                                $html .= '<div class="form-group">';							
+                            $html .= '<div class="single-settings">';
+                                $html .= '<span>Upload or add link: </span>';
+                                $html .= '<div class="form-group">';
                                     $html .= '<input type="text" placeholder="Paste Youtube or Vimeo link or upload" name="video-attachment-url" class="video-attachment-url" value="">';
                                     $html .= '<input type="button" class="video-upload" data-info="" value="Upload"/>';
                                 $html .= '</div>';
@@ -1846,14 +1847,14 @@ class Wpvr_Admin {
                             $html .= '<button id="videopreview">Preview</button>';
                         $html .= '</div>';
 					}
-                    //==Video Setting End==// 
+                    //==Video Setting End==//
                 $html .='</div>';
                 //---end video tab----
             $html .='</div>';
-            //---end rex-pano-tab-content---- 
+            //---end rex-pano-tab-content----
         $html .='</div>';
         //---end rex-pano-tabs---
-	$html .= '</div>';		
+	$html .= '</div>';
 	echo $html;
 	}
 

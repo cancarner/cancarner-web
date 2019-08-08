@@ -3,13 +3,61 @@
  * included in this file.
  */
 
-/*@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,700,900');*/
 .icon-wpvrtourmake_icon:before {
     content: '';
     height: 30px;
     width: 30px;
     background: url('../images/icon.png') no-repeat center center / 100% 100%;
 }
+.scene-gallery {    
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #32373c;
+    background-color: #eceef1;
+}
+.scene-gallery ul {
+    display: inline-grid;
+}
+
+.scctrl {
+    border-radius: 5px;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    cursor: pointer;
+    margin: 5px;
+}
+.scctrl:hover {
+    background: rgba(200, 200, 200, 1);
+    }
+.vr-export {
+    color: #fff!important;
+    background-color: #2196F3!important;
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap; 
+}
+.rex-pano-tab-content ::-webkit-input-placeholder {
+    color: #ccc;
+}
+
+.rex-pano-tab-content ::-moz-placeholder {
+    color: #ccc;
+}
+
+.rex-pano-tab-content :-ms-input-placeholder {
+    color: #ccc;
+}
+
 div.custom-tooltip span {
     visibility: hidden;
     position: absolute;
