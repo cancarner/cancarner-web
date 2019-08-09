@@ -23,14 +23,25 @@ body .site {
     max-width: 1200px;
     padding: 0 15px 30px; }
     body .site .site-content article {
+      -webkit-hyphens: initial !important;
+      -moz-hyphens: initial !important;
+      -ms-hyphens: initial !important;
       hyphens: initial !important; }
     body .site .site-content .entry-header .entry-title {
       font-family: 'Pt sans';
       font-size: 30px; }
+  @media only screen and (min-width: 993px) {
+    body .site .hide-desktop {
+      display: none; } }
 body img {
   vertical-align: bottom; }
 body #main-wrapper {
   text-align: left; }
+@media only screen and (max-width: 992px) {
+  body .has-2-columns.divide-2-1 {
+    flex-wrap: wrap; }
+    body .has-2-columns.divide-2-1 > .wp-block-column {
+      flex-basis: initial; } }
 body header.site-header .sticky-header {
   top: 0;
   position: fixed !important;
@@ -212,6 +223,7 @@ body .wpcf7-form {
     border: 3px solid #d03c15;
     color: #d03c15;
     line-height: normal;
+    text-transform: uppercase;
     letter-spacing: initial;
     padding: 5px 10px;
     font-weight: 700;
@@ -221,10 +233,16 @@ body .wpcf7-form {
       opacity: .5; }
     body .wpcf7-form .button-submit input[type="submit"]:hover {
       color: white; }
-body #main-wrapper.webtype_social div#content .wpcf7-form .button-submit input[type="submit"].button {
+body #main-wrapper.webtype_cohabitatge div#content .wpcf7-form .button-submit input[type="submit"] {
+  border-color: #d03c15;
+  color: #d03c15; }
+  body #main-wrapper.webtype_cohabitatge div#content .wpcf7-form .button-submit input[type="submit"]:hover {
+    background: #d03c15 !important;
+    color: white; }
+body #main-wrapper.webtype_social div#content .wpcf7-form .button-submit input[type="submit"] {
   border-color: #d87a06;
   color: #d87a06; }
-  body #main-wrapper.webtype_social div#content .wpcf7-form .button-submit input[type="submit"].button:hover {
+  body #main-wrapper.webtype_social div#content .wpcf7-form .button-submit input[type="submit"]:hover {
     background: #d87a06 !important;
     color: white; }
 body #main-wrapper.webtype_natura div#content .wpcf7-form .button-submit input[type="submit"] {
@@ -249,6 +267,7 @@ body .wp-block-ugb-separator {
 body div#content .entry-title {
   margin-bottom: 15px; }
 body div#content .info-campanya {
+  font-size: 20px;
   font-style: normal;
   overflow: hidden; }
   body div#content .info-campanya .hashtag {

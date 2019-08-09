@@ -6,6 +6,9 @@
         max-width: $big-desktop;
         padding: 0 $padding-inner 30px;
         article{
+            -webkit-hyphens: initial!important;
+            -moz-hyphens: initial!important;
+            -ms-hyphens: initial!important;
             hyphens: initial!important;
         }
 
@@ -16,6 +19,11 @@
             }
         }
     }
+    .hide-desktop{
+        @media #{$min-desktop}{
+            display:none;
+        }
+    }
 }
 
 img{
@@ -24,6 +32,11 @@ img{
 #main-wrapper{
     text-align: left;
 }
-.site-content {
-
+@media #{$max-tablet}{
+    .has-2-columns.divide-2-1{
+        flex-wrap: wrap;
+        >.wp-block-column {
+            flex-basis: initial;
+        }
+    }
 }

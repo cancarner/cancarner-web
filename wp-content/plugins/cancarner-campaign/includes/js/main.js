@@ -1,7 +1,7 @@
 var header = 80;
 
 jQuery(document).ready(function(){
-    jQuery(".sticky-shortcode").sticky({topSpacing: header + 5, bottomSpacing: 50});
+    jQuery("div:not(.hide-desktop).sticky-shortcode").sticky({topSpacing: header + 5, bottomSpacing: 50});
     jQuery(".participa-link").click(function(ev){
         ev.preventDefault();
         jQuery('html, body').animate({

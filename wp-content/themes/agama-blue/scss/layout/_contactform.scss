@@ -72,7 +72,7 @@
             border: 3px solid $cohabitatge;
             color: $cohabitatge;
             line-height: normal;
-            // text-transform: none;
+            text-transform: uppercase;
             letter-spacing: initial;
             padding: 5px 10px;
             font-weight: 700;
@@ -92,7 +92,16 @@
 
 
 }
-#main-wrapper.webtype_social div#content .wpcf7-form .button-submit input[type="submit"].button{
+
+#main-wrapper.webtype_cohabitatge div#content .wpcf7-form .button-submit input[type="submit"]{
+    border-color: $cohabitatge;
+    color: $cohabitatge;
+    &:hover{
+        background: $cohabitatge!important;
+        color: $white;
+    }
+}
+#main-wrapper.webtype_social div#content .wpcf7-form .button-submit input[type="submit"]{
     border-color: $social;
     color: $social;
     &:hover{
