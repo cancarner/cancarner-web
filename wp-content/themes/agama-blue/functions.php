@@ -74,3 +74,5 @@ function create_extra_fields_ct7( $posted_data )
     return $posted_data;
 };
 add_filter( 'wpcf7_posted_data', 'create_extra_fields_ct7', 10, 1 );
+
+add_filter( 'wpcf7_support_html5_fallback', '__return_true' );
