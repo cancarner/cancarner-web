@@ -34,6 +34,17 @@ if( ! defined( 'ABSPATH' ) ) {
 
 	<?php wp_head(); ?>
 
+    <script>
+        document.addEventListener( 'wpcf7mailsent', function( event ) {
+            var inputs = event.detail.inputs;
+            for (i = 0; i < inputs.length; i++) {
+                if(inputs[i].name == "numero-titols"){
+                    ga('send', 'event', 'Arrelem Can Carner', 'submit', 'ok', (inputs[i].value * 100));
+                }
+            }
+        }, false );
+    </script>
+
 </head>
 
 <body <?php body_class('stretched'); ?>>
