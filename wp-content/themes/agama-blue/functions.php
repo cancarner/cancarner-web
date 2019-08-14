@@ -64,7 +64,7 @@ function create_extra_fields_ct7( $posted_data )
             case 'Sòcia col·laboradora (100€)': $baseImport = 100; break;
             default: $baseImport = 100; break;
         }
-        $posted_data['import-total'] = $baseImport + $posted_data['aportacio-voluntaria'];
+        $posted_data['import-total'] = $baseImport + $posted_data['aportacio-voluntaria'] * 100;
     }
 
     //es formulari Arrelem o Socia
