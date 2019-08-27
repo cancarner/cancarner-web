@@ -33,6 +33,10 @@
                             display: inline-block;
                         }
                     }
+                    #vision-primary-nav > ul > li.wpml-ls-first-item:before{
+                        background: $white;
+                        text-shadow: 1px 1px $black;
+                    }
                     #vision-primary-nav > ul > li.highlight > a {
                         border-color: $white;
                         color: $white;

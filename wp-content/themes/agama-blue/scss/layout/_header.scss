@@ -29,20 +29,78 @@ header.site-header {
     }
 
 
-    nav#vision-mobile-nav li.highlight > a{
-        font-size: 1.2em;
-        color: $cohabitatge;
-    }
-    nav#vision-primary-nav li.highlight > a{
-        color: $cohabitatge;
-        border: 3px solid $cohabitatge;
-        padding: 5px 10px;
-        border-radius: 5px;
-        &:hover {
-            background: $cohabitatge;
-            color: $white!important;
+    nav#vision-mobile-nav {
+        li{
+            &.highlight > a{
+                font-size: 1.2em;
+                color: $cohabitatge;
+            }
+            &.wpml-ls-item {
+                background: $gray;
+                float: left;
+                width: 50%;
+                padding:0;
+                text-align: center;
+                a{
+                    border:none;
+                }
+                &.wpml-ls-first-item{
+                    padding-left: 40%;
+
+                }
+                &.wpml-ls-last-item{
+                    padding-right: 40%;
+                }
+                &.wpml-ls-current-language{
+                    a {
+                        color: $cohabitatge;
+                    }
+                }
+            }
         }
     }
+
+    nav#vision-primary-nav{
+        li{
+            &.highlight > a{
+                color: $cohabitatge;
+                border: 3px solid $cohabitatge;
+                padding: 5px 10px;
+                border-radius: 5px;
+                &:hover {
+                    background: $cohabitatge;
+                    color: $white!important;
+                }
+            }
+            &.wpml-ls-item {
+                &:not(:last-child){
+                    padding-right: 5px;
+                }
+
+                &.wpml-ls-first-item{
+                    position:relative;
+                    margin-left: -10px;
+                    &:before{
+                        content: '';
+                        position:absolute;
+                        height: 18px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: -8px;
+                        background: #757575;
+                        width: 2px;
+                    }
+                }
+                &.wpml-ls-current-language{
+                    a {
+                        color: $cohabitatge;
+                    }
+                }
+            }
+
+        }
+    }
+
 
     nav#vision-mobile-nav,
     nav#vision-primary-nav {
@@ -104,7 +162,6 @@ header.site-header {
             text-transform: uppercase;
             color: $black;
             letter-spacing: 1px;
-            // font-style: bold;
             i {
                 display:inline-block;
                 width: 5px;
@@ -183,11 +240,10 @@ header.site-header {
 #masthead.header_v3 #vision-mobile-nav{
     margin-top: 65px!important;
     position: fixed;
-left: 0px;
-right: 0px;
-top: -1px;
-z-index: 50;
-    // opacity: .5;
+    left: 0px;
+    right: 0px;
+    top: -1px;
+    z-index: 50;
 }
 
 #main-wrapper{

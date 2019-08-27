@@ -62,6 +62,20 @@ body header.site-header .sticky-header {
 body header.site-header nav#vision-mobile-nav li.highlight > a {
   font-size: 1.2em;
   color: #d03c15; }
+body header.site-header nav#vision-mobile-nav li.wpml-ls-item {
+  background: #eeeeee;
+  float: left;
+  width: 50%;
+  padding: 0;
+  text-align: center; }
+  body header.site-header nav#vision-mobile-nav li.wpml-ls-item a {
+    border: none; }
+  body header.site-header nav#vision-mobile-nav li.wpml-ls-item.wpml-ls-first-item {
+    padding-left: 40%; }
+  body header.site-header nav#vision-mobile-nav li.wpml-ls-item.wpml-ls-last-item {
+    padding-right: 40%; }
+  body header.site-header nav#vision-mobile-nav li.wpml-ls-item.wpml-ls-current-language a {
+    color: #d03c15; }
 body header.site-header nav#vision-primary-nav li.highlight > a {
   color: #d03c15;
   border: 3px solid #d03c15;
@@ -70,6 +84,22 @@ body header.site-header nav#vision-primary-nav li.highlight > a {
   body header.site-header nav#vision-primary-nav li.highlight > a:hover {
     background: #d03c15;
     color: white !important; }
+body header.site-header nav#vision-primary-nav li.wpml-ls-item:not(:last-child) {
+  padding-right: 5px; }
+body header.site-header nav#vision-primary-nav li.wpml-ls-item.wpml-ls-first-item {
+  position: relative;
+  margin-left: -10px; }
+  body header.site-header nav#vision-primary-nav li.wpml-ls-item.wpml-ls-first-item:before {
+    content: '';
+    position: absolute;
+    height: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -8px;
+    background: #757575;
+    width: 2px; }
+body header.site-header nav#vision-primary-nav li.wpml-ls-item.wpml-ls-current-language a {
+  color: #d03c15; }
 body header.site-header nav#vision-mobile-nav ul li.menu-item.current-menu-ancestor > a, body header.site-header nav#vision-mobile-nav ul li.menu-item.current-menu-item > a,
 body header.site-header nav#vision-primary-nav ul li.menu-item.current-menu-ancestor > a,
 body header.site-header nav#vision-primary-nav ul li.menu-item.current-menu-item > a {
@@ -644,6 +674,9 @@ body.page-template-home header {
             text-decoration: underline; }
           body.page-template-home header .sticky-header:not(.sticky-header-shrink) #vision-primary-nav > ul > li:not(.highlight) > a::after {
             display: inline-block; }
+        body.page-template-home header .sticky-header:not(.sticky-header-shrink) #vision-primary-nav > ul > li.wpml-ls-first-item:before {
+          background: white;
+          text-shadow: 1px 1px #111111; }
         body.page-template-home header .sticky-header:not(.sticky-header-shrink) #vision-primary-nav > ul > li.highlight > a {
           border-color: white;
           color: white; }
