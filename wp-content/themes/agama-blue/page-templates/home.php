@@ -31,7 +31,7 @@ $videoOgg = get_post_meta(get_the_ID(), 'cancarner_background_ogg', TRUE);
 			<?php if($postHighline): ?>
 				<h1><?=$postHighline?></h1>
 			<?php endif; ?>
-			<a class="btn" href="<?=get_post_meta(get_the_ID(), 'cancarner_link', TRUE); ?>">Saber-ne més</a>
+			<a class="btn" href="<?=get_post_meta(get_the_ID(), 'cancarner_link', TRUE); ?>"><?= __('more info' , 'cancarner-theme')?></a>
 		</div>
 	</div>
 	<div id="primary" class="site-content">

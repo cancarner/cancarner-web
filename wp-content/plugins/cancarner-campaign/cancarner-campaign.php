@@ -83,8 +83,11 @@ if ( ! function_exists( 'can_carner_campaign_init' ) ) {
                 $hours = floor($diff / 3600);
                 $minutes = floor($diff / 60);
 
+                $phraseRunning = __('The campaing is still runing, don\'t miss out!', 'cancarner-campaign');
+                $phraseOver = __('The campaign is over.<br/>Thanks to support us :)', 'cancarner-campaign');
+
                 $statebar = '<blockquote class="wp-block-quote sticky-shortcode"><div class="info-campanya">';
-                $statebar .= '<span class="hashtag">#ArrelemCanCarner</span>';
+                $statebar .= '<span class="hashtag">'. __('#ArrelemCanCarner', 'cancarner-campaign') .'</span>';
                 $statebar .= '<div class="info-money">';
                 $statebar .=   '<div class="left big">'. number_format($actual, 0, ',', '.') .'€</div>';
                 if($days > 0){
@@ -102,10 +105,10 @@ if ( ! function_exists( 'can_carner_campaign_init' ) ) {
                 $statebar .=   '<div class="left">'. $percentatge .'% de ' . number_format($total, 0, ',', '.') . '€</div>';
                 $statebar .= '</div>';
                 if($minutes > 0){
-                    $statebar .= '<p class="claim">La campanya encara està en marxa, no perdis l\'oportunitat de formar-ne part!</p>';
-                    $statebar .= '<div class="participa-link btn">Vull participar</div>';
+                    $statebar .= '<p class="claim">'. $phraseRunning .'</p>';
+                    $statebar .= '<div class="participa-link btn">'. __('I want to participate', 'cancarner-campaign') .'</div>';
                 }else{
-                    $statebar .= '<p class="claim">La campanya ha finalitzat.<br/>Gràcies pel teu suport :)</p>';
+                    $statebar .= '<p class="claim">'. $phraseOver .'La campanya ha finalitzat.<br/>Gràcies pel teu suport :)</p>';
                 }
             	$statebar .='</div></blockquote>';
 
