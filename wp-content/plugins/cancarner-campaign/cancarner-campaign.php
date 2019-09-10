@@ -74,7 +74,7 @@ if ( ! function_exists( 'can_carner_campaign_init' ) ) {
                 $total = esc_attr(get_post_meta($campaign->ID, 'cancarner_totalToObtain', TRUE));
                 $actual = esc_attr(get_post_meta($campaign->ID, 'cancarner_totalObtained', TRUE));
                 $deadline = get_post_meta($campaign->ID, 'cancarner_deadline', TRUE);
-                $percentatge = round($actual / $total * 100);
+                $percentatge = floor($actual / $total * 100);
 
                 date_default_timezone_set('Europe/Madrid');
 
