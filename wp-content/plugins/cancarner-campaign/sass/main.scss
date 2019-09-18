@@ -1,0 +1,62 @@
+div.info-campanya{
+    font-size: 20px;
+    font-style: normal;
+    overflow:hidden;
+    .hashtag{
+        margin-bottom: 20px;
+        display:block;
+        font-weight: bold;
+    }
+    .info-money{
+        overflow:hidden;
+        .left,.right{
+            margin-top: 2px;
+            float: left;
+            font-size: .8em;
+            &.big{
+                font-size: 1em;
+                font-weight: bold;
+                font-style: normal;
+            }
+            i{
+                margin-left: 5px;
+            }
+        }
+        .left{
+            font-style: italic;
+        }
+        .right{
+            float:right;
+        }
+
+    }
+    .bar-wrapper{
+        height: 20px;
+        position:relative;
+        background: #ffffff;
+        border-radius: 10px;
+        margin-bottom: 2px;
+        overflow: hidden;
+
+        .bar {
+        	height: 20px;
+        	left: 0;
+            top: 0;
+            display:block;
+        	border-radius: 10px;
+        	-moz-animation:graphic-design 2s ease-out;
+        	-webkit-animation:graphic-design 2s ease-out;
+        	background-color: black;
+        }
+
+    }
+    .claim{
+        margin-top: 10px;
+        font-size: .8em;
+    }
+    .btn{
+        float: left;
+        margin-top: 10px;
+        display: inline-block;
+    }
+}

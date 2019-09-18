@@ -6,7 +6,7 @@
 Plugin Name: Can Carner Campaign
 Plugin URI: https://cancarner.cat
 Description: Post type for campaign
-Version: 1.0
+Version: 1.1
 Author: Situ
 */
 
@@ -19,6 +19,14 @@ if ( ! function_exists( 'can_carner_campaign_script' ) ) {
 
     }
 }
+
+
+add_action( 'wp_enqueue_scripts', 'can_carner_campaign_styles' );
+
+function can_carner_campaign_styles() {
+    wp_enqueue_style( 'can_carner_campaign_main', plugins_url( '/includes/css/main.css', __FILE__ ) );
+}
+
 
 add_action( 'init', 'can_carner_campaign_init');
 
@@ -101,7 +109,7 @@ if ( ! function_exists( 'can_carner_campaign_init' ) ) {
                 }
                 $statebar .= '</div>';
                 $statebar .= '<div class="bar-wrapper">' ;
-                $statebar .=   '<span class="bar graphic-design" style="width:' . $percentatge . '%"></span>';
+                $statebar .=   '<span class="bar" style="width:' . $percentatge . '%"></span>';
                 $statebar .= '</div>';
                 $statebar .= '<div class="info-money">';
                 $statebar .=   '<div class="left">'. $percentatge .'% de ' . number_format($total, 0, ',', '.') . '€</div>';

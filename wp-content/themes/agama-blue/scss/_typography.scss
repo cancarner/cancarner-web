@@ -5,6 +5,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .btn {
+    font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
     border: 3px solid $cohabitatge;
     border-radius: 5px;
     font-color: $cohabitatge;
@@ -13,9 +14,12 @@ h1,h2,h3,h4,h5,h6{
     border-radius: 5px;
     font-weight: bold;
     color: $cohabitatge;
-    font-size: 1.25em;
+    font-size: 16px;
     cursor: pointer;
     text-shadow: 1px 1px rgba($white, .3);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
     &:hover{
         background: $cohabitatge;
         color: $white!important;

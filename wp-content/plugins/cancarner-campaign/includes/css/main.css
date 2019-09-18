@@ -1,0 +1,47 @@
+div.info-campanya {
+  font-size: 20px;
+  font-style: normal;
+  overflow: hidden; }
+  div.info-campanya .hashtag {
+    margin-bottom: 20px;
+    display: block;
+    font-weight: bold; }
+  div.info-campanya .info-money {
+    overflow: hidden; }
+    div.info-campanya .info-money .left, div.info-campanya .info-money .right {
+      margin-top: 2px;
+      float: left;
+      font-size: .8em; }
+      div.info-campanya .info-money .left.big, div.info-campanya .info-money .right.big {
+        font-size: 1em;
+        font-weight: bold;
+        font-style: normal; }
+      div.info-campanya .info-money .left i, div.info-campanya .info-money .right i {
+        margin-left: 5px; }
+    div.info-campanya .info-money .left {
+      font-style: italic; }
+    div.info-campanya .info-money .right {
+      float: right; }
+  div.info-campanya .bar-wrapper {
+    height: 20px;
+    position: relative;
+    background: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 2px;
+    overflow: hidden; }
+    div.info-campanya .bar-wrapper .bar {
+      height: 20px;
+      left: 0;
+      top: 0;
+      display: block;
+      border-radius: 10px;
+      -moz-animation: graphic-design 2s ease-out;
+      -webkit-animation: graphic-design 2s ease-out;
+      background-color: black; }
+  div.info-campanya .claim {
+    margin-top: 10px;
+    font-size: .8em; }
+  div.info-campanya .btn {
+    float: left;
+    margin-top: 10px;
+    display: inline-block; }

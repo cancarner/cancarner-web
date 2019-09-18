@@ -1,6 +1,7 @@
 body h1, body h2, body h3, body h4, body h5, body h6 {
   line-height: 1em; }
 body .btn {
+  font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
   border: 3px solid #d03c15;
   border-radius: 5px;
   font-color: #d03c15;
@@ -9,9 +10,12 @@ body .btn {
   border-radius: 5px;
   font-weight: bold;
   color: #d03c15;
-  font-size: 1.25em;
+  font-size: 16px;
   cursor: pointer;
-  text-shadow: 1px 1px rgba(255, 255, 255, 0.3); }
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.3);
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s; }
   body .btn:hover {
     background: #d03c15;
     color: white !important; }
@@ -296,62 +300,8 @@ body .wp-block-ugb-separator {
     fill: #d03c15 !important; }
 body div#content .entry-title {
   margin-bottom: 15px; }
-body div#content .info-campanya {
-  font-size: 20px;
-  font-style: normal;
-  overflow: hidden; }
-  body div#content .info-campanya .hashtag {
-    margin-bottom: 20px;
-    display: block;
-    font-weight: bold; }
-  body div#content .info-campanya .info-money {
-    overflow: hidden; }
-    body div#content .info-campanya .info-money .left, body div#content .info-campanya .info-money .right {
-      margin-top: 2px;
-      float: left;
-      font-size: .8em; }
-      body div#content .info-campanya .info-money .left.big, body div#content .info-campanya .info-money .right.big {
-        font-size: 1em;
-        font-weight: bold;
-        font-style: normal; }
-      body div#content .info-campanya .info-money .left i, body div#content .info-campanya .info-money .right i {
-        margin-left: 5px; }
-    body div#content .info-campanya .info-money .left {
-      font-style: italic; }
-    body div#content .info-campanya .info-money .right {
-      float: right; }
-  body div#content .info-campanya .bar-wrapper {
-    height: 20px;
-    position: relative;
-    background: white;
-    border-radius: 10px;
-    margin-bottom: 2px;
-    overflow: hidden; }
-    body div#content .info-campanya .bar-wrapper .bar {
-      height: 20px;
-      left: 0;
-      top: 0;
-      display: block;
-      border-radius: 10px;
-      -moz-animation: graphic-design 2s ease-out;
-      -webkit-animation: graphic-design 2s ease-out;
-      background-color: #d03c15; }
-  body div#content .info-campanya .claim {
-    margin-top: 10px;
-    font-size: .8em; }
-  body div#content .info-campanya .btn {
-    font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
-    float: left;
-    margin-top: 10px;
-    display: inline-block;
-    border-color: #d03c15;
-    color: #d03c15;
-    font-size: 16px;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s; }
-    body div#content .info-campanya .btn:hover {
-      background: #d03c15; }
+body div#content .info-campanya .bar {
+  background-color: #d03c15; }
 body div#content .wp-block-embed-youtube .wp-block-embed__wrapper {
   position: relative;
   padding-bottom: 56.25%; }
@@ -746,6 +696,8 @@ body.page-template-home .fullscreen {
       body.page-template-home .fullscreen .info h3 i {
         display: inline-block;
         width: 5px; }
+    body.page-template-home .fullscreen .info .btn {
+      font-size: 1.25em; }
     body.page-template-home .fullscreen .info h1 {
       text-shadow: 1px 1px #111111;
       color: white;
