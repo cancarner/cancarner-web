@@ -80,6 +80,7 @@ if ( ! function_exists( 'can_carner_campaign_init' ) ) {
                 $campaign = $campaigns[0];
 
                 $total = esc_attr(get_post_meta($campaign->ID, 'cancarner_totalToObtain', TRUE));
+                $goals = explode(',', esc_attr(get_post_meta($campaign->ID, 'cancarner_goalsToObtain', TRUE)));
                 $actual = esc_attr(get_post_meta($campaign->ID, 'cancarner_totalObtained', TRUE));
                 $deadline = get_post_meta($campaign->ID, 'cancarner_deadline', TRUE);
                 $percentatge = floor($actual / $total * 100);
@@ -110,6 +111,14 @@ if ( ! function_exists( 'can_carner_campaign_init' ) ) {
                 $statebar .= '</div>';
                 $statebar .= '<div class="bar-wrapper">' ;
                 $statebar .=   '<span class="bar" style="width:' . $percentatge . '%"></span>';
+                if(sizeof($goals)){
+                    foreach( $goals as $goal){
+                        if($goal !== ''){
+                            $percentatgeLine = floor($goal / $total * 100);
+                            $statebar .=   '<span class="line" style="left:' . $percentatgeLine . '%"></span>';
+                        }
+                    }
+                }
                 $statebar .= '</div>';
                 $statebar .= '<div class="info-money">';
                 $statebar .=   '<div class="left">'. $percentatge .'% de ' . number_format($total, 0, ',', '.') . '€</div>';

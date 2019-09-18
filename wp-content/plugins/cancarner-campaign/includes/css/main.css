@@ -38,6 +38,12 @@ div.info-campanya {
       -moz-animation: graphic-design 2s ease-out;
       -webkit-animation: graphic-design 2s ease-out;
       background-color: black; }
+    div.info-campanya .bar-wrapper .line {
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      background: white;
+      width: 3px; }
   div.info-campanya .claim {
     margin-top: 10px;
     font-size: .8em; }

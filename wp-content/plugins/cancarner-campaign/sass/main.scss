@@ -48,6 +48,13 @@ div.info-campanya{
         	-webkit-animation:graphic-design 2s ease-out;
         	background-color: black;
         }
+        .line{
+            top: 0;
+            bottom: 0;
+            position:absolute;
+            background: white;
+            width: 3px;
+        }
 
     }
     .claim{
