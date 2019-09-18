@@ -451,6 +451,9 @@ div#content {
         .ugb-feature-grid__item{
             border: 1px solid $social2;
         }
+        blockquote.wp-block-quote {
+            border-color: $social2;
+        }
         blockquote.wp-block-ugb-blockquote svg path{
             fill: $social2;
         }

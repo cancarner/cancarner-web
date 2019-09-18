@@ -545,6 +545,8 @@ body #main-wrapper.webtype_social div#content .wp-block-columns.has-2-columns.li
   border-color: #dd8a00; }
 body #main-wrapper.webtype_social div#content .ugb-feature-grid__item {
   border: 1px solid #dd8a00; }
+body #main-wrapper.webtype_social div#content blockquote.wp-block-quote {
+  border-color: #dd8a00; }
 body #main-wrapper.webtype_social div#content blockquote.wp-block-ugb-blockquote svg path {
   fill: #dd8a00; }
 body #main-wrapper.webtype_natura div#content .button {
