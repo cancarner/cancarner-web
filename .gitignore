@@ -15,6 +15,11 @@ wp-content/plugins/hello.php
 wp-content/db.php
 wp-content/object-cache.php
 wp-content/w3tc-config/
+wp-content/plugins/admin-menu-editor-pro
+wp-content/plugins/sitepress-multilingual-cms
+wp-content/plugins/wpml-media-translation
+wp-content/plugins/wpml-string-translation
+wp-content/plugins/wpml-translation-management
 
 /.htaccess
 /license.txt
