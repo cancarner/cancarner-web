@@ -127,7 +127,7 @@ if ( ! function_exists( 'can_carner_campaign_init' ) ) {
                     $statebar .= '<p class="claim">'. $phraseRunning .'</p>';
                     $statebar .= '<div class="participa-link btn">'. __('I want to participate', 'cancarner-campaign') .'</div>';
                 }else{
-                    $statebar .= '<p class="claim">'. $phraseOver .'La campanya ha finalitzat.<br/>Gràcies pel teu suport :)</p>';
+                    $statebar .= '<p class="claim">'. $phraseOver .'</p>';
                 }
             	$statebar .='</div></blockquote>';
 
