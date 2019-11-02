@@ -37,7 +37,8 @@
                         background: $white;
                         text-shadow: 1px 1px $black;
                     }
-                    #vision-primary-nav > ul > li.highlight > a {
+                    #vision-primary-nav > ul > li.highlight{
+                      > a {
                         border-color: $white;
                         color: $white;
                         &:hover{
@@ -45,6 +46,23 @@
                             background: transparent;
                             border-color: $cohabitatge;
                         }
+                      }
+                      &.social{
+                        > a {
+                          &:hover{
+                            color: $social!important;
+                            border-color: $social;
+                          }
+                        }
+                      }
+                      &.natura{
+                        > a {
+                          &:hover{
+                            color: $natura!important;
+                            border-color: $natura;
+                          }
+                        }
+                      }
                     }
                     #agama-logo{
                         .logo{

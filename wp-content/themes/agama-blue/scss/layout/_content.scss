@@ -394,7 +394,9 @@ div#content {
             border-color: $cohabitatge2;
         }
         a, h2{
-            color: $cohabitatge;
+            &,&:hover{
+              color: $cohabitatge;
+            }
         }
         p{
             &.box{
@@ -432,7 +434,9 @@ div#content {
             border-color: $social;
         }
         a, h2{
-            color: $social;
+          &,&:hover{
+            color: $social!important;
+          }
         }
         p{
             &.box{
@@ -470,7 +474,9 @@ div#content {
             border-color: $natura;
         }
         a, h2{
+          &,&:hover{
             color: $natura;
+          }
         }
         p{
             &.box{

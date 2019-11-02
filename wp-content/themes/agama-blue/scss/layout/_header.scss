@@ -30,10 +30,22 @@ header.site-header {
 
 
     nav#vision-mobile-nav {
-        li{
-            &.highlight > a{
+        li.menu-item{
+            &.highlight{
+               > a{
                 font-size: 1.2em;
                 color: $cohabitatge;
+              }
+              &.social{
+                  > a {
+                    color: $social;
+                  }
+              }
+              &.natura{
+                > a {
+                  color: $natura;
+                }
+              }
             }
             &.wpml-ls-item {
                 background: $gray;
@@ -60,9 +72,22 @@ header.site-header {
         }
     }
 
+    nav#vision-primary-nav > ul > li > a {
+      line-height: 86px;
+    }
+    &.shrinked{
+      nav#vision-primary-nav > ul > li > a {
+        line-height: 62px;
+      }
+    }
+
     nav#vision-primary-nav{
-        li{
-            &.highlight > a{
+        ul#menu-mainmenu > li > a {
+          // line-height: 62px;
+        }
+        ul#menu-mainmenu li{
+            &.highlight{
+               > a{
                 color: $cohabitatge;
                 border: 3px solid $cohabitatge;
                 padding: 5px 10px;
@@ -71,6 +96,27 @@ header.site-header {
                     background: $cohabitatge;
                     color: $white!important;
                 }
+              }
+              &.social{
+                > a {
+                  color: $social;
+                  border-color: $social;
+                  &:hover{
+                    background: $social;
+                    color: $white!important;
+                  }
+                }
+              }
+              &.natura{
+                > a {
+                  color: $natura;
+                  border-color: $natura;
+                  &:hover{
+                    background: $natura;
+                    color: $white!important;
+                  }
+                }
+              }
             }
             &.wpml-ls-item {
                 &:not(:last-child){
@@ -108,11 +154,11 @@ header.site-header {
             &.current-menu-ancestor,
             &.current-menu-item{
                  > a{
-                    color: $cohabitatge;
+                   color: $cohabitatge;
                 }
             }
             &.social{
-                a{
+                > a{
                     border-color: $social!important;
                     &:hover {
                         color: $social!important;
@@ -126,7 +172,7 @@ header.site-header {
                 }
             }
             &.natura{
-                a{
+                > a{
                     border-color: $natura!important;
                     &:hover {
                         color: $natura!important;
