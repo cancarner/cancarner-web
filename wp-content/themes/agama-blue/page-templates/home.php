@@ -27,7 +27,7 @@ $videoOgg = get_post_meta(get_the_ID(), 'cancarner_background_ogg', TRUE);
 		</div>
 		<div class="info">
 			<?php $postHighline = get_post_meta(get_the_ID(), 'cancarner_highline', TRUE); ?>
-			<h3>Arrelem Can Carner<i></i>!</h3>
+			<h3><?= __('We are looking for new families!', 'cancarner-theme') ?></h3>
 			<?php if($postHighline): ?>
 				<h1><?=$postHighline?></h1>
 			<?php endif; ?>

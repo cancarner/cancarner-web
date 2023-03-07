@@ -104,36 +104,36 @@ body header.site-header nav#vision-primary-nav > ul > li > a {
 body header.site-header.shrinked nav#vision-primary-nav > ul > li > a {
   line-height: 62px; }
 
-body header.site-header nav#vision-primary-nav ul#menu-mainmenu li.highlight > a {
+body header.site-header nav#vision-primary-nav ul li.highlight > a {
   color: #D03C15;
   border: 3px solid #D03C15;
   padding: 5px 10px;
   border-radius: 5px; }
-  body header.site-header nav#vision-primary-nav ul#menu-mainmenu li.highlight > a:hover {
+  body header.site-header nav#vision-primary-nav ul li.highlight > a:hover {
     background: #D03C15;
     color: #fff !important; }
 
-body header.site-header nav#vision-primary-nav ul#menu-mainmenu li.highlight.social > a {
+body header.site-header nav#vision-primary-nav ul li.highlight.social > a {
   color: #D87A06;
   border-color: #D87A06; }
-  body header.site-header nav#vision-primary-nav ul#menu-mainmenu li.highlight.social > a:hover {
+  body header.site-header nav#vision-primary-nav ul li.highlight.social > a:hover {
     background: #D87A06;
     color: #fff !important; }
 
-body header.site-header nav#vision-primary-nav ul#menu-mainmenu li.highlight.natura > a {
+body header.site-header nav#vision-primary-nav ul li.highlight.natura > a {
   color: #547723;
   border-color: #547723; }
-  body header.site-header nav#vision-primary-nav ul#menu-mainmenu li.highlight.natura > a:hover {
+  body header.site-header nav#vision-primary-nav ul li.highlight.natura > a:hover {
     background: #547723;
     color: #fff !important; }
 
-body header.site-header nav#vision-primary-nav ul#menu-mainmenu li.wpml-ls-item:not(:last-child) {
+body header.site-header nav#vision-primary-nav ul li.wpml-ls-item:not(:last-child) {
   padding-right: 5px; }
 
-body header.site-header nav#vision-primary-nav ul#menu-mainmenu li.wpml-ls-item.wpml-ls-first-item {
+body header.site-header nav#vision-primary-nav ul li.wpml-ls-item.wpml-ls-first-item {
   position: relative;
   margin-left: -10px; }
-  body header.site-header nav#vision-primary-nav ul#menu-mainmenu li.wpml-ls-item.wpml-ls-first-item:before {
+  body header.site-header nav#vision-primary-nav ul li.wpml-ls-item.wpml-ls-first-item:before {
     content: '';
     position: absolute;
     height: 18px;
@@ -145,7 +145,7 @@ body header.site-header nav#vision-primary-nav ul#menu-mainmenu li.wpml-ls-item.
     background: #757575;
     width: 2px; }
 
-body header.site-header nav#vision-primary-nav ul#menu-mainmenu li.wpml-ls-item.wpml-ls-current-language a {
+body header.site-header nav#vision-primary-nav ul li.wpml-ls-item.wpml-ls-current-language a {
   color: #D03C15; }
 
 body header.site-header nav#vision-mobile-nav ul li.menu-item.current-menu-ancestor > a, body header.site-header nav#vision-mobile-nav ul li.menu-item.current-menu-item > a,

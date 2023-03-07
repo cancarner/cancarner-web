@@ -82,10 +82,7 @@ header.site-header {
     }
 
     nav#vision-primary-nav{
-        ul#menu-mainmenu > li > a {
-          // line-height: 62px;
-        }
-        ul#menu-mainmenu li{
+        ul li{
             &.highlight{
                > a{
                 color: $cohabitatge;
